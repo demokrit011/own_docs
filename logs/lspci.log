@@ -1,0 +1,7 @@
+00:00.0 Host bridge: Intel Corporation Device 2280 (rev 36)
+00:02.0 VGA compatible controller: Intel Corporation Device 22b0 (rev 36)
+00:03.0 Multimedia controller: Intel Corporation Device 22b8 (rev 36)
+00:0b.0 Signal processing controller: Intel Corporation Device 22dc (rev 36)
+00:14.0 USB controller: Intel Corporation Device 22b5 (rev 36)
+00:1a.0 Encryption controller: Intel Corporation Device 2298 (rev 36)
+00:1f.0 ISA bridge: Intel Corporation Device 229c (rev 36)

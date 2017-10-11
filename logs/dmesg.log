@@ -1,0 +1,2396 @@
+[    0.000000] random: get_random_bytes called from start_kernel+0x42/0x4e1 with crng_init=0
+[    0.000000] Linux version 4.13.0-041300rc7-generic (kernel@tangerine) (gcc version 7.2.0 (Ubuntu 7.2.0-1ubuntu2)) #201708272131 SMP Mon Aug 28 01:32:42 UTC 2017
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.13.0-041300rc7-generic.efi.signed root=UUID=4e91a695-4bef-4ae8-9300-694b50067b51 ro quiet splash vt.handoff=7
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: x87 FPU will use FXSAVE
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000008efff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000008f000-0x000000000008ffff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x0000000000090000-0x000000000009dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000001fffffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000020000000-0x00000000201fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000020200000-0x000000007a323fff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007a324000-0x000000007ad33fff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007ad34000-0x000000007ad60fff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x000000007ad61000-0x000000007b5b3fff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000007b5b4000-0x000000007b871fff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000007b872000-0x000000007b8fafff] type 20
+[    0.000000] BIOS-e820: [mem 0x000000007b8fb000-0x000000007bffffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000e0000000-0x00000000e3ffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fea00000-0x00000000feafffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed01000-0x00000000fed01fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed03000-0x00000000fed03fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed06000-0x00000000fed06fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed08000-0x00000000fed09fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed1cfff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed80000-0x00000000fedbffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ffa00000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000017fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] efi: EFI v2.40 by American Megatrends
+[    0.000000] efi:  ESRT=0x7ad32000  ACPI=0x7ad3e000  ACPI 2.0=0x7ad3e000  SMBIOS=0x7b771000  SMBIOS 3.0=0x7b770000 
+[    0.000000] random: fast init done
+[    0.000000] SMBIOS 3.0.0 present.
+[    0.000000] DMI: CHUWI INNOVATION AND TECHNOLOGY(SHENZHEN)CO.LTD Hi10 pro tablet/Cherry Trail CR, BIOS 5.11 11/10/2016
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] e820: last_pfn = 0x180000 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-FFFFF write-protect
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 000000000 mask F80000000 write-back
+[    0.000000]   1 base 07E000000 mask FFE000000 uncachable
+[    0.000000]   2 base 07D000000 mask FFF000000 uncachable
+[    0.000000]   3 base 07C800000 mask FFF800000 uncachable
+[    0.000000]   4 base 100000000 mask F80000000 write-back
+[    0.000000]   5 base 07C400000 mask FFFC00000 uncachable
+[    0.000000]   6 disabled
+[    0.000000]   7 disabled
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
+[    0.000000] total RAM covered: 4036M
+[    0.000000] Found optimal setting for mtrr clean up
+[    0.000000]  gran_size: 64K 	chunk_size: 64M 	num_reg: 6  	lose cover RAM: 0G
+[    0.000000] e820: update [mem 0x7c400000-0xffffffff] usable ==> reserved
+[    0.000000] e820: last_pfn = 0x7c000 max_arch_pfn = 0x400000000
+[    0.000000] esrt: ESRT header is not in the memory map.
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] Base memory trampoline at [ffff9a5700098000] 98000 size 24576
+[    0.000000] BRK [0x11e923000, 0x11e923fff] PGTABLE
+[    0.000000] BRK [0x11e924000, 0x11e924fff] PGTABLE
+[    0.000000] BRK [0x11e925000, 0x11e925fff] PGTABLE
+[    0.000000] BRK [0x11e926000, 0x11e926fff] PGTABLE
+[    0.000000] BRK [0x11e927000, 0x11e927fff] PGTABLE
+[    0.000000] BRK [0x11e928000, 0x11e928fff] PGTABLE
+[    0.000000] BRK [0x11e929000, 0x11e929fff] PGTABLE
+[    0.000000] BRK [0x11e92a000, 0x11e92afff] PGTABLE
+[    0.000000] Secure boot could not be determined
+[    0.000000] RAMDISK: [mem 0x3308a000-0x3583cfff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x000000007AD3E000 000024 (v02 ALASKA)
+[    0.000000] ACPI: XSDT 0x000000007AD3E0A8 0000CC (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FACP 0x000000007AD5B048 00010C (v05 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: DSDT 0x000000007AD3E200 01CE47 (v02 ALASKA A M I    01072009 INTL 20120913)
+[    0.000000] ACPI: FACS 0x000000007B5B3F80 000040
+[    0.000000] ACPI: APIC 0x000000007AD5B158 000084 (v03 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FPDT 0x000000007AD5B1E0 000044 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: FIDT 0x000000007AD5B228 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: MSDM 0x000000007AD5B2C8 000055 (v03 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: MCFG 0x000000007AD5B320 00003C (v01 ALASKA A M I    01072009 MSFT 00000097)
+[    0.000000] ACPI: SSDT 0x000000007AD5B360 0041C7 (v01 DptfTb DptfTab  00001000 INTL 20120913)
+[    0.000000] ACPI: SSDT 0x000000007AD5F528 000645 (v01 CpuDpf CpuDptf  00001000 INTL 20120913)
+[    0.000000] ACPI: SSDT 0x000000007AD5FB70 000058 (v01 LowPM  LowPwrM  00001000 INTL 20120913)
+[    0.000000] ACPI: UEFI 0x000000007AD5FBC8 000042 (v01 ALASKA A M I    00000000      00000000)
+[    0.000000] ACPI: SSDT 0x000000007AD5FC10 000269 (v01 UsbCTb UsbCTab  00001000 INTL 20120913)
+[    0.000000] ACPI: HPET 0x000000007AD5FE80 000038 (v01 ALASKA A M I    01072009 AMI. 00000005)
+[    0.000000] ACPI: SSDT 0x000000007AD5FEB8 000763 (v01 PmRef  CpuPm    00003000 INTL 20120913)
+[    0.000000] ACPI: SSDT 0x000000007AD60620 000290 (v01 PmRef  Cpu0Tst  00003000 INTL 20120913)
+[    0.000000] ACPI: SSDT 0x000000007AD608B0 00017A (v01 PmRef  ApTst    00003000 INTL 20120913)
+[    0.000000] ACPI: LPIT 0x000000007AD60A30 000104 (v01 ALASKA A M I    00000005 MSFT 0100000D)
+[    0.000000] ACPI: BCFG 0x000000007AD60B38 000139 (v01 INTEL  BATTCONF 00000001 ACPI 00000000)
+[    0.000000] ACPI: PRAM 0x000000007AD60C78 000030 (v01                 00000001      00000000)
+[    0.000000] ACPI: CSRT 0x000000007AD60CA8 00014C (v00 INTEL  LANFORDC 00000005 MSFT 0100000D)
+[    0.000000] ACPI: BGRT 0x000000007AD60DF8 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.000000] ACPI: WDAT 0x000000007AD60E30 000104 (v01                 00000000      00000000)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000017fffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x17ffd4000-0x17fffefff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000017fffffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000008efff]
+[    0.000000]   node   0: [mem 0x0000000000090000-0x000000000009dfff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x000000001fffffff]
+[    0.000000]   node   0: [mem 0x0000000020200000-0x000000007a323fff]
+[    0.000000]   node   0: [mem 0x000000007b8fb000-0x000000007bffffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000017fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000017fffffff]
+[    0.000000] On node 0 totalpages: 1025989
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 22 pages reserved
+[    0.000000]   DMA zone: 3996 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 7777 pages used for memmap
+[    0.000000]   DMA32 zone: 497705 pages, LIFO batch:31
+[    0.000000]   Normal zone: 8192 pages used for memmap
+[    0.000000]   Normal zone: 524288 pages, LIFO batch:31
+[    0.000000] Reserving Intel graphics memory at 0x000000007ce00000-0x000000007edfffff
+[    0.000000] ACPI: PM-Timer IO Port: 0x408
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    0.000000] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-114
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0008f000-0x0008ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009e000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x20000000-0x201fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7a324000-0x7ad33fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7ad34000-0x7ad60fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7ad61000-0x7b5b3fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7b5b4000-0x7b871fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7b872000-0x7b8fafff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7c000000-0x7cdfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7ce00000-0x7edfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x7ee00000-0xdfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xe0000000-0xe3ffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xe4000000-0xfe9fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfea00000-0xfeafffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfeb00000-0xfebfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec01000-0xfed00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed01000-0xfed01fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed02000-0xfed02fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed03000-0xfed03fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed04000-0xfed05fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed06000-0xfed06fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed07000-0xfed07fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed08000-0xfed09fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed0a000-0xfed1bfff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed1c000-0xfed1cfff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed1d000-0xfed7ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed80000-0xfedbffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfedc0000-0xfedfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xff9fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xffa00000-0xffffffff]
+[    0.000000] e820: [mem 0x7ee00000-0xdfffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.000000] percpu: Embedded 39 pages/cpu @ffff9a587fc00000 s119704 r8192 d31848 u524288
+[    0.000000] pcpu-alloc: s119704 r8192 d31848 u524288 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 0 1 2 3 
+[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1009934
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.13.0-041300rc7-generic.efi.signed root=UUID=4e91a695-4bef-4ae8-9300-694b50067b51 ro quiet splash vt.handoff=7
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+[    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.000000] Memory: 3857576K/4103956K available (9253K kernel code, 2477K rwdata, 4052K rodata, 2320K init, 2388K bss, 246380K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 37595 entries in 147 pages
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=4.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 524544, nr_irqs: 1024, preallocated irqs: 16
+[    0.000000] Console: colour dummy device 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
+[    0.000000] hpet clockevent registered
+[    0.000000] tsc: Detected 1440.000 MHz processor
+[    0.000024] Calibrating delay loop (skipped), value calculated using timer frequency.. 2880.00 BogoMIPS (lpj=5760000)
+[    0.000030] pid_max: default: 32768 minimum: 301
+[    0.000065] ACPI: Core revision 20170531
+[    0.043905] ACPI: 8 ACPI AML tables successfully acquired and loaded
+[    0.044836] Security Framework initialized
+[    0.044842] Yama: becoming mindful.
+[    0.044891] AppArmor: AppArmor initialized
+[    0.047197] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.048390] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.048480] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.048519] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.049056] CPU: Physical Processor ID: 0
+[    0.049059] CPU: Processor Core ID: 0
+[    0.049066] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+[    0.049067] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
+[    0.049086] mce: CPU supports 6 MCE banks
+[    0.049099] CPU0: Thermal monitoring enabled (TM1)
+[    0.049109] process: using mwait in idle threads
+[    0.049116] Last level iTLB entries: 4KB 48, 2MB 0, 4MB 0
+[    0.049118] Last level dTLB entries: 4KB 256, 2MB 16, 4MB 16, 1GB 0
+[    0.049462] Freeing SMP alternatives memory: 36K
+[    0.057946] smpboot: Max logical packages: 1
+[    0.059582] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=0 pin2=0
+[    0.099295] TSC deadline timer enabled
+[    0.099305] smpboot: CPU0: Intel(R) Atom(TM) x5-Z8350  CPU @ 1.44GHz (family: 0x6, model: 0x4c, stepping: 0x4)
+[    0.099570] Performance Events: PEBS fmt2+, 8-deep LBR, Silvermont events, 8-deep LBR, full-width counters, Intel PMU driver.
+[    0.099602] ... version:                3
+[    0.099604] ... bit width:              40
+[    0.099606] ... generic registers:      2
+[    0.099608] ... value mask:             000000ffffffffff
+[    0.099609] ... max period:             0000007fffffffff
+[    0.099611] ... fixed-purpose events:   3
+[    0.099612] ... event mask:             0000000700000003
+[    0.099725] Hierarchical SRCU implementation.
+[    0.100000] smp: Bringing up secondary CPUs ...
+[    0.100000] x86: Booting SMP configuration:
+[    0.100000] .... node  #0, CPUs:      #1
+[    0.176206] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+[    0.176593]  #2 #3
+[    0.336077] smp: Brought up 1 node, 4 CPUs
+[    0.336077] smpboot: Total of 4 processors activated (11532.86 BogoMIPS)
+[    0.337881] devtmpfs: initialized
+[    0.337881] x86/mm: Memory block size: 128MB
+[    0.337881] evm: security.selinux
+[    0.337881] evm: security.SMACK64
+[    0.337881] evm: security.SMACK64EXEC
+[    0.337881] evm: security.SMACK64TRANSMUTE
+[    0.337881] evm: security.SMACK64MMAP
+[    0.337881] evm: security.ima
+[    0.337881] evm: security.capability
+[    0.337881] PM: Registering ACPI NVS region [mem 0x0008f000-0x0008ffff] (4096 bytes)
+[    0.337881] PM: Registering ACPI NVS region [mem 0x7ad61000-0x7b5b3fff] (8728576 bytes)
+[    0.340565] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.340591] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.340774] pinctrl core: initialized pinctrl subsystem
+[    0.341053] RTC time:  8:07:23, date: 09/20/17
+[    0.341322] NET: Registered protocol family 16
+[    0.341948] cpuidle: using governor ladder
+[    0.341948] cpuidle: using governor menu
+[    0.341948] PCCT header not found.
+[    0.341948] ACPI: bus type PCI registered
+[    0.341948] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.341948] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    0.341948] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+[    0.341948] PCI: MMCONFIG for 0000 [bus00-3f] at [mem 0xe0000000-0xe3ffffff] (base 0xe0000000) (size reduced!)
+[    0.341948] PCI: Using configuration type 1 for base access
+[    0.346212] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.346212] ACPI: Added _OSI(Module Device)
+[    0.346212] ACPI: Added _OSI(Processor Device)
+[    0.346212] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.346212] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.380810] ACPI: Dynamic OEM Table Load:
+[    0.380831] ACPI: SSDT 0xFFFF9A587A4E4000 00059C (v01 PmRef  Cpu0Ist  00003000 INTL 20120913)
+[    0.381521] ACPI: Dynamic OEM Table Load:
+[    0.381534] ACPI: SSDT 0xFFFF9A587A731400 0003A5 (v01 PmRef  Cpu0Cst  00003001 INTL 20120913)
+[    0.382718] ACPI: Dynamic OEM Table Load:
+[    0.382730] ACPI: SSDT 0xFFFF9A587A725A00 00015F (v01 PmRef  ApIst    00003000 INTL 20120913)
+[    0.383329] ACPI: Dynamic OEM Table Load:
+[    0.383343] ACPI: SSDT 0xFFFF9A587A7A60C0 00008D (v01 PmRef  ApCst    00003000 INTL 20120913)
+[    0.388061] ACPI: Interpreter enabled
+[    0.388120] ACPI: (supports S0 S4 S5)
+[    0.388126] ACPI: Using IOAPIC for interrupt routing
+[    0.388221] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.391448] ACPI: Power Resource [P06X] (off)
+[    0.393931] ACPI: Power Resource [ID3C] (on)
+[    0.397124] ACPI: Power Resource [USBC] (on)
+[    0.398449] ACPI: Power Resource [WWPR] (off)
+[    0.399315] ACPI: Power Resource [WWPR] (off)
+[    0.400663] ACPI: Power Resource [WWPR] (off)
+[    0.401514] ACPI: Power Resource [WWPR] (off)
+[    0.402364] ACPI: Power Resource [WWPR] (off)
+[    0.403279] ACPI: Power Resource [WWPR] (off)
+[    0.417249] ACPI: Power Resource [CLK2] (on)
+[    0.417839] ACPI: Power Resource [P28P] (off)
+[    0.417954] ACPI: Power Resource [P18P] (off)
+[    0.418078] sysfs: cannot create duplicate filename '/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/808622C1:00/OVTI2680:00/power_resources_D0/LNXPOWER:0b'
+[    0.418104] ------------[ cut here ]------------
+[    0.418116] WARNING: CPU: 1 PID: 1 at /home/kernel/COD/linux/fs/sysfs/dir.c:31 sysfs_warn_dup+0x56/0x70
+[    0.418117] Modules linked in:
+[    0.418127] CPU: 1 PID: 1 Comm: swapper/0 Not tainted 4.13.0-041300rc7-generic #201708272131
+[    0.418129] Hardware name: CHUWI INNOVATION AND TECHNOLOGY(SHENZHEN)CO.LTD Hi10 pro tablet/Cherry Trail CR, BIOS 5.11 11/10/2016
+[    0.418131] task: ffff9a587a41c200 task.stack: ffffa66a00654000
+[    0.418137] RIP: 0010:sysfs_warn_dup+0x56/0x70
+[    0.418140] RSP: 0000:ffffa66a00657a88 EFLAGS: 00010282
+[    0.418143] RAX: 000000000000008c RBX: ffff9a587a66f000 RCX: ffffffffa80601c8
+[    0.418145] RDX: 0000000000000000 RSI: 0000000000000096 RDI: 0000000000000247
+[    0.418147] RBP: ffffa66a00657aa0 R08: 0000000000000001 R09: 000000000000012a
+[    0.418149] R10: 0000000000000001 R11: 0000000000000000 R12: ffff9a587a012920
+[    0.418151] R13: ffff9a587a036c30 R14: 0000000000000001 R15: ffffffffffffffef
+[    0.418156] FS:  0000000000000000(0000) GS:ffff9a587fc80000(0000) knlGS:0000000000000000
+[    0.418159] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[    0.418161] CR2: ffffa66a00760000 CR3: 000000011e209000 CR4: 00000000001006e0
+[    0.418165] Call Trace:
+[    0.418176]  sysfs_do_create_link_sd.isra.2+0x9f/0xb0
+[    0.418180]  sysfs_create_link_sd+0x17/0x20
+[    0.418185]  sysfs_add_link_to_group+0x35/0x60
+[    0.418192]  acpi_power_expose_list+0x5a/0xa0
+[    0.418199]  acpi_power_add_remove_device+0x70/0xa0
+[    0.418205]  acpi_add_single_object+0x25c/0x5c0
+[    0.418210]  acpi_bus_check_add+0xc1/0x250
+[    0.418217]  ? down_timeout+0x37/0x60
+[    0.418221]  ? up+0x32/0x50
+[    0.418228]  acpi_ns_walk_namespace+0xe7/0x19a
+[    0.418232]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.418236]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.418240]  acpi_walk_namespace+0xa0/0xd5
+[    0.418248]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.418255]  ? set_debug_rodata+0x17/0x17
+[    0.418258]  acpi_bus_scan+0x7f/0x90
+[    0.418262]  acpi_scan_init+0xfe/0x24a
+[    0.418266]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.418269]  acpi_init+0x2f8/0x356
+[    0.418279]  do_one_initcall+0x50/0x190
+[    0.418284]  kernel_init_freeable+0x1ae/0x250
+[    0.418293]  ? rest_init+0xc0/0xc0
+[    0.418297]  kernel_init+0xe/0xfc
+[    0.418303]  ret_from_fork+0x25/0x30
+[    0.418306] Code: 85 c0 48 89 c3 74 12 b9 00 10 00 00 48 89 c2 31 f6 4c 89 ef e8 0c c8 ff ff 4c 89 e2 48 89 de 48 c7 c7 d8 b4 ed a7 e8 6b 8b e0 ff <0f> ff 48 89 df e8 70 c4 f4 ff 5b 41 5c 41 5d 5d c3 66 0f 1f 84 
+[    0.418383] ---[ end trace 2fcbe3b43dfe19cd ]---
+[    0.418769] sysfs: cannot create duplicate filename '/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/808622C1:00/OVTI2680:01/power_resources_D0/LNXPOWER:0b'
+[    0.418783] ------------[ cut here ]------------
+[    0.418792] WARNING: CPU: 1 PID: 1 at /home/kernel/COD/linux/fs/sysfs/dir.c:31 sysfs_warn_dup+0x56/0x70
+[    0.418793] Modules linked in:
+[    0.418798] CPU: 1 PID: 1 Comm: swapper/0 Tainted: G        W       4.13.0-041300rc7-generic #201708272131
+[    0.418800] Hardware name: CHUWI INNOVATION AND TECHNOLOGY(SHENZHEN)CO.LTD Hi10 pro tablet/Cherry Trail CR, BIOS 5.11 11/10/2016
+[    0.418802] task: ffff9a587a41c200 task.stack: ffffa66a00654000
+[    0.418806] RIP: 0010:sysfs_warn_dup+0x56/0x70
+[    0.418808] RSP: 0000:ffffa66a00657a88 EFLAGS: 00010282
+[    0.418811] RAX: 000000000000008c RBX: ffff9a587a66f000 RCX: ffffffffa80601c8
+[    0.418813] RDX: 0000000000000000 RSI: 0000000000000096 RDI: 0000000000000247
+[    0.418815] RBP: ffffa66a00657aa0 R08: 0000000000000001 R09: 0000000000000156
+[    0.418817] R10: 0000000000000001 R11: 0000000000000000 R12: ffff9a587a012920
+[    0.418819] R13: ffff9a587a0370f0 R14: 0000000000000001 R15: ffffffffffffffef
+[    0.418822] FS:  0000000000000000(0000) GS:ffff9a587fc80000(0000) knlGS:0000000000000000
+[    0.418824] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[    0.418826] CR2: ffffa66a00760000 CR3: 000000011e209000 CR4: 00000000001006e0
+[    0.418828] Call Trace:
+[    0.418834]  sysfs_do_create_link_sd.isra.2+0x9f/0xb0
+[    0.418838]  sysfs_create_link_sd+0x17/0x20
+[    0.418842]  sysfs_add_link_to_group+0x35/0x60
+[    0.418846]  acpi_power_expose_list+0x5a/0xa0
+[    0.418850]  acpi_power_add_remove_device+0x70/0xa0
+[    0.418854]  acpi_add_single_object+0x25c/0x5c0
+[    0.418859]  acpi_bus_check_add+0xc1/0x250
+[    0.418863]  ? down_timeout+0x37/0x60
+[    0.418866]  ? up+0x32/0x50
+[    0.418870]  acpi_ns_walk_namespace+0xe7/0x19a
+[    0.418874]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.418878]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.418881]  acpi_walk_namespace+0xa0/0xd5
+[    0.418885]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.418889]  ? set_debug_rodata+0x17/0x17
+[    0.418893]  acpi_bus_scan+0x7f/0x90
+[    0.418897]  acpi_scan_init+0xfe/0x24a
+[    0.418901]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.418904]  acpi_init+0x2f8/0x356
+[    0.418908]  do_one_initcall+0x50/0x190
+[    0.418913]  kernel_init_freeable+0x1ae/0x250
+[    0.418918]  ? rest_init+0xc0/0xc0
+[    0.418922]  kernel_init+0xe/0xfc
+[    0.418928]  ret_from_fork+0x25/0x30
+[    0.418930] Code: 85 c0 48 89 c3 74 12 b9 00 10 00 00 48 89 c2 31 f6 4c 89 ef e8 0c c8 ff ff 4c 89 e2 48 89 de 48 c7 c7 d8 b4 ed a7 e8 6b 8b e0 ff <0f> ff 48 89 df e8 70 c4 f4 ff 5b 41 5c 41 5d 5d c3 66 0f 1f 84 
+[    0.419000] ---[ end trace 2fcbe3b43dfe19ce ]---
+[    0.419110] ACPI: Power Resource [CLK4] (on)
+[    0.419448] sysfs: cannot create duplicate filename '/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/808622C1:00/OVB2680:00/power_resources_D0/LNXPOWER:0b'
+[    0.419462] ------------[ cut here ]------------
+[    0.419468] WARNING: CPU: 1 PID: 1 at /home/kernel/COD/linux/fs/sysfs/dir.c:31 sysfs_warn_dup+0x56/0x70
+[    0.419469] Modules linked in:
+[    0.419474] CPU: 1 PID: 1 Comm: swapper/0 Tainted: G        W       4.13.0-041300rc7-generic #201708272131
+[    0.419476] Hardware name: CHUWI INNOVATION AND TECHNOLOGY(SHENZHEN)CO.LTD Hi10 pro tablet/Cherry Trail CR, BIOS 5.11 11/10/2016
+[    0.419478] task: ffff9a587a41c200 task.stack: ffffa66a00654000
+[    0.419482] RIP: 0010:sysfs_warn_dup+0x56/0x70
+[    0.419484] RSP: 0000:ffffa66a00657a88 EFLAGS: 00010282
+[    0.419487] RAX: 000000000000008b RBX: ffff9a587a66f000 RCX: ffffffffa80601c8
+[    0.419489] RDX: 0000000000000000 RSI: 0000000000000096 RDI: 0000000000000247
+[    0.419491] RBP: ffffa66a00657aa0 R08: 0000000000000001 R09: 0000000000000183
+[    0.419493] R10: 0000000000000001 R11: 0000000000000000 R12: ffff9a587a012920
+[    0.419495] R13: ffff9a587a038960 R14: 0000000000000001 R15: ffffffffffffffef
+[    0.419497] FS:  0000000000000000(0000) GS:ffff9a587fc80000(0000) knlGS:0000000000000000
+[    0.419500] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[    0.419502] CR2: ffffa66a00760000 CR3: 000000011e209000 CR4: 00000000001006e0
+[    0.419503] Call Trace:
+[    0.419509]  sysfs_do_create_link_sd.isra.2+0x9f/0xb0
+[    0.419513]  sysfs_create_link_sd+0x17/0x20
+[    0.419517]  sysfs_add_link_to_group+0x35/0x60
+[    0.419521]  acpi_power_expose_list+0x5a/0xa0
+[    0.419525]  acpi_power_add_remove_device+0x70/0xa0
+[    0.419530]  acpi_add_single_object+0x25c/0x5c0
+[    0.419535]  acpi_bus_check_add+0xc1/0x250
+[    0.419538]  ? down_timeout+0x37/0x60
+[    0.419542]  ? up+0x32/0x50
+[    0.419546]  acpi_ns_walk_namespace+0xe7/0x19a
+[    0.419550]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.419554]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.419557]  acpi_walk_namespace+0xa0/0xd5
+[    0.419561]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.419565]  ? set_debug_rodata+0x17/0x17
+[    0.419569]  acpi_bus_scan+0x7f/0x90
+[    0.419573]  acpi_scan_init+0xfe/0x24a
+[    0.419577]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.419580]  acpi_init+0x2f8/0x356
+[    0.419584]  do_one_initcall+0x50/0x190
+[    0.419589]  kernel_init_freeable+0x1ae/0x250
+[    0.419594]  ? rest_init+0xc0/0xc0
+[    0.419598]  kernel_init+0xe/0xfc
+[    0.419604]  ret_from_fork+0x25/0x30
+[    0.419607] Code: 85 c0 48 89 c3 74 12 b9 00 10 00 00 48 89 c2 31 f6 4c 89 ef e8 0c c8 ff ff 4c 89 e2 48 89 de 48 c7 c7 d8 b4 ed a7 e8 6b 8b e0 ff <0f> ff 48 89 df e8 70 c4 f4 ff 5b 41 5c 41 5d 5d c3 66 0f 1f 84 
+[    0.419677] ---[ end trace 2fcbe3b43dfe19cf ]---
+[    0.420037] sysfs: cannot create duplicate filename '/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/808622C1:00/OVTI2680:02/power_resources_D0/LNXPOWER:0b'
+[    0.420051] ------------[ cut here ]------------
+[    0.420057] WARNING: CPU: 1 PID: 1 at /home/kernel/COD/linux/fs/sysfs/dir.c:31 sysfs_warn_dup+0x56/0x70
+[    0.420059] Modules linked in:
+[    0.420063] CPU: 1 PID: 1 Comm: swapper/0 Tainted: G        W       4.13.0-041300rc7-generic #201708272131
+[    0.420065] Hardware name: CHUWI INNOVATION AND TECHNOLOGY(SHENZHEN)CO.LTD Hi10 pro tablet/Cherry Trail CR, BIOS 5.11 11/10/2016
+[    0.420067] task: ffff9a587a41c200 task.stack: ffffa66a00654000
+[    0.420071] RIP: 0010:sysfs_warn_dup+0x56/0x70
+[    0.420073] RSP: 0000:ffffa66a00657a88 EFLAGS: 00010282
+[    0.420076] RAX: 000000000000008c RBX: ffff9a587a66f000 RCX: ffffffffa80601c8
+[    0.420078] RDX: 0000000000000000 RSI: 0000000000000096 RDI: 0000000000000247
+[    0.420080] RBP: ffffa66a00657aa0 R08: 0000000000000001 R09: 00000000000001af
+[    0.420082] R10: 0000000000000001 R11: 0000000000000000 R12: ffff9a587a012920
+[    0.420084] R13: ffff9a587a0390f0 R14: 0000000000000001 R15: ffffffffffffffef
+[    0.420087] FS:  0000000000000000(0000) GS:ffff9a587fc80000(0000) knlGS:0000000000000000
+[    0.420089] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[    0.420091] CR2: ffffa66a00760000 CR3: 000000011e209000 CR4: 00000000001006e0
+[    0.420093] Call Trace:
+[    0.420100]  sysfs_do_create_link_sd.isra.2+0x9f/0xb0
+[    0.420104]  sysfs_create_link_sd+0x17/0x20
+[    0.420108]  sysfs_add_link_to_group+0x35/0x60
+[    0.420112]  acpi_power_expose_list+0x5a/0xa0
+[    0.420116]  acpi_power_add_remove_device+0x70/0xa0
+[    0.420121]  acpi_add_single_object+0x25c/0x5c0
+[    0.420126]  acpi_bus_check_add+0xc1/0x250
+[    0.420131]  ? down_timeout+0x37/0x60
+[    0.420134]  ? up+0x32/0x50
+[    0.420139]  acpi_ns_walk_namespace+0xe7/0x19a
+[    0.420143]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.420147]  ? acpi_add_single_object+0x5c0/0x5c0
+[    0.420150]  acpi_walk_namespace+0xa0/0xd5
+[    0.420154]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.420158]  ? set_debug_rodata+0x17/0x17
+[    0.420162]  acpi_bus_scan+0x7f/0x90
+[    0.420166]  acpi_scan_init+0xfe/0x24a
+[    0.420169]  ? acpi_sleep_proc_init+0x2d/0x2d
+[    0.420173]  acpi_init+0x2f8/0x356
+[    0.420177]  do_one_initcall+0x50/0x190
+[    0.420182]  kernel_init_freeable+0x1ae/0x250
+[    0.420187]  ? rest_init+0xc0/0xc0
+[    0.420191]  kernel_init+0xe/0xfc
+[    0.420197]  ret_from_fork+0x25/0x30
+[    0.420199] Code: 85 c0 48 89 c3 74 12 b9 00 10 00 00 48 89 c2 31 f6 4c 89 ef e8 0c c8 ff ff 4c 89 e2 48 89 de 48 c7 c7 d8 b4 ed a7 e8 6b 8b e0 ff <0f> ff 48 89 df e8 70 c4 f4 ff 5b 41 5c 41 5d 5d c3 66 0f 1f 84 
+[    0.420269] ---[ end trace 2fcbe3b43dfe19d0 ]---
+[    0.423409] ACPI: Power Resource [CLK3] (on)
+[    0.423529] ACPI: Power Resource [CLK4] (on)
+[    0.441351] ACPI: Power Resource [CLK2] (on)
+[    0.441465] ACPI: Power Resource [CLK1] (on)
+[    0.444167] ACPI: Power Resource [CLK0] (on)
+[    0.444289] ACPI: Power Resource [CLK1] (on)
+[    0.446236] ACPI: Power Resource [CLK5] (off)
+[    0.464259] ACPI: Power Resource [P28X] (off)
+[    0.464388] ACPI: Power Resource [P18X] (off)
+[    0.464500] ACPI: Power Resource [P12X] (off)
+[    0.464647] ACPI: Power Resource [P12P] (off)
+[    0.464773] ACPI: Power Resource [P19X] (off)
+[    0.464898] ACPI: Power Resource [P12A] (off)
+[    0.465030] ACPI: Power Resource [P28T] (off)
+[    0.465141] ACPI: Power Resource [P18D] (off)
+[    0.465264] ACPI: Power Resource [P18T] (off)
+[    0.465375] ACPI: Power Resource [P3P3] (off)
+[    0.465493] ACPI: Power Resource [P12T] (off)
+[    0.465620] ACPI: Power Resource [P28W] (off)
+[    0.465738] ACPI: Power Resource [P18W] (off)
+[    0.465860] ACPI: Power Resource [P12W] (off)
+[    0.465977] ACPI: Power Resource [P33W] (off)
+[    0.466102] ACPI: Power Resource [P33X] (off)
+[    0.466220] ACPI: Power Resource [P4BW] (off)
+[    0.475786] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.475800] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    0.476392] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME AER PCIeCapability]
+[    0.476429] acpi PNP0A08:00: [Firmware Info]: MMCONFIG for domain 0000 [bus 00-3f] only partially covers this bridge
+[    0.477924] PCI host bridge to bus 0000:00
+[    0.477930] pci_bus 0000:00: root bus resource [io  0x0070-0x0077]
+[    0.477936] pci_bus 0000:00: root bus resource [io  0x0000-0x006f window]
+[    0.477942] pci_bus 0000:00: root bus resource [io  0x0078-0x0cf7 window]
+[    0.477945] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.477949] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.477953] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000dffff window]
+[    0.477956] pci_bus 0000:00: root bus resource [mem 0x000e0000-0x000fffff window]
+[    0.477960] pci_bus 0000:00: root bus resource [mem 0x20000000-0x201fffff window]
+[    0.477963] pci_bus 0000:00: root bus resource [mem 0x7ce00001-0x7ee00000 window]
+[    0.477966] pci_bus 0000:00: root bus resource [mem 0x80000000-0xdfffffff window]
+[    0.477973] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.477991] pci 0000:00:00.0: [8086:2280] type 00 class 0x060000
+[    0.478690] pci 0000:00:02.0: [8086:22b0] type 00 class 0x030000
+[    0.478725] pci 0000:00:02.0: reg 0x10: [mem 0x90000000-0x90ffffff 64bit]
+[    0.478740] pci 0000:00:02.0: reg 0x18: [mem 0x80000000-0x8fffffff 64bit pref]
+[    0.478750] pci 0000:00:02.0: reg 0x20: [io  0xf000-0xf03f]
+[    0.479121] pci 0000:00:03.0: [8086:22b8] type 00 class 0x048000
+[    0.479144] pci 0000:00:03.0: reg 0x10: [mem 0x91000000-0x913fffff]
+[    0.479532] pci 0000:00:0b.0: [8086:22dc] type 00 class 0x118000
+[    0.479560] pci 0000:00:0b.0: reg 0x10: [mem 0x9183b000-0x9183bfff 64bit]
+[    0.479997] pci 0000:00:14.0: [8086:22b5] type 00 class 0x0c0330
+[    0.480036] pci 0000:00:14.0: reg 0x10: [mem 0x91800000-0x9180ffff 64bit]
+[    0.480141] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    0.480520] pci 0000:00:1a.0: [8086:2298] type 00 class 0x108000
+[    0.480548] pci 0000:00:1a.0: reg 0x10: [mem 0x91700000-0x917fffff]
+[    0.480559] pci 0000:00:1a.0: reg 0x14: [mem 0x91600000-0x916fffff]
+[    0.480649] pci 0000:00:1a.0: PME# supported from D0 D3hot
+[    0.480994] pci 0000:00:1f.0: [8086:229c] type 00 class 0x060100
+[    0.485692] acpi 80862288:00: Device [PWM1] is in always present list
+[    0.496610] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.496799] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.496986] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.497174] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.497363] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.497555] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.497756] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.497944] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 10 11 12 14 15) *0, disabled.
+[    0.498352] acpi INT0002:00: Device [GPED] is in always present list
+[    0.510706] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.510706] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.510706] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.510706] vgaarb: loaded
+[    0.510706] SCSI subsystem initialized
+[    0.510706] libata version 3.00 loaded.
+[    0.510706] ACPI: bus type USB registered
+[    0.510706] usbcore: registered new interface driver usbfs
+[    0.510706] usbcore: registered new interface driver hub
+[    0.510706] usbcore: registered new device driver usb
+[    0.656066] EDAC MC: Ver: 3.0.0
+[    0.656145] Registered efivars operations
+[    0.660140] PCI: Using ACPI for IRQ routing
+[    0.662837] PCI: pci_cache_line_size set to 64 bytes
+[    0.662876] Expanded resource Reserved due to conflict with PCI Bus 0000:00
+[    0.662884] e820: reserve RAM buffer [mem 0x0008f000-0x0008ffff]
+[    0.662887] e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+[    0.662889] e820: reserve RAM buffer [mem 0x7a324000-0x7bffffff]
+[    0.663135] NetLabel: Initializing
+[    0.663138] NetLabel:  domain hash size = 128
+[    0.663140] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.663190] NetLabel:  unlabeled traffic allowed by default
+[    0.663252] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.663252] hpet0: 3 comparators, 64-bit 14.318180 MHz counter
+[    0.665059] clocksource: Switched to clocksource hpet
+[    0.697031] VFS: Disk quotas dquot_6.6.0
+[    0.697088] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.697349] AppArmor: AppArmor Filesystem Enabled
+[    0.697520] pnp: PnP ACPI init
+[    0.697951] system 00:00: [io  0x0680-0x069f] has been reserved
+[    0.697957] system 00:00: [io  0x0400-0x047f] could not be reserved
+[    0.697961] system 00:00: [io  0x0500-0x05fe] has been reserved
+[    0.697974] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.698192] pnp 00:01: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.705230] system 00:02: [mem 0x91839000-0x91839fff] has been reserved
+[    0.705236] system 00:02: [mem 0x91837000-0x91837fff] has been reserved
+[    0.705240] system 00:02: [mem 0x91835000-0x91835fff] has been reserved
+[    0.705244] system 00:02: [mem 0x91824000-0x91824fff] has been reserved
+[    0.705248] system 00:02: [mem 0x91822000-0x91822fff] has been reserved
+[    0.705252] system 00:02: [mem 0x91820000-0x91820fff] has been reserved
+[    0.705256] system 00:02: [mem 0x9181e000-0x9181efff] has been reserved
+[    0.705260] system 00:02: [mem 0x9181c000-0x9181cfff] has been reserved
+[    0.705264] system 00:02: [mem 0x9181a000-0x9181afff] has been reserved
+[    0.705269] system 00:02: [mem 0x91818000-0x91818fff] has been reserved
+[    0.705273] system 00:02: [mem 0x91833000-0x91833fff] has been reserved
+[    0.705277] system 00:02: [mem 0x91831000-0x91831fff] has been reserved
+[    0.705281] system 00:02: [mem 0x9182f000-0x9182ffff] has been reserved
+[    0.705286] system 00:02: [mem 0x9182d000-0x9182dfff] has been reserved
+[    0.705290] system 00:02: [mem 0x9182b000-0x9182bfff] has been reserved
+[    0.705294] system 00:02: [mem 0x91829000-0x91829fff] has been reserved
+[    0.705298] system 00:02: [mem 0x91827000-0x91827fff] has been reserved
+[    0.705302] system 00:02: [mem 0x91825000-0x91825fff] has been reserved
+[    0.705312] system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.705497] system 00:03: [mem 0xe0000000-0xefffffff] could not be reserved
+[    0.705502] system 00:03: [mem 0xfea00000-0xfeafffff] has been reserved
+[    0.705506] system 00:03: [mem 0xfed01000-0xfed01fff] has been reserved
+[    0.705510] system 00:03: [mem 0xfed03000-0xfed03fff] has been reserved
+[    0.705514] system 00:03: [mem 0xfed06000-0xfed06fff] has been reserved
+[    0.705518] system 00:03: [mem 0xfed08000-0xfed09fff] has been reserved
+[    0.705524] system 00:03: [mem 0xfed80000-0xfedbffff] could not be reserved
+[    0.705528] system 00:03: [mem 0xfed1c000-0xfed1cfff] has been reserved
+[    0.705532] system 00:03: [mem 0xfee00000-0xfeefffff] could not be reserved
+[    0.705540] system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.705989] pnp 00:04: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.707745] pnp: PnP ACPI: found 5 devices
+[    0.718988] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.719012] pci_bus 0000:00: resource 4 [io  0x0070-0x0077]
+[    0.719017] pci_bus 0000:00: resource 5 [io  0x0000-0x006f window]
+[    0.719021] pci_bus 0000:00: resource 6 [io  0x0078-0x0cf7 window]
+[    0.719026] pci_bus 0000:00: resource 7 [io  0x0d00-0xffff window]
+[    0.719033] pci_bus 0000:00: resource 8 [mem 0x000a0000-0x000bffff window]
+[    0.719036] pci_bus 0000:00: resource 9 [mem 0x000c0000-0x000dffff window]
+[    0.719042] pci_bus 0000:00: resource 10 [mem 0x000e0000-0x000fffff window]
+[    0.719046] pci_bus 0000:00: resource 11 [mem 0x20000000-0x201fffff window]
+[    0.719050] pci_bus 0000:00: resource 12 [mem 0x7ce00001-0x7ee00000 window]
+[    0.719055] pci_bus 0000:00: resource 13 [mem 0x80000000-0xdfffffff window]
+[    0.719618] NET: Registered protocol family 2
+[    0.720086] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.720279] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    0.720492] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.720623] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.720678] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.720842] NET: Registered protocol family 1
+[    0.720891] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.721448] PCI: CLS 64 bytes, default 64
+[    0.721603] Unpacking initramfs...
+[    2.202807] Freeing initrd memory: 40652K
+[    2.202817] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    2.202823] software IO TLB [mem 0x734a7000-0x774a7000] (64MB) mapped at [ffff9a57734a7000-ffff9a57774a6fff]
+[    2.202946] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x14c1baf3789, max_idle_ns: 440795266465 ns
+[    2.203000] clocksource: Switched to clocksource tsc
+[    2.203245] Scanning for low memory corruption every 60 seconds
+[    2.204182] audit: initializing netlink subsys (disabled)
+[    2.204315] audit: type=2000 audit(1505894845.204:1): state=initialized audit_enabled=0 res=1
+[    2.205065] Initialise system trusted keyrings
+[    2.205091] Key type blacklist registered
+[    2.205172] workingset: timestamp_bits=36 max_order=20 bucket_order=0
+[    2.209214] zbud: loaded
+[    2.210418] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.210883] fuse init (API version 7.26)
+[    2.214893] Key type asymmetric registered
+[    2.214897] Asymmetric key parser 'x509' registered
+[    2.215031] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    2.215132] io scheduler noop registered
+[    2.215134] io scheduler deadline registered
+[    2.215220] io scheduler cfq registered (default)
+[    2.215783] efifb: probing for efifb
+[    2.215830] efifb: framebuffer at 0x80000000, using 1920k, total 1920k
+[    2.215833] efifb: mode is 800x600x32, linelength=3200, pages=1
+[    2.215834] efifb: scrolling: redraw
+[    2.215840] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    2.220279] Console: switching to colour frame buffer device 100x37
+[    2.224356] fb0: EFI VGA frame buffer device
+[    2.224381] intel_idle: MWAIT substates: 0x33000020
+[    2.224386] intel_idle: v0.4.1 model 0x4C
+[    2.224825] intel_idle: lapic_timer_reliable_states 0xffffffff
+[    2.224917] ACPI: AC: found native INT33F4 PMIC, not loading
+[    2.225079] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+[    2.225106] ACPI: Power Button [PWRB]
+[    2.225357] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input1
+[    2.225430] ACPI: Lid Switch [LID0]
+[    2.225536] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+[    2.225595] ACPI: Power Button [PWRF]
+[    2.230344] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[    2.230507] thermal LNXTHERM:00: registered as thermal_zone0
+[    2.230510] ACPI: Thermal Zone [TZ00] (0 C)
+[    2.230640] ACPI: Battery: found native INT33F4 PMIC, not loading
+[    2.230652] GHES: HEST is not enabled!
+[    2.231017] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    2.251846] 00:01: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    2.258537] Linux agpgart interface v0.103
+[    2.264122] loop: module loaded
+[    2.264725] libphy: Fixed MDIO Bus: probed
+[    2.264728] tun: Universal TUN/TAP device driver, 1.6
+[    2.264932] PPP generic driver version 2.4.2
+[    2.265099] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.265109] ehci-pci: EHCI PCI platform driver
+[    2.265138] ehci-platform: EHCI generic platform driver
+[    2.265200] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.265209] ohci-pci: OHCI PCI platform driver
+[    2.265232] ohci-platform: OHCI generic platform driver
+[    2.265254] uhci_hcd: USB Universal Host Controller Interface driver
+[    2.265694] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    2.265719] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 1
+[    2.266904] xhci_hcd 0000:00:14.0: hcc params 0x200077c1 hci version 0x100 quirks 0x01509810
+[    2.266918] xhci_hcd 0000:00:14.0: cache line size of 64 is not supported
+[    2.267160] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.267164] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.267168] usb usb1: Product: xHCI Host Controller
+[    2.267172] usb usb1: Manufacturer: Linux 4.13.0-041300rc7-generic xhci-hcd
+[    2.267175] usb usb1: SerialNumber: 0000:00:14.0
+[    2.267600] hub 1-0:1.0: USB hub found
+[    2.267633] hub 1-0:1.0: 7 ports detected
+[    2.269011] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    2.269021] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+[    2.269133] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[    2.269137] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.269140] usb usb2: Product: xHCI Host Controller
+[    2.269143] usb usb2: Manufacturer: Linux 4.13.0-041300rc7-generic xhci-hcd
+[    2.269146] usb usb2: SerialNumber: 0000:00:14.0
+[    2.269499] hub 2-0:1.0: USB hub found
+[    2.269527] hub 2-0:1.0: 6 ports detected
+[    2.270922] i8042: PNP: No PS/2 controller found.
+[    2.271375] mousedev: PS/2 mouse device common for all mice
+[    2.272348] rtc_cmos 00:04: rtc core: registered rtc_cmos as rtc0
+[    2.272417] rtc_cmos 00:04: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+[    2.272431] i2c /dev entries driver
+[    2.273700] device-mapper: uevent: version 1.0.3
+[    2.273901] device-mapper: ioctl: 4.36.0-ioctl (2017-06-09) initialised: dm-devel@redhat.com
+[    2.273912] intel_pstate: Intel P-state driver initializing
+[    2.274932] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.274938] EFI Variables Facility v0.08 2004-May-17
+[    2.281178] NET: Registered protocol family 10
+[    2.291302] Segment Routing with IPv6
+[    2.291353] NET: Registered protocol family 17
+[    2.291375] Key type dns_resolver registered
+[    2.292524] RAS: Correctable Errors collector initialized.
+[    2.292954] microcode: sig=0x406c4, pf=0x1, revision=0x40a
+[    2.293387] microcode: Microcode Update Driver: v2.2.
+[    2.293406] sched_clock: Marking stable (2293375764, 0)->(2299455400, -6079636)
+[    2.294387] registered taskstats version 1
+[    2.294412] Loading compiled-in X.509 certificates
+[    2.301686] Loaded X.509 cert 'Build time autogenerated kernel key: 8a415e7642d331e739fb797bbb8d0eb54f1a1b57'
+[    2.301745] zswap: loaded using pool lzo/zbud
+[    2.307185] Key type big_key registered
+[    2.307195] Key type trusted registered
+[    2.311839] Key type encrypted registered
+[    2.311848] AppArmor: AppArmor sha1 policy hashing enabled
+[    2.311855] ima: No TPM chip found, activating TPM-bypass! (rc=-19)
+[    2.311908] evm: HMAC attrs: 0x1
+[    2.327346] i2c_designware 808622C1:06: I2C bus managed by PUNIT
+[    2.337107]   Magic number: 1:433:119
+[    2.337807] rtc_cmos 00:04: setting system clock to 2017-09-20 08:07:25 UTC (1505894845)
+[    2.337988] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    2.337989] EDD information not available.
+[    2.338097] PM: Hibernation image not present or could not be loaded.
+[    2.356156] Freeing unused kernel memory: 2320K
+[    2.356161] Write protecting the kernel read-only data: 14336k
+[    2.358313] Freeing unused kernel memory: 976K
+[    2.359135] Freeing unused kernel memory: 44K
+[    2.364151] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.538113] sdhci: Secure Digital Host Controller Interface driver
+[    2.538116] sdhci: Copyright(c) Pierre Ossman
+[    2.560764] mmc0: SDHCI controller on ACPI [80860F14:00] using ADMA
+[    2.592388] mmc1: SDHCI controller on ACPI [80860F14:01] using ADMA
+[    2.596136] usb 1-3: new high-speed USB device number 2 using xhci_hcd
+[    2.625226] mmc2: SDHCI controller on ACPI [80860F14:03] using ADMA
+[    2.653094] mmc1: new high speed SDIO card at address 0001
+[    2.662196] mmc0: new HS200 MMC card at address 0001
+[    2.675760] mmcblk0: mmc0:0001 DF4064 58.2 GiB 
+[    2.675988] mmcblk0boot0: mmc0:0001 DF4064 partition 1 4.00 MiB
+[    2.676556] mmcblk0boot1: mmc0:0001 DF4064 partition 2 4.00 MiB
+[    2.676795] mmcblk0rpmb: mmc0:0001 DF4064 partition 3 4.00 MiB
+[    2.681044]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9
+[    2.724356] [drm] Memory usable by graphics device = 2048M
+[    2.724362] checking generic (80000000 1e0000) vs hw (80000000 10000000)
+[    2.724364] fb: switching to inteldrmfb from EFI VGA
+[    2.724418] Console: switching to colour dummy device 80x25
+[    2.724690] [drm] Replacing VGA console driver
+[    2.724870] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.724872] [drm] Driver supports precise vblank timestamp query.
+[    2.736674] i915 0000:00:02.0: vgaarb: changed VGA decodes: olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[    2.737230] usb 1-3: New USB device found, idVendor=05e3, idProduct=0608
+[    2.737234] usb 1-3: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    2.737237] usb 1-3: Product: USB2.0 Hub
+[    2.737926] hub 1-3:1.0: USB hub found
+[    2.738184] hub 1-3:1.0: 4 ports detected
+[    2.756661] [drm] Initialized i915 1.6.0 20170619 for 0000:00:02.0 on minor 0
+[    2.758428] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    2.760377] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input3
+[    2.760657] [drm] HDaudio controller not detected, using LPE audio instead
+
+[    3.024667] usb 1-3.1: new low-speed USB device number 3 using xhci_hcd
+[    3.169154] fbcon: inteldrmfb (fb0) is primary device
+[    3.178961] usb 1-3.1: New USB device found, idVendor=1c4f, idProduct=0063
+[    3.178973] usb 1-3.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.178984] usb 1-3.1: Product: USB Keyboard
+[    3.178993] usb 1-3.1: Manufacturer: LIZHICHIP
+[    3.189713] hidraw: raw HID events driver (C) Jiri Kosina
+[    3.202783] usbcore: registered new interface driver usbhid
+[    3.202785] usbhid: USB HID core driver
+[    3.207375] input: LIZHICHIP USB Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.1/1-3.1:1.0/0003:1C4F:0063.0001/input/input4
+[    3.266345] hid-generic 0003:1C4F:0063.0001: input,hidraw0: USB HID v1.10 Keyboard [LIZHICHIP USB Keyboard] on usb-0000:00:14.0-3.1/input0
+[    3.266908] input: LIZHICHIP USB Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3.1/1-3.1:1.1/0003:1C4F:0063.0002/input/input5
+[    3.327674] hid-generic 0003:1C4F:0063.0002: input,hiddev0,hidraw1: USB HID v1.10 Mouse [LIZHICHIP USB Keyboard] on usb-0000:00:14.0-3.1/input1
+[    3.779193] Console: switching to colour frame buffer device 150x120
+[    3.826774] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[    4.696422] EXT4-fs (mmcblk0p8): mounted filesystem with ordered data mode. Opts: (null)
+[    5.031912] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
+[    5.032343] systemd[1]: Detected architecture x86-64.
+[    5.032936] systemd[1]: Set hostname to <chuwi>.
+[    5.244956] systemd[1]: Listening on Journal Socket (/dev/log).
+[    5.245157] systemd[1]: Reached target User and Group Name Lookups.
+[    5.245281] systemd[1]: Started Trigger resolvconf update for networkd DNS.
+[    5.245345] systemd[1]: Listening on Syslog Socket.
+[    5.245701] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    5.245793] systemd[1]: Listening on udev Control Socket.
+[    5.245909] systemd[1]: Listening on Journal Socket.
+[    5.458995] lp: driver loaded but no devices found
+[    5.525839] ppdev: user-space parallel port driver
+[    5.705775] EXT4-fs (mmcblk0p8): re-mounted. Opts: errors=remount-ro
+[    5.783260] systemd-journald[256]: Received request to flush runtime journal from PID 1
+[    6.276450] 8086228A:00: ttyS4 at MMIO 0x91821000 (irq = 39, base_baud = 2764800) is a 16550A
+[    6.292549] 8086228A:01: ttyS5 at MMIO 0x9181f000 (irq = 40, base_baud = 2764800) is a 16550A
+[    6.343957] silead_ts i2c-MSSL1680:00: i2c-MSSL1680:00 supply vddio not found, using dummy regulator
+[    6.344692] silead_ts i2c-MSSL1680:00: i2c-MSSL1680:00 supply avdd not found, using dummy regulator
+[    6.345293] silead_ts i2c-MSSL1680:00: Silead chip ID: 0x80360808
+[    6.346625] Bluetooth: Core ver 2.22
+[    6.346670] NET: Registered protocol family 31
+[    6.346672] Bluetooth: HCI device and connection manager initialized
+[    6.346688] Bluetooth: HCI socket layer initialized
+[    6.346694] Bluetooth: L2CAP socket layer initialized
+[    6.346707] Bluetooth: SCO socket layer initialized
+[    6.363057] axp20x-i2c i2c-INT33F4:00: AXP20x variant AXP288 found
+[    6.384150] Bluetooth: HCI UART driver ver 2.3
+[    6.384154] Bluetooth: HCI UART protocol H4 registered
+[    6.384156] Bluetooth: HCI UART protocol BCSP registered
+[    6.384205] Bluetooth: HCI UART protocol LL registered
+[    6.384207] Bluetooth: HCI UART protocol ATH3K registered
+[    6.384209] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    6.384409] Bluetooth: HCI UART protocol Intel registered
+[    6.384455] Bluetooth: HCI UART protocol Broadcom registered
+[    6.384457] Bluetooth: HCI UART protocol QCA registered
+[    6.384459] Bluetooth: HCI UART protocol AG6XX registered
+[    6.384461] Bluetooth: HCI UART protocol Marvell registered
+[    6.390435] r8723bs: module is from the staging directory, the quality is unknown, you have been warned.
+[    6.397450] RTL8723BS: module init start
+[    6.397455] RTL8723BS: rtl8723bs v4.3.5.5_12290.20140916_BTCOEX20140507-4E40
+[    6.397457] RTL8723BS: rtl8723bs BT-Coex version = BTCOEX20140507-4E40
+[    6.429224] axp20x-i2c i2c-INT33F4:00: AXP20X driver loaded
+[    6.444636] dw_dmac INTL9C60:00: DesignWare DMA Controller, 8 channels
+[    6.486241] dw_dmac INTL9C60:01: DesignWare DMA Controller, 8 channels
+[    6.488883] silead_ts i2c-MSSL1680:00: Direct firmware load for silead/mssl1680.fw failed with error -2
+[    6.488907] silead_ts i2c-MSSL1680:00: Firmware request error -2
+[    6.493214] pnetdev = ffff9a5871bfb000
+[    6.545567] input: Intel HDMI/DP LPE Audio HDMI/DP,pcm=0 as /devices/pci0000:00/0000:00:02.0/hdmi-lpe-audio/sound/card0/input6
+[    6.545721] input: Intel HDMI/DP LPE Audio HDMI/DP,pcm=1 as /devices/pci0000:00/0000:00:02.0/hdmi-lpe-audio/sound/card0/input7
+[    6.545882] input: Intel HDMI/DP LPE Audio HDMI/DP,pcm=2 as /devices/pci0000:00/0000:00:02.0/hdmi-lpe-audio/sound/card0/input8
+[    6.551902] proc_thermal 0000:00:0b.0: enabling device (0000 -> 0002)
+[    6.557026] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[    6.557154] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[    6.576149] mei_txe 0000:00:1a.0: enabling device (0000 -> 0002)
+[    6.616429] silead_ts: probe of i2c-MSSL1680:00 failed with error -2
+[    6.626973] r8723bs: module is from the staging directory, the quality is unknown, you have been warned.
+[    6.639345] RTL8723BS: rtw_ndev_init(wlan0)
+[    6.640275] RTL8723BS: module init ret =0
+[    6.821761] SSE version of gcm_enc/dec engaged.
+[    7.237767] intel_rapl: Found RAPL domain package
+[    7.237772] intel_rapl: Found RAPL domain core
+[    7.420645] Adding 4104188k swap on /dev/mmcblk0p9.  Priority:-1 extents:1 across:4104188k SSFS
+[    7.553122] input: gpio-keys as /devices/platform/gpio-keys.0.auto/input/input9
+[    7.553498] input: gpio-keys as /devices/platform/gpio-keys.1.auto/input/input10
+[    7.580045] mei_txe 0000:00:1a.0: wait for readiness failed
+[    7.580048] mei_txe 0000:00:1a.0: waiting for readiness failed
+[    7.580055] mei_txe 0000:00:1a.0: hw_start failed ret = -62
+[    7.877208] intel-spi intel-spi: w25q64dw (8192 Kbytes)
+[    7.893054] Creating 1 MTD partitions on "intel-spi":
+[    7.893065] 0x000000000000-0x000000800000 : "BIOS"
+[    8.091940] random: crng init done
+[    8.122408] audit: type=1400 audit(1505894851.284:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="content-hub-peer-picker" pid=753 comm="apparmor_parser"
+[    8.123290] audit: type=1400 audit(1505894851.285:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="content-hub-clipboard" pid=752 comm="apparmor_parser"
+[    8.129027] audit: type=1400 audit(1505894851.291:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="url-dispatcher-bad-url-helper" pid=757 comm="apparmor_parser"
+[    8.133516] audit: type=1400 audit(1505894851.296:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default" pid=755 comm="apparmor_parser"
+[    8.133526] audit: type=1400 audit(1505894851.296:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default-cgns" pid=755 comm="apparmor_parser"
+[    8.133531] audit: type=1400 audit(1505894851.296:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default-with-mounting" pid=755 comm="apparmor_parser"
+[    8.133536] audit: type=1400 audit(1505894851.296:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default-with-nesting" pid=755 comm="apparmor_parser"
+[    8.139481] audit: type=1400 audit(1505894851.302:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=756 comm="apparmor_parser"
+[    8.139497] audit: type=1400 audit(1505894851.302:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=756 comm="apparmor_parser"
+[    8.139504] audit: type=1400 audit(1505894851.302:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=756 comm="apparmor_parser"
+[    8.186474] axp288_fuel_gauge axp288_fuel_gauge: HW IRQ 16 -> VIRQ 317
+[    8.220288] axp288_fuel_gauge axp288_fuel_gauge: HW IRQ 17 -> VIRQ 318
+[    8.254029] axp288_fuel_gauge axp288_fuel_gauge: HW IRQ 18 -> VIRQ 319
+[    8.283265] axp288_fuel_gauge axp288_fuel_gauge: HW IRQ 19 -> VIRQ 320
+[    8.306330] axp288_fuel_gauge axp288_fuel_gauge: HW IRQ 24 -> VIRQ 325
+[    8.328230] axp288_fuel_gauge axp288_fuel_gauge: HW IRQ 25 -> VIRQ 326
+[    8.330521] axp288_fuel_gauge axp288_fuel_gauge: ADC charge current read failed:-19
+[    8.334521] axp288_fuel_gauge axp288_fuel_gauge: ADC charge current read failed:-19
+[    8.424815] new mount options do not match the existing superblock, will be ignored
+[    8.604092] mei_txe 0000:00:1a.0: wait for readiness failed
+[    8.604188] mei_txe 0000:00:1a.0: waiting for readiness failed
+[    8.604262] mei_txe 0000:00:1a.0: hw_start failed ret = -62
+[    9.628111] mei_txe 0000:00:1a.0: wait for readiness failed
+[    9.628113] mei_txe 0000:00:1a.0: waiting for readiness failed
+[    9.628119] mei_txe 0000:00:1a.0: hw_start failed ret = -62
+[    9.628124] mei_txe 0000:00:1a.0: reset: reached maximal consecutive resets: disabling the device
+[    9.628126] mei_txe 0000:00:1a.0: reset failed ret = -19
+[    9.628128] mei_txe 0000:00:1a.0: link layer initialization failed.
+[    9.628131] mei_txe 0000:00:1a.0: init hw failure.
+[    9.628399] mei_txe 0000:00:1a.0: initialization failed.
+[    9.647601] intel_sst_acpi 808622A8:00: LPE base: 0x91400000 size:0x200000
+[    9.647604] intel_sst_acpi 808622A8:00: IRAM base: 0x914c0000
+[    9.647643] intel_sst_acpi 808622A8:00: DRAM base: 0x91500000
+[    9.647653] intel_sst_acpi 808622A8:00: SHIM base: 0x91540000
+[    9.647688] intel_sst_acpi 808622A8:00: Mailbox base: 0x91544000
+[    9.647695] intel_sst_acpi 808622A8:00: DDR base: 0x20000000
+[    9.647950] intel_sst_acpi 808622A8:00: Got drv data max stream 25
+[    9.846731] bytcr_rt5651 bytcr_rt5651: snd-soc-dummy-dai <-> media-cpu-dai mapping ok
+[    9.846796] bytcr_rt5651 bytcr_rt5651: snd-soc-dummy-dai <-> deepbuffer-cpu-dai mapping ok
+[    9.846835] compress asoc: snd-soc-dummy-dai <-> compress-cpu-dai mapping ok
+[    9.846915] bytcr_rt5651 bytcr_rt5651: rt5651-aif1 <-> ssp2-port mapping ok
+[   10.668628] Bluetooth: Out-of-order packet arrived (7 != 0)
+[   10.814906] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   10.821830] rtl8723bs: acquire FW from file:rtlwifi/rtl8723bs_nic.bin
+[   11.357506] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   11.357511] Bluetooth: BNEP filters: protocol multicast
+[   11.357519] Bluetooth: BNEP socket layer initialized
+[   12.446438] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   12.705654] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   16.451601] RTL8723BS: rtw_set_802_11_connect(wlan0)  fw_state = 0x00000008
+[   17.269527] RTL8723BS: start auth
+[   17.282691] RTL8723BS: auth success, start assoc
+[   17.622598] RTL8723BS: rtw_cfg80211_indicate_connect(wlan0) BSS not found !!
+[   17.622618] RTL8723BS: assoc success
+[   17.622757] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   17.633503] RTL8723BS: send eapol packet
+[   18.470271] RTL8723BS: send eapol packet
+[   18.470446] RTL8723BS: set pairwise key camid:4, addr:5c:49:79:74:3d:1a, kid:0, type:AES
+[   18.472211] RTL8723BS: set group key camid:5, addr:5c:49:79:74:3d:1a, kid:1, type:AES
+[   25.036153] intel_sst_acpi 808622A8:00: FW Version 01.0b.02.01
+[   25.036695]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.037210]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.037587]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.061147]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.061693]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.062132]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.063690]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.064522]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.065108]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.066831]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.067576]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.068453]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.070645]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.071684]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.072243]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.073650]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.074212]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.074664]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.076444]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.077192]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.077861]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.079753]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.080645]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.081470]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.092981]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.093501]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.093988]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.096686]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.097218]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.097698]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.099217]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.099904]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.100614]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.102888]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.103664]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.104409]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.118157]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.118704]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.119147]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.122483]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.122956]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.123292]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.124823]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.126130]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.126744]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.129087]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.129798]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.130462]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.132405]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.133607]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.134100]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.135750]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.463213]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.463776]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.465049]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.467295]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.467843]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.468560]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.470987]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.471902]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.473669]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.476489]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.477272]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.478118]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.481295]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.481896]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.482351]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.484577]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.485130]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.485638]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.488766]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.489458]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.489995]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.492544]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.493278]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.493855]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.501037]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.501558]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.501963]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.504457]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.504930]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.505151]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.507326]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.507986]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.509725]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.511294]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.511920]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.512558]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.529201]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.529738]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.530171]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.534484]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.548227]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.548700]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.551728]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.552476]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.553035]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.558377]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.559046]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.559423]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.562781]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.563296]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.563639]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.567592]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.568174]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.568619]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.570666]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.571280]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.571636]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.574381]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.575121]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   25.575634]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.104630]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.105192]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.105611]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.108084]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.108604]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.109009]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.110553]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.111182]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.111723]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.113924]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.114612]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.115182]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.117225]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.117690]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.118041]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.119471]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.119952]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.120966]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.122472]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.123106]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.123617]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.125921]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.126590]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.127117]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.140879]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.141394]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.141799]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.143333]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.143827]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.147705]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.149758]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.151397]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.151897]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.153890]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.154562]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.155116]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.167582]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.168408]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.168818]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.169983]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.170476]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.170860]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.172900]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.173550]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.174056]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.175739]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.176615]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.177172]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.178553]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.179060]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.179490]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.181811]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.182385]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.182776]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.184558]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.186254]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.186817]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.189654]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.190360]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.190926]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.509704]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.510221]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.510615]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.511903]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.512460]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.512845]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.514678]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.515295]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.515778]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.518007]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.518676]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.519213]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.521409]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.521898]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.522263]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.523476]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.523939]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.524908]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.526427]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.527037]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.527538]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.529338]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.530004]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.530542]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.535373]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.535896]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.536437]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.537873]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.538350]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.538711]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.540586]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.541570]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.542333]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.543951]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.544693]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.545222]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.558151]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.558785]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.559219]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.560753]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.561248]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.561845]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.563362]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.564316]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.564868]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.566912]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.567593]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.568266]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.570556]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.571046]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.571428]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.573003]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.573484]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.573846]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.575472]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.576191]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.576782]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.578463]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.579186]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.579770]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.622814]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.623338]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.623777]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.628992]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.629519]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.629902]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.631619]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.632694]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.633249]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.635055]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.635715]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.636412]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.638419]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.638881]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.639239]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.640874]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.641333]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.641701]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.643198]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.643858]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.644520]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.646565]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.647272]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.647810]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.652684]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.653173]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.653556]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.654740]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.655223]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.655596]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.657450]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.658075]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.658594]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.660349]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.661024]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.661553]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.673575]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.674048]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.674384]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.675580]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.676437]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.676835]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.678332]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.678942]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.679428]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.681511]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.682181]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.682702]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.684482]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.685016]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.685411]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.686591]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.687064]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.687428]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.689059]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.689698]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.690208]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.691792]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.692544]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   28.693073]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.121236]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.121765]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.122219]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.123966]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.125048]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.125287]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.126845]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.127476]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.128662]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.130292]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.130999]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.131614]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.133944]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.134458]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.134865]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.136861]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.137405]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.137811]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.139348]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.140667]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.141243]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.142992]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.143724]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.145004]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.150322]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.150860]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.151308]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.153147]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.153739]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.154238]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.155888]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.157401]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.158072]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.159845]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.161234]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.161897]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.178390]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.178908]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.179335]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.180858]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.181301]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.181485]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.182982]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.183560]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.183880]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.186235]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.186874]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.187238]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.188667]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.189117]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.189308]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.190587]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.191021]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.191218]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.192727]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.193315]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.193638]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.195384]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.196113]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.196704]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.245220]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.245748]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.246259]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.247538]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.248864]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.249317]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.250891]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.251531]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.252640]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.254356]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.255018]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.255406]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.914650]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.915168]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.915373]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.916669]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.917143]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.917340]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.919100]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.919721]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.920193]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.922055]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.922714]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.923094]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.924676]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.925141]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.925341]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.926757]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.927227]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.927428]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.928951]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.929567]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.929905]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.931848]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.932584]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.932954]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.936782]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.937245]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.937438]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.938799]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.939260]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.939468]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.941491]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.942123]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.942472]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.944066]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.944748]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.945755]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.956856]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.957332]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.957523]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.958673]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.959122]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.959320]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.960796]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.961405]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.961752]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.963686]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.964406]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.964787]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.966345]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.966857]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.967064]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.968201]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.968684]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.968887]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.970566]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.971181]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.971520]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.973204]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.973885]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   31.974257]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.018292]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.018809]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.019005]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.022624]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.023101]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.023300]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.026703]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.027335]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.027661]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.029376]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.030061]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.030431]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.032774]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.033273]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.033469]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.035174]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.035645]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.035839]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.037889]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.038535]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.038885]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.040682]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.041338]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.041707]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.046050]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.046536]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.046737]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.047987]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.049113]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.049346]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.051850]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.052602]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.052958]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.055202]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.055892]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.056950]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.068294]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.068781]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.068997]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.070113]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.070575]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.070780]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.072960]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.073624]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.073953]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.075647]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.077031]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.078251]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.079660]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.080356]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.080659]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.082409]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.082899]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.083146]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.084648]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.085309]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.085661]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.088102]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.088822]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.089198]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.107495]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.108003]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.108343]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.111130]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.111603]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.111797]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.113360]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.113992]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.114364]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.117285]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.117956]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.118322]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.121112]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.121578]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.121772]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.122898]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.123355]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.123558]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   32.164102] Bluetooth: RFCOMM TTY layer initialized
+[   32.164124] Bluetooth: RFCOMM socket layer initialized
+[   32.164142] Bluetooth: RFCOMM ver 1.11
+[   33.920678]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.921161]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.921363]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.922471]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.922903]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.923099]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.924576]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.925457]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.925928]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.927694]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.928387]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.928756]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.930649]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.931105]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.931300]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.932620]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.933075]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.933282]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.935018]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.935612]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.935931]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.939553]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.940330]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.940745]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.946620]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.947234]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.947444]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.949226]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.949686]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.949886]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.951272]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.951862]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.953018]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.954625]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.955261]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.955645]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.967976]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.968688]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.968910]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.970646]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.971098]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.971297]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.973281]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.973882]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.974214]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.975801]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.977026]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.977399]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.978641]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.979123]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.979329]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.981108]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.981569]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.981772]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.983114]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.983707]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.984779]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.986281]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.986932]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   33.987300]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.025434]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.025906]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.026100]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.027187]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.027622]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.027833]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.029922]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.030516]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.030842]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.032518]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.033153]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.033513]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.035852]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.036436]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.036650]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.037758]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.038192]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.038387]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.039774]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.040671]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.041096]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.042709]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.043348]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.043712]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.047225]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.047694]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.047910]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.049021]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.049465]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.049667]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.050989]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.051772]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.052311]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.053844]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.054479]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.054867]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.066115]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.066578]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.066775]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.068097]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.068552]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.068745]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.070138]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.070730]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.071075]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.072923]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.073578]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.073937]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.075132]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.075607]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.075812]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.076939]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.077384]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.077600]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.078926]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.079515]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.079844]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.081419]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.082059]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   34.082424]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.036852]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.037331]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.037700]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.038923]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.039356]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.039705]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.042128]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.042747]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.043228]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.045026]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.045694]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.046212]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.047864]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.048448]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.048802]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.050010]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.050470]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.050814]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.052658]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.053279]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.053769]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.055418]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.056179]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.056716]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.061103]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.061590]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.061972]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.063089]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.063557]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.063925]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.065409]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.066034]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.066524]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.068450]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.069127]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.069640]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.081454]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.081927]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.082292]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.083441]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.083905]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.084418]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.085856]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.086467]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.086948]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.088916]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.089576]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.090101]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.091368]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.091858]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.092338]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.093457]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.093925]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.094275]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.095659]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.096360]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.096860]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.098465]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.099129]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   37.099641]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.069138]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.069679]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.070025]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.071213]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.071754]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.072324]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.073763]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.074430]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.075047]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.076965]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.077621]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.078007]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.081918]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.082411]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.082663]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.083822]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.084541]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.085026]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.086611]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.087246]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.087844]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.089734]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.090456]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.091098]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.096171]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.096713]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.097196]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.098775]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.099276]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.099744]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.101618]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.102276]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.102864]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.105104]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.105809]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.106620]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.119170]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.119671]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.120453]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.121648]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.122146]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.122584]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.124535]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.125222]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.125804]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.127584]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.128402]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.129037]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.130414]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.130922]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.131379]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.132721]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.133225]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.133682]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.135185]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.135838]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.136538]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.138191]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.138894]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.139510]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.403989]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.405237]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.405649]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.406881]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.407589]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.408391]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.410133]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.410864]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.411414]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.413857]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.414545]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.415101]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.417225]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.417701]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.418078]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.419521]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.419996]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.421220]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.422766]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.423399]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.423937]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.426053]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.426733]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.427288]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.431981]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.432771]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.433114]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.434283]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.434754]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.435079]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.436906]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.437550]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.438076]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.439734]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.440754]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.441331]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.454935]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.455420]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.455763]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.457468]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.457950]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.458283]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.459816]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.460801]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.461320]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.463078]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.463751]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.464775]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.466157]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.466642]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.467005]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.468579]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.469065]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.469417]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.470866]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.471494]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.472432]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.474029]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.474713]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.475273]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.512695]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.513174]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.513530]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.514852]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.515326]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.515695]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.518562]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.519182]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.519689]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.521805]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.522472]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.523026]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.525174]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.525646]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.525971]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.527202]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.527682]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.528461]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.529934]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.530568]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.531076]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.533255]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.533936]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.534458]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.539339]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.539837]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.540533]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.541654]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.542137]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.542483]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.543957]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.545003]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.545520]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.547192]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.547874]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   40.548941]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.945646]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.946144]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.946375]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.948888]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.949383]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.949587]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.951784]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.952471]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.952818]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.954432]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.955071]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.955444]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.956995]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.957444]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.957638]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.958727]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.959162]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.959365]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.960818]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.961413]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.961741]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.963352]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.963997]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.964509]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.968313]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.968786]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.968986]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.970023]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.970464]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.970669]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.971999]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.972637]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.972980]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.974525]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.975161]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.975581]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.986365]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.986828]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.987023]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.988189]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.988627]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.988839]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.990296]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.990891]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.991228]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.992931]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.993581]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.993950]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.995202]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.995683]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.995894]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.997016]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.997464]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.997665]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.999037]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.999634]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   42.999973]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.001615]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.002300]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.002715]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.042534]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.043043]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.043244]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.044557]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.045018]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.045216]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.046963]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.047580]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.047916]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.049914]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.050584]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.050966]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.052671]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.053136]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.053344]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.054637]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.055149]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.055443]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.057545]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.058450]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.058883]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.061573]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.062671]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.063127]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.066812]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.067301]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.067651]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.069889]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.070653]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.070935]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.073182]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.074231]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.074957]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.076599]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.077268]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.077646]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.089578]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.090043]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.090239]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.091361]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.091825]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.092133]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.093547]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.094166]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.094499]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.096177]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.096839]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.097361]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.099552]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.100562]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.101017]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.103103]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.103801]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.104403]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.105829]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.106434]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.106777]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.108420]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.109090]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.109473]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.123712]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.124925]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.125468]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.127243]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.127997]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.128501]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.130549]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.131632]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.132173]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.133910]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.135452]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.136273]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.138570]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.139327]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.139624]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.141353]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.141847]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.142055]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.143494]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.144209]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.144586]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.146873]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.147883]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.148585]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.153880]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.154361]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.154569]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.155653]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.156194]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.156463]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.157833]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.158466]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.158820]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.160455]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.161133]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   43.161512]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.013224]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.013694]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.014058]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.015224]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.015676]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.016535]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.017978]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.018588]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.019077]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.021091]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.021751]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.022277]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.023861]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.024683]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.025038]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.026201]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.026657]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.027008]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.028856]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.029478]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.029958]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.031613]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.032355]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.032876]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.036937]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.037423]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.037805]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.038997]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.039461]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.039889]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.041365]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.041980]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.042466]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.044086]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.044751]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.045276]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.056662]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.057152]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.057514]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.058657]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.059112]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.059465]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.060990]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.061606]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.062100]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.063751]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.064493]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.065023]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.066292]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.066754]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.067117]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.068269]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.068739]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.069096]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.070485]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.071093]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.071589]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.073260]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.073927]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.074442]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.353912]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.354396]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.354593]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.355698]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.357020]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.357415]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.358838]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.359453]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.359769]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.361433]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.362079]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.362451]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.364460]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.365189]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.365457]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.367208]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.367927]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.368410]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.370444]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.371038]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.371366]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.373861]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.374526]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.374896]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.378965]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.379726]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.380005]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.383466]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.384593]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.385032]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.386357]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.386967]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.387305]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.390025]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.390683]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.391042]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.404138]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.404603]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.404812]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.405919]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.406353]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.406549]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.407940]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.409065]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.409414]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.411041]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.411977]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.414768]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.417163]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.417880]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.418161]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.419268]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.419707]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.419905]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.421801]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.422407]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.422730]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.424622]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.425297]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.425666]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.463076]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.463699]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.463932]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.466235]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.466974]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.467227]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.471047]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.471653]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.471970]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.474437]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.475109]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.475478]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.477504]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.477984]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.478221]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.479937]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.481195]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.481492]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.483784]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.484919]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.485273]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.486919]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.487557]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.487920]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.491994]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.493315]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.493543]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.494660]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.495329]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.495599]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.498175]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.499069]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.499483]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.503028]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.503687]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.504386]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.515722]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.516815]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.517151]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.518571]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.519013]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.519218]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.520807]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.521406]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.521744]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.523372]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.524115]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.524563]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.525887]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.526381]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.526578]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.527684]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.528542]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.528917]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.530912]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.531808]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.534201]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.536226]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.536866]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.537232]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.554319]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.554811]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.554998]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.558482]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.558943]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.559133]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.560962]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.561570]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.561919]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.563842]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.564668]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.565052]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.566907]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.567384]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.567874]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.569541]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.570014]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.570210]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.572958]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.573626]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.573941]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.575629]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.576386]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.576799]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.582017]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.582813]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.583089]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.584776]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.585540]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.585837]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.587859]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.589041]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.589485]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.591487]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.592217]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.592642]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.603552]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.604096]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.605300]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.606536]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.606974]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.607166]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.608695]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.609287]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.609617]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.611333]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.611971]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.612628]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.613889]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.614364]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.614558]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.615666]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.616203]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.616451]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.617865]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.618458]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.618783]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.620470]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.621111]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.621473]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.632818]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.633296]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.633483]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.634761]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.635438]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.635704]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.638728]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.639615]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.640362]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.642341]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.642979]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.643395]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.645921]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.646378]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.646567]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.647736]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.648314]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.648580]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.650004]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.650606]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.650933]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.652699]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.653441]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.654027]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.658126]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.658596]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.658792]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.659867]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.660451]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.660676]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.662028]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.662618]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.662938]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.664560]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.665202]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.665565]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.676757]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.677542]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.677814]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.679595]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.680145]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.680411]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.681920]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.682515]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.682849]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.684667]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.685320]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.685690]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.686976]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.687457]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.687656]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.688863]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.689321]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.689537]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.690877]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.691501]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.691830]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.694006]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.694645]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.695003]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.705998]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.706480]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.706677]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.707889]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.708427]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.708634]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.710074]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.710660]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.710990]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.712772]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.713436]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.713803]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.715307]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.715745]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.715943]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.717519]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.717966]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.718158]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.719593]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.720293]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.720669]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.722276]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.722911]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.723272]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.727026]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.727763]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.728148]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.729802]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.730525]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.730816]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.733140]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.733930]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.734278]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.735826]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.736564]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.736947]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.747843]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.748398]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.748604]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.749805]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.750245]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.750441]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.751851]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.752534]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.752861]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.754487]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.755122]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.755484]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.757957]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.758439]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.758673]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.759733]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.760257]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.760499]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.761849]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.762418]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.762751]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.764528]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.765176]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.765567]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.776359]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.776838]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.777030]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.778149]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.778576]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.778768]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.781790]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.782445]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.782764]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.784601]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.785255]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.785621]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.787200]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.787661]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.787852]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.789660]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.790109]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.790298]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.791991]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.792992]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.793439]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.795782]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.796947]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.797479]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.801377]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.801843]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.802049]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.803247]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.803683]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.803881]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.806082]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.806690]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.807013]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.808695]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.809367]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.809737]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.825684]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.826155]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.826346]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.827540]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.828350]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.828693]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.830674]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.831547]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.831976]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.835047]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.835695]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.837044]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.838502]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.838962]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.839202]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.840340]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.840787]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.840982]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.842360]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.842966]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.843295]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.845057]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.845952]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[   46.846406]  Audio Port: ASoC: no backend DAIs enabled for Audio Port
+[  153.227476] RTL8723BS: send eapol packet
+[  153.230691] RTL8723BS: set group key camid:6, addr:5c:49:79:74:3d:1a, kid:2, type:AES
+[  753.236538] RTL8723BS: send eapol packet
+[  753.237788] RTL8723BS: set group key camid:5, addr:5c:49:79:74:3d:1a, kid:1, type:AES
+[ 1353.245239] RTL8723BS: send eapol packet
+[ 1353.247396] RTL8723BS: set group key camid:6, addr:5c:49:79:74:3d:1a, kid:2, type:AES
+[ 1543.139955] RPM wakelock ref not held during HW access
+[ 1543.140119] ------------[ cut here ]------------
+[ 1543.140381] WARNING: CPU: 1 PID: 17 at /home/kernel/COD/linux/drivers/gpu/drm/i915/intel_drv.h:1784 intel_uncore_forcewake_get.part.7+0x96/0xa0 [i915]
+[ 1543.140385] Modules linked in: binfmt_misc rfcomm bnep snd_soc_sst_bytcr_rt5651 axp288_adc axp288_fuel_gauge cmdlinepart intel_spi_platform industrialio intel_spi spi_nor axp288_charger mtd axp20x_pek extcon_axp288 gpio_keys nls_iso8859_1 intel_rapl intel_powerclamp coretemp kvm_intel kvm irqbypass punit_atom_debug crct10dif_pclmul crc32_pclmul ghash_clmulni_intel pcbc aesni_intel aes_x86_64 crypto_simd glue_helper cryptd intel_cstate input_leds joydev snd_intel_sst_acpi mei_txe snd_soc_rt5670 snd_intel_sst_core mei snd_soc_rt5645 snd_soc_sst_atom_hifi2_platform processor_thermal_device lpc_ich intel_soc_dts_iosf snd_hdmi_lpe_audio snd_soc_rt5640 snd_soc_sst_match snd_soc_rt5651 snd_soc_rl6231 snd_soc_core snd_compress ac97_bus snd_pcm_dmaengine snd_pcm dw_dmac snd_seq_midi dw_dmac_core intel_hid
+[ 1543.140675]  r8723bs(C) snd_seq_midi_event extcon_intel_int3496 sparse_keymap hci_uart snd_rawmidi btbcm intel_soc_pmic_bxtwc serdev intel_pmc_ipc axp20x_i2c btqca axp20x btintel bluetooth cfg80211 snd_seq silead ecdh_generic snd_seq_device snd_timer intel_cht_int33fe snd soundcore 8250_dw spi_pxa2xx_platform int3406_thermal soc_button_array int3403_thermal dptf_power mac_hid int3400_thermal int340x_thermal_zone acpi_thermal_rel intel_int0002_vgpio acpi_pad parport_pc ppdev lp parport autofs4 overlay hid_generic usbhid hid i915 mmc_block i2c_algo_bit drm_kms_helper syscopyarea sysfillrect sysimgblt fb_sys_fops drm video pwm_lpss_platform pwm_lpss sdhci_acpi sdhci
+[ 1543.140979] CPU: 1 PID: 17 Comm: kworker/1:0 Tainted: G        WC      4.13.0-041300rc7-generic #201708272131
+[ 1543.140987] Hardware name: CHUWI INNOVATION AND TECHNOLOGY(SHENZHEN)CO.LTD Hi10 pro tablet/Cherry Trail CR, BIOS 5.11 11/10/2016
+[ 1543.141006] Workqueue: events fuel_gauge_status_monitor [axp288_fuel_gauge]
+[ 1543.141017] task: ffff9a587a4a9600 task.stack: ffffa66a006ec000
+[ 1543.141235] RIP: 0010:intel_uncore_forcewake_get.part.7+0x96/0xa0 [i915]
+[ 1543.141242] RSP: 0018:ffffa66a006efad8 EFLAGS: 00010286
+[ 1543.141252] RAX: 000000000000002a RBX: ffff9a5871978000 RCX: ffffffffa80601c8
+[ 1543.141258] RDX: 0000000000000000 RSI: 0000000000000092 RDI: 0000000000000247
+[ 1543.141263] RBP: ffffa66a006efaf8 R08: 000000000000002a R09: 0000000000000926
+[ 1543.141269] R10: 0000000000000001 R11: 0000000000000000 R12: 0000000000000000
+[ 1543.141274] R13: 0000000000000001 R14: 0000000000000007 R15: 0000000000000000
+[ 1543.141285] FS:  0000000000000000(0000) GS:ffff9a587fc80000(0000) knlGS:0000000000000000
+[ 1543.141291] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 1543.141298] CR2: 0000558de37ae840 CR3: 000000011e209000 CR4: 00000000001006e0
+[ 1543.141305] Call Trace:
+[ 1543.141534]  i915_pmic_bus_access_notifier+0x4b/0x60 [i915]
+[ 1543.141554]  notifier_call_chain+0x4a/0x70
+[ 1543.141572]  blocking_notifier_call_chain+0x43/0x60
+[ 1543.141589]  iosf_mbi_call_pmic_bus_access_notifier_chain+0x1b/0x20
+[ 1543.141606]  baytrail_i2c_acquire+0x69/0x230
+[ 1543.141620]  i2c_dw_acquire_lock+0x1f/0x50
+[ 1543.141631]  i2c_dw_xfer+0x82/0x240
+[ 1543.141644]  __i2c_transfer+0x11d/0x400
+[ 1543.141654]  i2c_transfer+0x50/0xd0
+[ 1543.141669]  regmap_i2c_read+0x6d/0xa0
+[ 1543.141682]  ? update_load_avg+0x426/0x590
+[ 1543.141694]  _regmap_raw_read+0xa0/0x1e0
+[ 1543.141702]  ? _regmap_raw_read+0xa0/0x1e0
+[ 1543.141718]  ? sched_clock_cpu+0x11/0xb0
+[ 1543.141727]  _regmap_bus_read+0x2a/0x60
+[ 1543.141736]  _regmap_read+0x64/0x120
+[ 1543.141750]  ? sched_clock+0x9/0x10
+[ 1543.141759]  regmap_read+0x39/0x60
+[ 1543.141774]  fuel_gauge_reg_readb.isra.8+0x40/0x90 [axp288_fuel_gauge]
+[ 1543.141788]  fuel_gauge_get_status+0x2d/0x100 [axp288_fuel_gauge]
+[ 1543.141801]  fuel_gauge_status_monitor+0x16/0x40 [axp288_fuel_gauge]
+[ 1543.141815]  process_one_work+0x1e7/0x410
+[ 1543.141827]  worker_thread+0x4a/0x410
+[ 1543.141842]  kthread+0x125/0x140
+[ 1543.141853]  ? process_one_work+0x410/0x410
+[ 1543.141862]  ? kthread_create_on_node+0x70/0x70
+[ 1543.141878]  ret_from_fork+0x25/0x30
+[ 1543.141893] Code: 05 98 86 11 00 01 e8 db 7f 0c e7 0f ff eb a5 80 3d 87 86 11 00 00 75 a6 48 c7 c7 98 83 30 c0 c6 05 77 86 11 00 01 e8 bb 7f 0c e7 <0f> ff eb 8f 66 0f 1f 44 00 00 0f 1f 44 00 00 55 48 83 fe 01 48 
+[ 1543.142107] ---[ end trace 2fcbe3b43dfe19d2 ]---
+[ 1953.250498] RTL8723BS: send eapol packet
+[ 1953.250609] RTL8723BS: set group key camid:5, addr:5c:49:79:74:3d:1a, kid:1, type:AES
+[ 2553.258175] RTL8723BS: send eapol packet
+[ 2553.260656] RTL8723BS: set group key camid:6, addr:5c:49:79:74:3d:1a, kid:2, type:AES
