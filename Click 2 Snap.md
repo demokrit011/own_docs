@@ -16,6 +16,7 @@ As always, we need to get the info we need from various blogs, launchpad, github
 * https://wayback.archive.org/web/20161119000342/http://developer.ubuntu.com/en/
 * https://packages.ubuntu.com/xenial/ubuntu-sdk-libs code behind frameworks?
 * http://notyetthere.org/on-manually-creating-click-packages/
+* https://launchpad.net/ubuntu/+source/ubuntu-touch-meta
 
 #### Configuration files
 With this expression, i am meaning the files inside the source code, where the specific interactions/installation of the click package in question is stated. Which **dependepncies, hooks, permissions are necessary?**
@@ -46,6 +47,16 @@ The Core App Devs already ported some apps (ate least to some part) to snap so w
 * https://launchpad.net/~phablet-team
 * https://launchpad.net/ubuntu-system-apps
 * https://docs.ubuntu.com/phone/en/platform/guides/app-confinement
+* https://packages.ubuntu.com/xenial/ubuntu-sdk-libs
+
+#### Generell lessons
+
+Assuming the canonical devs had the following working history:
+1. Apps were running as clicks on a modified minimal ubuntu + stable phone overlay (meta-click)
+2. Apps were made running on ubuntu minimal + stable phone overlay (core-snap) as big snaps with all dependencies
+3. Apps were made dependent on plattform snap whith UITK, Ubuntu-sdk-libs, [etc.](https://git.launchpad.net/ubuntu-app-platform/tree/snapcraft.yaml) as smaller snaps with individual dependencies
+
+This means that by having the stable-phone overlay + ubuntu-app-platform packages, we should be able (idealy) to build and run any current click package by compliling it locally.
 
 #### Individual transition stories
 
