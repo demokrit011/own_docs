@@ -1,0 +1,582 @@
+yunit@yunitVM:~$ cd ~
+yunit@yunitVM:~$ ls
+Desktop    Downloads         Music     Public     Videos
+Documents  examples.desktop  Pictures  Templates
+yunit@yunitVM:~$ bzr branch lp:ubuntu-clock-app
+The program 'bzr' is currently not installed. You can install it by typing:
+sudo apt install bzr
+yunit@yunitVM:~$ sudo apt install bzr
+[sudo] password for yunit: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  javascript-common libjs-jquery python-bzrlib python-configobj python-crypto
+  python-dbus python-gi python-gpgme python-httplib2 python-keyring
+  python-launchpadlib python-lazr.restfulclient python-lazr.uri python-oauth
+  python-pkg-resources python-secretstorage python-simplejson python-six
+  python-wadllib python-zope.interface
+Suggested packages:
+  bzr-doc bzrtools python-bzrlib.tests apache2 | lighttpd | httpd
+  python-bzrlib-dbg python-kerberos python-paramiko python-pycurl
+  python-configobj-doc python-crypto-dbg python-crypto-doc python-dbus-doc
+  python-dbus-dbg python-gi-cairo python-fs python-gdata python-kde4
+  python-keyczar python-testresources python-setuptools
+  python-secretstorage-doc
+The following NEW packages will be installed:
+  bzr javascript-common libjs-jquery python-bzrlib python-configobj
+  python-crypto python-dbus python-gi python-gpgme python-httplib2
+  python-keyring python-launchpadlib python-lazr.restfulclient python-lazr.uri
+  python-oauth python-pkg-resources python-secretstorage python-simplejson
+  python-six python-wadllib python-zope.interface
+0 upgraded, 21 newly installed, 0 to remove and 202 not upgraded.
+Need to get 2.678 kB of archives.
+After this operation, 14,6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-six all 1.10.0-3 [10,9 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-configobj all 5.0.6-2 [34,2 kB]
+Get:3 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-bzrlib amd64 2.7.0-2ubuntu3.1 [1.390 kB]
+Get:4 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 bzr all 2.7.0-2ubuntu3.1 [37,3 kB]
+Get:5 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 javascript-common all 11 [6.066 B]
+Get:6 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 libjs-jquery all 1.11.3+dfsg-4 [161 kB]
+Get:7 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-crypto amd64 2.6.1-6ubuntu0.16.04.2 [246 kB]
+Get:8 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-dbus amd64 1.2.0-3 [83,5 kB]
+Get:9 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-gi amd64 3.20.0-0ubuntu1 [194 kB]
+Get:10 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-gpgme amd64 0.3-1.1 [24,6 kB]
+Get:11 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-httplib2 all 0.9.1+dfsg-1 [34,2 kB]
+Get:12 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-keyring all 7.3-1ubuntu1 [43,7 kB]
+Get:13 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-pkg-resources all 20.7.0-1 [108 kB]
+Get:14 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-lazr.uri all 1.0.3-2build1 [13,6 kB]
+Get:15 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-simplejson amd64 3.8.1-1ubuntu2 [60,4 kB]
+Get:16 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-wadllib all 1.3.2-3 [28,2 kB]
+Get:17 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-zope.interface amd64 4.1.3-1build1 [81,0 kB]
+Get:18 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-oauth all 1.0.1-5 [12,9 kB]
+Get:19 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-lazr.restfulclient all 0.13.4-5ubuntu1 [50,7 kB]
+Get:20 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-launchpadlib all 1.10.3-3ubuntu0.1 [45,6 kB]
+Get:21 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 python-secretstorage all 2.1.3-1 [12,3 kB]
+Fetched 2.678 kB in 2s (1.148 kB/s)         
+Selecting previously unselected package python-six.
+(Reading database ... 222159 files and directories currently installed.)
+Preparing to unpack .../python-six_1.10.0-3_all.deb ...
+Unpacking python-six (1.10.0-3) ...
+Selecting previously unselected package python-configobj.
+Preparing to unpack .../python-configobj_5.0.6-2_all.deb ...
+Unpacking python-configobj (5.0.6-2) ...
+Selecting previously unselected package python-bzrlib.
+Preparing to unpack .../python-bzrlib_2.7.0-2ubuntu3.1_amd64.deb ...
+Unpacking python-bzrlib (2.7.0-2ubuntu3.1) ...
+Selecting previously unselected package bzr.
+Preparing to unpack .../bzr_2.7.0-2ubuntu3.1_all.deb ...
+Unpacking bzr (2.7.0-2ubuntu3.1) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../libjs-jquery_1.11.3+dfsg-4_all.deb ...
+Unpacking libjs-jquery (1.11.3+dfsg-4) ...
+Selecting previously unselected package python-crypto.
+Preparing to unpack .../python-crypto_2.6.1-6ubuntu0.16.04.2_amd64.deb ...
+Unpacking python-crypto (2.6.1-6ubuntu0.16.04.2) ...
+Selecting previously unselected package python-dbus.
+Preparing to unpack .../python-dbus_1.2.0-3_amd64.deb ...
+Unpacking python-dbus (1.2.0-3) ...
+Selecting previously unselected package python-gi.
+Preparing to unpack .../python-gi_3.20.0-0ubuntu1_amd64.deb ...
+Unpacking python-gi (3.20.0-0ubuntu1) ...
+Selecting previously unselected package python-gpgme.
+Preparing to unpack .../python-gpgme_0.3-1.1_amd64.deb ...
+Unpacking python-gpgme (0.3-1.1) ...
+Selecting previously unselected package python-httplib2.
+Preparing to unpack .../python-httplib2_0.9.1+dfsg-1_all.deb ...
+Unpacking python-httplib2 (0.9.1+dfsg-1) ...
+Selecting previously unselected package python-keyring.
+Preparing to unpack .../python-keyring_7.3-1ubuntu1_all.deb ...
+Unpacking python-keyring (7.3-1ubuntu1) ...
+Selecting previously unselected package python-pkg-resources.
+Preparing to unpack .../python-pkg-resources_20.7.0-1_all.deb ...
+Unpacking python-pkg-resources (20.7.0-1) ...
+Selecting previously unselected package python-lazr.uri.
+Preparing to unpack .../python-lazr.uri_1.0.3-2build1_all.deb ...
+Unpacking python-lazr.uri (1.0.3-2build1) ...
+Selecting previously unselected package python-simplejson.
+Preparing to unpack .../python-simplejson_3.8.1-1ubuntu2_amd64.deb ...
+Unpacking python-simplejson (3.8.1-1ubuntu2) ...
+Selecting previously unselected package python-wadllib.
+Preparing to unpack .../python-wadllib_1.3.2-3_all.deb ...
+Unpacking python-wadllib (1.3.2-3) ...
+Selecting previously unselected package python-zope.interface.
+Preparing to unpack .../python-zope.interface_4.1.3-1build1_amd64.deb ...
+Unpacking python-zope.interface (4.1.3-1build1) ...
+Selecting previously unselected package python-oauth.
+Preparing to unpack .../python-oauth_1.0.1-5_all.deb ...
+Unpacking python-oauth (1.0.1-5) ...
+Selecting previously unselected package python-lazr.restfulclient.
+Preparing to unpack .../python-lazr.restfulclient_0.13.4-5ubuntu1_all.deb ...
+Unpacking python-lazr.restfulclient (0.13.4-5ubuntu1) ...
+Selecting previously unselected package python-launchpadlib.
+Preparing to unpack .../python-launchpadlib_1.10.3-3ubuntu0.1_all.deb ...
+Unpacking python-launchpadlib (1.10.3-3ubuntu0.1) ...
+Selecting previously unselected package python-secretstorage.
+Preparing to unpack .../python-secretstorage_2.1.3-1_all.deb ...
+Unpacking python-secretstorage (2.1.3-1) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up python-six (1.10.0-3) ...
+Setting up python-configobj (5.0.6-2) ...
+Setting up python-bzrlib (2.7.0-2ubuntu3.1) ...
+Setting up bzr (2.7.0-2ubuntu3.1) ...
+Setting up javascript-common (11) ...
+Setting up libjs-jquery (1.11.3+dfsg-4) ...
+Setting up python-crypto (2.6.1-6ubuntu0.16.04.2) ...
+Setting up python-dbus (1.2.0-3) ...
+Remove stale byte-compiled files...
+Setting up python-gi (3.20.0-0ubuntu1) ...
+Setting up python-gpgme (0.3-1.1) ...
+Setting up python-httplib2 (0.9.1+dfsg-1) ...
+Setting up python-keyring (7.3-1ubuntu1) ...
+Setting up python-pkg-resources (20.7.0-1) ...
+Setting up python-lazr.uri (1.0.3-2build1) ...
+Setting up python-simplejson (3.8.1-1ubuntu2) ...
+Setting up python-wadllib (1.3.2-3) ...
+Setting up python-zope.interface (4.1.3-1build1) ...
+Setting up python-oauth (1.0.1-5) ...
+Setting up python-lazr.restfulclient (0.13.4-5ubuntu1) ...
+Setting up python-launchpadlib (1.10.3-3ubuntu0.1) ...
+Setting up python-secretstorage (2.1.3-1) ...
+yunit@yunitVM:~$ bzr branch lp:ubuntu-clock-app
+You have not informed bzr of your Launchpad ID, and you must do this to
+write to Launchpad or access private data.  See "bzr help launchpad-login".
+Branched 511 revisions.                                                        
+yunit@yunitVM:~$ ls
+Desktop    Downloads         Music     Public     ubuntu-clock-app
+Documents  examples.desktop  Pictures  Templates  Videos
+yunit@yunitVM:~$ cd ubuntu-clock-app/
+yunit@yunitVM:~/ubuntu-clock-app$ ls
+app                                    README.autopilot
+AUTHORS                                README.developers
+backend                                README.mergeproposal
+clock.wrapper                          README.translations
+CMakeLists.txt                         README.unittest
+com.ubuntu.clock_clock.url-dispatcher  setup
+COPYING                                snap
+debian                                 snapcraft.yaml
+manifest.json.in                       tests
+po                                     ubuntu-clock-app.desktop.in.in
+README                                 ubuntu-clock-app.json
+yunit@yunitVM:~/ubuntu-clock-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Setting BZR_SOURCE to lp:ubuntu-clock-app
+-- Configuring manifest.json
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/ubuntu-clock-app
+yunit@yunitVM:~/ubuntu-clock-app$ ls
+app                                    po
+AUTHORS                                README
+backend                                README.autopilot
+clock.wrapper                          README.developers
+CMakeCache.txt                         README.mergeproposal
+CMakeFiles                             README.translations
+cmake_install.cmake                    README.unittest
+CMakeLists.txt                         setup
+com.ubuntu.clock_clock.url-dispatcher  snap
+COPYING                                snapcraft.yaml
+CTestTestfile.cmake                    tests
+debian                                 ubuntu-clock-app.desktop.in
+Makefile                               ubuntu-clock-app.desktop.in.in
+manifest.json                          ubuntu-clock-app.json
+manifest.json.in
+yunit@yunitVM:~/ubuntu-clock-app$ make -j4
+Scanning dependencies of target ubuntu-clock-app.desktop
+Scanning dependencies of target ubuntu-clock-app_alarm_QMlFiles
+Scanning dependencies of target ubuntu-clock-app_clock_QMlFiles
+Scanning dependencies of target ubuntu-clock-app_stopwatch_QMlFiles
+[  0%] Built target ubuntu-clock-app_stopwatch_QMlFiles
+[  0%] Built target ubuntu-clock-app_clock_QMlFiles
+[  0%] Built target ubuntu-clock-app_alarm_QMlFiles
+[  1%] Merging translations into ubuntu-clock-app.desktop...
+Scanning dependencies of target ubuntu-clock-app_components_QMlFiles
+Scanning dependencies of target ubuntu-clock-app_worldclock_QMlFiles
+Scanning dependencies of target ubuntu-clock-app_upstream_components_QMlFiles
+[  1%] Built target ubuntu-clock-app_worldclock_QMlFiles
+[  1%] Built target ubuntu-clock-app_components_QMlFiles
+Scanning dependencies of target stopwatch_automoc
+[  1%] Built target ubuntu-clock-app_upstream_components_QMlFiles
+[  2%] Automatic moc for target stopwatch
+Scanning dependencies of target worldclock_automoc
+Scanning dependencies of target alarm-qmldir
+[  3%] Automatic moc for target worldclock
+Generating moc_backend.cpp
+[  3%] Built target alarm-qmldir
+Generating moc_backend.cpp
+Scanning dependencies of target worldclock-qmldir
+[  3%] Built target worldclock-qmldir
+Generating moc_engine.cpp
+Generating moc_datetime.cpp
+Merging translations into ubuntu-clock-app.desktop.
+Scanning dependencies of target stopwatch-qmldir
+[  3%] Built target ubuntu-clock-app.desktop
+Scanning dependencies of target alarm_automoc
+[  3%] Built target stopwatch-qmldir
+Generating moc_generictimezonemodel.cpp
+[  4%] Automatic moc for target alarm
+Generating moc_formattime.cpp
+Scanning dependencies of target pofiles_65
+Generating moc_backend.cpp
+[  5%] Generating ru.gmo
+[  5%] Built target pofiles_65
+Generating moc_geolocation.cpp
+[  5%] Built target stopwatch_automoc
+Generating moc_settings.cpp
+Scanning dependencies of target pofiles_61
+Scanning dependencies of target pofiles_60
+[  6%] Generating sl.gmo
+[  7%] Generating fo.gmo
+[  7%] Built target pofiles_61
+[  7%] Built target pofiles_60
+Generating moc_sound.cpp
+Generating moc_jsontimezonemodel.cpp
+Scanning dependencies of target pofiles_56
+[  8%] Generating sc.gmo
+Scanning dependencies of target pofiles_55
+[ 10%] Generating pt_BR.gmo
+[ 10%] Built target pofiles_56
+[ 10%] Built target pofiles_55
+[ 10%] Built target alarm_automoc
+Scanning dependencies of target pofiles_52
+Generating moc_statictimezonemodel.cpp
+Scanning dependencies of target pofiles_51
+Scanning dependencies of target pofiles_50
+[ 11%] Generating vi.gmo
+[ 12%] Generating fa.gmo
+[ 13%] Generating en_GB.gmo
+[ 13%] Built target pofiles_50
+[ 13%] Built target pofiles_51
+[ 13%] Built target pofiles_52
+Generating moc_timezonemodel.cpp
+Scanning dependencies of target pofiles_19
+Scanning dependencies of target pofiles_39
+[ 14%] Generating ko.gmo
+Scanning dependencies of target pofiles_49
+[ 15%] Generating zh_TW.gmo
+[ 16%] Generating pa.gmo
+[ 16%] Built target pofiles_19
+[ 16%] Built target pofiles_39
+[ 16%] Built target pofiles_49
+Scanning dependencies of target pofiles_53
+Scanning dependencies of target pofiles_17
+[ 16%] Built target worldclock_automoc
+[ 17%] Generating hu.gmo
+Scanning dependencies of target pofiles_45
+[ 19%] Generating nb.gmo
+[ 20%] Generating ta.gmo
+Scanning dependencies of target pofiles_16
+[ 20%] Built target pofiles_53
+[ 21%] Built target pofiles_17
+[ 21%] Generating ia.gmo
+[ 21%] Built target pofiles_45
+Scanning dependencies of target pofiles_34
+Scanning dependencies of target pofiles_62
+[ 21%] Built target pofiles_16
+[ 22%] Generating az.gmo
+Scanning dependencies of target pofiles_15
+[ 23%] Generating he.gmo
+Scanning dependencies of target pofiles_2
+[ 24%] Generating pl.gmo
+[ 24%] Built target pofiles_34
+[ 24%] Built target pofiles_62
+[ 25%] Generating ms.gmo
+[ 25%] Built target pofiles_15
+Scanning dependencies of target pofiles_6
+Scanning dependencies of target pofiles_33
+[ 26%] Generating gd.gmo
+[ 26%] Built target pofiles_2
+Scanning dependencies of target pofiles_58
+[ 28%] Generating fi.gmo
+[ 29%] Generating aa.gmo
+Scanning dependencies of target pofiles_44
+[ 29%] Built target pofiles_6
+[ 30%] Generating kn.gmo
+[ 30%] Built target pofiles_33
+Scanning dependencies of target pofiles_20
+[ 30%] Built target pofiles_58
+Scanning dependencies of target pofiles_25
+[ 30%] Built target pofiles_44
+[ 31%] Generating nl.gmo
+Scanning dependencies of target pofiles_13
+[ 33%] Generating ca.gmo
+[ 32%] Generating km.gmo
+Scanning dependencies of target pofiles_12
+[ 33%] Built target pofiles_20
+[ 33%] Built target pofiles_25
+[ 34%] Generating shn.gmo
+[ 33%] Built target pofiles_13
+Scanning dependencies of target pofiles_47
+[ 35%] Generating ku.gmo
+[ 35%] Built target pofiles_12
+Scanning dependencies of target pofiles_11
+Scanning dependencies of target pofiles_32
+[ 37%] Generating cy.gmo
+Scanning dependencies of target pofiles_57
+[ 38%] Generating oc.gmo
+[ 38%] Built target pofiles_47
+[ 39%] Generating en_AU.gmo
+[ 39%] Built target pofiles_11
+[ 39%] Built target pofiles_32
+[ 39%] Built target pofiles_57
+Scanning dependencies of target pofiles_38
+Scanning dependencies of target pofiles_63
+[ 40%] Generating eo.gmo
+Scanning dependencies of target pofiles_9
+[ 41%] Generating sv.gmo
+Scanning dependencies of target pofiles_28
+[ 41%] Built target pofiles_63
+[ 41%] Built target pofiles_38
+[ 42%] Generating tk.gmo
+[ 43%] Generating ca@valencia.gmo
+[ 43%] Built target pofiles_9
+Scanning dependencies of target pofiles_59
+[ 43%] Built target pofiles_28
+Scanning dependencies of target pofiles_10
+[ 44%] Generating it.gmo
+Scanning dependencies of target pofiles_14
+Scanning dependencies of target pofiles_18
+[ 46%] Generating sk.gmo
+[ 47%] Generating ar.gmo
+[ 48%] Generating be.gmo
+[ 48%] Built target pofiles_10
+[ 48%] Built target pofiles_59
+[ 48%] Built target pofiles_14
+[ 48%] Built target pofiles_18
+Scanning dependencies of target com.ubuntu.clock.pot
+Scanning dependencies of target pofiles_5
+[ 49%] Generating translation template...
+[ 50%] Generating fr_CA.gmo
+Scanning dependencies of target pofiles_21
+Scanning dependencies of target pofiles_30
+[ 51%] Generating pt.gmo
+[ 52%] Built target pofiles_5
+[ 52%] Generating am.gmo
+Wrote ubuntu-clock-app.desktop.in.in.h
+[ 52%] Built target pofiles_21
+Scanning dependencies of target pofiles_3
+[ 52%] Built target pofiles_30
+../app/components/Circle.qml:18: warning: unterminated string literal
+../app/components/Circle.qml:46: warning: unterminated string literal
+[ 53%] Generating gl.gmo
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_31
+[ 55%] Generating br.gmo
+[ 56%] Generating fr.gmo
+[ 56%] Built target com.ubuntu.clock.pot
+[ 56%] Built target pofiles_3
+[ 56%] Built target pofiles_8
+Scanning dependencies of target pofiles_7
+Scanning dependencies of target pofiles_1
+[ 56%] Built target pofiles_31
+[ 58%] Generating tr.gmo
+[ 57%] Generating bg.gmo
+Scanning dependencies of target pofiles_35
+[ 59%] Generating my.gmo
+Scanning dependencies of target pofiles_4
+[ 59%] Built target pofiles_7
+[ 59%] Built target pofiles_35
+[ 59%] Built target pofiles_1
+[ 60%] Generating de.gmo
+Scanning dependencies of target pofiles_22
+[ 61%] Generating ro.gmo
+Scanning dependencies of target pofiles_23
+Scanning dependencies of target pofiles_46
+[ 61%] Built target pofiles_4
+[ 64%] Generating da.gmo
+[ 64%] Generating uk.gmo
+[ 64%] Built target pofiles_22
+[ 64%] Built target pofiles_23
+Scanning dependencies of target pofiles_24
+[ 64%] Built target pofiles_46
+[ 65%] Generating fur.gmo
+Scanning dependencies of target pofiles_64
+Scanning dependencies of target pofiles_26
+[ 66%] Generating ast.gmo
+Scanning dependencies of target pofiles_27
+[ 67%] Generating eu.gmo
+[ 68%] Generating el.gmo
+[ 68%] Built target pofiles_24
+[ 68%] Built target pofiles_26
+[ 68%] Built target pofiles_64
+[ 68%] Built target pofiles_27
+Scanning dependencies of target pofiles_54
+[ 69%] Generating es.gmo
+Scanning dependencies of target pofiles_48
+Scanning dependencies of target pofiles_29
+Scanning dependencies of target pofiles_36
+[ 70%] Generating id.gmo
+[ 71%] Generating bs.gmo
+[ 73%] Generating ug.gmo
+[ 73%] Built target pofiles_54
+[ 73%] Built target pofiles_48
+[ 73%] Built target pofiles_29
+Scanning dependencies of target pofiles_37
+[ 73%] Built target pofiles_36
+Scanning dependencies of target pofiles_42
+[ 74%] Generating sr.gmo
+Scanning dependencies of target pofiles_40
+[ 75%] Generating cs.gmo
+Scanning dependencies of target pofiles_41
+[ 76%] Generating zh_CN.gmo
+[ 76%] Built target pofiles_37
+[ 77%] Generating lv.gmo
+[ 77%] Built target pofiles_42
+Scanning dependencies of target pofiles_43
+[ 77%] Built target pofiles_40
+[ 78%] Generating ne.gmo
+Scanning dependencies of target tst_QmlFiles
+[ 77%] Built target pofiles_41
+[ 78%] Built target tst_QmlFiles
+Scanning dependencies of target tst_Utils
+Scanning dependencies of target stopwatch
+[ 78%] Built target pofiles_43
+[ 78%] Built target tst_Utils
+Scanning dependencies of target worldclock
+Scanning dependencies of target alarm
+[ 79%] Building CXX object backend/CMakeFiles/stopwatch.dir/modules/Stopwatch/engine.cpp.o
+[ 80%] Building CXX object backend/CMakeFiles/stopwatch.dir/modules/Stopwatch/backend.cpp.o
+[ 82%] Building CXX object backend/CMakeFiles/worldclock.dir/modules/WorldClock/backend.cpp.o
+[ 83%] Building CXX object backend/CMakeFiles/alarm.dir/modules/Alarm/backend.cpp.o
+[ 84%] Building CXX object backend/CMakeFiles/alarm.dir/modules/Alarm/settings.cpp.o
+[ 85%] Building CXX object backend/CMakeFiles/stopwatch.dir/modules/Stopwatch/formattime.cpp.o
+[ 86%] Building CXX object backend/CMakeFiles/worldclock.dir/modules/WorldClock/geolocation.cpp.o
+[ 87%] Building CXX object backend/CMakeFiles/stopwatch.dir/stopwatch_automoc.cpp.o
+[ 88%] Building CXX object backend/CMakeFiles/worldclock.dir/modules/WorldClock/datetime.cpp.o
+[ 89%] Linking CXX shared module Stopwatch/libstopwatch.so
+[ 91%] Building CXX object backend/CMakeFiles/worldclock.dir/modules/WorldClock/timezonemodel.cpp.o
+[ 91%] Built target stopwatch
+[ 92%] Building CXX object backend/CMakeFiles/worldclock.dir/modules/WorldClock/generictimezonemodel.cpp.o
+[ 93%] Building CXX object backend/CMakeFiles/alarm.dir/modules/Alarm/sound.cpp.o
+[ 94%] Building CXX object backend/CMakeFiles/worldclock.dir/modules/WorldClock/jsontimezonemodel.cpp.o
+[ 95%] Building CXX object backend/CMakeFiles/worldclock.dir/modules/WorldClock/statictimezonemodel.cpp.o
+[ 96%] Building CXX object backend/CMakeFiles/alarm.dir/alarm_automoc.cpp.o
+[ 97%] Building CXX object backend/CMakeFiles/worldclock.dir/worldclock_automoc.cpp.o
+[ 98%] Linking CXX shared module Alarm/libalarm.so
+[ 98%] Built target alarm
+[100%] Linking CXX shared module WorldClock/libworldclock.so
+[100%] Built target worldclock
+yunit@yunitVM:~/ubuntu-clock-app$ make install
+[  1%] Merging translations into ubuntu-clock-app.desktop...
+Merging translations into ubuntu-clock-app.desktop.
+[  1%] Built target ubuntu-clock-app.desktop
+[  1%] Built target ubuntu-clock-app_clock_QMlFiles
+[  1%] Built target ubuntu-clock-app_alarm_QMlFiles
+[  1%] Built target ubuntu-clock-app_stopwatch_QMlFiles
+[  1%] Built target ubuntu-clock-app_components_QMlFiles
+[  1%] Built target ubuntu-clock-app_worldclock_QMlFiles
+[  1%] Built target ubuntu-clock-app_upstream_components_QMlFiles
+[  2%] Automatic moc for target stopwatch
+[  2%] Built target stopwatch_automoc
+[  7%] Built target stopwatch
+[  8%] Automatic moc for target worldclock
+[  8%] Built target worldclock_automoc
+[ 19%] Built target worldclock
+[ 19%] Built target alarm-qmldir
+[ 19%] Built target worldclock-qmldir
+[ 19%] Built target stopwatch-qmldir
+[ 20%] Automatic moc for target alarm
+[ 20%] Built target alarm_automoc
+[ 25%] Built target alarm
+[ 26%] Built target pofiles_65
+[ 28%] Built target pofiles_61
+[ 29%] Built target pofiles_60
+[ 30%] Built target pofiles_56
+[ 31%] Built target pofiles_55
+[ 32%] Built target pofiles_52
+[ 33%] Built target pofiles_51
+[ 34%] Built target pofiles_50
+[ 35%] Built target pofiles_49
+[ 37%] Built target pofiles_19
+[ 38%] Built target pofiles_39
+[ 39%] Built target pofiles_53
+[ 40%] Built target pofiles_17
+[ 41%] Built target pofiles_45
+[ 42%] Built target pofiles_16
+[ 43%] Built target pofiles_34
+[ 44%] Built target pofiles_62
+[ 46%] Built target pofiles_15
+[ 47%] Built target pofiles_2
+[ 48%] Built target pofiles_6
+[ 49%] Built target pofiles_33
+[ 50%] Built target pofiles_58
+[ 51%] Built target pofiles_44
+[ 52%] Built target pofiles_20
+[ 53%] Built target pofiles_25
+[ 55%] Built target pofiles_13
+[ 56%] Built target pofiles_12
+[ 57%] Built target pofiles_47
+[ 58%] Built target pofiles_32
+[ 59%] Built target pofiles_11
+[ 60%] Built target pofiles_57
+[ 61%] Built target pofiles_38
+[ 62%] Built target pofiles_63
+[ 64%] Built target pofiles_9
+[ 65%] Built target pofiles_28
+[ 66%] Built target pofiles_59
+[ 67%] Built target pofiles_10
+[ 68%] Built target pofiles_14
+[ 69%] Built target pofiles_18
+[ 70%] Generating translation template...
+Wrote ubuntu-clock-app.desktop.in.in.h
+../app/components/Circle.qml:18: warning: unterminated string literal
+../app/components/Circle.qml:46: warning: unterminated string literal
+[ 70%] Built target com.ubuntu.clock.pot
+[ 71%] Built target pofiles_5
+[ 73%] Built target pofiles_21
+[ 74%] Built target pofiles_30
+[ 75%] Built target pofiles_3
+[ 76%] Built target pofiles_8
+[ 77%] Built target pofiles_31
+[ 78%] Built target pofiles_1
+[ 79%] Built target pofiles_7
+[ 80%] Built target pofiles_35
+[ 82%] Built target pofiles_4
+[ 83%] Built target pofiles_22
+[ 84%] Built target pofiles_46
+[ 85%] Built target pofiles_23
+[ 86%] Built target pofiles_24
+[ 87%] Built target pofiles_64
+[ 88%] Built target pofiles_26
+[ 89%] Built target pofiles_27
+[ 91%] Built target pofiles_54
+[ 92%] Built target pofiles_48
+[ 93%] Built target pofiles_29
+[ 94%] Built target pofiles_36
+[ 95%] Built target pofiles_37
+[ 96%] Built target pofiles_42
+[ 97%] Built target pofiles_40
+[ 98%] Built target pofiles_41
+[100%] Built target pofiles_43
+[100%] Built target tst_QmlFiles
+[100%] Built target tst_Utils
+Install the project...
+-- Install configuration: ""
+-- Installing: //manifest.json
+CMake Error at cmake_install.cmake:44 (file):
+  file INSTALL cannot copy file "/home/yunit/ubuntu-clock-app/manifest.json"
+  to "//manifest.json".
+
+
+Makefile:61: recipe for target 'install' failed
+make: *** [install] Error 1
+yunit@yunitVM:~/ubuntu-clock-app$ 
+
