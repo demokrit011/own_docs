@@ -141,3 +141,11 @@ make install
 ```
 
 okay, this seemed to work, right until the end when it failed... Analysing some other time...
+
+So first guess was that for **installing we need some privileges (sudo)** and this worked!
+
+```
+sudo make install
+```
+
+HOWEVER, i don't know how to start it -.- since the app does not appear in ```/usr/local/bin/``` nor can i just invoke ```ubuntu-clock-app``` form the terminal.
