@@ -67,6 +67,8 @@ There are a few repos (some PPAs and deb repos) out there that provide the mir/u
 
 ### Testing what is needed for building & installing a phone app locally (usually as *.click but NOT here)
 
+#### Ubuntu-Clock-App
+
 Starting with **Ubuntu 16.04.3 amd64** Unity 7, vanilla installation.... I think i read somewhere that i will need the [stable phone overlay](https://launchpad.net/~ci-train-ppa-service/+archive/ubuntu/stable-phone-overlay) and possibly the sdk so let's add both repos:
 
 ```
@@ -74,6 +76,8 @@ sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
 sudo add-apt-repository ppa:ci-train-ppa-service/stable-phone-overlay
 sudo apt-get update
 ```
+
+**Addendum 001: the first line is not needed, all necessary packages are inside the stable-phone-overlay repo!!**
 
 We will now try to do one simple thing: get the sources from the calculator app, take the snapcraft.yaml and get all packages listed there as necessary for building and running and trying to build an run the app without snapping/click-packagin it.
 
@@ -149,3 +153,58 @@ sudo make install
 ```
 
 HOWEVER, i don't know how to start it -.- since the app does not appear in ```/usr/local/bin/``` nor can i just invoke ```ubuntu-clock-app``` form the terminal.
+
+**Addendum 002: Upon doing this on a fresh VM with only the stable-phone-overlay PPA and using the exact cmake parameters from the snapcraft.yaml, everything works as follows**
+
+```
+cd ubuntu-clock-app
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+I can open the App via the *Dash* as "clock" or via the terminal using 
+
+```
+qmlscene $@ -I /usr/lib/x86_64-linux-gnu/qt5/qml/ClockApp  /usr/share/ubuntu-clock-app/ubuntu-clock-app.qml
+```
+
+which provides us with live-logging in our terminal. (I learned this by looking into the .desktop file of the clock app which you can do with ```less /usr/share/applications/ubuntu-clock-app.desktop``` and looking for the statement in the line beginning with "exec")
+
+#### Openstore
+
+We will be using the same VM as for the clock-app above with the exact same stuff installed as a first attempt.
+
+This is normally utilizing **qmake instead of cmake** ([german reference article](http://www.linux-magazin.de/Ausgaben/2013/05/Qmake-vs.-Cmake)) and it is hosted on github instead of launchpad, which is why we need to install git (instead of bazaar aka bzr) and clone our repo
+
+```
+cd ~
+sudo apt install git
+git clone https://github.com/UbuntuOpenStore/openstore-app.git
+cd openstore-app/
+```
+
+from some earlier tinkering and help by Brian Douglass i knwo we need a few other things:
+
+```
+sudo apt install libclick-0.4-dev ubuntu-sdk-qmake-extras
+```
+
+afterwards, we can just execute qmake:
+
+```
+qmake openstore.pro
+make -j4
+sudo make install
+```
+
+the ```make -j4``` will take a while and some *warnings* will occur, never mind that for now...
+
+We can now start the Openstore:
+
+```
+cd /lib/x86_64-linux-gnu/bin/
+./openstore
+```
+
+It works...**Hurray**
