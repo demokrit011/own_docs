@@ -1,0 +1,259 @@
+yunit@yunit-VM:~$ bzr branch lp:instantfx
+You have not informed bzr of your Launchpad ID, and you must do this to
+write to Launchpad or access private data.  See "bzr help launchpad-login".
+Branched 16 revisions.                                                         
+yunit@yunit-VM:~$ ls
+Desktop                  openstore-app
+Documents                Pictures
+Downloads                Public
+examples.desktop         session_successfull_build_clock-and-store.log
+failed_guitar-tools.log  Templates
+guitar-tools             ubuntu-clock-app
+instantfx                Videos
+Music
+yunit@yunit-VM:~$ cd instantfx/
+yunit@yunit-VM:~/instantfx$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+Found ../CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp;../src/app/main.cpp;../src/app/qml/components/BusyIndicator.qml;../src/app/qml/components/ClaritySettingsPanel.qml;../src/app/qml/components/ClaritySettingsPopover.qml;../src/app/qml/components/CropAreaHighlight.qml;../src/app/qml/components/CropAreaImage.qml;../src/app/qml/components/FilterSidebarPage.qml;../src/app/qml/components/FiltersView.qml;../src/app/qml/components/FunctionSelector.qml;../src/app/qml/components/OtherActionDelegate.qml;../src/app/qml/components/OtherActionsView.qml;../src/app/qml/components/ScalingPinchArea.qml;../src/app/qml/components/SectionHeader.qml;../src/app/qml/components/Slider.qml;../src/app/qml/components/SliderStyle.qml;../src/app/qml/components/StrokeButton.qml;../src/app/qml/components/TextualButtonStyle.qml;../src/app/qml/components/sliderUtils.js;../src/app/qml/effects/EffectListElement.qml;../src/app/qml/effects/EffectsList.qml;../src/app/qml/filters/Aden.qml;../src/app/qml/filters/Brooklyn.qml;../src/app/qml/filters/Clarendon.qml;../src/app/qml/filters/EarlyBird.qml;../src/app/qml/filters/Filter1977.qml;../src/app/qml/filters/FiltersList.qml;../src/app/qml/filters/Gingham.qml;../src/app/qml/filters/Hudson.qml;../src/app/qml/filters/Inkwell.qml;../src/app/qml/filters/Lark.qml;../src/app/qml/filters/Lofi.qml;../src/app/qml/filters/Moon.qml;../src/app/qml/filters/Nashville.qml;../src/app/qml/filters/NoFilter.qml;../src/app/qml/filters/Perpetua.qml;../src/app/qml/filters/Reyes.qml;../src/app/qml/filters/Rise.qml;../src/app/qml/filters/Slumber.qml;../src/app/qml/filters/Toaster.qml;../src/app/qml/filters/Walden.qml;../src/app/qml/filters/XPro2.qml;../src/app/qml/filters/effects/WebkitCssFilter.qml;../src/app/qml/main.qml;../src/app/qml/other-assets/marked.min.js;../src/app/qml/other-assets/oxide-user.js;../src/app/qml/ui/AboutPage.qml;../src/app/qml/ui/CreditsPage.qml;../src/app/qml/ui/CropPage.qml;../src/app/qml/ui/FiltersPage.qml;../src/app/qml/ui/ImportPage.qml;../src/app/qml/ui/MainPage.qml;../src/plugin/image_processor_plugin/backend.cpp;../src/plugin/image_processor_plugin/cropimageprovider.cpp;../src/plugin/image_processor_plugin/imageprocessor.cpp;../src/plugin/image_processor_plugin/offscreenrenderer.cpp;../src/plugin/image_processor_plugin/procdeviceinfo.cpp;../src/plugin/image_processor_plugin/qml/BasicFilters.qml;../src/plugin/image_processor_plugin/qml/ClarityFilter.qml;../src/plugin/image_processor_plugin/qml/FilterBase.qml;../src/plugin/image_processor_plugin/qml/ImageContainer.qml;../src/plugin/image_processor_plugin/qml/ImageProcessorOutput.qml;../tools/brightness-contrat-map-creator/main.cpp;../tools/color-temperature-map-creator/main.cpp;/home/yunit/instantfx/po/instantfx.sverzegnassi.desktop.in.in.h
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/instantfx
+yunit@yunit-VM:~/instantfx$ make -j4
+Scanning dependencies of target pofiles_9
+Scanning dependencies of target pofiles_2
+Scanning dependencies of target instantfx.sverzegnassi.pot
+Scanning dependencies of target pofiles_1
+[  4%] Generating hu.gmo
+[  8%] Generating translation template
+[ 13%] Generating es.gmo
+[ 17%] Generating pt.gmo
+[ 17%] Built target pofiles_9
+[ 17%] Built target pofiles_1
+[ 17%] Built target pofiles_2
+Scanning dependencies of target pofiles_3
+Scanning dependencies of target pofiles_4
+Scanning dependencies of target pofiles_8
+Wrote instantfx.sverzegnassi.desktop.in.in.h
+[ 21%] Generating fr.gmo
+[ 26%] Generating de.gmo
+../src/app/qml/filters/effects/WebkitCssFilter.qml:59: warning: unterminated string literal
+../src/app/qml/filters/effects/WebkitCssFilter.qml:143: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:61: warning: unterminated string literal[ 30%] Generating it.gmo
+
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:70: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:83: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:157: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:56: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:65: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:67: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:106: warning: unterminated string literal
+[ 30%] Built target pofiles_3
+[ 30%] Built target pofiles_4
+[ 30%] Built target pofiles_8
+[ 30%] Built target instantfx.sverzegnassi.pot
+Scanning dependencies of target pofiles_5
+Scanning dependencies of target instantfx_translation_files
+Scanning dependencies of target pofiles_6
+[ 34%] Generating pl.gmo
+Scanning dependencies of target pofiles_7
+[ 34%] Built target instantfx_translation_files
+[ 39%] Generating nl.gmo
+[ 39%] Built target pofiles_5
+[ 39%] Built target pofiles_6
+Scanning dependencies of target instantfx_CLICKFiles
+[ 43%] Generating fi.gmo
+Scanning dependencies of target instantfx.sverzegnassi.desktop
+[ 43%] Built target instantfx_CLICKFiles
+Scanning dependencies of target instantfx_automoc
+[ 43%] Built target pofiles_7
+[ 47%] Merging translations into instantfx.sverzegnassi.desktop
+Scanning dependencies of target imageprocessorplugin_automoc
+[ 52%] Automatic moc for target instantfx
+[ 56%] Automatic moc for target imageprocessorplugin
+[ 56%] Built target instantfx_automoc
+Generating moc_backend.cpp
+Scanning dependencies of target instantfx
+Merging translations into instantfx.sverzegnassi.desktop.
+[ 56%] Built target instantfx.sverzegnassi.desktop
+Generating moc_imageprocessor.cpp
+Generating moc_offscreenrenderer.cpp
+[ 60%] Building CXX object src/app/CMakeFiles/instantfx.dir/main.cpp.o
+[ 65%] Building CXX object src/app/CMakeFiles/instantfx.dir/instantfx_automoc.cpp.o
+Generating moc_procdeviceinfo.cpp
+[ 65%] Built target imageprocessorplugin_automoc
+Scanning dependencies of target imageprocessorplugin
+[ 69%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/offscreenrenderer.cpp.o
+[ 73%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/backend.cpp.o
+[ 78%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/imageprocessor.cpp.o
+[ 82%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/cropimageprovider.cpp.o
+[ 86%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/procdeviceinfo.cpp.o
+[ 91%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/imageprocessorplugin_automoc.cpp.o
+[ 95%] Linking CXX executable instantfx
+[ 95%] Built target instantfx
+[100%] Linking CXX shared module libimageprocessorplugin.so
+[100%] Built target imageprocessorplugin
+yunit@yunit-VM:~/instantfx$ sudo make install
+[sudo] password for yunit: 
+[  4%] Built target pofiles_9
+[  8%] Built target pofiles_1
+[ 13%] Generating translation template
+Wrote instantfx.sverzegnassi.desktop.in.in.h
+../src/app/qml/filters/effects/WebkitCssFilter.qml:59: warning: unterminated string literal
+../src/app/qml/filters/effects/WebkitCssFilter.qml:143: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:61: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:70: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:83: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:157: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:56: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:65: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:67: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:106: warning: unterminated string literal
+[ 13%] Built target instantfx.sverzegnassi.pot
+[ 17%] Built target pofiles_2
+[ 21%] Built target pofiles_3
+[ 26%] Built target pofiles_8
+[ 30%] Built target pofiles_4
+[ 34%] Built target pofiles_5
+[ 34%] Built target instantfx_translation_files
+[ 39%] Built target pofiles_6
+[ 43%] Built target pofiles_7
+[ 43%] Built target instantfx_CLICKFiles
+[ 47%] Merging translations into instantfx.sverzegnassi.desktop
+Merging translations into instantfx.sverzegnassi.desktop.
+[ 47%] Built target instantfx.sverzegnassi.desktop
+[ 52%] Automatic moc for target instantfx
+[ 52%] Built target instantfx_automoc
+[ 65%] Built target instantfx
+[ 69%] Automatic moc for target imageprocessorplugin
+[ 69%] Built target imageprocessorplugin_automoc
+[100%] Built target imageprocessorplugin
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/share/locale/es/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/applications/instantfx.sverzegnassi.desktop
+-- Installing: /usr/share/instantfx/qml
+-- Installing: /usr/share/instantfx/qml/effects
+-- Installing: /usr/share/instantfx/qml/effects/EffectListElement.qml
+-- Installing: /usr/share/instantfx/qml/effects/EffectsList.qml
+-- Installing: /usr/share/instantfx/qml/graphics
+-- Installing: /usr/share/instantfx/qml/graphics/highlights.svg
+-- Installing: /usr/share/instantfx/qml/graphics/temperature2.svg
+-- Installing: /usr/share/instantfx/qml/graphics/sharpen.svg
+-- Installing: /usr/share/instantfx/qml/graphics/filters.svg
+-- Installing: /usr/share/instantfx/qml/graphics/instantfx-symbolic.svg
+-- Installing: /usr/share/instantfx/qml/graphics/shadows.svg
+-- Installing: /usr/share/instantfx/qml/graphics/wallpapers
+-- Installing: /usr/share/instantfx/qml/graphics/wallpapers/1.jpg
+-- Installing: /usr/share/instantfx/qml/graphics/adjust-horizon.svg
+-- Installing: /usr/share/instantfx/qml/graphics/contrast.svg
+-- Installing: /usr/share/instantfx/qml/components
+-- Installing: /usr/share/instantfx/qml/components/ScalingPinchArea.qml
+-- Installing: /usr/share/instantfx/qml/components/OtherActionsView.qml
+-- Installing: /usr/share/instantfx/qml/components/TextualButtonStyle.qml
+-- Installing: /usr/share/instantfx/qml/components/FunctionSelector.qml
+-- Installing: /usr/share/instantfx/qml/components/OtherActionDelegate.qml
+-- Installing: /usr/share/instantfx/qml/components/sliderUtils.js
+-- Installing: /usr/share/instantfx/qml/components/StrokeButton.qml
+-- Installing: /usr/share/instantfx/qml/components/CropAreaHighlight.qml
+-- Installing: /usr/share/instantfx/qml/components/BusyIndicator.qml
+-- Installing: /usr/share/instantfx/qml/components/Slider.qml
+-- Installing: /usr/share/instantfx/qml/components/ClaritySettingsPanel.qml
+-- Installing: /usr/share/instantfx/qml/components/FiltersView.qml
+-- Installing: /usr/share/instantfx/qml/components/ClaritySettingsPopover.qml
+-- Installing: /usr/share/instantfx/qml/components/FilterSidebarPage.qml
+-- Installing: /usr/share/instantfx/qml/components/CropAreaImage.qml
+-- Installing: /usr/share/instantfx/qml/components/SectionHeader.qml
+-- Installing: /usr/share/instantfx/qml/components/SliderStyle.qml
+-- Installing: /usr/share/instantfx/qml/other-assets
+-- Installing: /usr/share/instantfx/qml/other-assets/credits.html
+-- Installing: /usr/share/instantfx/qml/other-assets/markdowncss.css
+-- Installing: /usr/share/instantfx/qml/other-assets/marked.min.js
+-- Installing: /usr/share/instantfx/qml/other-assets/third-party-software.md
+-- Installing: /usr/share/instantfx/qml/other-assets/oxide-user.js
+-- Installing: /usr/share/instantfx/qml/filters
+-- Installing: /usr/share/instantfx/qml/filters/Hudson.qml
+-- Installing: /usr/share/instantfx/qml/filters/Moon.qml
+-- Installing: /usr/share/instantfx/qml/filters/effects
+-- Installing: /usr/share/instantfx/qml/filters/effects/WebkitCssFilter.qml
+-- Installing: /usr/share/instantfx/qml/filters/Walden.qml
+-- Installing: /usr/share/instantfx/qml/filters/Slumber.qml
+-- Installing: /usr/share/instantfx/qml/filters/Nashville.qml
+-- Installing: /usr/share/instantfx/qml/filters/Rise.qml
+-- Installing: /usr/share/instantfx/qml/filters/Lark.qml
+-- Installing: /usr/share/instantfx/qml/filters/Filter1977.qml
+-- Installing: /usr/share/instantfx/qml/filters/Reyes.qml
+-- Installing: /usr/share/instantfx/qml/filters/Aden.qml
+-- Installing: /usr/share/instantfx/qml/filters/XPro2.qml
+-- Installing: /usr/share/instantfx/qml/filters/Gingham.qml
+-- Installing: /usr/share/instantfx/qml/filters/EarlyBird.qml
+-- Installing: /usr/share/instantfx/qml/filters/NoFilter.qml
+-- Installing: /usr/share/instantfx/qml/filters/Perpetua.qml
+-- Installing: /usr/share/instantfx/qml/filters/Toaster.qml
+-- Installing: /usr/share/instantfx/qml/filters/Brooklyn.qml
+-- Installing: /usr/share/instantfx/qml/filters/Lofi.qml
+-- Installing: /usr/share/instantfx/qml/filters/FiltersList.qml
+-- Installing: /usr/share/instantfx/qml/filters/Inkwell.qml
+-- Installing: /usr/share/instantfx/qml/filters/Clarendon.qml
+-- Installing: /usr/share/instantfx/qml/ui
+-- Installing: /usr/share/instantfx/qml/ui/FiltersPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/AboutPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/MainPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/CropPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/CreditsPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/ImportPage.qml
+-- Installing: /usr/share/instantfx/qml/main.qml
+-- Installing: /usr/bin/instantfx
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/libimageprocessorplugin.so
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/qmldir
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/ImageProcessorOutput.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/FilterBase.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/ClarityFilter.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/BasicFilters.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/ImageContainer.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/colorTemperatureMap.png
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/vignette.png
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/brightnessContrastMap.png
+yunit@yunit-VM:~/instantfx$ inst
+install                installkernel          instantfx
+install-docs           install-printerdriver  instmodsh
+install-info           install-sgmlcatalog    
+yunit@yunit-VM:~/instantfx$ inst
+install                installkernel          instantfx
+install-docs           install-printerdriver  instmodsh
+install-info           install-sgmlcatalog    
+yunit@yunit-VM:~/instantfx$ instantfx 
+QML debugging is enabled. Only use this in a safe environment.
+OffscreenRenderer::OffscreenRenderer(QObject*)
+file:///usr/share/instantfx/qml/main.qml:61: TypeError: Cannot read property '__clarityFilter' of null
+virtual void ImageProcessor::componentComplete() Hey me
+Container path found! "/usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/ImageContainer.qml"
+App required 1725 msec to be initialised.
+APP_ID isn't set, the handler ignored
+[PERFORMANCE]: Last frame took 48 ms to render.
+file:///usr/lib/x86_64-linux-gnu/qt5/qml/Ubuntu/Content/ContentPeerPicker13.qml:194: TypeError: Cannot read property 'peers' of null
+[PERFORMANCE]: Last frame took 43 ms to render.
+yunit@yunit-VM:~/instantfx$ 
+

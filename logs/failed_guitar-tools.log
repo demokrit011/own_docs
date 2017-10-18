@@ -1,0 +1,539 @@
+yunit@yunit-VM:~$ ls
+Desktop           Music          session_successfull_build_clock-and-store.log
+Documents         openstore-app  Templates
+Downloads         Pictures       ubuntu-clock-app
+examples.desktop  Public         Videos
+yunit@yunit-VM:~$ cd openstore-app/
+yunit@yunit-VM:~/openstore-app$ grep -R 'libclick'
+clickable.json:    "libclick-0.4-dev"
+Binary file openstore/openstore matches
+yunit@yunit-VM:~/openstore-app$ less clickable.json 
+yunit@yunit-VM:~/openstore-app$ cd ..
+yunit@yunit-VM:~$ bzr branch lp:guitar-tools
+You have not informed bzr of your Launchpad ID, and you must do this to
+write to Launchpad or access private data.  See "bzr help launchpad-login".
+Branched 96 revisions.                                                         
+yunit@yunit-VM:~$ ls
+Desktop           Pictures
+Documents         Public
+Downloads         session_successfull_build_clock-and-store.log
+examples.desktop  Templates
+guitar-tools      ubuntu-clock-app
+Music             Videos
+openstore-app
+yunit@yunit-VM:~$ cd guitar-tools/
+yunit@yunit-VM:~/guitar-tools$ ls
+data                   guitar-tools.desktop  icons             po
+guitar-tools           guitar-tools.png      LICENSE           screenshots
+guitar-tools.apparmor  guitar-tools.pro      manifest.json.in
+yunit@yunit-VM:~/guitar-tools$ qmake guitar-tools.pro 
+yunit@yunit-VM:~/guitar-tools$ make -j4
+sed s/@CLICK_ARCH@/amd64/g /home/yunit/guitar-tools/manifest.json.in > /home/yunit/guitar-tools/manifest.json
+make: Circular /home/yunit/guitar-tools/guitar-tools.desktop <- /home/yunit/guitar-tools/guitar-tools.desktop dependency dropped.
+cd guitar-tools/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake /home/yunit/guitar-tools/guitar-tools/guitar-tools.pro -o Makefile ) && make -f Makefile 
+mkdir -p /home/yunit/guitar-tools && cd /home/yunit/guitar-tools && intltool-extract --type=gettext/ini --update --srcdir=/home/yunit/guitar-tools guitar-tools.desktop
+Wrote guitar-tools.desktop.h
+mkdir -p /home/yunit/guitar-tools/po && xgettext -o /home/yunit/guitar-tools/po/guitar-tools.t-mon.pot --qt --c++ --from-code=UTF-8 --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 --keyword=N_ /home/yunit/guitar-tools/guitar-tools/qml/AboutPage.qml /home/yunit/guitar-tools/guitar-tools/qml/ChordPage.qml /home/yunit/guitar-tools/guitar-tools/qml/ChordsHelpPage.qml /home/yunit/guitar-tools/guitar-tools/qml/ComposeLoadPage.qml /home/yunit/guitar-tools/guitar-tools/qml/ComposePage.qml /home/yunit/guitar-tools/guitar-tools/qml/ComposeSelectorPage.qml /home/yunit/guitar-tools/guitar-tools/qml/ComposeSettingsPage.qml /home/yunit/guitar-tools/guitar-tools/qml/DrumLoopPage.qml /home/yunit/guitar-tools/guitar-tools/qml/FretBoardPage.qml /home/yunit/guitar-tools/guitar-tools/qml/GuitarPlayerPage.qml /home/yunit/guitar-tools/guitar-tools/qml/GuitarTunerPage.qml /home/yunit/guitar-tools/guitar-tools/qml/Main.qml /home/yunit/guitar-tools/guitar-tools/qml/MainPage.qml /home/yunit/guitar-tools/guitar-tools/qml/MetronomePage.qml /home/yunit/guitar-tools/guitar-tools/qml/RecorderPage.qml /home/yunit/guitar-tools/guitar-tools/qml/RecorderPlaylistHelpPage.qml /home/yunit/guitar-tools/guitar-tools/qml/RecorderPlaylistPage.qml /home/yunit/guitar-tools/guitar-tools/qml/ScalesPage.qml /home/yunit/guitar-tools/guitar-tools/qml/SettingsPage.qml /home/yunit/guitar-tools/guitar-tools/qml/TuningForkPage.qml /home/yunit/guitar-tools/guitar-tools/qml/components/ChordPlayer.qml /home/yunit/guitar-tools/guitar-tools/qml/components/ChordsBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/qml/components/ComposeBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/qml/components/FretBoardBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/qml/components/GuitarBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/qml/components/GuitarChordItem.qml /home/yunit/guitar-tools/guitar-tools/qml/components/GuitarSoundEffect.qml /home/yunit/guitar-tools/guitar-tools/qml/components/GuitarStringItem.qml /home/yunit/guitar-tools/guitar-tools/qml/components/MainMenuListItem.qml /home/yunit/guitar-tools/guitar-tools/qml/components/MetronomeBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/qml/components/MicrophoneVolumeBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/qml/components/ScaleItem.qml /home/yunit/guitar-tools/guitar-tools/qml/components/ScalesBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/qml/components/TunerBottomEdge.qml /home/yunit/guitar-tools/guitar-tools/analyzer.cpp /home/yunit/guitar-tools/guitar-tools/audioinput.cpp /home/yunit/guitar-tools/guitar-tools/chord.cpp /home/yunit/guitar-tools/guitar-tools/chordposition.cpp /home/yunit/guitar-tools/guitar-tools/chordpositions.cpp /home/yunit/guitar-tools/guitar-tools/chords.cpp /home/yunit/guitar-tools/guitar-tools/chordsproxy.cpp /home/yunit/guitar-tools/guitar-tools/composegrid.cpp /home/yunit/guitar-tools/guitar-tools/composenote.cpp /home/yunit/guitar-tools/guitar-tools/composenotes.cpp /home/yunit/guitar-tools/guitar-tools/composescale.cpp /home/yunit/guitar-tools/guitar-tools/composetool.cpp /home/yunit/guitar-tools/guitar-tools/core.cpp /home/yunit/guitar-tools/guitar-tools/drumloopplayer.cpp /home/yunit/guitar-tools/guitar-tools/fretposition.cpp /home/yunit/guitar-tools/guitar-tools/fretpositions.cpp /home/yunit/guitar-tools/guitar-tools/guitartuner.cpp /home/yunit/guitar-tools/guitar-tools/libfft.cpp /home/yunit/guitar-tools/guitar-tools/main.cpp /home/yunit/guitar-tools/guitar-tools/metronome.cpp /home/yunit/guitar-tools/guitar-tools/noteplayer.cpp /home/yunit/guitar-tools/guitar-tools/recorder.cpp /home/yunit/guitar-tools/guitar-tools/scale.cpp /home/yunit/guitar-tools/guitar-tools/scales.cpp /home/yunit/guitar-tools/guitar-tools/scalesproxy.cpp /home/yunit/guitar-tools/guitar-tools/settings.cpp /home/yunit/guitar-tools/guitar-tools/sinewavegenerator.cpp /home/yunit/guitar-tools/guitar-tools/volumeanalyzer.cpp /home/yunit/guitar-tools/guitar-tools/wavfile.cpp /home/yunit/guitar-tools/guitar-tools/analyzer.h /home/yunit/guitar-tools/guitar-tools/audioinput.h /home/yunit/guitar-tools/guitar-tools/chord.h /home/yunit/guitar-tools/guitar-tools/chordposition.h /home/yunit/guitar-tools/guitar-tools/chordpositions.h /home/yunit/guitar-tools/guitar-tools/chords.h /home/yunit/guitar-tools/guitar-tools/chordsproxy.h /home/yunit/guitar-tools/guitar-tools/composegrid.h /home/yunit/guitar-tools/guitar-tools/composenote.h /home/yunit/guitar-tools/guitar-tools/composenotes.h /home/yunit/guitar-tools/guitar-tools/composescale.h /home/yunit/guitar-tools/guitar-tools/composetool.h /home/yunit/guitar-tools/guitar-tools/core.h /home/yunit/guitar-tools/guitar-tools/drumloopplayer.h /home/yunit/guitar-tools/guitar-tools/fretposition.h /home/yunit/guitar-tools/guitar-tools/fretpositions.h /home/yunit/guitar-tools/guitar-tools/guitartuner.h /home/yunit/guitar-tools/guitar-tools/libfft.h /home/yunit/guitar-tools/guitar-tools/metronome.h /home/yunit/guitar-tools/guitar-tools/music.h /home/yunit/guitar-tools/guitar-tools/noteplayer.h /home/yunit/guitar-tools/guitar-tools/recorder.h /home/yunit/guitar-tools/guitar-tools/scale.h /home/yunit/guitar-tools/guitar-tools/scales.h /home/yunit/guitar-tools/guitar-tools/scalesproxy.h /home/yunit/guitar-tools/guitar-tools/settings.h /home/yunit/guitar-tools/guitar-tools/sinewavegenerator.h /home/yunit/guitar-tools/guitar-tools/volumeanalyzer.h /home/yunit/guitar-tools/guitar-tools/wavfile.h /home/yunit/guitar-tools/guitar-tools.desktop.h
+cd /home/yunit/guitar-tools/po && LC_ALL=C intltool-update -d ca -g guitar-tools.t-mon -x && mkdir -p /home/yunit/guitar-tools/po && touch /home/yunit/guitar-tools/po/ca.po.updated
+cd /home/yunit/guitar-tools/po && LC_ALL=C intltool-update -d de -g guitar-tools.t-mon -x && mkdir -p /home/yunit/guitar-tools/po && touch /home/yunit/guitar-tools/po/de.po.updated
+cd /home/yunit/guitar-tools/po && LC_ALL=C intltool-update -d es -g guitar-tools.t-mon -x && mkdir -p /home/yunit/guitar-tools/po && touch /home/yunit/guitar-tools/po/es.po.updated
+Project ERROR: Unknown module(s) in QT: multimedia
+Makefile:42: recipe for target 'sub-guitar-tools-make_first' failed
+make: *** [sub-guitar-tools-make_first] Error 3
+make: *** Waiting for unfinished jobs....
+Merging ./de.po with guitar-tools.t-mon.pot...Merging ./ca.po with guitar-tools.t-mon.pot...Merging ./es.po with guitar-tools.t-mon.pot.............. done.
+............ done.
+.......... done.
+101 translated messages101 translated messages101 translated messages.
+.
+.
+yunit@yunit-VM:~/guitar-tools$ sudo make install
+[sudo] password for yunit: 
+cd guitar-tools/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake /home/yunit/guitar-tools/guitar-tools/guitar-tools.pro -o Makefile ) && make -f Makefile install
+Project ERROR: Unknown module(s) in QT: multimedia
+Makefile:54: recipe for target 'sub-guitar-tools-install_subtargets' failed
+make: *** [sub-guitar-tools-install_subtargets] Error 3
+yunit@yunit-VM:~/guitar-tools$ grep -R 'multimedia'
+guitar-tools/guitar-tools.pro:QT += qml quick multimedia
+yunit@yunit-VM:~/guitar-tools$ apt-cache search multimedia,qt
+yunit@yunit-VM:~/guitar-tools$ apt-cache search multimedia
+gir1.2-packagekitglib-1.0 - GObject introspection data for the PackageKit GLib library
+libiec61883-0 - an partial implementation of IEC 61883
+libiec61883-dev - an partial implementation of IEC 61883
+libpackagekit-glib2-16 - Library for accessing PackageKit using GLib
+libpackagekit-glib2-dev - Library for accessing PackageKit using GLib (development files)
+libqgsttools-p1 - GStreamer tools for  Qt 5 Multimedia module
+libqt5multimedia5 - Qt 5 Multimedia module
+libqt5multimedia5-plugins - Qt 5 Multimedia module plugins
+libqt5multimediaquick-p5 - Qt 5 Multimedia Quick module
+libqt5multimediawidgets5 - Qt 5 Multimedia Widgets module
+packagekit - Provides a package management service
+packagekit-backend-aptcc - APT backend for PackageKit
+packagekit-docs - Documentation for PackageKit
+packagekit-tools - Provides PackageKit command-line tools
+python3-packagekit - PackageKit backend Python bindings
+qml-module-qtmultimedia - Qt 5 Multimedia QML module
+qtmultimedia5-dbg - Qt 5 Multimedia library debugging symbols
+qtmultimedia5-dev - APIs for multimedia functionality - development files
+qtmultimedia5-doc - Qt 5 multimedia documentation
+qtmultimedia5-examples - Examples for Qt 5 Multimedia module
+allegro4-doc - documentation for the Allegro library
+allegro5-doc - documentation for the Allegro 5 library
+ario - GTK+ client for the Music Player Daemon (MPD)
+ario-common - GTK+ client for the Music Player Daemon (MPD) (Common files)
+browser-plugin-packagekit - Plugin to install missing plugins using PackageKit
+browser-plugin-vlc - multimedia plugin for web browsers based on VLC
+btag - interactive command-line based multimedia tag editor
+calligraauthor - Authoring tool for the Calligra Suite
+cameraplugin-aal - Camera plugin that talks to Android by using Aal+
+cameraplugin-fake - Camera plugin for QtMultimedia faking with a photo file
+coccinella - Communication tool (XMPP/Jabber) with a built-in whiteboard
+concordance - configuration tool for Harmony remotes
+concordance-common - Harmony remote configuration tool - common files
+cortado - streaming applet for Ogg formats
+dragonplayer - simple video player
+dragonplayer-dbg - debugging symbols for dragonplayer
+ebhttpd - specialized HTTP server to access CD-ROM books
+ebnetd - the server of EBNET protocol
+ebnetd-common - Common files for the EBNETD suite
+ecere-samples - Project samples for the Ecere SDK
+emms - Emacs MultiMedia System
+erlang-esdl - Erlang bindings to the Simple Direct Media Library
+erlang-esdl-dev - Erlang bindings to the SDL (development files)
+erlang-esdl-doc - Erlang bindings to the SDL (documentation)
+esekeyd - multimedia keyboard daemon for Linux
+ffmpeg - Tools for transcoding, streaming and playing of multimedia files
+ffmpeg-dbg - Debug symbols for the FFmpeg multimedia framework
+ffmpeg-doc - Documentation of the FFmpeg multimedia framework
+ffmpegthumbs - video thumbnail generator using ffmpeg
+ffmsindex - Command line tool to create ffms2 index files
+fp-units-multimedia - Free Pascal - multimedia units dependency package
+fp-units-multimedia-3.0.0 - Free Pascal - multimedia units
+freetuxtv - Internet television and radio player
+gem - Graphics Environment for Multimedia - Pure Data library
+gem-dev - Graphics Environment for Multimedia (development files)
+gem-doc - Graphics Environment for Multimedia (documentation)
+gem-extra - Graphics Environment for Multimedia - extra objects
+gem-plugin-dc1394 - Graphics Environment for Multimedia - DC1394 support
+gem-plugin-dv4l - Graphics Environment for Multimedia - DV support
+gem-plugin-gmerlin - Graphics Environment for Multimedia - GMERLIN support
+gem-plugin-jpeg - Graphics Environment for Multimedia - JPEG support
+gem-plugin-lqt - Graphics Environment for Multimedia - LQT support
+gem-plugin-magick - Graphics Environment for Multimedia - ImageMagick support
+gem-plugin-mpeg3 - Graphics Environment for Multimedia - MPEG support
+gem-plugin-sgi - Graphics Environment for Multimedia - SGI support
+gem-plugin-tiff - Graphics Environment for Multimedia - TIFF support
+gem-plugin-unicap - Graphics Environment for Multimedia - unicap support
+gem-plugin-v4l2 - Graphics Environment for Multimedia - V4L2 output support
+ges1.0-tools - Tools for use with the GStreamer editing services
+gir1.2-ges-1.0 - GObject introspection data for the GES library
+gnome-mplayer - GTK+ interface for MPlayer
+gnome-mplayer-dbg - GTK+ interface for MPlayer (debugging symbols)
+gnome-packagekit - Graphical distribution neutral package manager for GNOME
+gnome-packagekit-data - Data files for GNOME-PackageKit
+gnome-packagekit-session - Provides PackageKit session API for GNOME
+gpac - GPAC Project on Advanced Content - utilities
+gpac-dbg - GPAC Project on Advanced Content - debugging symbols
+gpac-modules-base - GPAC Project on Advanced Content - modules
+gstreamer-qapt - GStreamer plugin to install codecs using QApt
+gstreamer1.0-packagekit - GStreamer plugin to install codecs using PackageKit
+gupnp-tools - tools for testing UPnP devices and control points
+hfsprogs - mkfs and fsck for HFS and HFS+ file systems
+icecast2 - streaming media server
+info-beamer - interactive multimedia presentation framework
+inputlirc - Zeroconf LIRC daemon using input event devices
+jclic - Tool for the development & use of multimedia educational activities
+juk - music jukebox / music player
+kde-baseapps - base applications from the official KDE release (meta-package)
+kde-config-cddb - CDDB retrieval configuration
+kde-runtime - runtime components from the official KDE release
+kdeartwork - themes, styles and other artwork from the official KDE release
+kdebase-runtime - Transitional package for the KDE runtime components
+kdemultimedia-dev - transitional package for KDE multimedia development packages
+kdemultimedia-kio-plugins - transitional package for kio-audiocd
+keytouch-editor - create keyboard files for keytouch
+kgmailnotifier - Gmail notifier applet for the KDE Plasma Workspace
+kio-audiocd - transparent audio CD access for applications using the KDE Platform
+kio-audiocd-dbg - debugging symbols for the audio CD KIO plugin
+kio-audiocd-dev - development files for the audio CD KIO plugin
+kmix - volume control and mixer
+kodi - Open Source Home Theatre (executable binaries)
+kodi-addons-dev - Open Source Home Theatre (Addons Dev package)
+kodi-bin - Open Source Home Theatre (architecture-dependent files)
+kodi-data - Open Source Home Theatre (arch-independent data package)
+kodi-eventclients-common - Open Source Home Theatre (Event Client Common package)
+kodi-eventclients-dev - Open Source Home Theatre (Event Client Dev package)
+kodi-eventclients-j2me - Open Source Home Theatre (Event Client J2ME package)
+kodi-eventclients-kodi-send - Open Source Home Theatre (Event Client Kodi-SEND package)
+kodi-eventclients-ps3 - Open Source Home Theatre (Event Client PS3 package)
+kodi-eventclients-wiiremote - Open Source Home Theatre (Event Client WII Remote support package)
+kscd - audio CD player
+liballeggl4-dev - development files for the allegrogl library
+liballeggl4.4 - library to mix OpenGL graphics with Allegro routines
+liballegro-acodec5-dev - header files for the Allegro 5 audio codec addon
+liballegro-acodec5.0 - audio codec addon for the Allegro 5 library
+liballegro-audio5-dev - header files for the Allegro 5 audio addon
+liballegro-audio5.0 - audio addon for the Allegro 5 library
+liballegro-dialog5-dev - header files for the Allegro 5 dialog addon
+liballegro-dialog5.0 - dialog addon for the Allegro 5 library
+liballegro-image5-dev - header files for the Allegro 5 image addon
+liballegro-image5.0 - image addon for the Allegro 5 library
+liballegro-physfs5-dev - header files for the Allegro 5 physfs addon
+liballegro-physfs5.0 - physfs addon for the Allegro 5 library
+liballegro-ttf5-dev - header files for the Allegro 5 TTF addon
+liballegro-ttf5.0 - TTF addon for the Allegro 5 library
+liballegro4-dev - development files for the Allegro library
+liballegro4.4 - portable library for cross-platform game and multimedia development
+liballegro5-dev - development files for the Allegro 5 library
+liballegro5.0 - portable library for cross-platform game and multimedia development
+libaria-demo - C++ library for MobileRobots/ActivMedia robots (demo example)
+libaria-dev - C++ library for MobileRobots/ActivMedia robots (devel)
+libaria-dev-doc - C++ library for MobileRobots/ActivMedia robots (devel docs)
+libaria2v5 - C++ library for MobileRobots/ActivMedia robots
+libav-tools - Compatibility links for libav-tools (transitional package)
+libavcodec-dev - FFmpeg library with de/encoders for audio/video codecs - development files
+libavcodec-extra - FFmpeg library with extra codecs (metapackage)
+libavcodec-ffmpeg-extra56 - FFmpeg library with additional de/encoders for audio/video codecs
+libavcodec-ffmpeg56 - FFmpeg library with de/encoders for audio/video codecs - runtime files
+libavdevice-dev - FFmpeg library for handling input and output devices - development files
+libavdevice-ffmpeg56 - FFmpeg library for handling input and output devices - runtime files
+libavfilter-dev - FFmpeg library containing media filters - development files
+libavfilter-ffmpeg5 - FFmpeg library containing media filters - runtime files
+libavformat-dev - FFmpeg library with (de)muxers for multimedia containers - development files
+libavformat-ffmpeg56 - FFmpeg library with (de)muxers for multimedia containers - runtime files
+libavresample-dev - FFmpeg compatibility library for resampling - development files
+libavresample-ffmpeg2 - FFmpeg compatibility library for resampling - runtime files
+libavutil-dev - FFmpeg library with functions for simplifying programming - development files
+libavutil-ffmpeg54 - FFmpeg library with functions for simplifying programming - runtime files
+libbasicusageenvironment1 - multimedia RTSP streaming library (BasicUsageEnvironment class)
+libconcord-dev - configuration tool for Harmony remotes - development files
+libconcord4 - configuration tool for Harmony remotes - runtime libraries
+libcortado-java - streaming applet for Ogg formats -- shared components
+libcsfml-audio2.3 - Libraries for the C Binding of SFML - Audio Part
+libcsfml-dev - Libraries for the C Binding of SFML - Development Files
+libcsfml-doc - Libraries for the C Binding of SFML - Documentation
+libcsfml-graphics2.3 - Libraries for the C Binding of SFML - Graphics Part
+libcsfml-network2.3 - Libraries for the C Binding of SFML - Network Part
+libcsfml-system2.3 - Libraries for the C Binding of SFML - System Part
+libcsfml-window2.3 - Libraries for the C Binding of SFML - Window Part
+libcsfml2.3-dbg - Libraries for the C Binding of SFML - Debug Files
+libexosip2-11 - eXtended osip library
+libexosip2-dev - eXtended osip library development files
+libfreeimage-dev - Support library for graphics image formats (development files)
+libfreeimage3 - Support library for graphics image formats (library)
+libfreeimage3-dbg - Support library for graphics image formats (debugging symbols)
+libfreeimageplus-dev - C++ wrappers for FreeImage (development files)
+libfreeimageplus-doc - C++ wrappers for FreeImage (documentation)
+libfreeimageplus3 - C++ wrappers for freeimage (library)
+libfreeimageplus3-dbg - C++ wrappers for FreeImage (debugging symbols)
+libges-1.0-0 - GStreamer editing services (shared library)
+libges-1.0-0-dbg - GStreamer editing services (debug symbols)
+libges-1.0-dev - GStreamer editing services (development files)
+libges-1.0-doc - GStreamer editing services (documentation)
+libgmerlin-avdec-dev - general multimedia decoding library (development files)
+libgmerlin-avdec-doc - general multimedia decoding library (documentation)
+libgmerlin-avdec1 - general multimedia decoding library
+libgpac-dbg - GPAC Project on Advanced Content - debugging symbols for libgpac4
+libgpac-dev - GPAC Project on Advanced Content - development files
+libgpac4 - GPAC Project on Advanced Content - shared libraries
+libgroupsock8 - multimedia RTSP streaming library (network interfaces and sockets)
+libgstreamermm-1.0-0v5 - C++ wrapper library for GStreamer (shared libraries)
+libgstreamermm-1.0-dev - C++ wrapper library for GStreamer (development files)
+libgstreamermm-1.0-doc - C++ wrapper library for GStreamer (documentation)
+libimage-exiftool-perl - library and program to read and write meta information in multimedia files
+libiptcdata-bin - Library to parse IPTC metadata (programs)
+libiptcdata-doc - Library to parse IPTC metadata (documentation)
+libiptcdata0 - Library to parse IPTC metadata
+libiptcdata0-dbg - Library to parse IPTC metadata (debug files)
+libiptcdata0-dev - Library to parse IPTC metadata (development files)
+libjpgalleg4-dev - development files for the JPG loading addon for Allegro 4
+libjpgalleg4.4 - JPG loading addon for Allegro 4
+libkblog4 - client-side support library for web application remote blogging APIs
+libkcddb-dbg - debugging symbols for libkcddb
+libkcddb-dev - CDDB library for KDE Platform (development)
+libkcddb4 - CDDB library for KDE Platform (runtime)
+libkcompactdisc-dev - CD drive library for KDE Platform (development)
+libkcompactdisc4 - CD drive library for KDE Platform (runtime)
+libkf5blog-dbg - kblog - debug symbols
+libkf5blog-dev - kblog - development files
+libkf5blog5 - client-side support library for web application remote blogging APIs
+libkxl0 - multimedia library for game development
+liblivemedia-dev - multimedia RTSP streaming library (development files)
+liblivemedia50 - multimedia RTSP streaming library
+liblo-dev - Lightweight OSC library -- development files
+liblo-tools - Lightweight OSC library
+liblo7 - Lightweight OSC library
+libloadpng4-dev - development files for the PNG loading addon for Allegro 4
+libloadpng4.4 - PNG loading addon for Allegro 4
+liblogg4-dev - development files for the OGG loading addon for Allegro 4
+liblogg4.4 - OGG loading addon for Allegro 4
+libmatroska-dev - extensible open standard audio/video container format (development files)
+libmatroska6v5 - extensible open standard audio/video container format (shared library)
+libmlt++-dev - MLT multimedia framework C++ wrapper (development)
+libmlt++3 - MLT multimedia framework C++ wrapper (runtime)
+libmlt-data - multimedia framework (data)
+libmlt-dbg - multimedia framework (debugging symbols)
+libmlt-dev - multimedia framework (development)
+libmlt6 - multimedia framework (runtime)
+libmm-ocaml - OCaml multimedia library -- runtime files
+libmm-ocaml-dev - OCaml multimedia library -- developpement files
+libmp4v2-2 - library to read, create, and modify mp4 files (shared library)
+libmp4v2-dev - library to read, create, and modify mp4 files (development files)
+libmrml1-dev - libmrml development files
+libmrml1v5 - Multimedia Retrieval Markup Language
+libnfo-dev - an NFO file parser/writer library -- development files
+libnfo-doc - developer documentation for libnfo
+libnfo1 - an NFO file parser/writer library
+libnfo1-bin - an utility to read NFO files which uses libnfo
+libnfo1-dbg - debugging symbols for libnfo1
+liboggplay1 - A library for playing OGG multimedia
+liboggplay1-dbg - A library for playing OGG multimedia (debugging symbols)
+liboggplay1-dev - A library for playing OGG multimedia (development files)
+libomxil-bellagio-dev - implementation of OpenMAX IL, development files
+libomxil-bellagio-doc - Documentation of the Bellagio OpenMAX IL
+libomxil-bellagio0 - implementation of OpenMAX IL, run-time library
+libomxil-bellagio0-components-alsa - ALSA source/sink components for Bellagio OpenMAX IL
+libomxil-bellagio0-components-base - components for Bellagio OpenMAX IL
+libomxil-bellagio0-components-camera - Motorola Camera components for Bellagio OpenMAX IL
+libomxil-bellagio0-components-fbdevsink - Frame Buffer Video Sink components for Bellagio OpenMAX IL
+libomxil-bellagio0-components-mad - MAD MP3 decoder components for Bellagio OpenMAX IL
+libomxil-bellagio0-components-videosrc - V4L2 video source components for Bellagio OpenMAX IL
+libomxil-bellagio0-components-vorbis - vorbis decoder components for Bellagio OpenMAX IL
+libomxil-bellagio0-components-xvideo - XVideo components for Bellagio OpenMAX IL
+libopenal-data - Software implementation of the OpenAL audio API (data files)
+libopenal-dev - Software implementation of the OpenAL audio API (development files)
+libopenal1 - Software implementation of the OpenAL audio API (shared library)
+libopenal1-dbg - Software implementation of the OpenAL audio API (debug symbols)
+libosip2-11 - Session Initiation Protocol (SIP) library
+libpackagekitqt5-0 - Library for accessing PackageKit using Qt5
+libpackagekitqt5-dev - Library for accessing PackageKit using Qt5 (development files)
+libphonon-dev - multimedia framework from KDE using Qt 4 - development files
+libphonon-perl - perl bindings for the Phonon library
+libphonon4 - multimedia framework from KDE - core library
+libphonon4qt5-4 - multimedia framework from KDE using Qt 5 - core library
+libphonon4qt5-dev - multimedia framework from KDE using Qt 5 - development files
+libphonon4qt5experimental-dev - multimedia framework from KDE using Qt 5 - experimental development files
+libphonon4qt5experimental4 - multimedia framework from KDE using Qt 5 - experimental library (internal)
+libphononexperimental-dev - multimedia framework from KDE - experimental development files
+libphononexperimental4 - multimedia framework from KDE using Qt 4 - experimental library (internal)
+libpj2 - PJ Project - PJProject core libraries
+libpjlib-util2 - PJ Project - helper utilities
+libpjmedia-audiodev2 - PJ Project - Audio devices
+libpjmedia-codec2 - PJ Project - Multimedia codecs handling
+libpjmedia-videodev2 - SIP handling library - video devices
+libpjmedia2 - PJ Project - VoIP media
+libpjnath2 - PJ Project - NAT handling
+libpjproject-dev - PJ Project - development headers
+libpjsip-simple2 - PJ Project - SIP SIMPLE instant messaging
+libpjsip-ua2 - SIP handling library - SIP user agent library
+libpjsip2 - PJ Project - SIP handling library
+libpjsua2 - PJ Project - Basic VoIP client library
+libpostproc-dev - FFmpeg library for post processing - development files
+libpostproc-ffmpeg53 - FFmpeg library for post processing - runtime files
+libqt5multimediawidgets5-gles - Qt 5 Multimedia Widgets module - OpenGLES
+libsdl-ocaml - OCaml bindings for SDL - runtime files
+libsdl-ocaml-dev - OCaml bindings for SDL - development files
+libsdl-sge - extension of graphic functions for SDL multimedia libraries
+libsdl-sge-dev - extension of graphic functions for the SDL multimedia, development files
+libsfml-audio2.3v5 - Simple and Fast Multimedia Library - Audio part
+libsfml-dev - Simple and Fast Multimedia Library - Development Files
+libsfml-doc - Simple and Fast Multimedia Library - Documentation
+libsfml-graphics2.3v5 - Simple and Fast Multimedia Library - Graphics part
+libsfml-network2.3v5 - Simple and Fast Multimedia Library - Network part
+libsfml-system2.3v5 - Simple and Fast Multimedia Library - System part
+libsfml-window2.3v5 - Simple and Fast Multimedia Library - Window part
+libsfml2.3-dbg - Simple and Fast Multimedia Library - Debug Symbols
+libswresample-dev - FFmpeg library for audio resampling, rematrixing etc. - development files
+libswresample-ffmpeg1 - FFmpeg library for audio resampling, rematrixing etc. - runtime files
+libswscale-dev - FFmpeg library for image scaling and various conversions - development files
+libswscale-ffmpeg3 - FFmpeg library for image scaling and various conversions - runtime files
+libtaoframework-openal-cil-dev - Tao CLI binding for OpenAL - development files
+libtaoframework-openal1.1-cil - Tao CLI binding for OpenAL
+libtaoframework-sdl-cil-dev - Tao CLI binding for SDL - development files
+libtaoframework-sdl1.2-cil - Tao CLI binding for SDL
+libuclmmbase1 - UCL Common Code (Multimedia) Library
+libuclmmbase1-dev - UCL Common Code (Multimedia) Library - development
+libusageenvironment3 - multimedia RTSP streaming library (UsageEnvironment classes)
+libvlc-dev - development files for libvlc
+libvlc5 - multimedia player and streamer library
+libvlccore-dev - development files for libvlccore
+libvlccore8 - base library for VLC and its modules
+libvorbis-java - Ogg and Vorbis toolkit for Java
+livemedia-utils - multimedia RTSP streaming tools
+lmms - Linux Multimedia Studio
+lmms-common - Linux Multimedia Studio - common files
+mew - mail reader supporting PGP/MIME for Emacs
+mew-beta - mail reader supporting PGP/MIME for Emacs (development version)
+mffm-timecode-dev - c++ hierarchy which controls and describes time code
+mkvtoolnix - Set of command-line tools to work with Matroska files
+mkvtoolnix-gui - Set of tools to work with Matroska files - GUI frontend
+mp4v2-dbg - library to read, create, and modify mp4 files (debug)
+mp4v2-utils - library to read, create, and modify mp4 files (frontends)
+mpdris2 - media player interface (MPRIS2) bridge for MPD
+mplayerthumbs - video thumbnail generator using mplayer
+multimedia-ambisonics - Packages for working with ambisonics (3D surround sound)
+multimedia-animation - Packages for creating animations
+multimedia-audio-plugins - Audio processing plugins, synths and virtual instruments
+multimedia-audio-utilities - packages for manipulating & cataloging music and audio
+multimedia-broadcasting - Packages for broadcasting media publicly or in the home
+multimedia-devel - Extra packages for developers and package compiling
+multimedia-djing - Packages for Disk Jockeys
+multimedia-drums - Packages for drums & beats
+multimedia-firewire - Packages for your firewire audiocard / interface
+multimedia-graphics - Packages for making and editing artwork
+multimedia-guitar - Packages for playing with your (virtual) guitar gear
+multimedia-jack - JACK (Jack Audio Connection Kit) and ALSA related packages
+multimedia-ladi - LADI, Linuxaudio session management, packages
+multimedia-looping - Packages for looping music and audio
+multimedia-midi - MIDI related packages
+multimedia-mixing - Packages for mixing and mastering your music
+multimedia-musiciantools - Packages for musicians
+multimedia-photography - Packages for working with digital photography
+multimedia-players - Packages which makes your multimedia tools complete
+multimedia-puredata - Packages for working with Pure Data
+multimedia-recording - Packages for audio recording
+multimedia-samplers - Software samplers
+multimedia-soundsynthesis - Packages for sound synthesis
+multimedia-tasks - Debian Multimedia tasks for tasksel
+multimedia-video - Video packages
+ndtpd - the Network Dictionary Transfer Protocol server
+newbiedoc - Debian documentation FOR newbies BY newbies
+ogmtools - Tools for manipulating Ogg multimedia streams
+packagekit-backend-smart - Smart backend for PackageKit
+packagekit-gtk3-module - Install fonts automatically using PackageKit
+phonon - multimedia framework from KDE using Qt 4 - metapackage
+phonon-backend-gstreamer - Phonon GStreamer 1.0 backend
+phonon-backend-gstreamer-common - Phonon GStreamer 1.0.x backend icons
+phonon-backend-null - multimedia framework from KDE - null back-end (no real back-end)
+phonon-backend-vlc - Phonon VLC backend
+phonon-backend-vlc-dbg - Phonon VLC backend debugging symbols
+phonon-dbg - multimedia framework from KDE - debugging symbols
+phonon4qt5 - multimedia framework from KDE using Qt 5 - metapackage
+phonon4qt5-backend-gstreamer - Phonon Qt5 GStreamer 1.0 backend
+phonon4qt5-backend-null - multimedia framework from KDE using Qt 5 - null back-end (no real back-end)
+phonon4qt5-backend-vlc - Phonon4Qt5 VLC backend
+phonon4qt5-backend-vlc-dbg - Phonon4Qt5 VLC backend debugging symbols
+phonon4qt5-dbg - multimedia framework from KDE using Qt 5 - debugging symbols
+php-getid3 - scripts to extract information from multimedia files
+plasma-mediacenter - multimedia center for KDE desktop
+plasma-mediacenter-dbg - multimedia center for KDE desktop - debugging symbols
+puredata - realtime computer music and graphics system
+pyliblo-utils - Command line utilities for sending and receiving OSC messages
+python-ariapy - C++ library for MobileRobots/ActivMedia robots (Python bindings)
+python-hachoir-metadata - Program to extract metadata using Hachoir library
+python-iptcdata - Python bindings for the iptcdata library
+python-kivy - Kivy - Multimedia / Multitouch framework in Python (Python 2)
+python-kivy-examples - Kivy - Multimedia / Multitouch framework in Python (examples)
+python-libconcord - Harmony remote configuration tool - Python bindings
+python-liblo - Python (Python 2) bindings for liblo, the lightweight OSC library
+python-mlt - multimedia framework (Python bindings)
+python-mmkeys - Multimedia key support as a PyGTK object
+python-pygame - SDL bindings for games development in Python
+python-pyglet - cross-platform windowing and multimedia library
+python-pyqt5.qtmultimedia - Python 2 bindings for Qt5's Multimedia module
+python-pyqt5.qtmultimedia-dbg - Python 2 bindings for Qt5's Multimedia module (debug extensions)
+python-pyside.phonon - Qt 4 Phonon module - Python bindings
+python-qt4-phonon - Python bindings for Phonon
+python-qt4-phonon-dbg - Python bindings for Phonon (debug extensions)
+python-sfml - Simple and Fast Multimedia Library - Python 2 Bindings
+python-sfml-dbg - Simple and Fast Multimedia Library - Python 2 Debug Bindings
+python-sfml-doc - Simple and Fast Multimedia Library - Documentation
+python-txosc - Open Sound Control (OSC) protocol for Twisted
+python3-kivy - Kivy - Multimedia / Multitouch framework in Python (Python 3)
+python3-liblo - Python (Python 3) bindings for liblo, the lightweight OSC library
+python3-pyqt4.phonon - Python3 bindings for Phonon
+python3-pyqt4.phonon-dbg - Python3 bindings for Phonon (debug extensions)
+python3-pyqt5.qtmultimedia - Python 3 bindings for Qt5's Multimedia module
+python3-pyqt5.qtmultimedia-dbg - Python 3 bindings for Qt5's Multimedia module (debug extensions)
+python3-pyside.phonon - Qt 4 Phonon module - Python3 bindings
+python3-sfml - Simple and Fast Multimedia Library - Python 3 Bindings
+python3-sfml-dbg - Simple and Fast Multimedia Library - Python 3 Debug Bindings
+qml-module-qtmultimedia-gles - Qt 5 Multimedia QML module - OpenGLES
+qtads - Qt HTML interpreter for TADS
+qtdeclarative5-qtmultimedia-plugin - transitional dummy package for Qt 5 Multimedia QML module
+qtmultimedia5-doc-html - Qt 5 multimedia HTML documentation
+qtubuntu-media - QtMultimedia plugin for AAL+
+rat - Unicast and multicast voice-over-IP application
+ruby-sdl - Ruby/SDL interface for Ruby
+ruby-sdl-dbg - Ruby/SDL interface for Ruby (debug symbols)
+samizdat - Web collaboration and open publishing engine
+smtube - YouTube videos browser
+sugar-memorize-activity - Sugar Learning Platform - matching game creation/playing activity
+terminology - Enlightenment efl based terminal emulator
+terminology-data - Enlightenment efl based terminal emulator data
+texlive-latex-extra - TeX Live: LaTeX additional packages
+transcend - retro-style, abstract 2D shooter
+transmageddon - video transcoder for Linux and Unix systems built using GStreamer
+ubuntustudio-audio - Ubuntu Studio Audio Package
+ubuntustudio-audio-core - Ubuntu Studio Audio Core Package
+ubuntustudio-audio-plugins - Ubuntu Studio audio plugins Package
+ubuntustudio-desktop - Ubuntu Studio Desktop Package
+ubuntustudio-desktop-core - Ubuntu Studio Desktop Core Package
+ubuntustudio-fonts - Ubuntu Studio fonts Package
+ubuntustudio-graphics - Ubuntu Studio graphics Package
+ubuntustudio-photography - Ubuntu Studio Photography Package
+ubuntustudio-publishing - Ubuntu Studio Publishing Package
+ubuntustudio-video - Ubuntu Studio video Package
+ushare - lightweight UPnP A/V Media Server
+vlc - multimedia player and streamer
+vlc-data - Common data for VLC
+vlc-nox - multimedia player and streamer (without X support)
+vlc-plugin-fluidsynth - FluidSynth plugin for VLC
+vlc-plugin-jack - Jack audio plugins for VLC
+vlc-plugin-notify - LibNotify plugin for VLC
+vlc-plugin-samba - Samba plugin for VLC
+vlc-plugin-sdl - SDL video and audio output plugin for VLC
+vlc-plugin-svg - SVG plugin for VLC
+vlc-plugin-zvbi - VBI teletext plugin for VLC
+volti - control audio volume from system tray/notification area
+whitedune-docs - documentation for whitedune
+xfce4-volumed - volume keys daemon
+xine-plugin - xine-based media player plugin for Mozilla browsers
+yate-qt4 - YATE-based universal telephony client
+kplayer - A KDE media player based on MPlayer
+kplayer-data - Data files for kplayer
+kplayer-doc - Documentation for kplayer
+squeak-image3.9 - The Squeak Smalltalk System (image and changes file)
+squeak-plugin-image - The Squeak Smalltalk System (image and changes file)
+w3-recs - Recommendations of the World Wide Web Consortium (W3C)
+wolf4sdl - SDL-Port of Wolfenstein 3-D and Spear of Destiny
+yunit@yunit-VM:~/guitar-tools$ sudo apt install libqt5multimedia
+libqt5multimedia5              libqt5multimediaquick-p5       libqt5multimediawidgets5-gles
+libqt5multimedia5-plugins      libqt5multimediawidgets5       
+yunit@yunit-VM:~/guitar-tools$ sudo apt install libqt5multimedia5
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libqt5multimedia5 is already the newest version (5.6.2-0ubuntu1~~xenialoverlay1~1).
+0 upgraded, 0 newly installed, 0 to remove and 153 not upgraded.
+yunit@yunit-VM:~/guitar-tools$ sudo apt install qtmultimedia5-dev 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  qtmultimedia5-dev
+0 upgraded, 1 newly installed, 0 to remove and 153 not upgraded.
+Need to get 40,9 kB of archives.
+After this operation, 524 kB of additional disk space will be used.
+Get:1 http://ppa.launchpad.net/ci-train-ppa-service/stable-phone-overlay/ubuntu xenial/main amd64 qtmultimedia5-dev amd64 5.6.2-0ubuntu1~~xenialoverlay1~1 [40,9 kB]
+Fetched 40,9 kB in 0s (115 kB/s)       
+Selecting previously unselected package qtmultimedia5-dev:amd64.
+(Reading database ... 221558 files and directories currently installed.)
+Preparing to unpack .../qtmultimedia5-dev_5.6.2-0ubuntu1~~xenialoverlay1~1_amd64.deb ...
+Unpacking qtmultimedia5-dev:amd64 (5.6.2-0ubuntu1~~xenialoverlay1~1) ...
+Setting up qtmultimedia5-dev:amd64 (5.6.2-0ubuntu1~~xenialoverlay1~1) ...
+yunit@yunit-VM:~/guitar-tools$ sudo make install
+cd guitar-tools/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake /home/yunit/guitar-tools/guitar-tools/guitar-tools.pro -o Makefile ) && make -f Makefile install
+make[1]: Entering directory '/home/yunit/guitar-tools/guitar-tools'
+g++ -c -m64 -pipe -O2 -std=gnu++0x -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_MULTIMEDIA_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/soundtouch -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o main.o main.cpp
+In file included from core.h:42:0,
+                 from main.cpp:29:
+drumloopplayer.h:28:24: fatal error: SoundTouch.h: No such file or directory
+compilation terminated.
+Makefile:730: recipe for target 'main.o' failed
+make[1]: *** [main.o] Error 1
+make[1]: Leaving directory '/home/yunit/guitar-tools/guitar-tools'
+Makefile:54: recipe for target 'sub-guitar-tools-install_subtargets' failed
+make: *** [sub-guitar-tools-install_subtargets] Error 2
+yunit@yunit-VM:~/guitar-tools$ 
+

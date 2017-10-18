@@ -208,3 +208,72 @@ cd /lib/x86_64-linux-gnu/bin/
 ```
 
 It works...**Hurray**
+
+#### Guitar tools
+
+Testing something totally different... Starting from same VM with packages installed from previous Ubuntu-Clock-App and OpenStore sections.
+
+```
+cd ~
+bzr branch lp:guitar-tools
+cd guitar-tools/
+qmake guitar-tools.pro
+make -j4
+sudo make install
+```
+
+**Fail** in the "end" it exits with following error
+
+> Project ERROR: Unknown module(s) in QT: multimedia
+>
+> Makefile:42: recipe for target 'sub-guitar-tools-make_first' failed
+
+which indicates that some QT package concerning multimedia is missing. Doing a quick ```apt-cache search multimedia``` reveals (as one of many hits):
+
+> libqt5multimedia5 - Qt 5 Multimedia module
+>
+> ....
+>
+> qtmultimedia5-dev - APIs for multimedia functionality - developement files
+
+i guess it's one of those, HOWEVER; the first is already installed, maybe the second one?
+
+```
+sudo apt install qtmultimedia5-dev
+sudo make install
+```
+
+This takes us to the next level, but still there are some errors... Will investigate some other time. The full logs is inside the logs folder...
+
+
+
+#### InstantFX
+
+Continuing with the exact same VM as in previous 3 attempts...
+
+```
+cd ~
+bzr branch lp:instantfx
+cd instantfx/
+```
+
+since we see no *.pro file but a CMakeLists.txt we can assume we need to use cmake again and thus i will follow the procedure as for the calculator:
+
+```
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+This works as far as i can see, since there is one line stating
+
+> -- Installing: /usr/bin/instantfx
+
+i can just type in the terminal
+
+```
+instantfx
+```
+
+This works great, however it says there are currently no apps installed that can provide media to the app but it starts without errors and navigating around works like a charm.... However in the dash it also has no icon.
+
