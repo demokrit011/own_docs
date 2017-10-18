@@ -155,3 +155,69 @@ In snapd, there are now the *KDE-framework-5* and *GNOME-3.26-framework* (or wha
 #### Some links
 * https://apachelog.wordpress.com/2016/12/02/snapping-kde-applications/
 * https://blog.neon.kde.org/index.php/2017/08/29/great-web-browsing-coming-back-to-kde-with-falkon-new-packaging-formats-coming-to-kde-with-snap/
+
+
+
+### Which Apps to migrate first?
+
+From Stefano Verzegnassi is the following list of the 20 most downloaded apps from the openstore
+
+1. OpenStore
+2. UT Tweak Tool
+3. Telegram
+4. WiFi Scanner
+5. Gallery
+6. uNav
+7. Bluetooth File Transfer
+8. TweakGeek (unsupported)
+9. Falcon
+10. UBports Welcome App
+11. OSM Scout
+12. Calendar
+13. Beru
+14. Fishy Shooter (w/ 140 updates!)
+15. Terminal
+16. Indicator Weather
+17. File Manager
+18. Compass
+19. LoquiIM
+20. OwnCloud Sync
+
+
+
+Personally i would add a few and have different priorities...
+
+Let's create a table where we directly link to the openstore webpage, the source code and have checkboxes for building ok locally, running ok locally (both on Ubuntu 16.04 x86 + Unity7) same goes for Ubuntu 16.04 + Yunit (atop mir) and for snapping isolated/snapping using app-platform
+
+| App                                      | Source                                   | Builds on 16.04 (unity7) | Runs on 16.04 (unity7) | Builds and Runs on 16.04 (yunit) | Snapped isolated | Snapped + platform |
+| ---------------------------------------- | ---------------------------------------- | ------------------------ | ---------------------- | -------------------------------- | ---------------- | ------------------ |
+| [Beru](https://open.uappexplorer.com/app/com.ubuntu.developer.rschroll.beru) | [source](https://github.com/rschroll/beru) |                          |                        |                                  |                  |                    |
+| [Bt File transfer](https://open.uappexplorer.com/app/ubtd.mzanetti) | [source](https://launchpad.net/~mzanetti/+junk/ubtd) |                          |                        |                                  |                  |                    |
+| [Calendar](https://open.uappexplorer.com/app/com.ubuntu.calendar) | [source](https://github.com/ubports/calendar-app) |                          |                        |                                  |                  |                    |
+| [Calculator](https://open.uappexplorer.com/app/com.ubuntu.calculator) | [source](https://github.com/ubports/calculator-app) |                          |                        |                                  |                  |                    |
+| [Document Viewer](https://open.uappexplorer.com/app/com.ubuntu.docviewer) | [source](https://github.com/sverzegnassi/docviewer-app) |                          |                        |                                  |                  |                    |
+| [Falcon](https://open.uappexplorer.com/app/falcon.bhdouglass) | [source](https://github.com/bhdouglass/falcon) |                          |                        |                                  |                  |                    |
+| [File Manager](https://open.uappexplorer.com/app/com.ubuntu.filemanager) | [source](https://github.com/ubports/filemanager-app) |                          |                        |                                  |                  |                    |
+| [Gallery](https://open.uappexplorer.com/app/com.ubuntu.gallery) | [source](https://github.com/ubports/gallery-app) |                          |                        |                                  |                  |                    |
+| [Guitar tools](https://open.uappexplorer.com/app/guitar-tools.t-mon) | [source](https://code.launchpad.net/guitar-tools) |                          |                        |                                  |                  |                    |
+| [InstantFX](https://open.uappexplorer.com/app/instantfx.sverzegnassi) | [source](https://launchpad.net/instantfx) |                          |                        |                                  |                  |                    |
+| [Kodimote](https://open.uappexplorer.com/app/com.ubuntu.developer.mzanetti.kodimote) | [source](https://github.com/mzanetti/kodimote) |                          |                        |                                  |                  |                    |
+| [LoquiIM](https://open.uappexplorer.com/app/loquiim.nfsprodriver) | [source](https://github.com/loqui/im)    |                          |                        |                                  |                  |                    |
+| [Notification Sender](https://open.uappexplorer.com/app/com.edi.npost) | [source](https://github.com/BigET/NotificationPost) |                          |                        |                                  |                  |                    |
+| [OpenStore](https://open.uappexplorer.com/app/openstore.openstore-team) | [source](https://github.com/UbuntuOpenStore/openstore-app) | yes                      | yes?                   |                                  |                  |                    |
+| [ScummVM](https://open.uappexplorer.com/app/scummvm.michael-sheldon) | [source](https://github.com/scummvm/scummvm) |                          |                        |                                  |                  |                    |
+| [Shorter](https://open.uappexplorer.com/app/doniks.shorter) | [source](https://github.com/doniks/shorter) |                          |                        |                                  |                  |                    |
+| [Tagger](https://open.uappexplorer.com/app/com.ubuntu.developer.mzanetti.tagger) | [source](https://code.launchpad.net/~mzanetti/tagger/trunk) |                          |                        |                                  |                  |                    |
+| [Telegram](https://open.uappexplorer.com/app/com.ubuntu.telegram) | [source](https://github.com/ubports/telegram-app) |                          |                        |                                  |                  |                    |
+| [Syncthing](https://open.uappexplorer.com/app/syncthing.zeropointenergy) | [source](https://github.com/syncthing/syncthing) |                          |                        |                                  |                  |                    |
+| [Terminal](https://open.uappexplorer.com/app/com.ubuntu.terminal) | [source](https://github.com/ubports/terminal-app) |                          |                        |                                  |                  |                    |
+| [Timer](https://open.uappexplorer.com/app/timerpro.mivoligo) | [source](https://launchpad.net/timer)    |                          |                        |                                  |                  |                    |
+| [TouchRules](https://open.uappexplorer.com/app/com.ubuntu.developer.psasse.touchrules) | [source](https://launchpad.net/touchrules) |                          |                        |                                  |                  |                    |
+| [UBports welcome app](https://open.uappexplorer.com/app/com.ubuntu.ubports) | [source]( <https://github.com/ubports/ubports-app) |                          |                        |                                  |                  |                    |
+| [UT Tweak Tool](https://open.uappexplorer.com/app/ut-tweak-tool.sverzegnassi) | [source]( <https://code.launchpad.net/~ubuntu-touch-tweak-tool-devs/ubuntu-touch-tweak-tool/trunk) |                          |                        |                                  |                  |                    |
+| [Calculus 2](https://open.uappexplorer.com/app/com.ubuntu.developer.dinko-metalac.calculus-app2) | ?                                        |                          |                        |                                  |                  |                    |
+| [WifiTransfer](https://open.uappexplorer.com/app/wifitransfer.sil) | [source]( <https://code.launchpad.net/~sil/wifitransfer/trunk/) |                          |                        |                                  |                  |                    |
+| [tweakgeek](https://open.uappexplorer.com/app/tweakgeek.mzanetti) | [source](  <https://code.launchpad.net/~mzanetti/+junk/tweakgeek) |                          |                        |                                  |                  |                    |
+| [uMatrix](https://open.uappexplorer.com/app/umatriks.larreamikel) | [source]( <https://github.com/LarreaMikel/uMatriks) |                          |                        |                                  |                  |                    |
+| [uNav](https://open.uappexplorer.com/app/navigator.costales) | [source]( <https://launchpad.net/unav)   |                          |                        |                                  |                  |                    |
+
