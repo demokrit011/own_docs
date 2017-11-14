@@ -1,0 +1,415 @@
+yunit@yunit-VM:~$ git clone https://github.com/rschroll/beru.git
+Cloning into 'beru'...
+remote: Counting objects: 2101, done.
+remote: Total 2101 (delta 0), reused 0 (delta 0), pack-reused 2101
+Receiving objects: 100% (2101/2101), 34.28 MiB | 137.00 KiB/s, done.
+Resolving deltas: 100% (1210/1210), done.
+Checking connectivity... done.
+yunit@yunit-VM:~$ ls
+beru
+Desktop
+Documents
+Downloads
+examples.desktop
+failed_guitar-tools.log
+failed_uNav_uMatriks_Gallery_UT-tweak-tool.log
+gallery-app
+guitar-tools
+instantfx
+instantfx_successfull.log
+Music
+openstore-app
+Pictures
+Public
+session_successfull_build_clock-and-store.log
+Templates
+trunk
+ubuntu-clock-app
+uMatriks
+unav
+Videos
+yunit@yunit-VM:~$ cd beru/
+yunit@yunit-VM:~/beru$ ls
+apparmor              beru.svg        fontlister        po
+beru                  CMakeLists.txt  html              qhttpserver
+beru.contenthub.json  COPYING         LICENSE           README.md
+beru.desktop.in       epubreader      manifest.json.in  ui
+beru.desktop.tr       filesystem      mimetype          VERSION
+yunit@yunit-VM:~/beru$ cmake
+Usage
+
+  cmake [options] <path-to-source>
+  cmake [options] <path-to-existing-build>
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run 'cmake --help' for more information.
+
+yunit@yunit-VM:~/beru$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/beru
+yunit@yunit-VM:~/beru$ sudo make install
+[sudo] password for yunit: 
+Scanning dependencies of target epubreaderplugin_automoc
+[  1%] Automatic moc for target epubreaderplugin
+Generating moc_cbzreader.cpp
+Generating moc_epubreader.cpp
+Generating moc_epubreaderplugin.cpp
+Generating moc_pdfreader.cpp
+Generating moc_quagzipfile.cpp
+Generating moc_quaziodevice.cpp
+Generating moc_quazipfile.cpp
+Generating moc_qhttpconnection.cpp
+Generating moc_qhttpresponse.cpp
+Generating moc_qhttpserver.cpp
+[  1%] Built target epubreaderplugin_automoc
+Scanning dependencies of target epubreaderplugin
+[  3%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/epubreader.cpp.o
+[  4%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/cbzreader.cpp.o
+[  6%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/pdfreader.cpp.o
+In file included from /home/yunit/beru/epubreader/pdfreader.cpp:7:0:
+/home/yunit/beru/epubreader/pdfreader.h:13:37: fatal error: poppler/qt5/poppler-qt5.h: No such file or directory
+compilation terminated.
+epubreader/CMakeFiles/epubreaderplugin.dir/build.make:110: recipe for target 'epubreader/CMakeFiles/epubreaderplugin.dir/pdfreader.cpp.o' failed
+make[2]: *** [epubreader/CMakeFiles/epubreaderplugin.dir/pdfreader.cpp.o] Error 1
+CMakeFiles/Makefile2:86: recipe for target 'epubreader/CMakeFiles/epubreaderplugin.dir/all' failed
+make[1]: *** [epubreader/CMakeFiles/epubreaderplugin.dir/all] Error 2
+Makefile:127: recipe for target 'all' failed
+make: *** [all] Error 2
+yunit@yunit-VM:~/beru$ sudo apt-cache search poppler
+gir1.2-poppler-0.18 - GObject introspection data for poppler-glib
+libpoppler-cpp-dev - PDF rendering library -- development files (CPP interface)
+libpoppler-cpp0 - PDF rendering library (CPP shared library)
+libpoppler-dev - PDF rendering library -- development files
+libpoppler-glib-dev - PDF rendering library -- development files (GLib interface)
+libpoppler-glib-doc - PDF rendering library -- documentation for the GLib interface
+libpoppler-glib8 - PDF rendering library (GLib-based shared library)
+libpoppler-private-dev - PDF rendering library -- private development files
+libpoppler-qt4-4 - PDF rendering library (Qt 4 based shared library)
+libpoppler-qt4-dev - PDF rendering library -- development files (Qt 4 interface)
+libpoppler-qt5-1 - PDF rendering library (Qt 5 based shared library)
+libpoppler-qt5-dev - PDF rendering library -- development files (Qt 5 interface)
+libpoppler58 - PDF rendering library
+poppler-data - encoding data for the poppler PDF rendering library
+poppler-dbg - PDF rendering library -- debugging symbols
+poppler-utils - PDF utilities (based on Poppler)
+apvlv - PDF viewer with Vim-like behaviour
+gambas3-gb-pdf - Gambas pdf component
+libpoppler-cil - PDF rendering library -- CLI bindings
+libpoppler-cil-dev - PDF rendering library -- CLI development files
+libpopplerkit-dev - GNUstep framework for rendering PDF content (development files)
+libpopplerkit0 - GNUstep framework for rendering PDF content (library files)
+monodoc-poppler-manual - compiled XML documentation for Poppler Sharp
+pdf2svg - converts PDF documents to SVG files (one per page)
+python-poppler - Poppler Python bindings
+python-poppler-dbg - Poppler Python bindings (debug extension)
+python-poppler-qt4 - Python binding to Poppler-Qt4 C++ library (Python 2)
+python3-poppler-qt4 - Python binding to Poppler-Qt4 C++ library (Python 3)
+python3-poppler-qt5 - Python binding to Poppler-Qt5 C++ library (Python 3)
+qpdfview - tabbed document viewer
+qpdfview-djvu-plugin - tabbed document viewer - DjVu plugin
+qpdfview-ps-plugin - tabbed document viewer - PostScript plugin
+qpdfview-translations - tabbed document viewer - translations
+qtdeclarative5-poppler1.0 - Poppler QML plugin
+ruby-poppler - Ruby bindings for the libpoppler-glib library
+ruby-poppler-dbg - Ruby bindings for the libpoppler-glib library (debugging symbols)
+xpdf - Portable Document Format (PDF) reader
+zathura-pdf-poppler - PDF support for zathura
+yunit@yunit-VM:~/beru$ sudo apt install qtdeclarative5-poppler1.0 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+qtdeclarative5-poppler1.0 is already the newest version (0.1.1+13.10.20130819.3-0ubuntu4~gcc5.1).
+qtdeclarative5-poppler1.0 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 211 not upgraded.
+yunit@yunit-VM:~/beru$ sudo apt install libpop
+libpoppler58            libpoppler-glib8        libpoppler-qt4-4
+libpoppler-cil          libpoppler-glib-dev     libpoppler-qt4-dev
+libpoppler-cil-dev      libpoppler-glib-doc     libpoppler-qt5-1
+libpoppler-cpp0         libpopplerkit0          libpoppler-qt5-dev
+libpoppler-cpp-dev      libpopplerkit-dev       libpopt0
+libpoppler-dev          libpoppler-private-dev  libpopt-dev
+yunit@yunit-VM:~/beru$ sudo apt install libpoppler-qt5-dev 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libpoppler-dev libpoppler-qt5-1 libpoppler58
+The following NEW packages will be installed:
+  libpoppler-dev libpoppler-qt5-dev
+The following packages will be upgraded:
+  libpoppler-qt5-1 libpoppler58
+2 upgraded, 2 newly installed, 0 to remove and 209 not upgraded.
+Need to get 916 kB/1.790 kB of archives.
+After this operation, 5.532 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpoppler-dev amd64 0.41.0-0ubuntu1.5 [761 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpoppler-qt5-dev amd64 0.41.0-0ubuntu1.5 [155 kB]
+Fetched 916 kB in 1s (906 kB/s)         
+(Reading database ... 222021 files and directories currently installed.)
+Preparing to unpack .../libpoppler58_0.41.0-0ubuntu1.5_amd64.deb ...
+Unpacking libpoppler58:amd64 (0.41.0-0ubuntu1.5) over (0.41.0-0ubuntu1.4) ...
+Selecting previously unselected package libpoppler-dev:amd64.
+Preparing to unpack .../libpoppler-dev_0.41.0-0ubuntu1.5_amd64.deb ...
+Unpacking libpoppler-dev:amd64 (0.41.0-0ubuntu1.5) ...
+Preparing to unpack .../libpoppler-qt5-1_0.41.0-0ubuntu1.5_amd64.deb ...
+Unpacking libpoppler-qt5-1:amd64 (0.41.0-0ubuntu1.5) over (0.41.0-0ubuntu1.4) ...
+Selecting previously unselected package libpoppler-qt5-dev:amd64.
+Preparing to unpack .../libpoppler-qt5-dev_0.41.0-0ubuntu1.5_amd64.deb ...
+Unpacking libpoppler-qt5-dev:amd64 (0.41.0-0ubuntu1.5) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Setting up libpoppler58:amd64 (0.41.0-0ubuntu1.5) ...
+Setting up libpoppler-dev:amd64 (0.41.0-0ubuntu1.5) ...
+Setting up libpoppler-qt5-1:amd64 (0.41.0-0ubuntu1.5) ...
+Setting up libpoppler-qt5-dev:amd64 (0.41.0-0ubuntu1.5) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+yunit@yunit-VM:~/beru$ sudo make install
+[  1%] Automatic moc for target epubreaderplugin
+[  1%] Built target epubreaderplugin_automoc
+[  3%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/pdfreader.cpp.o
+[  4%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/epubreaderplugin.cpp.o
+[  6%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/JlCompress.cpp.o
+[  7%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/qioapi.cpp.o
+[  9%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quacrc32.cpp.o
+[ 10%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quaadler32.cpp.o
+[ 12%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quazip.cpp.o
+[ 13%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quazipfile.cpp.o
+[ 15%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quagzipfile.cpp.o
+[ 16%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quazipfileinfo.cpp.o
+[ 18%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quaziodevice.cpp.o
+[ 20%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/quazipnewinfo.cpp.o
+[ 21%] Building C object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/unzip.c.o
+[ 23%] Building C object epubreader/CMakeFiles/epubreaderplugin.dir/quazip/zip.c.o
+[ 24%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/__/qhttpserver/qhttpconnection.cpp.o
+[ 26%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/__/qhttpserver/qhttpresponse.cpp.o
+[ 27%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/__/qhttpserver/qhttpserver.cpp.o
+[ 29%] Building CXX object epubreader/CMakeFiles/epubreaderplugin.dir/epubreaderplugin_automoc.cpp.o
+[ 30%] Linking CXX shared module ../Epub/libepubreaderplugin.so
+[ 33%] Built target epubreaderplugin
+Scanning dependencies of target filesystemplugin_automoc
+[ 35%] Automatic moc for target filesystemplugin
+Generating moc_filesystem.cpp
+Generating moc_filesystemplugin.cpp
+[ 35%] Built target filesystemplugin_automoc
+Scanning dependencies of target filesystemplugin
+[ 36%] Building CXX object filesystem/CMakeFiles/filesystemplugin.dir/filesystem.cpp.o
+[ 38%] Building CXX object filesystem/CMakeFiles/filesystemplugin.dir/filesystemplugin.cpp.o
+[ 40%] Building CXX object filesystem/CMakeFiles/filesystemplugin.dir/filesystemplugin_automoc.cpp.o
+[ 41%] Linking CXX shared module ../File/libfilesystemplugin.so
+[ 41%] Built target filesystemplugin
+Scanning dependencies of target fontlisterplugin_automoc
+[ 43%] Automatic moc for target fontlisterplugin
+Generating moc_fontlister.cpp
+Generating moc_fontlisterplugin.cpp
+[ 43%] Built target fontlisterplugin_automoc
+Scanning dependencies of target fontlisterplugin
+[ 44%] Building CXX object fontlister/CMakeFiles/fontlisterplugin.dir/fontlister.cpp.o
+[ 46%] Building CXX object fontlister/CMakeFiles/fontlisterplugin.dir/fontlisterplugin.cpp.o
+[ 47%] Building CXX object fontlister/CMakeFiles/fontlisterplugin.dir/fontlisterplugin_automoc.cpp.o
+[ 49%] Linking CXX shared module ../FontList/libfontlisterplugin.so
+[ 49%] Built target fontlisterplugin
+Scanning dependencies of target qhttpserverplugin_automoc
+[ 50%] Automatic moc for target qhttpserverplugin
+Generating moc_fileserver.cpp
+Generating moc_httpserverplugin.cpp
+Generating moc_qhttpconnection.cpp
+Generating moc_qhttprequest.cpp
+Generating moc_qhttpresponse.cpp
+Generating moc_qhttpserver.cpp
+[ 50%] Built target qhttpserverplugin_automoc
+Scanning dependencies of target qhttpserverplugin
+[ 52%] Building CXX object qhttpserver/CMakeFiles/qhttpserverplugin.dir/fileserver.cpp.o
+[ 53%] Building CXX object qhttpserver/CMakeFiles/qhttpserverplugin.dir/httpserverplugin.cpp.o
+[ 55%] Building CXX object qhttpserver/CMakeFiles/qhttpserverplugin.dir/qhttpconnection.cpp.o
+[ 56%] Building CXX object qhttpserver/CMakeFiles/qhttpserverplugin.dir/qhttprequest.cpp.o
+[ 58%] Building CXX object qhttpserver/CMakeFiles/qhttpserverplugin.dir/qhttpresponse.cpp.o
+[ 60%] Building CXX object qhttpserver/CMakeFiles/qhttpserverplugin.dir/qhttpserver.cpp.o
+[ 61%] Building C object qhttpserver/CMakeFiles/qhttpserverplugin.dir/http-parser/http_parser.c.o
+[ 63%] Building C object qhttpserver/CMakeFiles/qhttpserverplugin.dir/http-parser/url_parser.c.o
+[ 64%] Building CXX object qhttpserver/CMakeFiles/qhttpserverplugin.dir/qhttpserverplugin_automoc.cpp.o
+[ 66%] Linking CXX shared module ../HttpServer/libqhttpserverplugin.so
+[ 66%] Built target qhttpserverplugin
+Scanning dependencies of target MakeTextures
+[ 67%] Generating Textures.qml
+[ 67%] Built target MakeTextures
+Scanning dependencies of target pofiles_5
+[ 69%] Generating it.gmo
+[ 69%] Built target pofiles_5
+Scanning dependencies of target pofiles_4
+[ 70%] Generating fr.gmo
+[ 70%] Built target pofiles_4
+Scanning dependencies of target pofiles_8
+[ 72%] Generating pl.gmo
+[ 72%] Built target pofiles_8
+Scanning dependencies of target pofiles_3
+[ 73%] Generating ja.gmo
+[ 73%] Built target pofiles_3
+Scanning dependencies of target beru.pot
+[ 75%] Generating translation template
+[ 75%] Built target beru.pot
+Scanning dependencies of target pofiles_1
+[ 76%] Generating ca.gmo
+[ 76%] Built target pofiles_1
+Scanning dependencies of target pofiles_14
+[ 78%] Generating fi.gmo
+[ 78%] Built target pofiles_14
+Scanning dependencies of target pofiles_10
+[ 80%] Generating is.gmo
+[ 80%] Built target pofiles_10
+Scanning dependencies of target pofiles_9
+[ 81%] Generating el.gmo
+[ 81%] Built target pofiles_9
+Scanning dependencies of target pofiles_11
+[ 83%] Generating ru.gmo
+[ 83%] Built target pofiles_11
+Scanning dependencies of target pofiles_18
+[ 84%] Generating nb.gmo
+[ 84%] Built target pofiles_18
+Scanning dependencies of target pofiles_7
+[ 86%] Generating eu.gmo
+[ 86%] Built target pofiles_7
+Scanning dependencies of target pofiles_12
+[ 87%] Generating nl.gmo
+[ 87%] Built target pofiles_12
+Scanning dependencies of target pofiles_13
+[ 89%] Generating gl.gmo
+[ 89%] Built target pofiles_13
+Scanning dependencies of target pofiles_20
+[ 90%] Generating sl.gmo
+[ 90%] Built target pofiles_20
+Scanning dependencies of target pofiles_6
+[ 92%] Generating lv.gmo
+[ 92%] Built target pofiles_6
+Scanning dependencies of target pofiles_2
+[ 93%] Generating es.gmo
+[ 93%] Built target pofiles_2
+Scanning dependencies of target pofiles_15
+[ 95%] Generating de.gmo
+[ 95%] Built target pofiles_15
+Scanning dependencies of target pofiles_16
+[ 96%] Generating hu.gmo
+[ 96%] Built target pofiles_16
+Scanning dependencies of target pofiles_17
+[ 98%] Generating uk.gmo
+[ 98%] Built target pofiles_17
+Scanning dependencies of target pofiles_19
+[100%] Generating gd.gmo
+[100%] Built target pofiles_19
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/bin/beru
+-- Installing: /usr/share/beru/beru
+-- Installing: /usr/share/applications/beru.desktop
+-- Installing: /usr/share/beru/beru.svg
+-- Installing: /usr/share/beru/Epub/libepubreaderplugin.so
+-- Installing: /usr/share/beru/Epub/qmldir
+-- Installing: /usr/share/beru/File/libfilesystemplugin.so
+-- Installing: /usr/share/beru/File/qmldir
+-- Installing: /usr/share/beru/FontList/libfontlisterplugin.so
+-- Installing: /usr/share/beru/FontList/qmldir
+-- Installing: /usr/share/beru/html
+-- Installing: /usr/share/beru/html/background_paper@30.png
+-- Installing: /usr/share/beru/html/monocle
+-- Installing: /usr/share/beru/html/monocle/scripts
+-- Installing: /usr/share/beru/html/monocle/scripts/monoctrl.js
+-- Installing: /usr/share/beru/html/monocle/scripts/monocore.js
+-- Installing: /usr/share/beru/html/monocle/styles
+-- Installing: /usr/share/beru/html/monocle/styles/monocore.css
+-- Installing: /usr/share/beru/html/monocle/styles/monoctrl.css
+-- Installing: /usr/share/beru/html/monocle/README.md
+-- Installing: /usr/share/beru/html/background_paper_invert@30.png
+-- Installing: /usr/share/beru/html/messaging.js
+-- Installing: /usr/share/beru/html/index.html
+-- Installing: /usr/share/beru/html/instantslider.js
+-- Installing: /usr/share/beru/html/fonts
+-- Installing: /usr/share/beru/html/fonts/URW Bookman L.ttf
+-- Installing: /usr/share/beru/html/fonts/URW Gothic L Bold Italic.ttf
+-- Installing: /usr/share/beru/html/fonts/URW Bookman L Italic.ttf
+-- Installing: /usr/share/beru/html/fonts/COPYING.URW
+-- Installing: /usr/share/beru/html/fonts/Bitstream Charter Bold.ttf
+-- Installing: /usr/share/beru/html/fonts/URW Bookman L Bold Italic.ttf
+-- Installing: /usr/share/beru/html/fonts/URW Gothic L Bold.ttf
+-- Installing: /usr/share/beru/html/fonts/Bitstream Charter.ttf
+-- Installing: /usr/share/beru/html/fonts/README.URW
+-- Installing: /usr/share/beru/html/fonts/Bitstream Charter Italic.ttf
+-- Installing: /usr/share/beru/html/fonts/license.charter.txt
+-- Installing: /usr/share/beru/html/fonts/URW Bookman L Bold.ttf
+-- Installing: /usr/share/beru/html/fonts/Bitstream Charter Bold Italic.ttf
+-- Installing: /usr/share/beru/html/fonts/URW Gothic L Italic.ttf
+-- Installing: /usr/share/beru/html/fonts/URW Gothic L.ttf
+-- Installing: /usr/share/beru/html/styling.js
+-- Installing: /usr/share/beru/html/Makefile
+-- Installing: /usr/share/beru/HttpServer/libqhttpserverplugin.so
+-- Installing: /usr/share/beru/HttpServer/qmldir
+-- Installing: /usr/share/beru/ui
+-- Installing: /usr/share/beru/ui/DefaultCover.qml
+-- Installing: /usr/share/beru/ui/images
+-- Installing: /usr/share/beru/ui/images/stainedpaper_tiled.jpg
+-- Installing: /usr/share/beru/ui/images/error_cover.svg
+-- Installing: /usr/share/beru/ui/images/error_cover_full.svg
+-- Installing: /usr/share/beru/ui/encoder.sh
+-- Installing: /usr/share/beru/ui/Importer.qml
+-- Installing: /usr/share/beru/ui/components
+-- Installing: /usr/share/beru/ui/components/StylableOptionSelectorDelegate.qml
+-- Installing: /usr/share/beru/ui/components/FloatingButton.qml
+-- Installing: /usr/share/beru/ui/components/StyledButton.qml
+-- Installing: /usr/share/beru/ui/components/SwipeControl.qml
+-- Installing: /usr/share/beru/ui/components/OptionSelector.qml
+-- Installing: /usr/share/beru/ui/components/PageWithBottomEdge.qml
+-- Installing: /usr/share/beru/ui/qmlmessaging-userscript.js
+-- Installing: /usr/share/beru/ui/historystack.js
+-- Installing: /usr/share/beru/ui/LocalBooks.qml
+-- Installing: /usr/share/beru/ui/BookSources.qml
+-- Installing: /usr/share/beru/ui/qmlmessaging.js
+-- Installing: /usr/share/beru/ui/Server.qml
+-- Installing: /usr/share/beru/ui/main.qml
+-- Installing: /usr/share/beru/ui/Makefile
+-- Installing: /usr/share/beru/ui/Textures.qml
+-- Installing: /usr/share/beru/ui/Reader.qml
+-- Installing: /usr/share/beru/ui/BookPage.qml
+-- Installing: /usr/share/locale/ca/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/ja/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/lv/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/eu/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/el/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/is/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/ru/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/gl/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/uk/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/nb/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/gd/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+-- Installing: /usr/share/locale/sl/LC_MESSAGES/com.ubuntu.developer.rschroll.beru.mo
+yunit@yunit-VM:~/beru$ cd ..
+yunit@yunit-VM:~$ beru
+file:///usr/share/beru/ui/main.qml:56 Type BookPage unavailable
+file:///usr/share/beru/ui/BookPage.qml:11 plugin cannot be loaded for module "com.canonical.Oxide": Cannot load library /usr/lib/x86_64-linux-gnu/qt5/qml/com/canonical/Oxide/libqmloxideplugin.so: (/usr/lib/x86_64-linux-gnu/libQt5Feedback.so.5: version `Qt_5' not found (required by /usr/lib/x86_64-linux-gnu/libOxideQtCore.so.0))
+
+yunit@yunit-VM:~$ 
+

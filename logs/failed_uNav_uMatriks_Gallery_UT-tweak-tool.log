@@ -1,0 +1,993 @@
+yunit@yunit-VM:~$ ls
+Desktop                    Music
+Documents                  openstore-app
+Downloads                  Pictures
+examples.desktop           Public
+failed_guitar-tools.log    session_successfull_build_clock-and-store.log
+guitar-tools               Templates
+instantfx                  ubuntu-clock-app
+instantfx_successfull.log  Videos
+yunit@yunit-VM:~$ bzr branch lp:unav
+You have not informed bzr of your Launchpad ID, and you must do this to
+write to Launchpad or access private data.  See "bzr help launchpad-login".
+Branched 197 revisions.                                                        
+yunit@yunit-VM:~$ ls
+Desktop                    openstore-app
+Documents                  Pictures
+Downloads                  Public
+examples.desktop           session_successfull_build_clock-and-store.log
+failed_guitar-tools.log    Templates
+guitar-tools               ubuntu-clock-app
+instantfx                  unav
+instantfx_successfull.log  Videos
+Music
+yunit@yunit-VM:~$ cd unav/
+yunit@yunit-VM:~/unav$ ls
+app-armor.json  app-dispatcher.json  icon.png  Makefile       nav  qml
+app.desktop     COPYING.GPL3         lib       manifest.json  po
+yunit@yunit-VM:~/unav$ ls nav/
+class  css  img  index.html  libraries  locales  sounds  toolkit  voices
+yunit@yunit-VM:~/unav$ ls po/
+af.po   ca@valencia.po  en_GB.po  fr.po  it.po  pl.po     sk.po  uk.po
+ar.po   cs.po           eo.po     gd.po  ja.po  pt_BR.po  sl.po  unav.pot
+ast.po  da.po           es.po     gl.po  ku.po  pt.po     sr.po  zh_CN.po
+br.po   de.po           eu.po     he.po  nb.po  ro.po     sv.po  zh_TW.po
+bs.po   el.po           fa.po     hu.po  nl.po  ru.po     tr.po
+ca.po   en_AU.po        fi.po     id.po  oc.po  sc.po     ug.po
+yunit@yunit-VM:~/unav$ less Makefile 
+yunit@yunit-VM:~/unav$ make install
+make: *** No rule to make target 'install'.  Stop.
+yunit@yunit-VM:~/unav$ make
+grep -Po 'data-localize=([^>]*)' nav/index.html > nav/index.html.strings
+yunit@yunit-VM:~/unav$ make install
+make: *** No rule to make target 'install'.  Stop.
+yunit@yunit-VM:~/unav$ ls
+app-armor.json  app-dispatcher.json  icon.png  Makefile       nav  qml
+app.desktop     COPYING.GPL3         lib       manifest.json  po
+yunit@yunit-VM:~/unav$ ls po
+af.po   ca@valencia.po  en_GB.po  fr.po  it.po  pl.po     sk.po  uk.po
+ar.po   cs.po           eo.po     gd.po  ja.po  pt_BR.po  sl.po  unav.pot
+ast.po  da.po           es.po     gl.po  ku.po  pt.po     sr.po  zh_CN.po
+br.po   de.po           eu.po     he.po  nb.po  ro.po     sv.po  zh_TW.po
+bs.po   el.po           fa.po     hu.po  nl.po  ru.po     tr.po
+ca.po   en_AU.po        fi.po     id.po  oc.po  sc.po     ug.po
+yunit@yunit-VM:~/unav$ cd ..
+yunit@yunit-VM:~$      bzr branch lp:ubuntu-touch-tweak-tool/trunk 
+You have not informed bzr of your Launchpad ID, and you must do this to
+write to Launchpad or access private data.  See "bzr help launchpad-login".
+Branched 42 revisions.                                                         
+yunit@yunit-VM:~$ ls
+Desktop                    openstore-app
+Documents                  Pictures
+Downloads                  Public
+examples.desktop           session_successfull_build_clock-and-store.log
+failed_guitar-tools.log    Templates
+guitar-tools               trunk
+instantfx                  ubuntu-clock-app
+instantfx_successfull.log  unav
+Music                      Videos
+yunit@yunit-VM:~$ cd trunk/
+yunit@yunit-VM:~/trunk$ ls
+app             COPYING           plugins  TODO
+cmake           copyright         po       ut-tweak-tool.apparmor
+CMakeLists.txt  manifest.json.in  README
+yunit@yunit-VM:~/trunk$ sudo apt install libpa
+Display all 226 possibilities? (y or n)
+yunit@yunit-VM:~/trunk$ sudo apt install libpam0g
+libpam0g      libpam0g-dev  
+yunit@yunit-VM:~/trunk$ sudo apt install libpam0g
+libpam0g      libpam0g-dev  
+yunit@yunit-VM:~/trunk$ sudo apt install libpam0g-dev qtdeclarative5-gsettings1.0 
+[sudo] password for yunit: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libgsettings-qt1
+The following NEW packages will be installed:
+  libpam0g-dev qtdeclarative5-gsettings1.0
+The following packages will be upgraded:
+  libgsettings-qt1
+1 upgraded, 2 newly installed, 0 to remove and 211 not upgraded.
+Need to get 140 kB of archives.
+After this operation, 453 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 libpam0g-dev amd64 1.1.8-3.2ubuntu2 [109 kB]
+Get:2 http://ppa.launchpad.net/ci-train-ppa-service/stable-phone-overlay/ubuntu xenial/main amd64 libgsettings-qt1 amd64 0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1 [16,2 kB]
+Get:3 http://ppa.launchpad.net/ci-train-ppa-service/stable-phone-overlay/ubuntu xenial/main amd64 qtdeclarative5-gsettings1.0 amd64 0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1 [14,8 kB]
+Fetched 140 kB in 0s (285 kB/s)                       
+Selecting previously unselected package libpam0g-dev:amd64.
+(Reading database ... 221775 files and directories currently installed.)
+Preparing to unpack .../libpam0g-dev_1.1.8-3.2ubuntu2_amd64.deb ...
+Unpacking libpam0g-dev:amd64 (1.1.8-3.2ubuntu2) ...
+Preparing to unpack .../libgsettings-qt1_0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1_amd64.deb ...
+Unpacking libgsettings-qt1:amd64 (0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1) over (0.1+16.04.20160329-0ubuntu1) ...
+Selecting previously unselected package qtdeclarative5-gsettings1.0.
+Preparing to unpack .../qtdeclarative5-gsettings1.0_0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1_amd64.deb ...
+Unpacking qtdeclarative5-gsettings1.0 (0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Setting up libpam0g-dev:amd64 (1.1.8-3.2ubuntu2) ...
+Setting up libgsettings-qt1:amd64 (0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1) ...
+Setting up qtdeclarative5-gsettings1.0 (0.1+16.04.20160329-0ubuntu3~~xenialoverlay1~1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+yunit@yunit-VM:~/trunk$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLICK_MODE
+
+
+-- Build files have been written to: /home/yunit/trunk
+yunit@yunit-VM:~/trunk$ make -j4
+Scanning dependencies of target ut-tweak-tool_QMlFiles
+Scanning dependencies of target PamAuthentication_automoc
+Scanning dependencies of target ut-tweak-tool_ClickFiles
+Scanning dependencies of target tweaktoolclickplugin_automoc
+[  0%] Built target ut-tweak-tool_ClickFiles
+[  2%] Automatic moc for target PamAuthentication
+[  2%] Built target ut-tweak-tool_QMlFiles
+[  4%] Automatic moc for target tweaktoolclickplugin
+Scanning dependencies of target ubuntusoundplugin_automoc
+Scanning dependencies of target qmlqtpowerdplugin_automoc
+[  6%] Automatic moc for target qmlqtpowerdplugin
+Generating moc_applicationsmodel.cpp
+Generating moc_pamauthentication.cpp
+[  8%] Automatic moc for target ubuntusoundplugin
+Generating moc_QtPowerd.cpp
+Generating moc_accountsservice.cpp
+Generating moc_pamauthentication_plugin.cpp
+Generating moc_backend.cpp
+Generating moc_plugin.cpp
+Generating moc_plugin.cpp
+[  8%] Built target PamAuthentication_automoc
+Scanning dependencies of target storagemanagerplugin_automoc
+[  8%] Built target tweaktoolclickplugin_automoc
+Generating moc_sound.cpp
+[ 10%] Automatic moc for target storagemanagerplugin
+[  8%] Built target qmlqtpowerdplugin_automoc
+Scanning dependencies of target tweaktoolplugin_automoc
+Scanning dependencies of target ut-tweak-tool.desktop
+Generating moc_backend.cpp
+[ 12%] Automatic moc for target tweaktoolplugin
+[ 14%] Merging translations into ut-tweak-tool.desktop
+Generating moc_backend.cpp
+[ 14%] Built target ubuntusoundplugin_automoc
+Scanning dependencies of target pofiles_13
+Generating moc_storagemanager.cpp
+[ 17%] Generating nb.gmo
+Generating moc_cmdlauncher.cpp
+[ 17%] Built target pofiles_13
+[ 17%] Built target storagemanagerplugin_automoc
+[ 17%] Built target ut-tweak-tool.desktop
+Scanning dependencies of target pofiles_12
+Generating moc_singleprocess.cpp
+[ 19%] Generating de.gmo
+Scanning dependencies of target pofiles_11
+Scanning dependencies of target pofiles_9
+[ 21%] Generating fi.gmo
+[ 21%] Built target pofiles_12
+[ 23%] Generating nl.gmo
+[ 23%] Built target pofiles_9
+Scanning dependencies of target pofiles_10
+[ 23%] Built target pofiles_11
+Scanning dependencies of target pofiles_1
+Scanning dependencies of target pofiles_2
+[ 25%] Generating gl.gmo
+[ 25%] Built target tweaktoolplugin_automoc
+[ 27%] Generating es.gmo
+[ 27%] Built target pofiles_10
+Scanning dependencies of target ut-tweak-tool.sverzegnassi.pot
+[ 29%] Generating ca.gmo
+Scanning dependencies of target pofiles_3
+[ 31%] Generating translation template
+[ 29%] Built target pofiles_1
+[ 29%] Built target pofiles_2
+[ 34%] Generating fr.gmo
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_4
+[ 36%] Generating it.gmo
+[ 38%] Generating zh_CN.gmo
+[ 38%] Built target pofiles_3
+Wrote ut-tweak-tool.desktop.in.h
+Scanning dependencies of target pofiles_5
+[ 38%] Built target pofiles_8
+[ 38%] Built target pofiles_4
+[ 40%] Generating pl.gmo
+../app/ui/mainPage/OverviewTab.qml:42: warning: unterminated string literal
+../app/ui/mainPage/OverviewTab.qml:87: warning: unterminated string literal
+Scanning dependencies of target pofiles_6
+Scanning dependencies of target pofiles_7
+[ 40%] Built target pofiles_5
+[ 42%] Generating ug.gmo
+[ 44%] Generating ru.gmo
+[ 44%] Built target ut-tweak-tool.sverzegnassi.pot
+Scanning dependencies of target tweaktoolclickplugin
+[ 44%] Built target pofiles_6
+[ 44%] Built target pofiles_7
+Scanning dependencies of target qmlqtpowerdplugin
+Scanning dependencies of target PamAuthentication
+Scanning dependencies of target ubuntusoundplugin
+[ 46%] Building CXX object plugins/QtPowerd/CMakeFiles/qmlqtpowerdplugin.dir/plugin.cpp.o
+[ 48%] Building CXX object plugins/click/CMakeFiles/tweaktoolclickplugin.dir/applicationsmodel.cpp.o
+[ 51%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/plugin.cpp.o
+[ 53%] Building CXX object plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication.cpp.o
+[ 55%] Building CXX object plugins/QtPowerd/CMakeFiles/qmlqtpowerdplugin.dir/QtPowerd.cpp.o
+[ 57%] Building CXX object plugins/click/CMakeFiles/tweaktoolclickplugin.dir/backend.cpp.o
+[ 59%] Building CXX object plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication_plugin.cpp.o
+[ 61%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/sound.cpp.o
+[ 63%] Building CXX object plugins/QtPowerd/CMakeFiles/qmlqtpowerdplugin.dir/qmlqtpowerdplugin_automoc.cpp.o
+[ 65%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/accountsservice.cpp.o
+[ 68%] Building CXX object plugins/click/CMakeFiles/tweaktoolclickplugin.dir/tweaktoolclickplugin_automoc.cpp.o
+[ 70%] Building CXX object plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/PamAuthentication_automoc.cpp.o
+[ 72%] Linking CXX shared module libqmlqtpowerdplugin.so
+[ 72%] Built target qmlqtpowerdplugin
+Scanning dependencies of target storagemanagerplugin
+[ 74%] Building CXX object plugins/storagemanager/CMakeFiles/storagemanagerplugin.dir/storagemanager.cpp.o
+[ 76%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/ubuntusoundplugin_automoc.cpp.o
+[ 78%] Linking CXX shared module libtweaktoolclickplugin.so
+[ 80%] Linking CXX shared module libPamAuthentication.so
+[ 80%] Built target tweaktoolclickplugin
+Scanning dependencies of target tweaktoolplugin
+[ 82%] Building CXX object plugins/tweaktool/CMakeFiles/tweaktoolplugin.dir/cmdlauncher.cpp.o
+[ 82%] Built target PamAuthentication
+[ 85%] Building CXX object plugins/tweaktool/CMakeFiles/tweaktoolplugin.dir/singleprocess.cpp.o
+[ 87%] Building CXX object plugins/storagemanager/CMakeFiles/storagemanagerplugin.dir/backend.cpp.o
+[ 89%] Linking CXX shared module libubuntusoundplugin.so
+[ 89%] Built target ubuntusoundplugin
+[ 91%] Building CXX object plugins/storagemanager/CMakeFiles/storagemanagerplugin.dir/storagemanagerplugin_automoc.cpp.o
+[ 93%] Building CXX object plugins/tweaktool/CMakeFiles/tweaktoolplugin.dir/backend.cpp.o
+[ 95%] Building CXX object plugins/tweaktool/CMakeFiles/tweaktoolplugin.dir/tweaktoolplugin_automoc.cpp.o
+[ 97%] Linking CXX shared module libstoragemanagerplugin.so
+[ 97%] Built target storagemanagerplugin
+[100%] Linking CXX shared module libtweaktoolplugin.so
+[100%] Built target tweaktoolplugin
+yunit@yunit-VM:~/trunk$ sudo make install
+[  0%] Built target ut-tweak-tool_ClickFiles
+[  0%] Built target ut-tweak-tool_QMlFiles
+[  2%] Automatic moc for target tweaktoolclickplugin
+[  2%] Built target tweaktoolclickplugin_automoc
+[ 10%] Built target tweaktoolclickplugin
+[ 12%] Automatic moc for target PamAuthentication
+[ 12%] Built target PamAuthentication_automoc
+[ 21%] Built target PamAuthentication
+[ 23%] Automatic moc for target qmlqtpowerdplugin
+[ 23%] Built target qmlqtpowerdplugin_automoc
+[ 31%] Built target qmlqtpowerdplugin
+[ 34%] Automatic moc for target ubuntusoundplugin
+[ 34%] Built target ubuntusoundplugin_automoc
+[ 44%] Built target ubuntusoundplugin
+[ 46%] Automatic moc for target storagemanagerplugin
+[ 46%] Built target storagemanagerplugin_automoc
+[ 55%] Built target storagemanagerplugin
+[ 57%] Automatic moc for target tweaktoolplugin
+[ 57%] Built target tweaktoolplugin_automoc
+[ 68%] Built target tweaktoolplugin
+[ 70%] Merging translations into ut-tweak-tool.desktop
+[ 70%] Built target ut-tweak-tool.desktop
+[ 72%] Built target pofiles_13
+[ 74%] Built target pofiles_12
+[ 76%] Built target pofiles_11
+[ 78%] Built target pofiles_9
+[ 80%] Built target pofiles_10
+[ 82%] Built target pofiles_2
+[ 85%] Built target pofiles_1
+[ 87%] Generating translation template
+Wrote ut-tweak-tool.desktop.in.h
+../app/ui/mainPage/OverviewTab.qml:42: warning: unterminated string literal
+../app/ui/mainPage/OverviewTab.qml:87: warning: unterminated string literal
+[ 87%] Built target ut-tweak-tool.sverzegnassi.pot
+[ 89%] Built target pofiles_3
+[ 91%] Built target pofiles_8
+[ 93%] Built target pofiles_4
+[ 95%] Built target pofiles_5
+[ 97%] Built target pofiles_6
+[100%] Built target pofiles_7
+Install the project...
+-- Install configuration: ""
+-- Installing: //manifest.json
+-- Installing: /share/qml/ut-tweak-tool/manifest.json
+-- Installing: //graphics
+-- Installing: //graphics/empty.png
+-- Installing: //graphics/ut-tweak-tool.png
+-- Installing: //graphics/select.svg
+-- Installing: //graphics/select-none.svg
+-- Installing: //graphics/ut-tweak-tool_alt.png
+-- Installing: //graphics/apps-scope.png
+-- Installing: //graphics/back.svg
+-- Installing: //graphics/terminal.png
+-- Installing: //ut-tweak-tool.apparmor
+-- Installing: //COPYING
+-- Installing: //copyright
+-- Installing: /share/qml/ut-tweak-tool/components
+-- Installing: /share/qml/ut-tweak-tool/components/ManifestParser.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Models
+-- Installing: /share/qml/ut-tweak-tool/components/Models/ClickModel.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Models/ApplicationsModel.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Commands
+-- Installing: /share/qml/ut-tweak-tool/components/Commands/Reboot.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Dialogs
+-- Installing: /share/qml/ut-tweak-tool/components/Dialogs/FileChooserDialog.qml
+-- Installing: /share/qml/ut-tweak-tool/components/TweakToolPage.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Functions.js
+-- Installing: /share/qml/ut-tweak-tool/components/ToastWithAction.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/Application.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/AppLauncher.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/Button.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/Warning.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/Page.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/Base.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/OptionSelector.qml
+-- Installing: /share/qml/ut-tweak-tool/components/ListItems/SectionDivider.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Upstream
+-- Installing: /share/qml/ut-tweak-tool/components/Upstream/EmptyState.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Upstream/MultipleSelectionVisualModel.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Upstream/MultipleSelectionListView.qml
+-- Installing: /share/qml/ut-tweak-tool/components/TweakToolMainView.qml
+-- Installing: /share/qml/ut-tweak-tool/components/Toast.qml
+-- Installing: /share/qml/ut-tweak-tool/scripts
+-- Installing: /share/qml/ut-tweak-tool/scripts/adb_on_lock_unset
+-- Installing: /share/qml/ut-tweak-tool/scripts/adb_on_lock_set
+-- Installing: /share/qml/ut-tweak-tool/scripts/writable_image_unset
+-- Installing: /share/qml/ut-tweak-tool/scripts/writable_image_get
+-- Installing: /share/qml/ut-tweak-tool/scripts/adb_on_lock_get
+-- Installing: /share/qml/ut-tweak-tool/scripts/writable_image_set
+-- Installing: /share/qml/ut-tweak-tool/theme
+-- Installing: /share/qml/ut-tweak-tool/theme/parent_theme
+-- Installing: /share/qml/ut-tweak-tool/theme/SectionButton.qml
+-- Installing: /share/qml/ut-tweak-tool/theme/PageHeadStyle.qml
+-- Installing: /share/qml/ut-tweak-tool/theme/OverflowPanel.qml
+-- Installing: /share/qml/ut-tweak-tool/theme/PageHeadButton.qml
+-- Installing: /share/qml/ut-tweak-tool/ui
+-- Installing: /share/qml/ut-tweak-tool/ui/AboutPage.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/MainPage.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/BehaviourTab.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/OverviewTab.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/SystemTab.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/behaviourTab
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/behaviourTab/Audio.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/behaviourTab/AppsScopeFavs.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/behaviourTab/GestureTutorial.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/behaviourTab/Unity8Mode.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/systemTab
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/systemTab/InstallClickFromLocal.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/systemTab/UninstallScopes.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/systemTab/UsbMode.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/systemTab/AppsStats.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/systemTab/ImageWritable.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/ApplicationsTab.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/MainPageDefaultHeader.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/applicationsTab
+-- Installing: /share/qml/ut-tweak-tool/ui/mainPage/applicationsTab/TerminalApp.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/aboutPage
+-- Installing: /share/qml/ut-tweak-tool/ui/aboutPage/AboutCopyrightSection.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/aboutPage/AboutGeneralSection.qml
+-- Installing: /share/qml/ut-tweak-tool/ui/aboutPage/AboutCreditsSection.qml
+-- Installing: /share/qml/ut-tweak-tool/main.qml
+-- Installing: //ut-tweak-tool.desktop
+-- Installing: /lib/x86_64-linux-gnu/TweakTool/Click/libtweaktoolclickplugin.so
+-- Installing: /lib/x86_64-linux-gnu/TweakTool/Click/qmldir
+-- Installing: /lib/x86_64-linux-gnu/com/ubuntu/PamAuthentication/libPamAuthentication.so
+-- Installing: /lib/x86_64-linux-gnu/com/ubuntu/PamAuthentication/qmldir
+-- Installing: /lib/x86_64-linux-gnu/com/ubuntu/PamAuthentication/AuthenticationDialog.qml
+-- Installing: /lib/x86_64-linux-gnu/com/ubuntu/PamAuthentication/AuthenticationService.qml
+-- Installing: /lib/x86_64-linux-gnu/com/ubuntu/PamAuthentication/NotifyDialog.qml
+-- Installing: /lib/x86_64-linux-gnu/QtPowerd/libqmlqtpowerdplugin.so
+-- Installing: /lib/x86_64-linux-gnu/QtPowerd/qmldir
+-- Installing: /lib/x86_64-linux-gnu/Ubuntu/SystemSettings/Sound/libubuntusoundplugin.so
+-- Installing: /lib/x86_64-linux-gnu/Ubuntu/SystemSettings/Sound/qmldir
+-- Installing: /lib/x86_64-linux-gnu/StorageManager/libstoragemanagerplugin.so
+-- Installing: /lib/x86_64-linux-gnu/StorageManager/qmldir
+-- Installing: /lib/x86_64-linux-gnu/TweakTool/libtweaktoolplugin.so
+-- Installing: /lib/x86_64-linux-gnu/TweakTool/qmldir
+-- Installing: /share/locale/ca/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/es/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/fr/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/it/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/pl/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/ug/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/ru/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/zh_CN/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/nl/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/gl/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/fi/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/de/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+-- Installing: /share/locale/nb/LC_MESSAGES/ut-tweak-tool.sverzegnassi.mo
+yunit@yunit-VM:~/trunk$ ls /
+bin        graphics        manifest.json  run    usr
+boot       home            media          sbin   ut-tweak-tool.apparmor
+cdrom      initrd.img      mnt            share  ut-tweak-tool.desktop
+COPYING    initrd.img.old  openstore      snap   var
+copyright  lib             opt            srv    vmlinuz
+dev        lib64           proc           sys    vmlinuz.old
+etc        lost+found      root           tmp
+yunit@yunit-VM:~/trunk$ less /ut-tweak-tool.desktop 
+yunit@yunit-VM:~/trunk$ qmlscene $@ share/qml/ut-tweak-tool/main.qml
+"/home/yunit/trunk/share/qml/ut-tweak-tool/main.qml" does not exist.
+file:///share/qml/ut-tweak-tool/main.qml:20 module "com.ubuntu.PamAuthentication" is not installed
+file:///share/qml/ut-tweak-tool/main.qml:23 module "StorageManager" is not installed
+file:///share/qml/ut-tweak-tool/main.qml:20 module "com.ubuntu.PamAuthentication" is not installed
+file:///share/qml/ut-tweak-tool/main.qml:23 module "StorageManager" is not installed
+
+yunit@yunit-VM:~/trunk$ cd ..
+yunit@yunit-VM:~$ qmlscene $@ /share/qml/ut-tweak-tool/main.qml
+file:///share/qml/ut-tweak-tool/main.qml:23 module "StorageManager" is not installed
+file:///share/qml/ut-tweak-tool/main.qml:20 module "com.ubuntu.PamAuthentication" is not installed
+file:///share/qml/ut-tweak-tool/main.qml:23 module "StorageManager" is not installed
+file:///share/qml/ut-tweak-tool/main.qml:20 module "com.ubuntu.PamAuthentication" is not installed
+
+yunit@yunit-VM:~$ git clone https://github.com/LarreaMikel/uMatriks.git
+Cloning into 'uMatriks'...
+remote: Counting objects: 749, done.
+remote: Compressing objects: 100% (90/90), done.
+remote: Total 749 (delta 67), reused 89 (delta 34), pack-reused 617
+Receiving objects: 100% (749/749), 741.35 KiB | 780.00 KiB/s, done.
+Resolving deltas: 100% (449/449), done.
+Checking connectivity... done.
+yunit@yunit-VM:~$ ls
+Desktop                    Pictures
+Documents                  Public
+Downloads                  session_successfull_build_clock-and-store.log
+examples.desktop           Templates
+failed_guitar-tools.log    trunk
+guitar-tools               ubuntu-clock-app
+instantfx                  uMatriks
+instantfx_successfull.log  unav
+Music                      Videos
+openstore-app
+yunit@yunit-VM:~$ cd uMatriks/
+yunit@yunit-VM:~/uMatriks$ ls
+clickable.json  LICENSE           po         uMatriks
+lib             manifest.json.in  README.md  uMatriks.pro
+yunit@yunit-VM:~/uMatriks$ qmake uMatriks.pro 
+yunit@yunit-VM:~/uMatriks$ make -j4
+sed s/@CLICK_ARCH@/amd64/g /home/yunit/uMatriks/manifest.json.in > /home/yunit/uMatriks/manifest.json
+make: Circular /home/yunit/uMatriks/uMatriks/uMatriks.desktop <- /home/yunit/uMatriks/uMatriks/uMatriks.desktop dependency dropped.
+cd uMatriks/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake /home/yunit/uMatriks/uMatriks/uMatriks.pro -o Makefile ) && make -f Makefile 
+cd lib/Matrix/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake /home/yunit/uMatriks/lib/Matrix/Matrix.pro -o Makefile ) && make -f Makefile 
+mkdir -p /home/yunit/uMatriks/uMatriks && cd /home/yunit/uMatriks/uMatriks && intltool-extract --type=gettext/ini --update --srcdir=/home/yunit/uMatriks/uMatriks uMatriks.desktop
+make[1]: Entering directory '/home/yunit/uMatriks/uMatriks'
+make[1]: Nothing to be done for 'first'.
+make[1]: Leaving directory '/home/yunit/uMatriks/uMatriks'
+Wrote uMatriks.desktop.h
+Cannot read /home/yunit/uMatriks/lib/Matrix/libqmatrixclient/libqmatrixclient.pri: No such file or directory
+mkdir -p /home/yunit/uMatriks/po && xgettext -o /home/yunit/uMatriks/po/umatriks.larreamikel.pot --qt --c++ --from-code=UTF-8 --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 --keyword=N_ /home/yunit/uMatriks/uMatriks/About.qml /home/yunit/uMatriks/uMatriks/BasePage.qml /home/yunit/uMatriks/uMatriks/ChatRoom.qml /home/yunit/uMatriks/uMatriks/DialogJoinRoom.qml /home/yunit/uMatriks/uMatriks/Login.qml /home/yunit/uMatriks/uMatriks/Main.qml /home/yunit/uMatriks/uMatriks/MemberList.qml /home/yunit/uMatriks/uMatriks/RoomList.qml /home/yunit/uMatriks/uMatriks/RoomView.qml /home/yunit/uMatriks/uMatriks/Theme.qml /home/yunit/uMatriks/uMatriks/WelcomePage.qml /home/yunit/uMatriks/uMatriks/components/ChatBubble.qml /home/yunit/uMatriks/uMatriks/tests/unit/tst_main.qml /home/yunit/uMatriks/uMatriks/jschat.js /home/yunit/uMatriks/uMatriks/utils.js /home/yunit/uMatriks/lib/Matrix/main.cpp /home/yunit/uMatriks/lib/Matrix/matrix.cpp /home/yunit/uMatriks/lib/Matrix/matrixconn.cpp /home/yunit/uMatriks/lib/Matrix/models/imageprovider.cpp /home/yunit/uMatriks/lib/Matrix/models/messageeventmodel.cpp /home/yunit/uMatriks/lib/Matrix/models/roomlistmodel.cpp /home/yunit/uMatriks/lib/Matrix/matrix.h /home/yunit/uMatriks/lib/Matrix/matrixconn.h /home/yunit/uMatriks/lib/Matrix/models/imageprovider.h /home/yunit/uMatriks/lib/Matrix/models/messageeventmodel.h /home/yunit/uMatriks/lib/Matrix/models/roomlistmodel.h /home/yunit/uMatriks/uMatriks/uMatriks.desktop.h
+cd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d ca -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/ca.po.updated
+cd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d cz -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/cz.po.updated
+cd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d de -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/de.po.updated
+make[1]: Entering directory '/home/yunit/uMatriks/lib/Matrix'
+g++ -c -m64 -pipe -O2 -std=gnu++0x -D_REENTRANT -Wall -W -fPIC -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o matrix.o matrix.cpp
+Merging ./ca.po with umatriks.larreamikel.pot...Merging ./cz.po with umatriks.larreamikel.pot...Merging ./de.po with umatriks.larreamikel.pot......... done.
+... done.
+... done.
+29 translated messages29 translated messages, 6 untranslated messages.
+35 translated messages, 6 untranslated messages.
+.
+cd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d es -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/es.po.updated
+cd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d eu -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/eu.po.updated
+cd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d fr -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/fr.po.updated
+Merging ./eu.po with umatriks.larreamikel.pot....Merging ./es.po with umatriks.larreamikel.pot....... done.
+... done.
+Merging ./fr.po with umatriks.larreamikel.pot....... done.
+29 translated messages29 translated messages, 6 untranslated messages.
+, 6 untranslated messages.
+cd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d nb -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/nb.po.updated
+23 translated messagescd /home/yunit/uMatriks/po && LC_ALL=C intltool-update -d ru -g umatriks.larreamikel -x && mkdir -p /home/yunit/uMatriks/po && touch /home/yunit/uMatriks/po/ru.po.updated
+, 1 fuzzy translation, 11 untranslated messages.
+mkdir -p po/ca && LC_ALL=C msgfmt -o /home/yunit/uMatriks/po/ca/umatriks.larreamikel.mo /home/yunit/uMatriks/po/ca.po
+mkdir -p po/cz && LC_ALL=C msgfmt -o /home/yunit/uMatriks/po/cz/umatriks.larreamikel.mo /home/yunit/uMatriks/po/cz.po
+mkdir -p po/de && LC_ALL=C msgfmt -o /home/yunit/uMatriks/po/de/umatriks.larreamikel.mo /home/yunit/uMatriks/po/de.po
+matrix.cpp:5:24: fatal error: connection.h: No such file or directory
+compilation terminated.
+Makefile:374: recipe for target 'matrix.o' failed
+make[1]: *** [matrix.o] Error 1
+make[1]: Leaving directory '/home/yunit/uMatriks/lib/Matrix'
+Makefile:68: recipe for target 'sub-lib-Matrix-make_first' failed
+make: *** [sub-lib-Matrix-make_first] Error 2
+make: *** Waiting for unfinished jobs....
+Merging ./ru.po with umatriks.larreamikel.pot....Merging ./nb.po with umatriks.larreamikel.pot....... done.
+... done.
+29 translated messages13 translated messages, 6 untranslated messages.
+, 1 fuzzy translation, 21 untranslated messages.
+yunit@yunit-VM:~/uMatriks$ cd ..
+yunit@yunit-VM:~$ sudo apt install pkg-config
+[sudo] password for yunit: 
+Sorry, try again.
+[sudo] password for yunit: 
+sudo: 1 incorrect password attempt
+yunit@yunit-VM:~$ sudo apt install pkg-config libexiv2-dev libmediainfo-dev libexpat1-dev zlib1g-d
+zlib1g-dbg  zlib1g-dev  
+yunit@yunit-VM:~$ sudo apt install pkg-config libexiv2-dev libmediainfo-dev libexpat1-dev zlib1g-dev xdg-user-dirs libmediainfo0v5 libzen0v5 libmms0 libtinyxml2-2v5 
+[sudo] password for yunit: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+pkg-config is already the newest version (0.29.1-0ubuntu1).
+xdg-user-dirs is already the newest version (0.15-2ubuntu6).
+libmms0 is already the newest version (0.6.4-1).
+libmms0 set to manually installed.
+zlib1g-dev is already the newest version (1:1.2.8.dfsg-2ubuntu4.1).
+zlib1g-dev set to manually installed.
+The following additional packages will be installed:
+  libtinyxml-dev libtinyxml2.6.2v5 libzen-dev
+Suggested packages:
+  libexiv2-doc libtinyxml-doc
+The following NEW packages will be installed:
+  libexiv2-dev libexpat1-dev libmediainfo-dev libmediainfo0v5 libtinyxml-dev
+  libtinyxml2-2v5 libtinyxml2.6.2v5 libzen-dev libzen0v5
+0 upgraded, 9 newly installed, 0 to remove and 211 not upgraded.
+Need to get 3.013 kB of archives.
+After this operation, 15,5 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexiv2-dev amd64 0.25-2.1ubuntu16.04.1 [865 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1-dev amd64 2.1.0-7ubuntu0.16.04.3 [115 kB]
+Get:3 http://de.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libzen0v5 amd64 0.4.32-1ubuntu0.16.04.1 [91,9 kB]
+Get:4 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 libtinyxml2.6.2v5 amd64 2.6.2-3 [29,7 kB]
+Get:5 http://de.archive.ubuntu.com/ubuntu xenial/main amd64 libtinyxml-dev amd64 2.6.2-3 [44,2 kB]
+Get:6 http://de.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 libzen-dev amd64 0.4.32-1ubuntu0.16.04.1 [29,4 kB]
+Get:7 http://de.archive.ubuntu.com/ubuntu xenial/universe amd64 libtinyxml2-2v5 amd64 2.2.0-1.1ubuntu1 [25,7 kB]
+Get:8 http://de.archive.ubuntu.com/ubuntu xenial/universe amd64 libmediainfo0v5 amd64 0.7.82-1 [1.796 kB]
+Get:9 http://de.archive.ubuntu.com/ubuntu xenial/universe amd64 libmediainfo-dev amd64 0.7.82-1 [15,2 kB]
+Fetched 3.013 kB in 2s (1.248 kB/s)    
+Selecting previously unselected package libexiv2-dev.
+(Reading database ... 221860 files and directories currently installed.)
+Preparing to unpack .../libexiv2-dev_0.25-2.1ubuntu16.04.1_amd64.deb ...
+Unpacking libexiv2-dev (0.25-2.1ubuntu16.04.1) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../libexpat1-dev_2.1.0-7ubuntu0.16.04.3_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Selecting previously unselected package libzen0v5:amd64.
+Preparing to unpack .../libzen0v5_0.4.32-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libzen0v5:amd64 (0.4.32-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libtinyxml2.6.2v5:amd64.
+Preparing to unpack .../libtinyxml2.6.2v5_2.6.2-3_amd64.deb ...
+Unpacking libtinyxml2.6.2v5:amd64 (2.6.2-3) ...
+Selecting previously unselected package libtinyxml-dev:amd64.
+Preparing to unpack .../libtinyxml-dev_2.6.2-3_amd64.deb ...
+Unpacking libtinyxml-dev:amd64 (2.6.2-3) ...
+Selecting previously unselected package libzen-dev.
+Preparing to unpack .../libzen-dev_0.4.32-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libzen-dev (0.4.32-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libtinyxml2-2v5:amd64.
+Preparing to unpack .../libtinyxml2-2v5_2.2.0-1.1ubuntu1_amd64.deb ...
+Unpacking libtinyxml2-2v5:amd64 (2.2.0-1.1ubuntu1) ...
+Selecting previously unselected package libmediainfo0v5:amd64.
+Preparing to unpack .../libmediainfo0v5_0.7.82-1_amd64.deb ...
+Unpacking libmediainfo0v5:amd64 (0.7.82-1) ...
+Selecting previously unselected package libmediainfo-dev.
+Preparing to unpack .../libmediainfo-dev_0.7.82-1_amd64.deb ...
+Unpacking libmediainfo-dev (0.7.82-1) ...
+Processing triggers for doc-base (0.10.7) ...
+Processing 1 added doc-base file...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Setting up libexiv2-dev (0.25-2.1ubuntu16.04.1) ...
+Setting up libexpat1-dev:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Setting up libzen0v5:amd64 (0.4.32-1ubuntu0.16.04.1) ...
+Setting up libtinyxml2.6.2v5:amd64 (2.6.2-3) ...
+Setting up libtinyxml-dev:amd64 (2.6.2-3) ...
+Setting up libzen-dev (0.4.32-1ubuntu0.16.04.1) ...
+Setting up libtinyxml2-2v5:amd64 (2.2.0-1.1ubuntu1) ...
+Setting up libmediainfo0v5:amd64 (0.7.82-1) ...
+Setting up libmediainfo-dev (0.7.82-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+yunit@yunit-VM:~$ git clone https://github.com/ubports/gallery-app.git
+Cloning into 'gallery-app'...
+remote: Counting objects: 26217, done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 26217 (delta 13), reused 12 (delta 6), pack-reused 26195
+Receiving objects: 100% (26217/26217), 35.22 MiB | 933.00 KiB/s, done.
+Resolving deltas: 100% (19232/19232), done.
+Checking connectivity... done.
+yunit@yunit-VM:~$ ls
+Desktop                    openstore-app
+Documents                  Pictures
+Downloads                  Public
+examples.desktop           session_successfull_build_clock-and-store.log
+failed_guitar-tools.log    Templates
+gallery-app                trunk
+guitar-tools               ubuntu-clock-app
+instantfx                  uMatriks
+instantfx_successfull.log  unav
+Music                      Videos
+yunit@yunit-VM:~$ cd gallery-app/
+yunit@yunit-VM:~/gallery-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find Lcov (missing:  LCOV_EXECUTABLE GENHTML_EXECUTABLE) 
+-- Could NOT find gcovr (missing:  GCOVR_EXECUTABLE) 
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libGL.so  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'exiv2'
+--   Found exiv2, version 0.25
+-- Checking for module 'libmediainfo'
+--   Found libmediainfo, version 0.7.820.7.82
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Autopilot tests disabled: autopilot binary not found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/gallery-app
+yunit@yunit-VM:~/gallery-app$ make -j4
+Scanning dependencies of target pofiles_60
+Scanning dependencies of target pofiles_61
+Scanning dependencies of target NON_COMPILED_TARGET
+Scanning dependencies of target gallery-app.desktop
+[  1%] Generating ca@valencia.gmo
+[  1%] Built target NON_COMPILED_TARGET
+[  1%] Generating pt_BR.gmo
+[  2%] Merging translations into gallery-app.desktop
+Scanning dependencies of target pofiles_56
+[  2%] Built target pofiles_61
+[  2%] Built target pofiles_60
+[  3%] Generating cs.gmo
+Scanning dependencies of target pofiles_55
+Scanning dependencies of target pofiles_52
+[  3%] Built target pofiles_56
+[  3%] Generating gd.gmo
+[  4%] Generating uk.gmo
+Scanning dependencies of target pofiles_51
+[  4%] Built target pofiles_55
+[  4%] Built target pofiles_52
+[  4%] Generating en_AU.gmo
+Scanning dependencies of target pofiles_49
+Scanning dependencies of target pofiles_50
+[  5%] Generating hu.gmo
+[  6%] Generating am.gmo
+[  6%] Built target pofiles_51
+Scanning dependencies of target pofiles_19
+[  6%] Built target pofiles_49
+Merging translations into gallery-app.desktop.
+[  6%] Built target pofiles_50
+[  6%] Built target gallery-app.desktop
+Scanning dependencies of target pofiles_53
+Scanning dependencies of target pofiles_39
+[  6%] Generating en_GB.gmo
+Scanning dependencies of target pofiles_17
+[  6%] Generating gl.gmo
+[  6%] Generating ml.gmo
+[  6%] Built target pofiles_19
+[  6%] Built target pofiles_39
+Scanning dependencies of target pofiles_45
+[  6%] Generating ar.gmo
+[  6%] Built target pofiles_53
+[  7%] Generating fi.gmo
+Scanning dependencies of target pofiles_16
+[  7%] Built target pofiles_17
+Scanning dependencies of target pofiles_34
+Scanning dependencies of target pofiles_15
+[  8%] Generating da.gmo
+[  9%] Generating is.gmo
+[  9%] Built target pofiles_45
+[  9%] Generating ckb.gmo
+[  9%] Built target pofiles_34
+[  9%] Built target pofiles_16
+Scanning dependencies of target pofiles_2
+[ 10%] Generating te.gmo
+Scanning dependencies of target pofiles_33
+[ 10%] Built target pofiles_15
+Scanning dependencies of target pofiles_6
+[ 10%] Built target pofiles_2
+Scanning dependencies of target pofiles_58
+[ 10%] Generating pa.gmo
+[ 11%] Generating cy.gmo
+[ 11%] Built target pofiles_6
+Scanning dependencies of target pofiles_44
+[ 11%] Built target pofiles_33
+[ 12%] Generating sl.gmo
+[ 12%] Generating tr.gmo
+[ 12%] Built target pofiles_58
+Scanning dependencies of target pofiles_20
+Scanning dependencies of target pofiles_25
+[ 12%] Built target pofiles_44
+Scanning dependencies of target pofiles_13
+[ 13%] Generating pl.gmo
+[ 13%] Generating lv.gmo
+[ 13%] Generating my.gmo
+[ 13%] Built target pofiles_25
+Scanning dependencies of target pofiles_12
+[ 13%] Built target pofiles_20
+Scanning dependencies of target pofiles_18
+[ 13%] Built target pofiles_13
+[ 14%] Generating fr.gmo
+Scanning dependencies of target pofiles_47
+[ 14%] Built target pofiles_12
+[ 15%] Generating az.gmo
+Scanning dependencies of target pofiles_32
+[ 16%] Generating de.gmo
+[ 17%] Generating el.gmo
+[ 17%] Built target pofiles_18
+Scanning dependencies of target pofiles_11
+[ 17%] Built target pofiles_47
+Scanning dependencies of target pofiles_57
+[ 17%] Generating sk.gmo
+[ 17%] Built target pofiles_32
+Scanning dependencies of target pofiles_38
+Scanning dependencies of target pofiles_9
+[ 17%] Generating ta.gmo
+[ 17%] Built target pofiles_11
+[ 17%] Generating zh_TW.gmo
+Scanning dependencies of target pofiles_28
+[ 17%] Built target pofiles_57
+[ 18%] Generating nl.gmo
+[ 18%] Built target pofiles_9
+[ 18%] Built target pofiles_38
+[ 18%] Generating ug.gmo
+Scanning dependencies of target pofiles_14
+Scanning dependencies of target pofiles_59
+[ 19%] Generating it.gmo
+Scanning dependencies of target pofiles_10
+[ 19%] Built target pofiles_28
+[ 19%] Generating ko.gmo
+Scanning dependencies of target pofiles_3
+[ 20%] Generating ja.gmo
+[ 20%] Built target pofiles_14
+[ 20%] Generating es.gmo
+[ 20%] Built target pofiles_10
+Scanning dependencies of target pofiles_8
+[ 20%] Built target pofiles_59
+[ 21%] Generating sr.gmo
+Scanning dependencies of target pofiles_1
+Scanning dependencies of target pofiles_31
+[ 21%] Built target pofiles_3
+Scanning dependencies of target pofiles_7
+[ 21%] Generating mr.gmo
+[ 21%] Generating ca.gmo
+[ 21%] Built target pofiles_8
+[ 21%] Generating bs.gmo
+[ 21%] Built target pofiles_1
+Scanning dependencies of target pofiles_35
+[ 21%] Built target pofiles_31
+Scanning dependencies of target gallery-app.pot
+[ 21%] Generating ru.gmo
+Scanning dependencies of target pofiles_4
+[ 21%] Built target pofiles_7
+[ 22%] Generating ro.gmo
+[ 22%] Built target pofiles_35
+Scanning dependencies of target pofiles_5
+[ 22%] Generating translation template
+[ 22%] Built target pofiles_4
+[ 22%] Generating pt.gmo
+Scanning dependencies of target pofiles_21
+Scanning dependencies of target pofiles_30
+[ 23%] Generating eu.gmo
+[ 23%] Built target pofiles_5
+[ 24%] Generating ms.gmo
+Wrote desktop/gallery-app.desktop.in.in.h
+Scanning dependencies of target pofiles_22
+[ 24%] Built target pofiles_21
+Scanning dependencies of target pofiles_46
+[ 24%] Generating be.gmo
+[ 24%] Built target pofiles_30
+[ 24%] Built target pofiles_22
+[ 24%] Built target gallery-app.pot
+Scanning dependencies of target pofiles_23
+[ 24%] Generating km.gmo
+Scanning dependencies of target pofiles_26
+[ 24%] Built target pofiles_46
+[ 25%] Generating aa.gmo
+Scanning dependencies of target pofiles_24
+Scanning dependencies of target pofiles_27
+[ 25%] Generating shn.gmo
+[ 25%] Generating he.gmo
+[ 25%] Built target pofiles_23
+Scanning dependencies of target pofiles_54
+[ 26%] Generating sq.gmo
+[ 26%] Built target pofiles_24
+[ 26%] Built target pofiles_26
+[ 27%] Generating nb.gmo
+Scanning dependencies of target pofiles_48
+Scanning dependencies of target pofiles_29
+[ 27%] Built target pofiles_27
+[ 27%] Generating ast.gmo
+[ 27%] Built target pofiles_54
+Scanning dependencies of target pofiles_36
+[ 28%] Generating id.gmo
+[ 29%] Generating zh_CN.gmo
+[ 29%] Built target pofiles_48
+Scanning dependencies of target pofiles_37
+[ 29%] Built target pofiles_29
+Scanning dependencies of target pofiles_42
+[ 29%] Generating zh_HK.gmo
+[ 29%] Built target pofiles_36
+Scanning dependencies of target pofiles_40
+[ 29%] Generating br.gmo
+[ 29%] Built target pofiles_37
+Scanning dependencies of target pofiles_41
+[ 29%] Generating sv.gmo
+[ 29%] Built target pofiles_42
+[ 30%] Generating fa.gmo
+Scanning dependencies of target pofiles_43
+[ 30%] Built target pofiles_40
+Scanning dependencies of target gallery-app_automoc
+[ 31%] Generating sc.gmo
+Scanning dependencies of target gallery-util_automoc
+[ 31%] Built target pofiles_41
+Scanning dependencies of target gallery-core_automoc
+[ 31%] Built target pofiles_43
+[ 31%] Automatic moc for target gallery-util
+[ 32%] Automatic moc for target gallery-app
+Generating moc_gallery-application.cpp
+Scanning dependencies of target gallery-album_automoc
+[ 32%] Automatic moc for target gallery-core
+[ 32%] Built target gallery-util_automoc
+Generating moc_container-source-collection.cpp
+[ 32%] Automatic moc for target gallery-album
+Generating moc_album-collection.cpp
+Scanning dependencies of target gallery-database_automoc
+[ 32%] Automatic moc for target gallery-database
+Generating moc_album-table.cpp
+Generating moc_container-source.cpp
+Generating moc_database.cpp
+Generating moc_data-collection.cpp
+Generating moc_gallery-manager.cpp
+Generating moc_album-default-template.cpp
+Generating moc_media-table.cpp
+Generating moc_data-object.cpp
+Generating moc_album-page.cpp
+Generating moc_data-source.cpp
+[ 32%] Built target gallery-database_automoc
+Scanning dependencies of target gallery-event_automoc
+Generating moc_selectable-view-collection.cpp
+[ 33%] Automatic moc for target gallery-event
+Generating moc_event-collection.cpp
+Generating moc_media-object-factory.cpp
+Generating moc_source-collection.cpp
+Generating moc_event.cpp
+Generating moc_album-template-page.cpp
+Generating moc_view-collection.cpp
+Generating moc_album-template.cpp
+[ 33%] Built target gallery-core_automoc
+Scanning dependencies of target gallery-media_automoc
+Generating moc_album.cpp
+[ 34%] Automatic moc for target gallery-media
+[ 34%] Built target gallery-app_automoc
+Generating moc_media-collection.cpp
+Scanning dependencies of target gallery-medialoader_automoc
+[ 35%] Automatic moc for target gallery-medialoader
+[ 35%] Built target gallery-event_automoc
+Scanning dependencies of target gallery-photo_automoc
+Generating moc_video-metadata.cpp
+[ 35%] Automatic moc for target gallery-photo
+Generating moc_media-monitor.cpp
+Generating moc_photo-metadata.cpp
+[ 35%] Built target gallery-medialoader_automoc
+Generating moc_media-source.cpp
+Scanning dependencies of target gallery-qml_automoc
+[ 35%] Built target gallery-album_automoc
+Scanning dependencies of target gallery-video_automoc
+[ 35%] Automatic moc for target gallery-qml
+Generating moc_qml-album-collection-model.cpp
+Generating moc_photo.cpp
+[ 35%] Automatic moc for target gallery-video
+Generating moc_video.cpp
+[ 35%] Built target gallery-media_automoc
+Scanning dependencies of target command-line-parser_automoc
+[ 36%] Automatic moc for target command-line-parser
+Generating moc_qml-event-collection-model.cpp
+Generating tst_commandlineparser.moc
+[ 36%] Built target gallery-photo_automoc
+[ 36%] Built target gallery-video_automoc
+Scanning dependencies of target imaging_automoc
+Scanning dependencies of target mediamonitor_automoc
+[ 36%] Automatic moc for target imaging
+[ 36%] Automatic moc for target mediamonitor
+Generating tst_imaging.moc
+Generating tst_mediamonitor.moc
+Generating moc_qml-event-overview-model.cpp
+[ 36%] Built target command-line-parser_automoc
+Scanning dependencies of target mediaobjectfactory_automoc
+[ 37%] Automatic moc for target mediaobjectfactory
+[ 37%] Built target imaging_automoc
+Scanning dependencies of target resource_automoc
+Generating tst_mediaobjectfactory.moc
+[ 37%] Built target mediamonitor_automoc
+[ 37%] Automatic moc for target resource
+Scanning dependencies of target video_automoc
+Generating tst_resource.moc
+[ 38%] Automatic moc for target video
+Generating tst_video.moc
+Generating moc_qml-media-collection-model.cpp
+[ 38%] Built target resource_automoc
+Generating moc_media-object-factory.cpp
+Scanning dependencies of target photo-metadata_automoc
+[ 39%] Automatic moc for target photo-metadata
+Generating moc_qml-view-collection-model.cpp
+Generating tst_photo-metadata.moc
+Generating moc_gallery-manager.cpp
+Generating moc_photo.cpp
+[ 39%] Built target gallery-qml_automoc
+Scanning dependencies of target gallery-util
+Generating moc_media-object-factory.cpp
+Generating moc_photo-metadata.cpp
+[ 40%] Building CXX object src/util/CMakeFiles/gallery-util.dir/command-line-parser.cpp.o
+[ 40%] Built target mediaobjectfactory_automoc
+[ 40%] Built target photo-metadata_automoc
+Scanning dependencies of target gallery-core
+Scanning dependencies of target gallery-database
+[ 40%] Building CXX object src/core/CMakeFiles/gallery-core.dir/container-source.cpp.o
+[ 40%] Built target video_automoc
+Scanning dependencies of target gallery-event
+[ 41%] Building CXX object src/database/CMakeFiles/gallery-database.dir/album-table.cpp.o
+[ 42%] Building CXX object src/event/CMakeFiles/gallery-event.dir/event.cpp.o
+[ 43%] Building CXX object src/core/CMakeFiles/gallery-core.dir/container-source-collection.cpp.o
+[ 43%] Building CXX object src/util/CMakeFiles/gallery-util.dir/imaging.cpp.o
+[ 43%] Building CXX object src/event/CMakeFiles/gallery-event.dir/event-collection.cpp.o
+[ 43%] Building CXX object src/database/CMakeFiles/gallery-database.dir/database.cpp.o
+[ 43%] Building CXX object src/core/CMakeFiles/gallery-core.dir/data-collection.cpp.o
+[ 44%] Building CXX object src/util/CMakeFiles/gallery-util.dir/orientation.cpp.o
+[ 44%] Building CXX object src/util/CMakeFiles/gallery-util.dir/resource.cpp.o
+[ 45%] Building CXX object src/core/CMakeFiles/gallery-core.dir/data-object.cpp.o
+[ 46%] Building CXX object src/database/CMakeFiles/gallery-database.dir/media-table.cpp.o
+[ 47%] Building CXX object src/event/CMakeFiles/gallery-event.dir/gallery-event_automoc.cpp.o
+[ 47%] Building CXX object src/core/CMakeFiles/gallery-core.dir/data-source.cpp.o
+[ 48%] Building CXX object src/util/CMakeFiles/gallery-util.dir/urlhandler.cpp.o
+[ 49%] Building CXX object src/core/CMakeFiles/gallery-core.dir/selectable-view-collection.cpp.o
+[ 49%] Building CXX object src/database/CMakeFiles/gallery-database.dir/gallery-database_automoc.cpp.o
+[ 49%] Building CXX object src/util/CMakeFiles/gallery-util.dir/gallery-util_automoc.cpp.o
+[ 50%] Linking CXX static library libgallery-util.a
+[ 50%] Built target gallery-util
+Scanning dependencies of target gallery-media
+[ 50%] Linking CXX static library libgallery-event.a
+[ 50%] Building CXX object src/media/CMakeFiles/gallery-media.dir/media-collection.cpp.o
+[ 50%] Built target gallery-event
+Scanning dependencies of target gallery-medialoader
+[ 50%] Building CXX object src/medialoader/CMakeFiles/gallery-medialoader.dir/video-metadata.cpp.o
+In file included from /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h:37:0,
+                 from /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h:41,
+                 from /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h:37,
+                 from /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime:1,
+                 from /home/yunit/gallery-app/src/medialoader/video-metadata.h:20,
+                 from /home/yunit/gallery-app/src/medialoader/video-metadata.cpp:17:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:1107:23: error: expected ‘,’ or ‘...’ before ‘&&’ token
+ void qAsConst(const T &&) Q_DECL_EQ_DELETE;
+                       ^
+[ 50%] Building CXX object src/core/CMakeFiles/gallery-core.dir/source-collection.cpp.o
+src/medialoader/CMakeFiles/gallery-medialoader.dir/build.make:62: recipe for target 'src/medialoader/CMakeFiles/gallery-medialoader.dir/video-metadata.cpp.o' failed
+make[2]: *** [src/medialoader/CMakeFiles/gallery-medialoader.dir/video-metadata.cpp.o] Error 1
+CMakeFiles/Makefile2:3398: recipe for target 'src/medialoader/CMakeFiles/gallery-medialoader.dir/all' failed
+make[1]: *** [src/medialoader/CMakeFiles/gallery-medialoader.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 51%] Building CXX object src/core/CMakeFiles/gallery-core.dir/view-collection.cpp.o
+[ 52%] Linking CXX static library libgallery-database.a
+[ 52%] Built target gallery-database
+[ 52%] Building CXX object src/core/CMakeFiles/gallery-core.dir/gallery-core_automoc.cpp.o
+[ 53%] Building CXX object src/media/CMakeFiles/gallery-media.dir/media-monitor.cpp.o
+[ 53%] Building CXX object src/media/CMakeFiles/gallery-media.dir/media-source.cpp.o
+[ 54%] Building CXX object src/media/CMakeFiles/gallery-media.dir/gallery-media_automoc.cpp.o
+[ 55%] Linking CXX static library libgallery-core.a
+[ 55%] Built target gallery-core
+[ 55%] Linking CXX static library libgallery-media.a
+[ 55%] Built target gallery-media
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2
+yunit@yunit-VM:~/gallery-app$ 
+
