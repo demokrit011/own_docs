@@ -103,6 +103,8 @@ So there are basically two orientations, Landscape (broader than high) and Portr
 * https://github.com/ubports/indicator-display
 * https://github.com/ubports/unity8 
 
+**Update: there seems to be an issue with some helpfull advise @ yunit's github**: [link to github](https://github.com/yunit-io/yunit/issues/18)
+
 
 
 #### Log
