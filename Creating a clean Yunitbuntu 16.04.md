@@ -65,7 +65,9 @@ There are a few repos (some PPAs and deb repos) out there that provide the mir/u
 
 ### Testing what is needed for building & installing a phone app locally (usually as *.click but NOT here)
 
-#### Ubuntu-Clock-App
+#### First Test System: Ubuntu 16.04.3 Unity7 + X11 based
+
+##### Ubuntu-Clock-App
 
 Starting with **Ubuntu 16.04.3 amd64** Unity 7, vanilla installation.... I think i read somewhere that i will need the [stable phone overlay](https://launchpad.net/~ci-train-ppa-service/+archive/ubuntu/stable-phone-overlay) and possibly the sdk so let's add both repos:
 
@@ -169,7 +171,7 @@ qmlscene $@ -I /usr/lib/x86_64-linux-gnu/qt5/qml/ClockApp  /usr/share/ubuntu-clo
 
 which provides us with live-logging in our terminal. (I learned this by looking into the .desktop file of the clock app which you can do with ```less /usr/share/applications/ubuntu-clock-app.desktop``` and looking for the statement in the line beginning with "exec")
 
-#### Openstore
+##### Openstore
 
 We will be using the same VM as for the clock-app above with the exact same stuff installed as a first attempt.
 
@@ -207,7 +209,7 @@ cd /lib/x86_64-linux-gnu/bin/
 
 It works...**Hurray**
 
-#### Guitar tools
+##### Guitar tools
 
 Testing something totally different... Starting from same VM with packages installed from previous Ubuntu-Clock-App and OpenStore sections.
 
@@ -245,7 +247,7 @@ This takes us to the next level, but still there are some errors... Will investi
 
 
 
-#### InstantFX
+##### InstantFX
 
 Continuing with the exact same VM as in previous 3 attempts...
 
@@ -275,7 +277,7 @@ instantfx
 
 This works great, however it says there are currently no apps installed that can provide media to the app but it starts without errors and navigating around works like a charm.... However in the dash it also has no icon.
 
-#### uNav
+##### uNav
 
 Continuing with the exact same VM as in previous 3 attempts... This is again hosted on launchpad
 
@@ -299,7 +301,7 @@ but at least the latter does something (search for the set language which is the
 
 Moving on as a first test this suffices for me noob ;-P...
 
-#### UT Tweak Tool
+##### UT Tweak Tool
 
 Directly using the VM from the failed attempt building uNav, we'll clone UT Tweak Tool from launchpad and move into it's folder...
 
@@ -346,7 +348,7 @@ This fails because some needed modules, namely
 
 are missing... moving on for now
 
-#### uMatrix
+##### uMatrix
 
 Taking the VM from above we next try uMAtrix as out-of-the-box experience... It tells a little on how you can build and deploy it on the phone but i will only take a few lines from that stuff which is that we need to use qmake
 
@@ -360,7 +362,7 @@ make -j4
 
 This has an **fatal error** dum dum duuuummmm... moving on for now.
 
-#### Gallery
+##### Gallery
 
 This is another one that already has a snap file so chances are high that it works. I'll post the complete packages list and the thorough reader may notice that there are some that were not installed for the e.g. the clock-app so we may need a few of those...
 
@@ -411,7 +413,7 @@ This fails at 55% at line 138 of the Makfile -.-
 
 
 
-#### Beru
+##### Beru
 
 Last but not least for today: Beru from github, no snap yet but isn't as internally linked as some of the above so may work and uses cmake...
 
@@ -466,3 +468,404 @@ beru
 ```
 
 This tries to start it, however, beru seems to be built atop oxide (something like a browser container of chrome/ium AFAIK) which is not found -.- This might work better with Yunit since this should have oxide in it's repos...
+
+##### Resumee
+
+So we saw that a few apps can be build if we know which dependencies they have which is easy for all already snapped apps. For all others, we need to figure out a way to find out what is needed. Also we do not know whether the content-hub and everything like camera and else will work with these locally build apps. For now, we will switch to a Yunit based system to see what we can learn from there. For the future, we should do the following: 
+
+1. create a table with all Apps we want to test (more or less done in Click2Snap docu)
+2. insert URL to sources in that table (done)
+3. insert existing snapcraft.yaml into that table (should make it an xml with links not a stupid .md table)
+4. insert dependencies we found out by other means
+5. insert manifest from clicks
+6. try to automatise all this and make a script that does all our work
+
+Concerning finding out dependencies: what i did in the above was very dirty, a cleaner method would be to create a clean Ubuntu 16.04.3 with Unity7, X11 and acivated Overlay PPA and then create a snapshot of this. Afterwards, each app should be checked what dependencies are really needed to make it build and in a second step to make it work. A list of those should be written to a file, the log should be saved and the VM should return to the snapshot and try the next app. Also this might be done the exact other way round, installing all dependencies from all currently available already snapped mobile apps, see what apps build and then remove dependencies one by one and see which apps fail at what point. However both is the brute-force method, best would be some way to know from the code what is needed...
+
+#### Ubuntu 16.04 server image + Yunit + mir
+
+##### Setting up the VM
+
+** Step 01: Pristine Yunit + Mir + Ubuntu 16.04**
+
+So this time we get the latest 16.04.3-server 64-bits image, create a VM with that, activate our Yunit repos, download Yunit and reboot...
+```
+wget http://releases.ubuntu.com/16.04/ubuntu-16.04.3-server-amd64.iso
+sha256sum ubuntu-16.04.3-server-amd64.iso
+```
+You may compare the sha256sum with the correct one [here](http://releases.ubuntu.com/16.04/SHA256SUMS) and move on if correct, otherwise repeat the download.
+
+Create a VM (i use dynamically allocated VDI disk with 30 GB maximum space) and putting the downloaded iso into the drives... we will install Ubuntu server with the HWE kernel, enable automatic security updates and leave everything else to default. (maybe including OpenSSH server might be usefull but we can install it later on if needed)
+
+Okay, i am writing this just as i am doing it but i wanted to install yunit next however copy-paste between host and guest VM does not work very well so we will install and set up openssh first ;-P
+
+**Inside the VM**
+
+```
+sudo apt install openssh-server
+```
+
+shutdown the VM...
+
+**Outside of the VM**
+
+we go to the settings of the VM (in Virtualbox that is), navigate to network -> NAT (adapter 1), open the additional feature and go to "port forwarding" and add a new rule:
+
+| Name | Protocoll | HOST-IP | HOST-port | GUEST-IP | GUEST-port |
+| ---- | --------- | ------- | --------- | -------- | ---------- |
+| ssh  | TCP       |         | 3022      |          | 22         |
+
+Now we start the VM again and open a terminal in the host machine. Only the login via ssh (so the next command) is *purely done on the host terminal* everything else is the same if we do it in or outside. (my user is named yunit)
+
+```
+ssh -p 3022 yunit@127.0.0.1 
+```
+
+*Sidenote: if you have done this with already, it may tell you that the Host identification has changed and provide you with the solution how to move on, i.e. the ssh-keygen... command*
+
+Now we can set up Yunit
+
+```
+wget -qO - https://archive.yunit.io/yunit.gpg.key | sudo apt-key add
+echo 'deb [arch=amd64] http://archive.yunit.io/ubuntu/ xenial main' | sudo tee /etc/apt/sources.list.d/yunit.list
+echo 'deb-src http://archive.yunit.io/ubuntu/ xenial main' | sudo tee --append /etc/apt/sources.list.d/yunit.list
+sudo apt update
+sudo apt upgrade
+sudo apt install yunit-desktop
+```
+
+Then we will restart the VM and see whether yunit will come up... If so, we have our first snapshot "Yunitbuntu 16.04.3_amd64 pristine" (since we did not add the Overlay PPA yet which we will do in the next step before our first work-with-snapshot, up to this part is the first log of this session)
+
+Nice, it started! Be aware though, that **it will change keyboard layout to english** (for those that have a QWERTZ or other layout!)
+
+A quick note what is there: not much, Terminal, Settings, Browser, Music and Videos Scope and some utilities. Vim seems to be preinstalled but does not start from the dash. Since i have no wish to actually run it i will move on. Also sound is not working...
+
+Shutting down the VM and creating a snapshot. (logs/yunitbuntu_16-04-3_amd64_setup_pristine.log)
+
+**Step 02: Adding OVerlay PPA, making working Snapshot**
+
+see (logs/yunitbuntu_16-04-3_amd64_adding_overlay-PPA.log) for procedure...
+
+shutdown VM and create snapshot
+
+##### Intermezzo: Dirty Quickshot
+**this is logged as FREAKrun = install ALL the packages and test core apps + x THEN return to snapshot**
+
+so we will install
+1. all packages inside the ubuntu-plattform-snap
+2. all packages from previous snapcraft.yamls
+
+So let's begin with the [ubuntu-platform-snap](https://git.launchpad.net/ubuntu-app-platform/tree/snapcraft.yaml) which states the following:
+```
+stage-packages:
+        - fontconfig
+        - libc6
+        - libcups2
+        - libdbus-1-3
+        - libdrm2
+        - libegl1-mesa
+        - libfontconfig1
+        - libfreetype6
+        - libgbm1
+        - libgcc1
+        - libgl1-mesa-dev
+        - libgl1-mesa-glx
+        - libgles2-mesa-dev
+        - libglib2.0-0
+        - libglu1-mesa-dev
+        - libharfbuzz0b
+        - libice6
+        - libicu55 ##
+        - libinput10
+        - libjpeg8
+        - libmtdev1
+        - libpcre16-3
+        - libpng16-16
+        - libproxy1v5
+        - libsm6
+        - libsqlite3-0
+        - libstdc++6
+        - libudev1
+        - libx11-6
+        - libx11-xcb1
+        - libxcb1
+        - libxcb-glx0
+        - libxcb-icccm4
+        - libxcb-image0
+        - libxcb-keysyms1
+        - libxcb-randr0
+        - libxcb-render0
+        - libxcb-render-util0
+        - libxcb-shape0
+        - libxcb-shm0
+        - libxcb-sync1
+        - libxcb-xfixes0
+        - libxcb-xkb1
+        - libxext-dev
+        - libxi6
+        - libxkbcommon0
+        - libxkbcommon-x11-0
+        - libxrender1
+        - perl
+        - zlib1g
+        # workaround for LP: #1576282
+        - locales-all
+        # qtmultimedia
+        - libpulse0
+        # ubuntu-sdk-libs
+        - ubuntu-sdk-libs
+        # Extra UI components
+        - qtdeclarative5-ubuntu-ui-extras0.2
+        # Calendar deps
+        - qtcontact5-galera
+        - qtorganizer5-eds
+        # Web apps
+        - liboxideqt-qmlplugin
+        - webapp-container
+        # Allow non-memory GSettings backend
+        - dconf-gsettings-backend
+        # Mir QPA
+        - qtubuntu-desktop
+        # Additional deps
+        - qml-module-ubuntu-thumbnailer0.1
+        # Needed by address-book-app. See bug 1643660
+        - qtdeclarative5-gsettings1.0
+        - qtdeclarative5-ofono0.2
+        - qtdeclarative5-ubuntu-keyboard-extensions0.1
+        - qtdeclarative5-ubuntu-telephony-phonenumber0.1
+        - qtdeclarative5-buteo-syncfw0.1
+        - qml-module-qtcontacts # See bug 1643659
+        # Needed by telegram.
+        - qml-module-ubuntu-connectivity
+        - qtdeclarative5-ubuntu-contacts0.1
+        # Add a droid derived Sans-Serif style CJK font
+        - fonts-wqy-microhei
+        # Unity7 desktop integration (menus and indicators with snap support)
+        - appmenu-qt5
+        # OSK
+        - ubuntu-keyboard-arabic
+        - ubuntu-keyboard-autopilot
+        - ubuntu-keyboard-azerbaijani
+        - ubuntu-keyboard-bosnian
+        - ubuntu-keyboard-catalan
+        - ubuntu-keyboard-chinese-chewing
+        - ubuntu-keyboard-chinese-pinyin
+        - ubuntu-keyboard-croatian
+        - ubuntu-keyboard-czech
+        - ubuntu-keyboard-danish
+        - ubuntu-keyboard-dev
+        - ubuntu-keyboard-dutch
+        - ubuntu-keyboard-emoji
+        - ubuntu-keyboard-english
+        - ubuntu-keyboard-esperanto
+        - ubuntu-keyboard-finnish
+        - ubuntu-keyboard-french
+        - ubuntu-keyboard-german
+        - ubuntu-keyboard-greek
+        - ubuntu-keyboard-hebrew
+        - ubuntu-keyboard-hungarian
+        - ubuntu-keyboard-icelandic
+        - ubuntu-keyboard-italian
+        - ubuntu-keyboard-japanese
+        - ubuntu-keyboard-korean
+        - ubuntu-keyboard-latvian
+        - ubuntu-keyboard-norwegian-bokmal
+        - ubuntu-keyboard-polish
+        - ubuntu-keyboard-portuguese
+        - ubuntu-keyboard-romanian
+        - ubuntu-keyboard-russian
+        - ubuntu-keyboard-scottish-gaelic
+        - ubuntu-keyboard-serbian
+        - ubuntu-keyboard-slovenian
+        - ubuntu-keyboard-spanish
+        - ubuntu-keyboard-swedish
+        - ubuntu-keyboard-ukrainian
+```
+
+so to make this into a command after having started the VM:
+
+```
+sudo apt install fontconfig libc6 libcups2 libdbus-1-3 libdrm2 libegl1-mesa libfontconfig1 libfreetype6 libgbm1 libgcc1 libgl1-mesa-dev libgl1-mesa-glx libgles2-mesa-dev libglib2.0-0 libglu1-mesa-dev libharfbuzz0b libice6 libicu55 ## libinput10 libjpeg8 libmtdev1 libpcre16-3 libpng16-16 libproxy1v5 libsm6 libsqlite3-0 libstdc++6 libudev1 libx11-6 libx11-xcb1 libxcb1 libxcb-glx0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render0 libxcb-render-util0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb-xkb1 libxext-dev libxi6 libxkbcommon0 libxkbcommon-x11-0 libxrender1 perl zlib1g locales-all libpulse0 ubuntu-sdk-libs qtdeclarative5-ubuntu-ui-extras0.2 qtcontact5-galera qtorganizer5-eds liboxideqt-qmlplugin webapp-container dconf-gsettings-backend qtubuntu-desktop qml-module-ubuntu-thumbnailer0.1 qtdeclarative5-gsettings1.0 qtdeclarative5-ofono0.2 qtdeclarative5-ubuntu-keyboard-extensions0.1 qtdeclarative5-ubuntu-telephony-phonenumber0.1 qtdeclarative5-buteo-syncfw0.1 qml-module-qtcontacts # See bug 1643659 qml-module-ubuntu-connectivity qtdeclarative5-ubuntu-contacts0.1 fonts-wqy-microhei appmenu-qt5 ubuntu-keyboard-arabic ubuntu-keyboard-autopilot ubuntu-keyboard-azerbaijani ubuntu-keyboard-bosnian ubuntu-keyboard-catalan ubuntu-keyboard-chinese-chewing ubuntu-keyboard-chinese-pinyin ubuntu-keyboard-croatian ubuntu-keyboard-czech ubuntu-keyboard-danish ubuntu-keyboard-dev ubuntu-keyboard-dutch ubuntu-keyboard-emoji ubuntu-keyboard-english ubuntu-keyboard-esperanto ubuntu-keyboard-finnish ubuntu-keyboard-french ubuntu-keyboard-german ubuntu-keyboard-greek ubuntu-keyboard-hebrew ubuntu-keyboard-hungarian ubuntu-keyboard-icelandic ubuntu-keyboard-italian ubuntu-keyboard-japanese ubuntu-keyboard-korean ubuntu-keyboard-latvian ubuntu-keyboard-norwegian-bokmal ubuntu-keyboard-polish ubuntu-keyboard-portuguese ubuntu-keyboard-romanian ubuntu-keyboard-russian ubuntu-keyboard-scottish-gaelic ubuntu-keyboard-serbian ubuntu-keyboard-slovenian ubuntu-keyboard-spanish ubuntu-keyboard-swedish ubuntu-keyboard-ukrainian
+```
+
+and from all previous attempts we include the following
+
+
+```
+sudo apt install build-essential cmake gettext intltool ubuntu-touch-sounds suru-icon-theme qml-module-qttest qml-module-qtsysteminfo qml-module-qt-labs-settings qtdeclarative5-u1db1.0 qtdeclarative5-qtmultimedia-plugin qtdeclarative5-qtpositioning-plugin qtdeclarative5-ubuntu-content1 qt5-default qtbase5-dev qtdeclarative5-dev qtdeclarative5-dev-tools qtdeclarative5-folderlistmodel-plugin qtdeclarative5-ubuntu-ui-toolkit-plugin xvfb ubuntu-sdk-libs qtubuntu-desktop bzr git ubuntu-sdk-qmake-extras libclick-0.4-dev qtmultimedia5-dev pkg-config libexiv2-dev libmediainfo-dev libexpat1-dev zlib1g-dev xdg-user-dirs libmediainfo0v5 libzen0v5 libmms0 libtinyxml2-2v5 libpoppler-qt5-dev
+```
+
+okay, if this starts up after reboot we will try to build some apps, this is crazy but cool xD
+
+...
+
+so i am a little bit astonished, it still works xD
+
+From here on, we will now clone [every app that has the Tag "core app"](https://github.com/search?q=topic%3Acore-app+org%3Aubports+fork%3Atrue) on ubports (19 in total) and see whether they build. We'll at least create a "builddir" to work in so it doesn't completely get out of hand (the chaos)
+
+```
+mkdir builddir
+cd builddir
+git clone https://github.com/ubports/telegram-app.git
+git clone https://github.com/ubports/camera-app.git
+git clone https://github.com/ubports/filemanager-app.git
+# git clone https://github.com/ubports/terminal-app.git
+git clone https://github.com/ubports/docviewer-app.git
+git clone https://github.com/ubports/ubports-app.git
+git clone https://github.com/ubports/address-book-app.git
+git clone https://github.com/ubports/clock-app.git
+git clone https://github.com/ubports/dialer-app.git
+# git clone https://github.com/ubports/wheather-app.git
+git clone https://github.com/ubports/calculator-app.git
+git clone https://github.com/ubports/gallery-app.git
+git clone https://github.com/ubports/mediaplayer-app.git
+git clone https://github.com/ubports/sudoku-app.git
+git clone https://github.com/ubports/messaging-app.git
+# git clone https://github.com/ubports/ubuntu-printing-app.git
+git clone https://github.com/ubports/notes-app.git
+# git clone https://github.com/ubports/webbrowser-app.git
+git clone https://github.com/ubports/calendar-app.git
+```
+
+out of these, only Terminal and Webbrowser are preinstalled, not shure about ubuntu-printing though... (there is something like that and i thought i saw it upon setup, not so important now...) we'll leave them out for now, also for the wheather -app it wants to know the github account so we'll skip that one too. 
+
+Since we are at it, before going any further we will also clone a few more apps, archive all of them and copy them to the host so we don't have to do this anytime in the future we want to repeat something similar... but we will do this in a subdirectory
+
+```
+mkdir community-apps
+cd community-apps
+git clone https://github.com/LarreaMikel/uMatriks.git
+git clone https://github.com/rschroll/beru.git
+bzr branch lp:ubuntu-touch-tweak-tool/trunk
+bzr branch lp:unav
+bzr branch lp:instantfx
+bzr branch lp:guitar-tools
+git clone https://github.com/UbuntuOpenStore/openstore-app.git
+git clone https://github.com/bhdouglass/falcon.git
+git clone https://github.com/mzanetti/kodimote.git
+git clone https://github.com/loqui/im.git
+git clone https://github.com/scummvm/scummvm.git
+git clone https://github.com/doniks/shorter.git
+bzr branch lp:tagger 
+git clone https://github.com/syncthing/syncthing.git
+bzr branch lp:timer 
+bzr branch lp:~mzanetti/+junk/ubtd 
+```
+
+So we also use ssh to copy those files to our host machine, adapting [this documentation](https://help.ubuntu.com/community/SSH/TransferFiles) to our needs.
+
+*In host terminal, not logged into VM* (this will copy recursively the folder builddir to the current folder in the host terminal beware the Capital -P for scp instead of minor -p for ssh)
+
+```
+scp -P 3022 -r yunit@127.0.0.1:~/builddir/ .
+```
+
+So now we have (if we take into account that we left out the preinstalled) **30 apps to test with** i think this should suffice...
+
+**Testing the ... out of it**
+
+*Clock*
+
+```
+cd ..
+cd clock-app
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+builds...
+
+```
+qmlscene $@ -I /usr/lib/x86_64-linux-gnu/qt5/qml/ClockApp  /usr/share/ubuntu-clock-app/ubuntu-clock-app.qml
+```
+
+won't work:
+
+> QXcbConnection: Could not connect to display 
+> Aborted (core dumped)
+
+From Brian Douglass i heard that the following might work 
+
+```
+QT_QPA_PLATFORM=mirserver
+# and/or
+MIR_SOCKET=/path/to/something
+```
+
+the path is found by ```sudo find / -name 'mir_socket'``` 
+
+> /run/mir_socket
+> /run/user/1000/mir_socket
+
+ 
+
+And indeed if we run
+
+```
+QT_QPA_PLATFORM=mirserver qmlscene $@ -I /usr/lib/x86_64-linux-gnu/qt5/qml/ClockApp  /usr/share/ubuntu-clock-app/ubuntu-clock-app.qml
+```
+
+we get a different error:
+
+> [2017-11-16 22:51:45.230081] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+> [2017-11-16 22:51:45.230567] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+> [2017-11-16 22:51:45.231708] mirserver: Starting
+> [2017-11-16 22:51:45.232281] mircommon: Loading modules from: /usr/lib/x86_64-linux-gnu/mir/server-platform
+> [2017-11-16 22:51:45.232585] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/graphics-mesa-kms.so.12
+> [2017-11-16 22:51:45.232865] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/server-mesa-x11.so.12
+> [2017-11-16 22:51:45.233890] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/input-evdev.so.6
+> [2017-11-16 22:51:45.236290] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+> [2017-11-16 22:51:45.236786] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+> [2017-11-16 22:51:45.237314] mirserver: Selected driver: mir:mesa-kms (version 0.26.3)
+> Exception while creating graphics platform
+> ERROR: /build/mir-O8_xaj/mir-0.26.3+16.04.20170605/src/platforms/mesa/server/kms/linux_virtual_terminal.cpp(220): Throw in function int mir::graphics::mesa::LinuxVirtualTerminal::find_active_vt_number()
+> Dynamic exception type: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+> std::exception::what: Failed to find the current VT
+
+We'll have to ask someone else or search the web. However i have to do some real life stuff now... So just to test whether this works with another app, let's say the ubports-app...
+
+
+
+*ubports-app*
+
+```
+cd ~/builddir/ubports-app
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+works... going to desktop file and searching for command gives... executing has QXcbCOnnection error...trying with
+
+```
+QT_QPA_PLATFORM=mirserver qmlscene /qml/Main.qml
+```
+
+same error as for the clock
+
+
+
+Okay, so finally, we will try this for a community app and end it for today.
+
+
+
+*beru*
+
+```
+cd ~/builddir/community-apps/beru/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+works...
+
+```
+beru
+# error connecting..
+QT_QPA_PLATFORM=mirserver beru
+```
+
+same error as allways...
+
