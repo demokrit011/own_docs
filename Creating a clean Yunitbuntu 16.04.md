@@ -1331,3 +1331,9 @@ starting beru from the dash brought up a difference between ```ps -ef``` before 
 >yunit     4208  4206  0 13:43 ?        00:00:00 /usr/lib/x86_64-linux-gnu/oxide-qt/oxide-renderer --type=zygote --shared-memory-override-path=/dev/shm/beru.oxide --disable-gpu-compositing
 
 well this doesn't help tooo much right now, but we'll look into it some other time.
+
+Also some usefull links (maybe):
+
+* https://askubuntu.com/questions/767697/running-ubuntu-touch-applications-in-command-line-for-gdb-debugging
+* https://askubuntu.com/questions/642444/how-do-i-simply-run-an-ubuntu-touch-app-from-the-terminal
+
