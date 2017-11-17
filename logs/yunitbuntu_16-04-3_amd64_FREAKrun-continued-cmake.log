@@ -1,0 +1,2467 @@
+ssh -p 3022 yunit@127.0.0.1yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Thu Nov 16 21:15:03 2017 from 10.0.2.2
+yunit@yunitvm:~$ sudo find 7 -name '*.desktop'
+[sudo] password for yunit: 
+find: ‘7’: No such file or directory
+yunit@yunitvm:~$ sudo find / -name '*.desktop'
+/home/yunit/builddir/camera-app/setup/gui/camera-app.desktop
+/home/yunit/builddir/community-apps/kodimote/apps/generic/kodimote.desktop
+/home/yunit/builddir/community-apps/kodimote/apps/ubuntu/kodimote.desktop
+/home/yunit/builddir/community-apps/kodimote/apps/harmattan/xbmcremote.desktop
+/home/yunit/builddir/community-apps/kodimote/apps/plasmoid/plasma-applet-xbmcremote.desktop
+/home/yunit/builddir/community-apps/kodimote/apps/sailfish/harbour-kodimote.desktop
+/home/yunit/builddir/community-apps/guitar-tools/guitar-tools.desktop
+/home/yunit/builddir/community-apps/openstore-app/openstore/openstore.desktop
+/home/yunit/builddir/community-apps/beru/beru.desktop
+/home/yunit/builddir/community-apps/ubtd/shareplugin/shareplugin.desktop
+/home/yunit/builddir/community-apps/ubtd/app/app.desktop
+/home/yunit/builddir/community-apps/timer/Timer/Timer.desktop
+/home/yunit/builddir/community-apps/im/platform/ubuntu-touch/loqui.desktop
+/home/yunit/builddir/community-apps/unav/app.desktop
+/home/yunit/builddir/community-apps/scummvm/dists/scummvm.desktop
+/home/yunit/builddir/community-apps/scummvm/dists/motoezx/scummvm.desktop
+/home/yunit/builddir/community-apps/scummvm/dists/motomagx/mpkg/scummvm.desktop
+/home/yunit/builddir/community-apps/scummvm/dists/gcw0/default.gcw0.desktop
+/home/yunit/builddir/community-apps/scummvm/dists/maemo/scummvm.desktop
+/home/yunit/builddir/community-apps/uMatriks/uMatriks/uMatriks.desktop
+/home/yunit/builddir/notes-app/setup/gui/ubuntu-notes-app.desktop
+/home/yunit/builddir/docviewer-app/setup/gui/ubuntu-docviewer-app.desktop
+/home/yunit/builddir/messaging-app/setup/gui/messaging-app.desktop
+/home/yunit/builddir/calculator-app/setup/gui/ubuntu-calculator-app.desktop
+/home/yunit/builddir/dialer-app/setup/gui/dialer-app.desktop
+/home/yunit/builddir/filemanager-app/setup/gui/ubuntu-filemanager-app.desktop
+/home/yunit/builddir/mediaplayer-app/setup/gui/mediaplayer-app.desktop
+/home/yunit/builddir/ubports-app/com.ubuntu.ubports.desktop
+/home/yunit/builddir/clock-app/setup/gui/ubuntu-clock-app.desktop
+/home/yunit/builddir/clock-app/ubuntu-clock-app.desktop
+/home/yunit/builddir/telegram-app/setup/gui/telegram-app.desktop
+/home/yunit/builddir/telegram-app/telegram/app/telegram.desktop
+/home/yunit/builddir/gallery-app/setup/gui/gallery-app.desktop
+/home/yunit/builddir/address-book-app/setup/gui/address-book-app.desktop
+/home/yunit/builddir/sudoku-app/sudoku-app.desktop
+/home/yunit/.local/share/applications/videoaggregator.desktop
+/home/yunit/.local/share/applications/musicaggregator.desktop
+/home/yunit/.local/share/applications/mediascanner-video.desktop
+/home/yunit/.local/share/applications/mediascanner-music.desktop
+/home/yunit/.local/share/applications/libertine-scope.ubuntu_libertine-scope.desktop
+/etc/xdg/autostart/nm-applet.desktop
+/etc/xdg/autostart/notification-daemon-autostart.desktop
+/etc/xdg/autostart/print-applet.desktop
+/etc/xdg/autostart/at-spi-dbus-bus.desktop
+/etc/xdg/autostart/gnome-keyring-pkcs11.desktop
+/etc/xdg/autostart/gnome-screensaver.desktop
+/etc/xdg/autostart/unity-settings-daemon.desktop
+/etc/xdg/autostart/gnome-keyring-ssh.desktop
+/etc/xdg/autostart/gnome-keyring-secrets.desktop
+/etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop
+/etc/xdg/autostart/pulseaudio.desktop
+/etc/xdg/autostart/indicator-application.desktop
+/etc/xdg/autostart/unity-fallback-mount-helper.desktop
+/etc/xdg/autostart/indicator-messages.desktop
+/usr/lib/gnome-settings-daemon-3.0/gtk-modules/canberra-gtk3-module.desktop
+/usr/lib/unity-settings-daemon-1.0/gtk-modules/canberra-gtk3-module.desktop
+/usr/share/lightdm/guest-session/skel/.config/autostart/guest-session-startup.desktop
+/usr/share/lightdm/sessions/unity8.desktop
+/usr/share/lightdm/greeters/unity8-greeter.desktop
+/usr/share/xgreeters/unity-greeter.desktop
+/usr/share/apps/konsole/python.desktop
+/usr/share/applications/telephony-service-call.desktop
+/usr/share/applications/unity-sound-panel.desktop
+/usr/share/applications/nm-applet.desktop
+/usr/share/applications/online-accounts-ui.desktop
+/usr/share/applications/yelp.desktop
+/usr/share/applications/notification-daemon.desktop
+/usr/share/applications/unity-color-panel.desktop
+/usr/share/applications/unity-info-panel.desktop
+/usr/share/applications/telephony-service-sms.desktop
+/usr/share/applications/display-im6.q16.desktop
+/usr/share/applications/content-hub-clipboard.desktop
+/usr/share/applications/signon-ui.desktop
+/usr/share/applications/unity-universal-access-panel.desktop
+/usr/share/applications/im-config.desktop
+/usr/share/applications/unity8-dash.desktop
+/usr/share/applications/content-hub-peer-picker.desktop
+/usr/share/applications/byobu.desktop
+/usr/share/applications/credentials-preferences.desktop
+/usr/share/applications/unity-power-panel.desktop
+/usr/share/applications/unity-user-accounts-panel.desktop
+/usr/share/applications/system-config-printer.desktop
+/usr/share/applications/geoclue-where-am-i.desktop
+/usr/share/applications/evolution-data-server-uoa.desktop
+/usr/share/applications/unity-wacom-panel.desktop
+/usr/share/applications/vim.desktop
+/usr/share/applications/update-accounts.desktop
+/usr/share/applications/python2.7.desktop
+/usr/share/applications/ibus-setup.desktop
+/usr/share/applications/unity-screen-panel.desktop
+/usr/share/applications/beru.desktop
+/usr/share/applications/gcr-viewer.desktop
+/usr/share/applications/nm-connection-editor.desktop
+/usr/share/applications/unity-display-panel.desktop
+/usr/share/applications/unity-appearance-panel.desktop
+/usr/share/applications/unity-control-center.desktop
+/usr/share/applications/python3.5.desktop
+/usr/share/applications/ubuntu-terminal-app.desktop
+/usr/share/applications/unity8.desktop
+/usr/share/applications/unity-bluetooth-panel.desktop
+/usr/share/applications/libertine-manager-app.desktop
+/usr/share/applications/unity-credentials-panel.desktop
+/usr/share/applications/ubuntu-clock-app.desktop
+/usr/share/applications/gcr-prompter.desktop
+/usr/share/applications/unity-keyboard-panel.desktop
+/usr/share/applications/content-hub-send.desktop
+/usr/share/applications/unity-network-panel.desktop
+/usr/share/applications/webbrowser-app.desktop
+/usr/share/applications/unity-mouse-panel.desktop
+/usr/share/applications/ubuntu-system-settings.desktop
+/usr/share/applications/unity-region-panel.desktop
+/usr/share/applications/gnome-power-statistics.desktop
+/usr/share/applications/gkbd-keyboard-display.desktop
+/usr/share/applications/display-im6.desktop
+/usr/share/applications/history-daemon.desktop
+/usr/share/applications/unity-datetime-panel.desktop
+/usr/share/indicator-application/upstart/xdg/autostart/indicator-application.desktop
+/usr/share/byobu/desktop/byobu.desktop
+/usr/share/upstart/xdg/autostart/at-spi-dbus-bus.desktop
+/usr/share/upstart/xdg/autostart/unity-settings-daemon.desktop
+/usr/share/upstart/xdg/autostart/indicator-messages.desktop
+/com.ubuntu.ubports.desktop
+yunit@yunitvm:~$ ls 
+.bash_history              .gnupg/
+.bash_logout               .local/
+.bashrc                    Pictures/
+Books/                     .presage/
+builddir/                  .profile
+.bzr.log                   .sudo_as_admin_successful
+.cache/                    .viminfo
+.config/                   .xsession-errors
+.dmrc                      .xsession-errors.old
+yunit@yunitvm:~$ ls Books/
+huck_finn.epub
+yunit@yunitvm:~$ qmlscene /qml/Main.qml 
+QXcbConnection: Could not connect to display 
+Aborted (core dumped)
+yunit@yunitvm:~$ QT_QPA_PLATFORM=mirserver qmlscene /qml/Main.qml
+[2017-11-17 10:46:00.208087] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+[2017-11-17 10:46:00.208736] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+[2017-11-17 10:46:00.209788] mirserver: Starting
+[2017-11-17 10:46:00.210301] mircommon: Loading modules from: /usr/lib/x86_64-linux-gnu/mir/server-platform
+[2017-11-17 10:46:00.210729] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/graphics-mesa-kms.so.12
+[2017-11-17 10:46:00.211112] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/server-mesa-x11.so.12
+[2017-11-17 10:46:00.211978] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/input-evdev.so.6
+[2017-11-17 10:46:00.213936] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+[2017-11-17 10:46:00.214353] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+[2017-11-17 10:46:00.214924] mirserver: Selected driver: mir:mesa-kms (version 0.26.3)
+Exception while creating graphics platform
+ERROR: /build/mir-O8_xaj/mir-0.26.3+16.04.20170605/src/platforms/mesa/server/kms/linux_virtual_terminal.cpp(220): Throw in function int mir::graphics::mesa::LinuxVirtualTerminal::find_active_vt_number()
+Dynamic exception type: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+std::exception::what: Failed to find the current VT
+
+
+yunit@yunitvm:~$ cd builddir/
+yunit@yunitvm:~/builddir$ find . -name 'CMakeLists.txt'
+./camera-app/desktop/CMakeLists.txt
+./camera-app/tests/unittests/CMakeLists.txt
+./camera-app/tests/CMakeLists.txt
+./camera-app/tests/autopilot/CMakeLists.txt
+./camera-app/CMakeLists.txt
+./camera-app/CameraApp/CMakeLists.txt
+./camera-app/po/CMakeLists.txt
+./community-apps/instantfx/data/CMakeLists.txt
+./community-apps/instantfx/src/CMakeLists.txt
+./community-apps/instantfx/src/app/CMakeLists.txt
+./community-apps/instantfx/src/plugin/image_processor_plugin/CMakeLists.txt
+./community-apps/instantfx/src/plugin/CMakeLists.txt
+./community-apps/instantfx/CMakeLists.txt
+./community-apps/instantfx/click/CMakeLists.txt
+./community-apps/instantfx/po/CMakeLists.txt
+./community-apps/kodimote/apps/CMakeLists.txt
+./community-apps/kodimote/apps/plasmoid/CMakeLists.txt
+./community-apps/kodimote/CMakeLists.txt
+./community-apps/kodimote/libkodimote/CMakeLists.txt
+./community-apps/shorter/CMakeLists.txt
+./community-apps/shorter/shorts/tests/CMakeLists.txt
+./community-apps/shorter/shorts/tests/autopilot/CMakeLists.txt
+./community-apps/shorter/shorts/qml/delegates/CMakeLists.txt
+./community-apps/shorter/shorts/qml/nongoogle/CMakeLists.txt
+./community-apps/shorter/shorts/qml/content/CMakeLists.txt
+./community-apps/shorter/shorts/qml/components/CMakeLists.txt
+./community-apps/shorter/shorts/qml/tabs/CMakeLists.txt
+./community-apps/shorter/shorts/qml/CMakeLists.txt
+./community-apps/shorter/shorts/qml/utils/CMakeLists.txt
+./community-apps/shorter/shorts/qml/pages/CMakeLists.txt
+./community-apps/shorter/shorts/qml/icons/CMakeLists.txt
+./community-apps/shorter/shorts/CMakeLists.txt
+./community-apps/shorter/shorts/po/CMakeLists.txt
+./community-apps/beru/fontlister/CMakeLists.txt
+./community-apps/beru/filesystem/CMakeLists.txt
+./community-apps/beru/html/CMakeLists.txt
+./community-apps/beru/epubreader/CMakeLists.txt
+./community-apps/beru/CMakeLists.txt
+./community-apps/beru/ui/CMakeLists.txt
+./community-apps/beru/po/CMakeLists.txt
+./community-apps/beru/qhttpserver/CMakeLists.txt
+./community-apps/trunk/plugins/tweaktool/CMakeLists.txt
+./community-apps/trunk/plugins/sound/CMakeLists.txt
+./community-apps/trunk/plugins/pamauthentication/CMakeLists.txt
+./community-apps/trunk/plugins/QtPowerd/CMakeLists.txt
+./community-apps/trunk/plugins/storagemanager/CMakeLists.txt
+./community-apps/trunk/plugins/CMakeLists.txt
+./community-apps/trunk/plugins/click/CMakeLists.txt
+./community-apps/trunk/CMakeLists.txt
+./community-apps/trunk/app/CMakeLists.txt
+./community-apps/trunk/po/CMakeLists.txt
+./community-apps/tagger/CMakeLists.txt
+./community-apps/tagger/app/qml/CMakeLists.txt
+./community-apps/tagger/app/CMakeLists.txt
+./community-apps/tagger/po/CMakeLists.txt
+./community-apps/scummvm/devtools/create_project/cmake/CMakeLists.txt
+./notes-app/tests/qml/CMakeLists.txt
+./notes-app/tests/CMakeLists.txt
+./notes-app/tests/autopilot/CMakeLists.txt
+./notes-app/3rdParty/CMakeLists.txt
+./notes-app/3rdParty/evernote-sdk-cpp/CMakeLists.txt
+./notes-app/3rdParty/libthrift/CMakeLists.txt
+./notes-app/src/push-helper/CMakeLists.txt
+./notes-app/src/CMakeLists.txt
+./notes-app/src/libqtevernote/CMakeLists.txt
+./notes-app/src/app/CMakeLists.txt
+./notes-app/src/plugin/CMakeLists.txt
+./notes-app/src/plugin/Evernote/CMakeLists.txt
+./notes-app/src/account-plugin/CMakeLists.txt
+./notes-app/CMakeLists.txt
+./notes-app/po/CMakeLists.txt
+./docviewer-app/tests/CMakeLists.txt
+./docviewer-app/tests/autopilot/ubuntu_docviewer_app/tests/CMakeLists.txt
+./docviewer-app/tests/autopilot/ubuntu_docviewer_app/CMakeLists.txt
+./docviewer-app/tests/autopilot/CMakeLists.txt
+./docviewer-app/data/CMakeLists.txt
+./docviewer-app/src/CMakeLists.txt
+./docviewer-app/src/app/CMakeLists.txt
+./docviewer-app/src/plugin/poppler-qml-plugin/CMakeLists.txt
+./docviewer-app/src/plugin/CMakeLists.txt
+./docviewer-app/src/plugin/file-qml-plugin/CMakeLists.txt
+./docviewer-app/src/plugin/libreofficetoolkit-qml-plugin/CMakeLists.txt
+./docviewer-app/CMakeLists.txt
+./docviewer-app/click/CMakeLists.txt
+./docviewer-app/po/CMakeLists.txt
+./messaging-app/tests/data/CMakeLists.txt
+./messaging-app/tests/qml/CMakeLists.txt
+./messaging-app/tests/CMakeLists.txt
+./messaging-app/accounts/CMakeLists.txt
+./messaging-app/src/qml/Stickers/CMakeLists.txt
+./messaging-app/src/qml/CMakeLists.txt
+./messaging-app/src/qml/AttachmentDelegates/CMakeLists.txt
+./messaging-app/src/qml/Dialogs/CMakeLists.txt
+./messaging-app/src/CMakeLists.txt
+./messaging-app/CMakeLists.txt
+./messaging-app/po/CMakeLists.txt
+./calculator-app/tests/CMakeLists.txt
+./calculator-app/tests/autopilot/CMakeLists.txt
+./calculator-app/CMakeLists.txt
+./calculator-app/app/engine/CMakeLists.txt
+./calculator-app/app/upstreamcomponents/CMakeLists.txt
+./calculator-app/app/welcomewizard/CMakeLists.txt
+./calculator-app/app/CMakeLists.txt
+./calculator-app/app/ui/CMakeLists.txt
+./calculator-app/app/graphics/CMakeLists.txt
+./calculator-app/po/CMakeLists.txt
+./dialer-app/tests/data/CMakeLists.txt
+./dialer-app/tests/qml/CMakeLists.txt
+./dialer-app/tests/CMakeLists.txt
+./dialer-app/tests/autopilot/CMakeLists.txt
+./dialer-app/accounts/CMakeLists.txt
+./dialer-app/src/qml/LiveCallPage/CMakeLists.txt
+./dialer-app/src/qml/SettingsPage/CMakeLists.txt
+./dialer-app/src/qml/SettingsPage/AccountSettings/CMakeLists.txt
+./dialer-app/src/qml/ContactEditorPage/CMakeLists.txt
+./dialer-app/src/qml/CMakeLists.txt
+./dialer-app/src/qml/ContactsPage/CMakeLists.txt
+./dialer-app/src/qml/DialerPage/CMakeLists.txt
+./dialer-app/src/qml/HistoryPage/CMakeLists.txt
+./dialer-app/src/qml/ContactViewPage/CMakeLists.txt
+./dialer-app/src/qml/Dialogs/CMakeLists.txt
+./dialer-app/src/CMakeLists.txt
+./dialer-app/CMakeLists.txt
+./dialer-app/po/CMakeLists.txt
+./filemanager-app/tests/CMakeLists.txt
+./filemanager-app/tests/autopilot/filemanager/tests/CMakeLists.txt
+./filemanager-app/tests/autopilot/filemanager/CMakeLists.txt
+./filemanager-app/tests/autopilot/CMakeLists.txt
+./filemanager-app/src/CMakeLists.txt
+./filemanager-app/src/app/CMakeLists.txt
+./filemanager-app/src/plugin/placesmodel/CMakeLists.txt
+./filemanager-app/src/plugin/pamauthentication/CMakeLists.txt
+./filemanager-app/src/plugin/CMakeLists.txt
+./filemanager-app/src/plugin/folderlistmodel/CMakeLists.txt
+./filemanager-app/src/plugin/archives/CMakeLists.txt
+./filemanager-app/CMakeLists.txt
+./filemanager-app/po/CMakeLists.txt
+./mediaplayer-app/tests/unittest/CMakeLists.txt
+./mediaplayer-app/tests/videos/CMakeLists.txt
+./mediaplayer-app/tests/CMakeLists.txt
+./mediaplayer-app/tests/images/CMakeLists.txt
+./mediaplayer-app/tests/autopilot/CMakeLists.txt
+./mediaplayer-app/data/CMakeLists.txt
+./mediaplayer-app/src/qml/CMakeLists.txt
+./mediaplayer-app/src/CMakeLists.txt
+./mediaplayer-app/CMakeLists.txt
+./mediaplayer-app/sdk/CMakeLists.txt
+./mediaplayer-app/po/CMakeLists.txt
+./calendar-app/CMakeLists.txt
+./calendar-app/po/CMakeLists.txt
+./ubports-app/CMakeLists.txt
+./ubports-app/po/CMakeLists.txt
+./clock-app/tests/unit/CMakeLists.txt
+./clock-app/tests/CMakeLists.txt
+./clock-app/tests/autopilot/CMakeLists.txt
+./clock-app/backend/CMakeLists.txt
+./clock-app/CMakeLists.txt
+./clock-app/app/clock/CMakeLists.txt
+./clock-app/app/upstreamcomponents/CMakeLists.txt
+./clock-app/app/components/CMakeLists.txt
+./clock-app/app/worldclock/CMakeLists.txt
+./clock-app/app/CMakeLists.txt
+./clock-app/app/stopwatch/CMakeLists.txt
+./clock-app/app/graphics/CMakeLists.txt
+./clock-app/app/alarm/CMakeLists.txt
+./clock-app/po/CMakeLists.txt
+./gallery-app/desktop/CMakeLists.txt
+./gallery-app/tests/unittests/mediamonitor/CMakeLists.txt
+./gallery-app/tests/unittests/photo-metadata/CMakeLists.txt
+./gallery-app/tests/unittests/mediaobjectfactory/CMakeLists.txt
+./gallery-app/tests/unittests/imaging/CMakeLists.txt
+./gallery-app/tests/unittests/CMakeLists.txt
+./gallery-app/tests/unittests/resource/CMakeLists.txt
+./gallery-app/tests/unittests/command-line-parser/CMakeLists.txt
+./gallery-app/tests/unittests/video/CMakeLists.txt
+./gallery-app/tests/CMakeLists.txt
+./gallery-app/tests/autopilot/CMakeLists.txt
+./gallery-app/rc/CMakeLists.txt
+./gallery-app/src/media/CMakeLists.txt
+./gallery-app/src/album/CMakeLists.txt
+./gallery-app/src/qml/CMakeLists.txt
+./gallery-app/src/event/CMakeLists.txt
+./gallery-app/src/util/CMakeLists.txt
+./gallery-app/src/core/CMakeLists.txt
+./gallery-app/src/CMakeLists.txt
+./gallery-app/src/photo/CMakeLists.txt
+./gallery-app/src/database/CMakeLists.txt
+./gallery-app/src/video/CMakeLists.txt
+./gallery-app/src/medialoader/CMakeLists.txt
+./gallery-app/CMakeLists.txt
+./gallery-app/click/CMakeLists.txt
+./gallery-app/po/CMakeLists.txt
+./address-book-app/tests/data/CMakeLists.txt
+./address-book-app/tests/qml/CMakeLists.txt
+./address-book-app/tests/CMakeLists.txt
+./address-book-app/tests/autopilot/CMakeLists.txt
+./address-book-app/data/CMakeLists.txt
+./address-book-app/src/imports/Ubuntu/CMakeLists.txt
+./address-book-app/src/imports/Ubuntu/AddressBook/Base/CMakeLists.txt
+./address-book-app/src/imports/Ubuntu/AddressBook/CMakeLists.txt
+./address-book-app/src/imports/Ubuntu/AddressBook/ContactShare/CMakeLists.txt
+./address-book-app/src/imports/Ubuntu/AddressBook/ContactView/CMakeLists.txt
+./address-book-app/src/imports/Ubuntu/AddressBook/ContactEditor/CMakeLists.txt
+./address-book-app/src/imports/Ubuntu/Contacts/CMakeLists.txt
+./address-book-app/src/imports/CMakeLists.txt
+./address-book-app/src/imports/Settings/CMakeLists.txt
+./address-book-app/src/artwork/CMakeLists.txt
+./address-book-app/src/CMakeLists.txt
+./address-book-app/src/app/CMakeLists.txt
+./address-book-app/CMakeLists.txt
+./address-book-app/click/CMakeLists.txt
+./address-book-app/po/CMakeLists.txt
+./sudoku-app/tests/CMakeLists.txt
+./sudoku-app/tests/autopilot/CMakeLists.txt
+./sudoku-app/components/CMakeLists.txt
+./sudoku-app/CMakeLists.txt
+./sudoku-app/js/CMakeLists.txt
+./sudoku-app/click/CMakeLists.txt
+./sudoku-app/po/CMakeLists.txt
+yunit@yunitvm:~/builddir$ 
+yunit@yunitvm:~/builddir$ cd community-apps/shorter/
+yunit@yunitvm:~/builddir/community-apps/shorter$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+NOT CLICK_MODE
+CMake Error: File /home/yunit/builddir/community-apps/shorter/shorter.in does not exist.
+CMake Error at CMakeLists.txt:83 (configure_file):
+  configure_file Problem configuring file
+
+
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring incomplete, errors occurred!
+See also "/home/yunit/builddir/community-apps/shorter/CMakeFiles/CMakeOutput.log".
+yunit@yunitvm:~/builddir/community-apps/shorter$ cd ~/builddir/camera-app
+yunit@yunitvm:~/builddir/camera-app$ ls
+AdvancedOptions.qml       COPYING                OptionButton.qml        snap
+assets                    debian                 OptionsOverlay.qml      snapcraft.yaml
+BottomEdgeIndicators.qml  DeleteDialog.qml       OptionValueButton.qml   StopWatch.qml
+CameraApp                 desktop                PhotoEditorLoader.qml   tests
+camera.apparmor           FocusRing.qml          PhotogridView.qml       ThinSliderStyle.qml
+camera-app.desktop.in.in  GalleryViewHeader.qml  PhotoRollHint.qml       UnableShareDialog.qml
+cameraapplication.cpp     GalleryViewLoader.qml  PictureReview.qml       VideoReview.qml
+cameraapplication.h       GalleryView.qml        po                      ViewFinderExportConfirmation.qml
+camera-app.png            IconButton.qml         ProcessingFeedback.qml  ViewFinderGeometry.qml
+camera-app.qml            Information.qml        README.click            ViewFinderOverlayLoader.qml
+camera-contenthub.json    Jenkinsfile            ResponsiveGridView.qml  ViewFinderOverlay.qml
+CircleButton.qml          main.cpp               setup                   ViewFinderView.qml
+click-build.sh            manifest.json.in       SharePopover.qml        ZoomControl.qml
+CMakeLists.txt            MimeTypeMapper.js      ShootButton.qml
+config.h.in               NoSpaceHint.qml        SlideshowView.qml
+yunit@yunitvm:~/builddir/camera-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/builddir/camera-app
+yunit@yunitvm:~/builddir/camera-app$ make -j4
+Scanning dependencies of target NON_COMPILED_TARGET
+Scanning dependencies of target camera-qml_automoc
+Scanning dependencies of target camera-app.desktop
+Scanning dependencies of target camera-app_automoc
+[  0%] Built target NON_COMPILED_TARGET
+[  1%] Automatic moc for target camera-qml
+[  2%] Automatic moc for target camera-app
+[  3%] Merging translations into camera-app.desktop
+Scanning dependencies of target pofiles_66
+Generating moc_cameraapplication.cpp
+[  4%] Generating bg.gmo
+Generating moc_advancedcamerasettings.cpp
+[  4%] Built target pofiles_66
+Scanning dependencies of target pofiles_65
+[  5%] Generating es.gmo
+[  5%] Built target pofiles_65
+Generating moc_components.cpp
+Scanning dependencies of target pofiles_61
+[  6%] Generating ca@valencia.gmo
+[  6%] Built target camera-app_automoc
+[  6%] Built target pofiles_61
+Scanning dependencies of target pofiles_60
+Merging translations into camera-app.desktop.
+[  6%] Built target camera-app.desktop
+Generating moc_fileoperations.cpp
+Scanning dependencies of target pofiles_56
+[  7%] Generating ta.gmo
+[  8%] Generating te.gmo
+Scanning dependencies of target pofiles_55
+[  8%] Built target pofiles_60
+[  9%] Generating km.gmo
+[  9%] Built target pofiles_56
+Generating moc_foldersmodel.cpp
+[  9%] Built target pofiles_55
+Scanning dependencies of target pofiles_52
+Scanning dependencies of target pofiles_51
+[ 10%] Generating nl.gmo
+Scanning dependencies of target pofiles_50
+[ 11%] Generating tr.gmo
+[ 11%] Built target pofiles_52
+[ 12%] Generating nan.gmo
+[ 12%] Built target pofiles_51
+[ 12%] Built target pofiles_50
+/home/yunit/builddir/camera-app/CameraApp/foldersmodel.h:103: Warning: Class FoldersModel implements the interface QQmlParserStatus but does not list it in Q_INTERFACES. qobject_cast to QQmlParserStatus will not work!
+Scanning dependencies of target pofiles_49
+Scanning dependencies of target pofiles_19
+Generating moc_postprocessoperations.cpp
+[ 13%] Generating ro.gmo
+[ 14%] Generating th.gmo
+Scanning dependencies of target pofiles_39
+[ 14%] Built target pofiles_49
+[ 15%] Generating cy.gmo
+[ 15%] Built target pofiles_19
+Scanning dependencies of target pofiles_53
+Generating moc_storagelocations.cpp
+Scanning dependencies of target pofiles_17
+[ 15%] Built target pofiles_39
+Scanning dependencies of target pofiles_45
+[ 17%] Generating br.gmo
+[ 18%] Generating bs.gmo
+[ 18%] Built target pofiles_17
+[ 19%] Generating uk.gmo
+[ 19%] Built target pofiles_53
+Generating moc_storagemonitor.cpp
+Scanning dependencies of target pofiles_16
+[ 19%] Built target pofiles_45
+Scanning dependencies of target pofiles_34
+[ 20%] Generating my.gmo
+Scanning dependencies of target pofiles_62
+[ 21%] Generating am.gmo
+[ 21%] Built target pofiles_16
+[ 22%] Generating ast.gmo
+[ 22%] Built target pofiles_34
+[ 22%] Built target camera-qml_automoc
+Scanning dependencies of target pofiles_15
+Scanning dependencies of target pofiles_2
+[ 22%] Built target pofiles_62
+Scanning dependencies of target pofiles_6
+[ 23%] Generating hi.gmo
+[ 24%] Generating pl.gmo
+Scanning dependencies of target pofiles_33
+[ 25%] Generating hu.gmo
+[ 25%] Built target pofiles_15
+[ 26%] Built target pofiles_6
+[ 26%] Generating be.gmo
+[ 26%] Built target pofiles_2
+Scanning dependencies of target pofiles_20
+Scanning dependencies of target pofiles_44
+[ 26%] Built target pofiles_33
+Scanning dependencies of target pofiles_58
+[ 27%] Generating ko.gmo
+Scanning dependencies of target pofiles_25
+[ 28%] Generating pt.gmo
+[ 29%] Generating aa.gmo
+[ 30%] Generating el.gmo
+[ 30%] Built target pofiles_58
+[ 30%] Built target pofiles_44
+[ 30%] Built target pofiles_20
+Scanning dependencies of target pofiles_13
+Scanning dependencies of target pofiles_18
+[ 30%] Built target pofiles_25
+Scanning dependencies of target pofiles_12
+Scanning dependencies of target pofiles_47
+[ 31%] Generating sl.gmo
+[ 32%] Generating ug.gmo
+[ 34%] Generating ru.gmo
+[ 35%] Generating ml.gmo
+[ 35%] Built target pofiles_13
+[ 35%] Built target pofiles_18
+[ 35%] Built target pofiles_12
+Scanning dependencies of target pofiles_32
+[ 35%] Built target pofiles_47
+Scanning dependencies of target pofiles_11
+[ 36%] Generating gd.gmo
+Scanning dependencies of target pofiles_57
+[ 37%] Generating de.gmo
+Scanning dependencies of target pofiles_38
+[ 38%] Generating lv.gmo
+[ 38%] Built target pofiles_32
+[ 39%] Generating ca.gmo
+[ 39%] Built target pofiles_57
+[ 39%] Built target pofiles_11
+Scanning dependencies of target pofiles_63
+Scanning dependencies of target pofiles_9
+[ 39%] Built target pofiles_38
+[ 40%] Generating nb.gmo
+Scanning dependencies of target pofiles_28
+Scanning dependencies of target pofiles_14
+[ 40%] Built target pofiles_63
+[ 41%] Generating en_GB.gmo
+[ 42%] Generating da.gmo
+[ 43%] Generating he.gmo
+Scanning dependencies of target pofiles_59
+[ 43%] Built target pofiles_28
+[ 43%] Built target pofiles_9
+Scanning dependencies of target pofiles_10
+[ 43%] Built target pofiles_14
+Scanning dependencies of target camera-app.pot
+[ 44%] Generating sr.gmo
+Scanning dependencies of target pofiles_3
+[ 45%] Generating fr_CA.gmo
+[ 46%] Generating translation template
+[ 44%] Built target pofiles_59
+[ 47%] Generating gl.gmo
+Scanning dependencies of target pofiles_8
+[ 47%] Built target pofiles_10
+Scanning dependencies of target pofiles_31
+[ 48%] Generating az.gmo
+[ 48%] Built target pofiles_3
+Wrote camera-app.desktop.in.in.h
+[ 50%] Generating eo.gmo
+Scanning dependencies of target pofiles_1
+[ 50%] Built target pofiles_8
+Scanning dependencies of target pofiles_7
+[ 51%] Generating cs.gmo
+[ 51%] Built target pofiles_31
+[ 50%] Built target camera-app.pot
+[ 52%] Generating lo.gmo
+Scanning dependencies of target pofiles_35
+Scanning dependencies of target pofiles_4
+[ 52%] Built target pofiles_1
+[ 53%] Generating ja.gmo
+Scanning dependencies of target pofiles_5
+[ 54%] Generating shn.gmo
+[ 53%] Built target pofiles_7
+[ 55%] Generating pa.gmo
+Scanning dependencies of target pofiles_21
+[ 55%] Built target pofiles_4
+[ 55%] Built target pofiles_35
+[ 55%] Built target pofiles_5
+[ 56%] Generating hy.gmo
+Scanning dependencies of target pofiles_30
+Scanning dependencies of target pofiles_22
+Scanning dependencies of target pofiles_46
+[ 58%] Generating it.gmo
+[ 57%] Built target pofiles_21
+[ 57%] Generating zh_TW.gmo
+Scanning dependencies of target pofiles_23
+[ 59%] Generating hr.gmo
+[ 59%] Built target pofiles_30
+[ 59%] Built target pofiles_22
+[ 60%] Generating fa.gmo
+Scanning dependencies of target pofiles_24
+[ 60%] Built target pofiles_46
+Scanning dependencies of target pofiles_64
+[ 61%] Generating id.gmo
+[ 62%] Generating sv.gmo
+Scanning dependencies of target pofiles_26
+[ 61%] Built target pofiles_23
+Scanning dependencies of target pofiles_27
+[ 62%] Built target pofiles_64
+[ 63%] Generating zh_CN.gmo
+[ 63%] Built target pofiles_24
+[ 64%] Generating pt_BR.gmo
+Scanning dependencies of target pofiles_54
+Scanning dependencies of target pofiles_48
+[ 64%] Built target pofiles_26
+[ 65%] Generating zh_HK.gmo
+[ 65%] Built target pofiles_27
+Scanning dependencies of target pofiles_29
+[ 67%] Generating sk.gmo
+Scanning dependencies of target pofiles_36
+[ 68%] Generating fi.gmo
+[ 68%] Built target pofiles_48
+[ 68%] Built target pofiles_54
+Scanning dependencies of target pofiles_37
+[ 69%] Generating ms.gmo
+Scanning dependencies of target pofiles_42
+[ 69%] Built target pofiles_29
+Scanning dependencies of target pofiles_40
+[ 70%] Generating en_AU.gmo
+[ 71%] Generating fr.gmo
+[ 69%] Built target pofiles_36
+Scanning dependencies of target pofiles_41
+[ 72%] Generating ar.gmo
+[ 72%] Built target pofiles_42
+[ 72%] Built target pofiles_37
+[ 73%] Generating is.gmo
+[ 73%] Built target pofiles_40
+Scanning dependencies of target tst_QmlTests_automoc
+Scanning dependencies of target pofiles_43
+Scanning dependencies of target tst_storagemonitor_automoc
+[ 75%] Generating eu.gmo
+[ 73%] Built target pofiles_41
+[ 75%] Automatic moc for target tst_QmlTests
+Scanning dependencies of target camera-app
+[ 76%] Automatic moc for target tst_storagemonitor
+[ 75%] Built target pofiles_43
+[ 76%] Built target tst_QmlTests_automoc
+Generating tst_storagemonitor.moc
+Scanning dependencies of target camera-qml
+Scanning dependencies of target tst_QmlTests
+[ 77%] Building CXX object CMakeFiles/camera-app.dir/cameraapplication.cpp.o
+[ 78%] Building CXX object tests/unittests/CMakeFiles/tst_QmlTests.dir/tst_QmlTests.cpp.o
+Generating moc_storagemonitor.cpp
+[ 79%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/components.cpp.o
+[ 79%] Built target tst_storagemonitor_automoc
+[ 80%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/advancedcamerasettings.cpp.o
+[ 81%] Building CXX object CMakeFiles/camera-app.dir/main.cpp.o
+[ 82%] Building CXX object tests/unittests/CMakeFiles/tst_QmlTests.dir/tst_QmlTests_automoc.cpp.o
+[ 84%] Linking CXX executable tst_QmlTests
+[ 85%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/fileoperations.cpp.o
+[ 85%] Built target tst_QmlTests
+[ 86%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/postprocessoperations.cpp.o
+[ 87%] Building CXX object CMakeFiles/camera-app.dir/camera-app_automoc.cpp.o
+[ 88%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/foldersmodel.cpp.o
+[ 89%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/storagemonitor.cpp.o
+[ 90%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/storagelocations.cpp.o
+[ 91%] Linking CXX executable camera-app
+[ 91%] Built target camera-app
+[ 92%] Building CXX object CameraApp/CMakeFiles/camera-qml.dir/camera-qml_automoc.cpp.o
+[ 93%] Linking CXX shared library libcamera-qml.so
+[ 93%] Built target camera-qml
+Scanning dependencies of target tst_storagemonitor
+[ 94%] Building CXX object tests/unittests/CMakeFiles/tst_storagemonitor.dir/storageinfocontrol.cpp.o
+[ 95%] Building CXX object tests/unittests/CMakeFiles/tst_storagemonitor.dir/__/__/CameraApp/storagemonitor.cpp.o
+[ 96%] Building CXX object tests/unittests/CMakeFiles/tst_storagemonitor.dir/qstorageinfo_stub.cpp.o
+[ 97%] Building CXX object tests/unittests/CMakeFiles/tst_storagemonitor.dir/tst_storagemonitor.cpp.o
+[ 98%] Building CXX object tests/unittests/CMakeFiles/tst_storagemonitor.dir/tst_storagemonitor_automoc.cpp.o
+[100%] Linking CXX executable tst_storagemonitor
+[100%] Built target tst_storagemonitor
+yunit@yunitvm:~/builddir/camera-app$ sudo make install
+[sudo] password for yunit: 
+[  1%] Automatic moc for target camera-app
+[  1%] Built target camera-app_automoc
+[  5%] Built target camera-app
+[  6%] Merging translations into camera-app.desktop
+Merging translations into camera-app.desktop.
+[  6%] Built target camera-app.desktop
+[  6%] Built target NON_COMPILED_TARGET
+[  7%] Automatic moc for target camera-qml
+[  7%] Built target camera-qml_automoc
+[ 17%] Built target camera-qml
+[ 18%] Built target pofiles_66
+[ 19%] Built target pofiles_65
+[ 20%] Built target pofiles_61
+[ 21%] Built target pofiles_60
+[ 22%] Built target pofiles_56
+[ 23%] Built target pofiles_55
+[ 24%] Built target pofiles_52
+[ 25%] Built target pofiles_51
+[ 26%] Built target pofiles_50
+[ 27%] Built target pofiles_49
+[ 28%] Built target pofiles_19
+[ 29%] Built target pofiles_39
+[ 30%] Built target pofiles_53
+[ 31%] Built target pofiles_17
+[ 32%] Built target pofiles_45
+[ 34%] Built target pofiles_16
+[ 35%] Built target pofiles_34
+[ 36%] Built target pofiles_62
+[ 37%] Built target pofiles_15
+[ 38%] Built target pofiles_2
+[ 39%] Built target pofiles_6
+[ 40%] Built target pofiles_33
+[ 41%] Built target pofiles_58
+[ 42%] Built target pofiles_44
+[ 43%] Built target pofiles_20
+[ 44%] Built target pofiles_25
+[ 45%] Built target pofiles_13
+[ 46%] Built target pofiles_12
+[ 47%] Built target pofiles_18
+[ 48%] Built target pofiles_47
+[ 50%] Built target pofiles_32
+[ 51%] Built target pofiles_11
+[ 52%] Built target pofiles_57
+[ 53%] Built target pofiles_38
+[ 54%] Built target pofiles_63
+[ 55%] Built target pofiles_9
+[ 56%] Built target pofiles_28
+[ 57%] Built target pofiles_14
+[ 58%] Built target pofiles_59
+[ 59%] Built target pofiles_10
+[ 60%] Generating translation template
+Wrote camera-app.desktop.in.in.h
+[ 60%] Built target camera-app.pot
+[ 61%] Built target pofiles_3
+[ 62%] Built target pofiles_8
+[ 63%] Built target pofiles_31
+[ 64%] Built target pofiles_1
+[ 65%] Built target pofiles_7
+[ 67%] Built target pofiles_35
+[ 68%] Built target pofiles_4
+[ 69%] Built target pofiles_5
+[ 70%] Built target pofiles_21
+[ 71%] Built target pofiles_30
+[ 72%] Built target pofiles_22
+[ 73%] Built target pofiles_46
+[ 74%] Built target pofiles_23
+[ 75%] Built target pofiles_24
+[ 76%] Built target pofiles_64
+[ 77%] Built target pofiles_26
+[ 78%] Built target pofiles_27
+[ 79%] Built target pofiles_54
+[ 80%] Built target pofiles_48
+[ 81%] Built target pofiles_29
+[ 82%] Built target pofiles_36
+[ 84%] Built target pofiles_37
+[ 85%] Built target pofiles_42
+[ 86%] Built target pofiles_40
+[ 87%] Built target pofiles_41
+[ 88%] Built target pofiles_43
+[ 89%] Automatic moc for target tst_QmlTests
+[ 89%] Built target tst_QmlTests_automoc
+[ 92%] Built target tst_QmlTests
+[ 93%] Automatic moc for target tst_storagemonitor
+[ 93%] Built target tst_storagemonitor_automoc
+[100%] Built target tst_storagemonitor
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/bin/camera-app
+-- Installing: /usr/share/camera-app/ViewFinderView.qml
+-- Installing: /usr/share/camera-app/PhotoEditorLoader.qml
+-- Installing: /usr/share/camera-app/PictureReview.qml
+-- Installing: /usr/share/camera-app/GalleryView.qml
+-- Installing: /usr/share/camera-app/StopWatch.qml
+-- Installing: /usr/share/camera-app/ShootButton.qml
+-- Installing: /usr/share/camera-app/ViewFinderOverlayLoader.qml
+-- Installing: /usr/share/camera-app/OptionsOverlay.qml
+-- Installing: /usr/share/camera-app/ViewFinderGeometry.qml
+-- Installing: /usr/share/camera-app/PhotogridView.qml
+-- Installing: /usr/share/camera-app/camera-app.qml
+-- Installing: /usr/share/camera-app/GalleryViewHeader.qml
+-- Installing: /usr/share/camera-app/UnableShareDialog.qml
+-- Installing: /usr/share/camera-app/SlideshowView.qml
+-- Installing: /usr/share/camera-app/Information.qml
+-- Installing: /usr/share/camera-app/GalleryViewLoader.qml
+-- Installing: /usr/share/camera-app/ViewFinderOverlay.qml
+-- Installing: /usr/share/camera-app/ProcessingFeedback.qml
+-- Installing: /usr/share/camera-app/VideoReview.qml
+-- Installing: /usr/share/camera-app/BottomEdgeIndicators.qml
+-- Installing: /usr/share/camera-app/ZoomControl.qml
+-- Installing: /usr/share/camera-app/ResponsiveGridView.qml
+-- Installing: /usr/share/camera-app/DeleteDialog.qml
+-- Installing: /usr/share/camera-app/OptionButton.qml
+-- Installing: /usr/share/camera-app/AdvancedOptions.qml
+-- Installing: /usr/share/camera-app/OptionValueButton.qml
+-- Installing: /usr/share/camera-app/CircleButton.qml
+-- Installing: /usr/share/camera-app/ViewFinderExportConfirmation.qml
+-- Installing: /usr/share/camera-app/ThinSliderStyle.qml
+-- Installing: /usr/share/camera-app/IconButton.qml
+-- Installing: /usr/share/camera-app/PhotoRollHint.qml
+-- Installing: /usr/share/camera-app/NoSpaceHint.qml
+-- Installing: /usr/share/camera-app/SharePopover.qml
+-- Installing: /usr/share/camera-app/FocusRing.qml
+-- Installing: /usr/share/camera-app/MimeTypeMapper.js
+-- Installing: /usr/share/camera-app/assets
+-- Installing: /usr/share/camera-app/assets/focus_ring@27.png
+-- Installing: /usr/share/camera-app/assets/shadow@27.png
+-- Installing: /usr/share/camera-app/assets/shutter_stills@27.png
+-- Installing: /usr/share/camera-app/assets/ubuntu_shape@27.png
+-- Installing: /usr/share/camera-app/assets/ubuntu_shape.svg
+-- Installing: /usr/share/camera-app/assets/record_video_stop@27.png
+-- Installing: /usr/share/camera-app/assets/camera_swipe@18.png
+-- Installing: /usr/share/camera-app/assets/self_timer.svg
+-- Installing: /usr/share/camera-app/assets/zoom_minus@18.png
+-- Installing: /usr/share/camera-app/assets/record_video@27.png
+-- Installing: /usr/share/camera-app/assets/zoom_bar@18.png
+-- Installing: /usr/share/camera-app/assets/zoom_plus@18.png
+-- Installing: /usr/share/camera-app/assets/zoom_point@18.png
+-- Installing: /usr/share/camera-app/assets/grid_lines.svg
+-- Installing: /usr/share/camera-app/assets/ubuntu_shape@27.sci
+-- Up-to-date: /usr/share/camera-app
+-- Installing: /usr/share/applications/camera-app.desktop
+-- Installing: /usr/lib/x86_64-linux-gnu/camera-app/CameraApp/libcamera-qml.so
+-- Installing: /usr/lib/x86_64-linux-gnu/camera-app/CameraApp/qmldir
+-- Up-to-date: /usr/share/icons/hicolor
+-- Up-to-date: /usr/share/icons/hicolor/256x256
+-- Up-to-date: /usr/share/icons/hicolor/256x256/apps
+-- Installing: /usr/share/icons/hicolor/256x256/apps/camera-app.png
+-- Up-to-date: /usr/share/icons/hicolor/128x128
+-- Up-to-date: /usr/share/icons/hicolor/128x128/apps
+-- Installing: /usr/share/icons/hicolor/128x128/apps/camera-app.png
+-- Up-to-date: /usr/share/icons/hicolor/64x64
+-- Up-to-date: /usr/share/icons/hicolor/64x64/apps
+-- Installing: /usr/share/icons/hicolor/64x64/apps/camera-app.png
+-- Installing: /usr/share/locale/cs/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/gl/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ja/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/pa/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/lo/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/az/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/en_GB/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/fr_CA/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/sl/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ug/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/he/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/hi/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/am/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/br/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ru/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/th/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/aa/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/hy/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/zh_TW/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/fa/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/id/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/el/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/zh_CN/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/pt_BR/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/da/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/eo/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/gd/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/be/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/my/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/shn/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ms/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/en_AU/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ca/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/cy/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ar/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/is/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/eu/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ko/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/uk/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/hr/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ml/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/zh_HK/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ro/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/nan/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/tr/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/bs/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/sk/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/km/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/te/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/lv/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/sr/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ta/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ca@valencia/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/ast/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/nb/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/sv/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/camera-app.mo
+-- Installing: /usr/share/locale/bg/LC_MESSAGES/camera-app.mo
+yunit@yunitvm:~/builddir/camera-app$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Nov 17 10:14:40 2017 from 10.0.2.2
+
+yunit@yunitvm:~$ cd builddir/community-apps/instantfx/
+yunit@yunitvm:~/builddir/community-apps/instantfx$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+Found ../CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp;../src/app/main.cpp;../src/app/qml/components/BusyIndicator.qml;../src/app/qml/components/ClaritySettingsPanel.qml;../src/app/qml/components/ClaritySettingsPopover.qml;../src/app/qml/components/CropAreaHighlight.qml;../src/app/qml/components/CropAreaImage.qml;../src/app/qml/components/FilterSidebarPage.qml;../src/app/qml/components/FiltersView.qml;../src/app/qml/components/FunctionSelector.qml;../src/app/qml/components/OtherActionDelegate.qml;../src/app/qml/components/OtherActionsView.qml;../src/app/qml/components/ScalingPinchArea.qml;../src/app/qml/components/SectionHeader.qml;../src/app/qml/components/Slider.qml;../src/app/qml/components/SliderStyle.qml;../src/app/qml/components/StrokeButton.qml;../src/app/qml/components/TextualButtonStyle.qml;../src/app/qml/components/sliderUtils.js;../src/app/qml/effects/EffectListElement.qml;../src/app/qml/effects/EffectsList.qml;../src/app/qml/filters/Aden.qml;../src/app/qml/filters/Brooklyn.qml;../src/app/qml/filters/Clarendon.qml;../src/app/qml/filters/EarlyBird.qml;../src/app/qml/filters/Filter1977.qml;../src/app/qml/filters/FiltersList.qml;../src/app/qml/filters/Gingham.qml;../src/app/qml/filters/Hudson.qml;../src/app/qml/filters/Inkwell.qml;../src/app/qml/filters/Lark.qml;../src/app/qml/filters/Lofi.qml;../src/app/qml/filters/Moon.qml;../src/app/qml/filters/Nashville.qml;../src/app/qml/filters/NoFilter.qml;../src/app/qml/filters/Perpetua.qml;../src/app/qml/filters/Reyes.qml;../src/app/qml/filters/Rise.qml;../src/app/qml/filters/Slumber.qml;../src/app/qml/filters/Toaster.qml;../src/app/qml/filters/Walden.qml;../src/app/qml/filters/XPro2.qml;../src/app/qml/filters/effects/WebkitCssFilter.qml;../src/app/qml/main.qml;../src/app/qml/other-assets/marked.min.js;../src/app/qml/other-assets/oxide-user.js;../src/app/qml/ui/AboutPage.qml;../src/app/qml/ui/CreditsPage.qml;../src/app/qml/ui/CropPage.qml;../src/app/qml/ui/FiltersPage.qml;../src/app/qml/ui/ImportPage.qml;../src/app/qml/ui/MainPage.qml;../src/plugin/image_processor_plugin/backend.cpp;../src/plugin/image_processor_plugin/cropimageprovider.cpp;../src/plugin/image_processor_plugin/imageprocessor.cpp;../src/plugin/image_processor_plugin/offscreenrenderer.cpp;../src/plugin/image_processor_plugin/procdeviceinfo.cpp;../src/plugin/image_processor_plugin/qml/BasicFilters.qml;../src/plugin/image_processor_plugin/qml/ClarityFilter.qml;../src/plugin/image_processor_plugin/qml/FilterBase.qml;../src/plugin/image_processor_plugin/qml/ImageContainer.qml;../src/plugin/image_processor_plugin/qml/ImageProcessorOutput.qml;../tools/brightness-contrat-map-creator/main.cpp;../tools/color-temperature-map-creator/main.cpp;/home/yunit/builddir/community-apps/instantfx/po/instantfx.sverzegnassi.desktop.in.in.h
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/builddir/community-apps/instantfx
+yunit@yunitvm:~/builddir/community-apps/instantfx$ 
+yunit@yunitvm:~/builddir/community-apps/instantfx$ make -j4
+Scanning dependencies of target pofiles_9
+Scanning dependencies of target pofiles_2
+Scanning dependencies of target instantfx.sverzegnassi.pot
+Scanning dependencies of target pofiles_1
+[  4%] Generating translation template
+[  8%] Generating pl.gmo
+[ 13%] Generating hu.gmo
+[ 17%] Generating es.gmo
+[ 17%] Built target pofiles_1
+[ 17%] Built target pofiles_9
+[ 17%] Built target pofiles_2
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_3
+Scanning dependencies of target pofiles_4
+Wrote instantfx.sverzegnassi.desktop.in.in.h
+[ 21%] Generating fi.gmo
+[ 26%] Generating pt.gmo
+[ 30%] Generating de.gmo
+../src/app/qml/filters/effects/WebkitCssFilter.qml:59: warning: unterminated string literal
+../src/app/qml/filters/effects/WebkitCssFilter.qml:143: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:61: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:70: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:83: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:157: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:56: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:65: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:67: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:106: warning: unterminated string literal
+[ 30%] Built target pofiles_4
+[ 30%] Built target pofiles_8
+[ 30%] Built target pofiles_3
+Scanning dependencies of target pofiles_5
+[ 30%] Built target instantfx.sverzegnassi.pot
+Scanning dependencies of target instantfx_translation_files
+Scanning dependencies of target pofiles_6
+[ 34%] Generating it.gmo
+Scanning dependencies of target pofiles_7
+[ 39%] Built target instantfx_translation_files
+[ 39%] Generating fr.gmo
+[ 39%] Built target pofiles_5
+[ 43%] Generating nl.gmo
+Scanning dependencies of target instantfx_CLICKFiles
+[ 43%] Built target pofiles_6
+[ 43%] Built target instantfx_CLICKFiles
+Scanning dependencies of target instantfx.sverzegnassi.desktop
+Scanning dependencies of target instantfx_automoc
+[ 43%] Built target pofiles_7
+Scanning dependencies of target imageprocessorplugin_automoc
+[ 47%] Merging translations into instantfx.sverzegnassi.desktop
+[ 52%] Automatic moc for target instantfx
+[ 56%] Automatic moc for target imageprocessorplugin
+[ 56%] Built target instantfx_automoc
+Generating moc_backend.cpp
+Scanning dependencies of target instantfx
+Generating moc_imageprocessor.cpp
+Merging translations into instantfx.sverzegnassi.desktop.
+[ 56%] Built target instantfx.sverzegnassi.desktop
+Generating moc_offscreenrenderer.cpp
+[ 60%] Building CXX object src/app/CMakeFiles/instantfx.dir/instantfx_automoc.cpp.o
+[ 65%] Building CXX object src/app/CMakeFiles/instantfx.dir/main.cpp.o
+Generating moc_procdeviceinfo.cpp
+[ 65%] Built target imageprocessorplugin_automoc
+Scanning dependencies of target imageprocessorplugin
+[ 69%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/offscreenrenderer.cpp.o
+[ 73%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/imageprocessor.cpp.o
+[ 78%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/backend.cpp.o
+[ 82%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/cropimageprovider.cpp.o
+[ 86%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/procdeviceinfo.cpp.o
+[ 91%] Building CXX object src/plugin/image_processor_plugin/CMakeFiles/imageprocessorplugin.dir/imageprocessorplugin_automoc.cpp.o
+[ 95%] Linking CXX executable instantfx
+[ 95%] Built target instantfx
+[100%] Linking CXX shared module libimageprocessorplugin.so
+[100%] Built target imageprocessorplugin
+yunit@yunitvm:~/builddir/community-apps/instantfx$ sudo make install
+[sudo] password for yunit: 
+[  4%] Built target pofiles_9
+[  8%] Built target pofiles_1
+[ 13%] Generating translation template
+Wrote instantfx.sverzegnassi.desktop.in.in.h
+../src/app/qml/filters/effects/WebkitCssFilter.qml:59: warning: unterminated string literal
+../src/app/qml/filters/effects/WebkitCssFilter.qml:143: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:61: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:70: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:83: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/BasicFilters.qml:157: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:56: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:65: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:67: warning: unterminated string literal
+../src/plugin/image_processor_plugin/qml/ClarityFilter.qml:106: warning: unterminated string literal
+[ 13%] Built target instantfx.sverzegnassi.pot
+[ 17%] Built target pofiles_2
+[ 21%] Built target pofiles_3
+[ 26%] Built target pofiles_8
+[ 30%] Built target pofiles_4
+[ 34%] Built target pofiles_5
+[ 34%] Built target instantfx_translation_files
+[ 39%] Built target pofiles_6
+[ 43%] Built target pofiles_7
+[ 43%] Built target instantfx_CLICKFiles
+[ 47%] Merging translations into instantfx.sverzegnassi.desktop
+Merging translations into instantfx.sverzegnassi.desktop.
+[ 47%] Built target instantfx.sverzegnassi.desktop
+[ 52%] Automatic moc for target instantfx
+[ 52%] Built target instantfx_automoc
+[ 65%] Built target instantfx
+[ 69%] Automatic moc for target imageprocessorplugin
+[ 69%] Built target imageprocessorplugin_automoc
+[100%] Built target imageprocessorplugin
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/instantfx.sverzegnassi.mo
+-- Installing: /usr/share/applications/instantfx.sverzegnassi.desktop
+-- Installing: /usr/share/instantfx/qml
+-- Installing: /usr/share/instantfx/qml/filters
+-- Installing: /usr/share/instantfx/qml/filters/Aden.qml
+-- Installing: /usr/share/instantfx/qml/filters/Toaster.qml
+-- Installing: /usr/share/instantfx/qml/filters/Lofi.qml
+-- Installing: /usr/share/instantfx/qml/filters/Perpetua.qml
+-- Installing: /usr/share/instantfx/qml/filters/Lark.qml
+-- Installing: /usr/share/instantfx/qml/filters/Inkwell.qml
+-- Installing: /usr/share/instantfx/qml/filters/Brooklyn.qml
+-- Installing: /usr/share/instantfx/qml/filters/effects
+-- Installing: /usr/share/instantfx/qml/filters/effects/WebkitCssFilter.qml
+-- Installing: /usr/share/instantfx/qml/filters/Clarendon.qml
+-- Installing: /usr/share/instantfx/qml/filters/XPro2.qml
+-- Installing: /usr/share/instantfx/qml/filters/Slumber.qml
+-- Installing: /usr/share/instantfx/qml/filters/Rise.qml
+-- Installing: /usr/share/instantfx/qml/filters/Hudson.qml
+-- Installing: /usr/share/instantfx/qml/filters/Filter1977.qml
+-- Installing: /usr/share/instantfx/qml/filters/Nashville.qml
+-- Installing: /usr/share/instantfx/qml/filters/Moon.qml
+-- Installing: /usr/share/instantfx/qml/filters/Walden.qml
+-- Installing: /usr/share/instantfx/qml/filters/Reyes.qml
+-- Installing: /usr/share/instantfx/qml/filters/EarlyBird.qml
+-- Installing: /usr/share/instantfx/qml/filters/FiltersList.qml
+-- Installing: /usr/share/instantfx/qml/filters/Gingham.qml
+-- Installing: /usr/share/instantfx/qml/filters/NoFilter.qml
+-- Installing: /usr/share/instantfx/qml/components
+-- Installing: /usr/share/instantfx/qml/components/Slider.qml
+-- Installing: /usr/share/instantfx/qml/components/FiltersView.qml
+-- Installing: /usr/share/instantfx/qml/components/CropAreaImage.qml
+-- Installing: /usr/share/instantfx/qml/components/SectionHeader.qml
+-- Installing: /usr/share/instantfx/qml/components/BusyIndicator.qml
+-- Installing: /usr/share/instantfx/qml/components/OtherActionsView.qml
+-- Installing: /usr/share/instantfx/qml/components/CropAreaHighlight.qml
+-- Installing: /usr/share/instantfx/qml/components/sliderUtils.js
+-- Installing: /usr/share/instantfx/qml/components/SliderStyle.qml
+-- Installing: /usr/share/instantfx/qml/components/ClaritySettingsPanel.qml
+-- Installing: /usr/share/instantfx/qml/components/ScalingPinchArea.qml
+-- Installing: /usr/share/instantfx/qml/components/FunctionSelector.qml
+-- Installing: /usr/share/instantfx/qml/components/ClaritySettingsPopover.qml
+-- Installing: /usr/share/instantfx/qml/components/OtherActionDelegate.qml
+-- Installing: /usr/share/instantfx/qml/components/FilterSidebarPage.qml
+-- Installing: /usr/share/instantfx/qml/components/StrokeButton.qml
+-- Installing: /usr/share/instantfx/qml/components/TextualButtonStyle.qml
+-- Installing: /usr/share/instantfx/qml/main.qml
+-- Installing: /usr/share/instantfx/qml/other-assets
+-- Installing: /usr/share/instantfx/qml/other-assets/third-party-software.md
+-- Installing: /usr/share/instantfx/qml/other-assets/credits.html
+-- Installing: /usr/share/instantfx/qml/other-assets/oxide-user.js
+-- Installing: /usr/share/instantfx/qml/other-assets/markdowncss.css
+-- Installing: /usr/share/instantfx/qml/other-assets/marked.min.js
+-- Installing: /usr/share/instantfx/qml/effects
+-- Installing: /usr/share/instantfx/qml/effects/EffectListElement.qml
+-- Installing: /usr/share/instantfx/qml/effects/EffectsList.qml
+-- Installing: /usr/share/instantfx/qml/ui
+-- Installing: /usr/share/instantfx/qml/ui/AboutPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/CreditsPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/CropPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/MainPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/FiltersPage.qml
+-- Installing: /usr/share/instantfx/qml/ui/ImportPage.qml
+-- Installing: /usr/share/instantfx/qml/graphics
+-- Installing: /usr/share/instantfx/qml/graphics/highlights.svg
+-- Installing: /usr/share/instantfx/qml/graphics/temperature2.svg
+-- Installing: /usr/share/instantfx/qml/graphics/adjust-horizon.svg
+-- Installing: /usr/share/instantfx/qml/graphics/sharpen.svg
+-- Installing: /usr/share/instantfx/qml/graphics/filters.svg
+-- Installing: /usr/share/instantfx/qml/graphics/instantfx-symbolic.svg
+-- Installing: /usr/share/instantfx/qml/graphics/wallpapers
+-- Installing: /usr/share/instantfx/qml/graphics/wallpapers/1.jpg
+-- Installing: /usr/share/instantfx/qml/graphics/contrast.svg
+-- Installing: /usr/share/instantfx/qml/graphics/shadows.svg
+-- Installing: /usr/bin/instantfx
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/libimageprocessorplugin.so
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/qmldir
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/ImageContainer.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/BasicFilters.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/ClarityFilter.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/FilterBase.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/ImageProcessorOutput.qml
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/vignette.png
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/brightnessContrastMap.png
+-- Installing: /usr/lib/x86_64-linux-gnu/qt5/qml/InstantFX/ImageProcessor/colorTemperatureMap.png
+yunit@yunitvm:~/builddir/community-apps/instantfx$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Nov 17 11:10:56 2017 from 10.0.2.2
+yunit@yunitvm:~$ instantfx 
+QML debugging is enabled. Only use this in a safe environment.
+QXcbConnection: Could not connect to display 
+Aborted (core dumped)
+yunit@yunitvm:~$ cd builddir/community-apps/kodimote/
+yunit@yunitvm:~/builddir/community-apps/kodimote$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at /usr/share/cmake-3.5/Modules/FindQt4.cmake:1326 (message):
+  Found unsuitable Qt version "5.9.1" from /usr/bin/qmake, this code requires
+  Qt 4.x
+Call Stack (most recent call first):
+  CMakeLists.txt:3 (find_package)
+
+
+CMake Warning (dev) in CMakeLists.txt:
+  No cmake_minimum_required command is present.  A line of code such as
+
+    cmake_minimum_required(VERSION 3.5)
+
+  should be added at the top of the file.  The version specified may be lower
+  if you wish to support older CMake versions for this project.  For more
+  information run "cmake --help-policy CMP0000".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring incomplete, errors occurred!
+See also "/home/yunit/builddir/community-apps/kodimote/CMakeFiles/CMakeOutput.log".
+yunit@yunitvm:~/builddir/community-apps/kodimote$ cd ~/builddir/community-apps/
+beru/          guitar-tools/  instantfx/     openstore-app/ shorter/       tagger/        trunk/         uMatriks/
+falcon/        im/            kodimote/      scummvm/       syncthing/     timer/         ubtd/          unav/
+yunit@yunitvm:~/builddir/community-apps/kodimote$ cd ~/builddir/community-apps/trunk/
+yunit@yunitvm:~/builddir/community-apps/trunk$ ls
+app  cmake  CMakeLists.txt  COPYING  copyright  manifest.json.in  plugins  po  README  TODO  ut-tweak-tool.apparmor
+yunit@yunitvm:~/builddir/community-apps/trunk$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLICK_MODE
+
+
+-- Build files have been written to: /home/yunit/builddir/community-apps/trunk
+yunit@yunitvm:~/builddir/community-apps/trunk$ make -j4
+Scanning dependencies of target PamAuthentication_automoc
+Scanning dependencies of target ut-tweak-tool_ClickFiles
+Scanning dependencies of target tweaktoolclickplugin_automoc
+Scanning dependencies of target ut-tweak-tool_QMlFiles
+[  2%] Automatic moc for target tweaktoolclickplugin
+[  4%] Built target ut-tweak-tool_QMlFiles
+[  2%] Built target ut-tweak-tool_ClickFiles
+[  4%] Automatic moc for target PamAuthentication
+Scanning dependencies of target qmlqtpowerdplugin_automoc
+Generating moc_applicationsmodel.cpp
+Generating moc_pamauthentication.cpp
+Scanning dependencies of target ubuntusoundplugin_automoc
+[  6%] Automatic moc for target qmlqtpowerdplugin
+[  8%] Automatic moc for target ubuntusoundplugin
+Generating moc_backend.cpp
+Generating moc_QtPowerd.cpp
+Generating moc_accountsservice.cpp
+Generating moc_pamauthentication_plugin.cpp
+Generating moc_plugin.cpp
+Generating moc_plugin.cpp
+[  8%] Built target PamAuthentication_automoc
+[  8%] Built target tweaktoolclickplugin_automoc
+Scanning dependencies of target tweaktoolplugin_automoc
+Scanning dependencies of target storagemanagerplugin_automoc
+[  8%] Built target qmlqtpowerdplugin_automoc
+[ 12%] Automatic moc for target tweaktoolplugin
+[ 10%] Automatic moc for target storagemanagerplugin
+Generating moc_sound.cpp
+Scanning dependencies of target ut-tweak-tool.desktop
+Generating moc_backend.cpp
+Generating moc_backend.cpp
+[ 14%] Merging translations into ut-tweak-tool.desktop
+[ 14%] Built target ubuntusoundplugin_automoc
+Generating moc_cmdlauncher.cpp
+Generating moc_storagemanager.cpp
+Scanning dependencies of target pofiles_13
+[ 17%] Generating es.gmo
+Generating moc_singleprocess.cpp
+[ 17%] Built target storagemanagerplugin_automoc
+[ 17%] Built target ut-tweak-tool.desktop
+[ 17%] Built target pofiles_13
+Scanning dependencies of target pofiles_12
+Scanning dependencies of target pofiles_11
+Scanning dependencies of target pofiles_9
+[ 19%] Generating ca.gmo
+[ 23%] Built target tweaktoolplugin_automoc
+[ 21%] Generating nb.gmo
+[ 23%] Generating nl.gmo
+[ 23%] Built target pofiles_9
+[ 23%] Built target pofiles_11
+Scanning dependencies of target pofiles_10
+[ 23%] Built target pofiles_12
+Scanning dependencies of target pofiles_1
+Scanning dependencies of target pofiles_2
+[ 25%] Generating fr.gmo
+Scanning dependencies of target ut-tweak-tool.sverzegnassi.pot
+[ 27%] Generating gl.gmo
+[ 29%] Generating translation template
+[ 31%] Generating pl.gmo
+[ 27%] Built target pofiles_10
+[ 31%] Built target pofiles_2
+[ 31%] Built target pofiles_1
+Scanning dependencies of target pofiles_3
+Scanning dependencies of target pofiles_8
+[ 34%] Generating de.gmo
+Scanning dependencies of target pofiles_4
+Wrote ut-tweak-tool.desktop.in.h
+[ 38%] Generating it.gmo
+[ 36%] Generating ug.gmo
+[ 38%] Built target pofiles_3
+../app/ui/mainPage/OverviewTab.qml:42: warning: unterminated string literal
+../app/ui/mainPage/OverviewTab.qml:87: warning: unterminated string literal
+[ 38%] Built target pofiles_8
+Scanning dependencies of target pofiles_5
+Scanning dependencies of target pofiles_6
+[ 38%] Built target pofiles_4
+Scanning dependencies of target pofiles_7
+[ 40%] Generating ru.gmo
+[ 42%] Generating zh_CN.gmo
+[ 42%] Built target ut-tweak-tool.sverzegnassi.pot
+[ 44%] Generating fi.gmo
+Scanning dependencies of target tweaktoolclickplugin
+[ 44%] Built target pofiles_5
+[ 44%] Built target pofiles_6
+[ 44%] Built target pofiles_7
+Scanning dependencies of target qmlqtpowerdplugin
+Scanning dependencies of target PamAuthentication
+Scanning dependencies of target ubuntusoundplugin
+[ 46%] Building CXX object plugins/click/CMakeFiles/tweaktoolclickplugin.dir/applicationsmodel.cpp.o
+[ 48%] Building CXX object plugins/QtPowerd/CMakeFiles/qmlqtpowerdplugin.dir/plugin.cpp.o
+[ 51%] Building CXX object plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication.cpp.o
+[ 53%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/plugin.cpp.o
+/home/yunit/builddir/community-apps/trunk/plugins/pamauthentication/pamauthentication.cpp:24:31: fatal error: security/pam_appl.h: No such file or directory
+compilation terminated.
+plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/build.make:62: recipe for target 'plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication.cpp.o' failed
+make[2]: *** [plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication.cpp.o] Error 1
+CMakeFiles/Makefile2:395: recipe for target 'plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/all' failed
+make[1]: *** [plugins/pamauthentication/CMakeFiles/PamAuthentication.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 55%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/sound.cpp.o
+[ 57%] Building CXX object plugins/QtPowerd/CMakeFiles/qmlqtpowerdplugin.dir/QtPowerd.cpp.o
+[ 59%] Building CXX object plugins/click/CMakeFiles/tweaktoolclickplugin.dir/backend.cpp.o
+[ 61%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/accountsservice.cpp.o
+[ 63%] Building CXX object plugins/sound/CMakeFiles/ubuntusoundplugin.dir/ubuntusoundplugin_automoc.cpp.o
+[ 65%] Building CXX object plugins/QtPowerd/CMakeFiles/qmlqtpowerdplugin.dir/qmlqtpowerdplugin_automoc.cpp.o
+[ 68%] Building CXX object plugins/click/CMakeFiles/tweaktoolclickplugin.dir/tweaktoolclickplugin_automoc.cpp.o
+[ 70%] Linking CXX shared module libubuntusoundplugin.so
+[ 70%] Built target ubuntusoundplugin
+[ 72%] Linking CXX shared module libqmlqtpowerdplugin.so
+[ 72%] Built target qmlqtpowerdplugin
+[ 74%] Linking CXX shared module libtweaktoolclickplugin.so
+[ 74%] Built target tweaktoolclickplugin
+Makefile:127: recipe for target 'all' failed
+make: *** [all] Error 2
+yunit@yunitvm:~/builddir/community-apps/trunk$ cd ~/builddir/community-apps/tagger/
+yunit@yunitvm:~/builddir/community-apps/tagger$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+cp: cannot stat '/usr/lib/libzbar.so.0': No such file or directory
+cp: cannot stat '/usr/lib/arm-linux-gnueabihf/libqrencode.so': No such file or directory
+cp: cannot stat '/usr/lib/arm-linux-gnueabihf/libqrencode.so.3': No such file or directory
+cp: cannot stat '/usr/lib/arm-linux-gnueabihf/libqrencode.so.3.4.3': No such file or directory
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+installing po to /cs/LC_MESSAGES
+installing po to /pl/LC_MESSAGES
+installing po to /gl/LC_MESSAGES
+installing po to /hu/LC_MESSAGES
+installing po to /ia/LC_MESSAGES
+installing po to /de/LC_MESSAGES
+installing po to /sl/LC_MESSAGES
+installing po to /ug/LC_MESSAGES
+installing po to /he/LC_MESSAGES
+installing po to /ru/LC_MESSAGES
+installing po to /aa/LC_MESSAGES
+installing po to /zh_TW/LC_MESSAGES
+installing po to /id/LC_MESSAGES
+installing po to /el/LC_MESSAGES
+installing po to /zh_CN/LC_MESSAGES
+installing po to /pt_BR/LC_MESSAGES
+installing po to /da/LC_MESSAGES
+installing po to /fi/LC_MESSAGES
+installing po to /it/LC_MESSAGES
+installing po to /gd/LC_MESSAGES
+installing po to /ca/LC_MESSAGES
+installing po to /is/LC_MESSAGES
+installing po to /fr/LC_MESSAGES
+installing po to /eu/LC_MESSAGES
+installing po to /uk/LC_MESSAGES
+installing po to /ro/LC_MESSAGES
+installing po to /nl/LC_MESSAGES
+installing po to /bs/LC_MESSAGES
+installing po to /pt/LC_MESSAGES
+installing po to /sr/LC_MESSAGES
+installing po to /ta/LC_MESSAGES
+installing po to /nb/LC_MESSAGES
+installing po to /es/LC_MESSAGES
+installing po to /bg/LC_MESSAGES
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLICK_MODE
+
+
+-- Build files have been written to: /home/yunit/builddir/community-apps/tagger
+yunit@yunitvm:~/builddir/community-apps/tagger$ make -j4
+Scanning dependencies of target tagger_automoc
+Scanning dependencies of target tagger.desktop
+Scanning dependencies of target tagger_ui_QMlFiles
+Scanning dependencies of target tagger_ClickFiles
+[  0%] Built target tagger_ui_QMlFiles
+[  2%] Merging translations into tagger.desktop
+[  2%] Built target tagger_ClickFiles
+[  4%] Automatic moc for target tagger
+Scanning dependencies of target pofiles_29
+Scanning dependencies of target pofiles_27
+Generating moc_filehelper.cpp
+[  6%] Generating pt.gmo
+[  8%] Generating nl.gmo
+[  8%] Built target pofiles_27
+[  8%] Built target pofiles_29
+Scanning dependencies of target pofiles_24
+[  8%] Built target tagger.desktop
+Scanning dependencies of target pofiles_26
+Generating moc_historymodel.cpp
+[ 11%] Generating eu.gmo
+Scanning dependencies of target pofiles_23
+[ 13%] Generating ro.gmo
+[ 15%] Generating fr.gmo
+[ 15%] Built target pofiles_26
+[ 15%] Built target pofiles_24
+[ 15%] Built target pofiles_23
+Scanning dependencies of target pofiles_22
+Scanning dependencies of target pofiles_4
+Scanning dependencies of target pofiles_31
+[ 17%] Generating hu.gmo
+[ 20%] Generating is.gmo
+Generating moc_qrcodegenerator.cpp
+[ 20%] Built target pofiles_22
+[ 20%] Built target pofiles_4
+[ 22%] Generating ta.gmo
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_3
+[ 22%] Built target pofiles_31
+[ 24%] Generating ug.gmo
+Scanning dependencies of target pofiles_30
+[ 26%] Generating gl.gmo
+Generating moc_qrcodereader.cpp
+[ 28%] Generating sr.gmo
+[ 28%] Built target pofiles_8
+[ 28%] Built target pofiles_3
+Scanning dependencies of target pofiles_5
+[ 28%] Built target pofiles_30
+Scanning dependencies of target pofiles_21
+[ 31%] Generating ca.gmo
+[ 33%] Generating ia.gmo
+Scanning dependencies of target tagger.pot
+[ 33%] Built target pofiles_21
+[ 35%] Generating translation template
+[ 35%] Built target pofiles_5
+Scanning dependencies of target pofiles_1
+Scanning dependencies of target pofiles_14
+[ 37%] Generating cs.gmo
+Wrote tagger.desktop.in.in.h
+[ 40%] Generating el.gmo
+[ 40%] Built target pofiles_1
+[ 40%] Built target tagger_automoc
+[ 40%] Built target pofiles_14
+[ 40%] Built target tagger.pot
+Scanning dependencies of target pofiles_28
+Scanning dependencies of target pofiles_10
+Scanning dependencies of target pofiles_9
+Scanning dependencies of target pofiles_11
+[ 42%] Generating ru.gmo
+[ 44%] Generating he.gmo
+[ 46%] Generating bs.gmo
+[ 48%] Generating aa.gmo
+[ 48%] Built target pofiles_10
+[ 48%] Built target pofiles_28
+[ 48%] Built target pofiles_11
+[ 48%] Built target pofiles_9
+Scanning dependencies of target pofiles_7
+Scanning dependencies of target pofiles_18
+Scanning dependencies of target pofiles_12
+Scanning dependencies of target pofiles_32
+[ 51%] Generating sl.gmo
+[ 53%] Generating zh_TW.gmo
+[ 55%] Generating fi.gmo
+[ 57%] Generating nb.gmo
+[ 57%] Built target pofiles_7
+[ 57%] Built target pofiles_32
+[ 57%] Built target pofiles_18
+[ 57%] Built target pofiles_12
+Scanning dependencies of target pofiles_20
+Scanning dependencies of target pofiles_6
+Scanning dependencies of target pofiles_33
+Scanning dependencies of target pofiles_13
+[ 60%] Generating id.gmo
+[ 62%] Generating gd.gmo
+[ 64%] Generating de.gmo
+[ 66%] Generating es.gmo
+[ 66%] Built target pofiles_6
+[ 66%] Built target pofiles_33
+[ 66%] Built target pofiles_20
+[ 66%] Built target pofiles_13
+Scanning dependencies of target pofiles_2
+Scanning dependencies of target pofiles_15
+Scanning dependencies of target pofiles_16
+Scanning dependencies of target pofiles_34
+[ 68%] Generating pl.gmo
+[ 71%] Generating pt_BR.gmo
+[ 73%] Generating bg.gmo
+[ 75%] Generating zh_CN.gmo
+[ 75%] Built target pofiles_2
+[ 75%] Built target pofiles_16
+[ 75%] Built target pofiles_34
+[ 75%] Built target pofiles_15
+Scanning dependencies of target pofiles_25
+Scanning dependencies of target pofiles_17
+Scanning dependencies of target tagger
+Scanning dependencies of target pofiles_19
+[ 77%] Generating da.gmo
+[ 80%] Generating uk.gmo
+[ 82%] Generating it.gmo
+[ 82%] Built target pofiles_25
+[ 82%] Built target pofiles_19
+[ 82%] Built target pofiles_17
+[ 84%] Building CXX object app/CMakeFiles/tagger.dir/qrcodegenerator.cpp.o
+[ 86%] Building CXX object app/CMakeFiles/tagger.dir/qrcodeimageprovider.cpp.o
+[ 88%] Building CXX object app/CMakeFiles/tagger.dir/qrcodereader.cpp.o
+[ 91%] Building CXX object app/CMakeFiles/tagger.dir/main.cpp.o
+/home/yunit/builddir/community-apps/tagger/app/qrcodegenerator.cpp:3:22: fatal error: qrencode.h: No such file or directory
+compilation terminated.
+app/CMakeFiles/tagger.dir/build.make:110: recipe for target 'app/CMakeFiles/tagger.dir/qrcodegenerator.cpp.o' failed
+make[2]: *** [app/CMakeFiles/tagger.dir/qrcodegenerator.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /home/yunit/builddir/community-apps/tagger/app/qrcodereader.cpp:22:0:
+/home/yunit/builddir/community-apps/tagger/app/QZBarImage.h:30:18: fatal error: zbar.h: No such file or directory
+compilation terminated.
+app/CMakeFiles/tagger.dir/build.make:86: recipe for target 'app/CMakeFiles/tagger.dir/qrcodereader.cpp.o' failed
+make[2]: *** [app/CMakeFiles/tagger.dir/qrcodereader.cpp.o] Error 1
+CMakeFiles/Makefile2:162: recipe for target 'app/CMakeFiles/tagger.dir/all' failed
+make[1]: *** [app/CMakeFiles/tagger.dir/all] Error 2
+Makefile:127: recipe for target 'all' failed
+make: *** [all] Error 2
+yunit@yunitvm:~/builddir/community-apps/tagger$ cd ~/builddir/notes-app/
+yunit@yunitvm:~/builddir/notes-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Checking for one of the modules 'openssl'
+CMake Error at /usr/share/cmake-3.5/Modules/FindPkgConfig.cmake:578 (message):
+  None of the required 'openssl' found
+Call Stack (most recent call first):
+  3rdParty/libthrift/CMakeLists.txt:1 (pkg_search_module)
+
+
+CMake Warning at src/CMakeLists.txt:4 (find_package):
+  By not providing "FindQt5Organizer.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "Qt5Organizer", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5Organizer" with
+  any of the following names:
+
+    Qt5OrganizerConfig.cmake
+    qt5organizer-config.cmake
+
+  Add the installation prefix of "Qt5Organizer" to CMAKE_PREFIX_PATH or set
+  "Qt5Organizer_DIR" to a directory containing one of the above files.  If
+  "Qt5Organizer" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+CMake Warning at /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake:329 (find_package):
+  Could not find a package configuration file provided by "Qt5Organizer" with
+  any of the following names:
+
+    Qt5OrganizerConfig.cmake
+    qt5organizer-config.cmake
+
+  Add the installation prefix of "Qt5Organizer" to CMAKE_PREFIX_PATH or set
+  "Qt5Organizer_DIR" to a directory containing one of the above files.  If
+  "Qt5Organizer" provides a separate development package or SDK, be sure it
+  has been installed.
+Call Stack (most recent call first):
+  src/libqtevernote/CMakeLists.txt:47 (qt5_use_modules)
+
+
+CMake Error at /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake:331 (message):
+  Can not use "Organizer" module which has not yet been found.
+Call Stack (most recent call first):
+  src/libqtevernote/CMakeLists.txt:47 (qt5_use_modules)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/yunit/builddir/notes-app/CMakeFiles/CMakeOutput.log".
+yunit@yunitvm:~/builddir/notes-app$ apt-cache search QT5Organizer
+libqt5organizer5 - Qt PIM module, Organizer library
+yunit@yunitvm:~/builddir/notes-app$ sudo apt install libqt5organizer5 
+[sudo] password for yunit: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libqt5organizer5 is already the newest version (5.0~git20140515~29475884-0yunit1+ubuntu+16.04).
+libqt5organizer5 set to manually installed.
+0 to upgrade, 0 to newly install, 0 to remove and 0 not to upgrade.
+yunit@yunitvm:~/builddir/notes-app$ cd ~/builddir/docviewer-app/
+yunit@yunitvm:~/builddir/docviewer-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- QT_IMPORTS_DIR set to /usr/lib/x86_64-linux-gnu/qt5/qml
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+Found ../CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp;../src/app/main.cpp;../src/app/qml/common/CommandLineProxy.qml;../src/app/qml/common/ContentHubProxy.qml;../src/app/qml/common/DetailsPage.qml;../src/app/qml/common/EmptyState.qml;../src/app/qml/common/ErrorDialog.qml;../src/app/qml/common/HorizontalDivider.qml;../src/app/qml/common/NightModeShader.qml;../src/app/qml/common/PickImportedDialog.qml;../src/app/qml/common/RejectedImportDialog.qml;../src/app/qml/common/ResizeableSidebar.qml;../src/app/qml/common/ScalingMouseArea.qml;../src/app/qml/common/ScalingPinchArea.qml;../src/app/qml/common/SubtitledListItem.qml;../src/app/qml/common/TextFieldButtonPopover.qml;../src/app/qml/common/TextFieldWithButton.qml;../src/app/qml/common/TextualButtonStyle.qml;../src/app/qml/common/UnknownTypeDialog.qml;../src/app/qml/common/VerticalDivider.qml;../src/app/qml/common/ViewerPage.qml;../src/app/qml/common/loadComponent.js;../src/app/qml/common/utils.js;../src/app/qml/documentPage/DeleteFileDialog.qml;../src/app/qml/documentPage/DocumentDelegateActions.qml;../src/app/qml/documentPage/DocumentEmptyState.qml;../src/app/qml/documentPage/DocumentListDelegate.qml;../src/app/qml/documentPage/DocumentListView.qml;../src/app/qml/documentPage/DocumentPage.qml;../src/app/qml/documentPage/DocumentPageDefaultHeader.qml;../src/app/qml/documentPage/DocumentPagePickModeHeader.qml;../src/app/qml/documentPage/DocumentPageSearchHeader.qml;../src/app/qml/documentPage/DocumentPageSelectionModeHeader.qml;../src/app/qml/documentPage/SearchEmptyState.qml;../src/app/qml/documentPage/SectionHeader.qml;../src/app/qml/documentPage/SharePage.qml;../src/app/qml/documentPage/SortSettingsDialog.qml;../src/app/qml/loView/KeybHelper.js;../src/app/qml/loView/LOViewDefaultHeader.qml;../src/app/qml/loView/LOViewGotoDialog.qml;../src/app/qml/loView/LOViewPage.qml;../src/app/qml/loView/PartsView.qml;../src/app/qml/loView/Splashscreen.qml;../src/app/qml/loView/SpreadsheetSelector.qml;../src/app/qml/loView/ZoomSelector.qml;../src/app/qml/pdfView/PdfContentsPage.qml;../src/app/qml/pdfView/PdfPresentation.qml;../src/app/qml/pdfView/PdfView.qml;../src/app/qml/pdfView/PdfViewDelegate.qml;../src/app/qml/pdfView/PdfViewGotoDialog.qml;../src/app/qml/textView/TextView.qml;../src/app/qml/textView/TextViewDefaultHeader.qml;../src/app/qml/ubuntu-docviewer-app.qml;../src/app/renderengine.cpp;../src/app/rendertask.cpp;../src/plugin/file-qml-plugin/backend.cpp;../src/plugin/file-qml-plugin/documentmodel.cpp;../src/plugin/file-qml-plugin/docviewerfile.cpp;../src/plugin/file-qml-plugin/docviewerutils.cpp;../src/plugin/file-qml-plugin/fswatcher.cpp;../src/plugin/libreofficetoolkit-qml-plugin/lodocument.cpp;../src/plugin/libreofficetoolkit-qml-plugin/lopartsimageprovider.cpp;../src/plugin/libreofficetoolkit-qml-plugin/lopartsimageresponse.cpp;../src/plugin/libreofficetoolkit-qml-plugin/lopartsmodel.cpp;../src/plugin/libreofficetoolkit-qml-plugin/lorendertask.cpp;../src/plugin/libreofficetoolkit-qml-plugin/loview.cpp;../src/plugin/libreofficetoolkit-qml-plugin/lozoom.cpp;../src/plugin/libreofficetoolkit-qml-plugin/plugin.cpp;../src/plugin/libreofficetoolkit-qml-plugin/qml/Viewer.qml;../src/plugin/libreofficetoolkit-qml-plugin/sgtileitem.cpp;../src/plugin/libreofficetoolkit-qml-plugin/ucunits.cpp;../src/plugin/poppler-qml-plugin/pdfdocument.cpp;../src/plugin/poppler-qml-plugin/pdfimageprovider.cpp;../src/plugin/poppler-qml-plugin/pdfitem.cpp;../src/plugin/poppler-qml-plugin/pdftocmodel.cpp;../src/plugin/poppler-qml-plugin/plugin.cpp;../src/plugin/poppler-qml-plugin/verticalview.cpp;/home/yunit/builddir/docviewer-app/po/com.ubuntu.docviewer.desktop.in.in.h
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/builddir/docviewer-app
+yunit@yunitvm:~/builddir/docviewer-app$ make -j4
+Scanning dependencies of target pofiles_49
+Scanning dependencies of target pofiles_50
+Scanning dependencies of target pofiles_51
+Scanning dependencies of target pofiles_19
+[  1%] Generating id.gmo
+[  2%] Generating sv.gmo
+[  3%] Generating fo.gmo
+[  4%] Generating es.gmo
+[  4%] Built target pofiles_51
+[  4%] Built target pofiles_19
+[  4%] Built target pofiles_49
+[  4%] Built target pofiles_50
+Scanning dependencies of target pofiles_17
+Scanning dependencies of target pofiles_45
+Scanning dependencies of target pofiles_39
+Scanning dependencies of target com_ubuntu_docviewer_translation_files
+[  4%] Built target com_ubuntu_docviewer_translation_files
+[  5%] Generating zh_TW.gmo
+[  6%] Generating ro.gmo
+[  7%] Generating pt.gmo
+Scanning dependencies of target pofiles_16
+[  7%] Built target pofiles_17
+[  7%] Built target pofiles_45
+[  7%] Built target pofiles_39
+Scanning dependencies of target pofiles_34
+Scanning dependencies of target pofiles_15
+[  8%] Generating ru.gmo
+Scanning dependencies of target pofiles_2
+[ 10%] Generating br.gmo
+[ 11%] Generating ar.gmo
+[ 12%] Generating pl.gmo
+[ 11%] Built target pofiles_16
+Scanning dependencies of target pofiles_6
+[ 12%] Built target pofiles_15
+[ 12%] Built target pofiles_34
+Scanning dependencies of target pofiles_33
+[ 12%] Built target pofiles_2
+Scanning dependencies of target pofiles_44
+[ 13%] Generating hu.gmo
+[ 14%] Generating lv.gmo
+[ 15%] Built target pofiles_6
+[ 15%] Generating cy.gmo
+Scanning dependencies of target pofiles_20
+[ 16%] Generating el.gmo
+Scanning dependencies of target pofiles_25
+[ 16%] Built target pofiles_44
+[ 16%] Built target pofiles_33
+[ 17%] Generating uz.gmo
+Scanning dependencies of target pofiles_12
+Scanning dependencies of target pofiles_13
+[ 17%] Built target pofiles_20
+[ 19%] Generating sl.gmo
+[ 20%] Generating ug.gmo
+[ 20%] Built target pofiles_25
+Scanning dependencies of target pofiles_18
+[ 20%] Built target pofiles_12
+Scanning dependencies of target pofiles_47
+[ 21%] Generating fa.gmo
+[ 21%] Built target pofiles_13
+[ 22%] Generating ast.gmo
+[ 22%] Built target pofiles_18
+Scanning dependencies of target pofiles_11
+Scanning dependencies of target pofiles_32
+[ 22%] Built target pofiles_47
+[ 23%] Generating ca.gmo
+Scanning dependencies of target pofiles_38
+[ 24%] Generating af.gmo
+Scanning dependencies of target pofiles_9
+[ 25%] Generating hr.gmo
+[ 24%] Built target pofiles_11
+[ 25%] Built target pofiles_32
+[ 26%] Generating fr_CA.gmo
+[ 25%] Built target pofiles_38
+Scanning dependencies of target pofiles_28
+Scanning dependencies of target pofiles_10
+[ 28%] Generating de.gmo
+[ 29%] Generating eo.gmo
+Scanning dependencies of target pofiles_14
+[ 29%] Built target pofiles_9
+[ 30%] Generating am.gmo
+Scanning dependencies of target com.ubuntu.docviewer.pot
+[ 30%] Built target pofiles_10
+[ 30%] Built target pofiles_28
+[ 31%] Generating translation template
+[ 31%] Built target pofiles_14
+Scanning dependencies of target pofiles_3
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_31
+[ 32%] Generating en_GB.gmo
+[ 33%] Generating gl.gmo
+[ 34%] Generating en_AU.gmo
+Wrote com.ubuntu.docviewer.desktop.in.in.h
+[ 34%] Built target pofiles_3
+[ 34%] Built target pofiles_8
+../src/app/qml/common/NightModeShader.qml:20: warning: unterminated string literal
+../src/app/qml/common/NightModeShader.qml:32: warning: unterminated string literal
+[ 34%] Built target pofiles_31
+Scanning dependencies of target pofiles_1
+Scanning dependencies of target pofiles_7
+Scanning dependencies of target pofiles_35
+[ 35%] Generating cs.gmo
+[ 35%] Built target com.ubuntu.docviewer.pot
+[ 37%] Generating lo.gmo
+[ 38%] Generating fr.gmo
+[ 38%] Built target pofiles_1
+Scanning dependencies of target pofiles_4
+[ 38%] Built target pofiles_7
+[ 38%] Built target pofiles_35
+Scanning dependencies of target pofiles_5
+[ 39%] Generating ja.gmo
+Scanning dependencies of target pofiles_21
+Scanning dependencies of target pofiles_30
+[ 40%] Generating pa.gmo
+[ 41%] Generating shn.gmo
+[ 42%] Generating zh_CN.gmo
+[ 40%] Built target pofiles_4
+Scanning dependencies of target pofiles_22
+[ 42%] Built target pofiles_5
+[ 42%] Built target pofiles_21
+[ 42%] Built target pofiles_30
+[ 43%] Generating pt_BR.gmo
+Scanning dependencies of target pofiles_23
+Scanning dependencies of target pofiles_24
+Scanning dependencies of target pofiles_46
+[ 46%] Generating ny.gmo
+[ 47%] Generating da.gmo
+[ 44%] Generating sr.gmo
+[ 46%] Built target pofiles_22
+Scanning dependencies of target pofiles_26
+[ 47%] Built target pofiles_24
+[ 47%] Built target pofiles_23
+[ 47%] Built target pofiles_46
+[ 48%] Generating fi.gmo
+Scanning dependencies of target pofiles_29
+Scanning dependencies of target pofiles_27
+Scanning dependencies of target pofiles_48
+[ 49%] Generating nb.gmo
+[ 50%] Generating it.gmo
+[ 48%] Built target pofiles_26
+[ 51%] Generating gd.gmo
+[ 51%] Built target pofiles_27
+[ 51%] Built target pofiles_48
+Scanning dependencies of target pofiles_36
+[ 51%] Built target pofiles_29
+[ 52%] Generating eu.gmo
+Scanning dependencies of target pofiles_42
+Scanning dependencies of target pofiles_37
+Scanning dependencies of target pofiles_40
+[ 53%] Generating tr.gmo
+[ 55%] Generating uk.gmo
+[ 56%] Generating bs.gmo
+[ 56%] Built target pofiles_36
+Scanning dependencies of target pofiles_41
+[ 56%] Built target pofiles_40
+[ 56%] Built target pofiles_37
+[ 56%] Built target pofiles_42
+[ 57%] Generating nl.gmo
+Scanning dependencies of target com_ubuntu_docviewer_CLICKFiles
+Scanning dependencies of target com.ubuntu.docviewer.desktop
+Scanning dependencies of target pofiles_43
+[ 58%] Merging translations into com.ubuntu.docviewer.desktop
+[ 59%] Built target com_ubuntu_docviewer_CLICKFiles
+[ 58%] Built target pofiles_41
+[ 59%] Generating sk.gmo
+Scanning dependencies of target ubuntu-docviewer-app_automoc
+Scanning dependencies of target fileqmlplugin_automoc
+[ 59%] Built target pofiles_43
+[ 60%] Automatic moc for target fileqmlplugin
+Scanning dependencies of target popplerqmlplugin_automoc
+[ 61%] Automatic moc for target ubuntu-docviewer-app
+[ 62%] Automatic moc for target popplerqmlplugin
+Generating moc_renderengine.cpp
+Generating moc_backend.cpp
+Generating moc_verticalview.cpp
+Generating moc_pdfdocument.cpp
+Generating moc_documentmodel.cpp
+Merging translations into com.ubuntu.docviewer.desktop.
+[ 62%] Built target com.ubuntu.docviewer.desktop
+[ 62%] Built target ubuntu-docviewer-app_automoc
+Scanning dependencies of target libreofficetoolkitqmlplugin_automoc
+Scanning dependencies of target com_ubuntu_docviewer_PYTHONEMULATORFiles
+Generating moc_pdftocmodel.cpp
+Generating moc_docviewerfile.cpp
+[ 64%] Automatic moc for target libreofficetoolkitqmlplugin
+[ 64%] Built target com_ubuntu_docviewer_PYTHONEMULATORFiles
+Scanning dependencies of target com_ubuntu_docviewer_PYTHONTESTFiles
+Generating moc_lodocument.cpp
+[ 64%] Built target com_ubuntu_docviewer_PYTHONTESTFiles
+Generating moc_docviewerutils.cpp
+Scanning dependencies of target ubuntu-docviewer-app
+Generating moc_plugin.cpp
+Generating moc_loerror.cpp
+Generating moc_fswatcher.cpp
+Generating moc_lopartsmodel.cpp
+[ 65%] Building CXX object src/app/CMakeFiles/ubuntu-docviewer-app.dir/main.cpp.o
+[ 65%] Built target popplerqmlplugin_automoc
+[ 65%] Built target fileqmlplugin_automoc
+Scanning dependencies of target popplerqmlplugin
+Scanning dependencies of target fileqmlplugin
+Generating moc_loview.cpp
+[ 66%] Building CXX object src/plugin/file-qml-plugin/CMakeFiles/fileqmlplugin.dir/backend.cpp.o
+[ 67%] Building CXX object src/plugin/poppler-qml-plugin/CMakeFiles/popplerqmlplugin.dir/plugin.cpp.o
+Generating moc_lozoom.cpp
+Generating moc_plugin.cpp
+Generating moc_sgtileitem.cpp
+Generating moc_ucunits.cpp
+In file included from /home/yunit/builddir/docviewer-app/src/plugin/poppler-qml-plugin/plugin.cpp:23:0:
+/home/yunit/builddir/docviewer-app/src/plugin/poppler-qml-plugin/verticalview.h:20:48: fatal error: private/qquickitemchangelistener_p.h: No such file or directory
+compilation terminated.
+src/plugin/poppler-qml-plugin/CMakeFiles/popplerqmlplugin.dir/build.make:62: recipe for target 'src/plugin/poppler-qml-plugin/CMakeFiles/popplerqmlplugin.dir/plugin.cpp.o' failed
+make[2]: *** [src/plugin/poppler-qml-plugin/CMakeFiles/popplerqmlplugin.dir/plugin.cpp.o] Error 1
+CMakeFiles/Makefile2:2583: recipe for target 'src/plugin/poppler-qml-plugin/CMakeFiles/popplerqmlplugin.dir/all' failed
+make[1]: *** [src/plugin/poppler-qml-plugin/CMakeFiles/popplerqmlplugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 68%] Building CXX object src/plugin/file-qml-plugin/CMakeFiles/fileqmlplugin.dir/documentmodel.cpp.o
+[ 68%] Built target libreofficetoolkitqmlplugin_automoc
+[ 69%] Building CXX object src/plugin/file-qml-plugin/CMakeFiles/fileqmlplugin.dir/fswatcher.cpp.o
+[ 70%] Building CXX object src/plugin/file-qml-plugin/CMakeFiles/fileqmlplugin.dir/docviewerfile.cpp.o
+[ 71%] Building CXX object src/plugin/file-qml-plugin/CMakeFiles/fileqmlplugin.dir/docviewerutils.cpp.o
+[ 73%] Building CXX object src/plugin/file-qml-plugin/CMakeFiles/fileqmlplugin.dir/fileqmlplugin_automoc.cpp.o
+[ 74%] Building CXX object src/app/CMakeFiles/ubuntu-docviewer-app.dir/renderengine.cpp.o
+/home/yunit/builddir/docviewer-app/src/plugin/file-qml-plugin/docviewerutils.cpp:77:61: warning: unused parameter ‘destinationDir’ [-Wunused-parameter]
+ QString DocviewerUtils::buildDestinationPath(const QString &destinationDir, const QString &sourcePath)
+                                                             ^
+[ 75%] Building CXX object src/app/CMakeFiles/ubuntu-docviewer-app.dir/rendertask.cpp.o
+[ 76%] Building CXX object src/app/CMakeFiles/ubuntu-docviewer-app.dir/ubuntu-docviewer-app_automoc.cpp.o
+[ 77%] Linking CXX shared module libfileqmlplugin.so
+[ 77%] Built target fileqmlplugin
+[ 78%] Linking CXX executable ubuntu-docviewer-app
+[ 78%] Built target ubuntu-docviewer-app
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2
+yunit@yunitvm:~/builddir/docviewer-app$ cd ~/builddir/messaging-app/
+yunit@yunitvm:~/builddir/messaging-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find Lcov (missing:  LCOV_EXECUTABLE GENHTML_EXECUTABLE) 
+-- Could NOT find gcovr (missing:  GCOVR_EXECUTABLE) 
+CMake Warning at CMakeLists.txt:42 (find_package):
+  By not providing "FindQt5Versit.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "Qt5Versit", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5Versit" with
+  any of the following names:
+
+    Qt5VersitConfig.cmake
+    qt5versit-config.cmake
+
+  Add the installation prefix of "Qt5Versit" to CMAKE_PREFIX_PATH or set
+  "Qt5Versit_DIR" to a directory containing one of the above files.  If
+  "Qt5Versit" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'libnotify'
+--   No package 'libnotify' found
+CMake Error at /usr/share/cmake-3.5/Modules/FindPkgConfig.cmake:367 (message):
+  A required package was not found
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindPkgConfig.cmake:532 (_pkg_check_modules_internal)
+  CMakeLists.txt:47 (pkg_check_modules)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/yunit/builddir/messaging-app/CMakeFiles/CMakeOutput.log".
+yunit@yunitvm:~/builddir/messaging-app$ cd ~/builddir/calculator-app/
+yunit@yunitvm:~/builddir/calculator-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/builddir/calculator-app
+yunit@yunitvm:~/builddir/calculator-app$ make -j4
+Scanning dependencies of target ubuntu-calculator-app_upstreamcomponents_QMlFiles
+Scanning dependencies of target ubuntu-calculator-app_ui_QMlFiles
+Scanning dependencies of target ubuntu-calculator-app.desktop
+Scanning dependencies of target ubuntu-calculator-app_engine_QMlFiles
+[  0%] Built target ubuntu-calculator-app_upstreamcomponents_QMlFiles
+[  0%] Built target ubuntu-calculator-app_ui_QMlFiles
+[  1%] Merging translations into ubuntu-calculator-app.desktop
+[  1%] Built target ubuntu-calculator-app_engine_QMlFiles
+Scanning dependencies of target pofiles_75
+Scanning dependencies of target calculator_welcomewizard_QMlFiles
+Scanning dependencies of target com_ubuntu_calculator_translation_files
+[  1%] Built target com_ubuntu_calculator_translation_files
+[  2%] Generating es.gmo
+[  2%] Built target calculator_welcomewizard_QMlFiles
+Scanning dependencies of target pofiles_74
+Scanning dependencies of target pofiles_71
+[  3%] Generating sv.gmo
+[  5%] Generating nb.gmo
+[  5%] Built target pofiles_75
+[  5%] Built target pofiles_71
+[  5%] Built target pofiles_74
+Scanning dependencies of target pofiles_68
+Scanning dependencies of target pofiles_70
+Merging translations into ubuntu-calculator-app.desktop.
+[  6%] Generating sa.gmo
+Scanning dependencies of target pofiles_66
+[  6%] Built target ubuntu-calculator-app.desktop
+[  7%] Generating ca@valencia.gmo
+Scanning dependencies of target pofiles_65
+[  8%] Generating sr.gmo
+[  8%] Built target pofiles_70
+[  8%] Built target pofiles_68
+[  8%] Built target pofiles_66
+Scanning dependencies of target pofiles_61
+[ 10%] Generating pt.gmo
+Scanning dependencies of target pofiles_60
+[ 11%] Generating km.gmo
+Scanning dependencies of target pofiles_56
+[ 11%] Built target pofiles_65
+[ 12%] Generating sk.gmo
+Scanning dependencies of target pofiles_55
+[ 14%] Built target pofiles_61
+[ 12%] Built target pofiles_60
+[ 14%] Generating tr.gmo
+Scanning dependencies of target pofiles_52
+[ 14%] Built target pofiles_56
+Scanning dependencies of target pofiles_51
+[ 15%] Generating en_CA.gmo
+[ 16%] Generating ml.gmo
+[ 17%] Generating hr.gmo
+Scanning dependencies of target pofiles_50
+[ 17%] Built target pofiles_55
+Scanning dependencies of target pofiles_49
+[ 19%] Built target pofiles_52
+[ 17%] Built target pofiles_51
+[ 19%] Generating uk.gmo
+Scanning dependencies of target pofiles_19
+Scanning dependencies of target pofiles_39
+[ 20%] Generating ko.gmo
+[ 20%] Built target pofiles_50
+[ 21%] Generating vi.gmo
+Scanning dependencies of target pofiles_53
+[ 23%] Generating ka.gmo
+[ 23%] Built target pofiles_49
+[ 23%] Built target pofiles_39
+Scanning dependencies of target pofiles_17
+[ 24%] Generating zh_HK.gmo
+[ 24%] Built target pofiles_19
+Scanning dependencies of target pofiles_45
+[ 25%] Generating am.gmo
+[ 24%] Built target pofiles_53
+Scanning dependencies of target pofiles_16
+[ 26%] Generating hi.gmo
+Scanning dependencies of target pofiles_34
+[ 28%] Generating et.gmo
+[ 28%] Built target pofiles_17
+Scanning dependencies of target pofiles_62
+[ 28%] Built target pofiles_45
+[ 29%] Generating eo.gmo
+[ 28%] Built target pofiles_16
+[ 30%] Generating mr.gmo
+Scanning dependencies of target pofiles_15
+[ 30%] Built target pofiles_34
+Scanning dependencies of target pofiles_73
+[ 32%] Generating he.gmo
+[ 32%] Built target pofiles_62
+[ 33%] Generating si.gmo
+Scanning dependencies of target pofiles_2
+[ 33%] Built target pofiles_15
+[ 34%] Generating pl.gmo
+Scanning dependencies of target pofiles_6
+[ 33%] Built target pofiles_73
+Scanning dependencies of target pofiles_33
+Scanning dependencies of target pofiles_76
+[ 35%] Generating pa.gmo
+[ 35%] Built target pofiles_2
+[ 37%] Generating bg.gmo
+[ 37%] Built target pofiles_6
+[ 38%] Generating it.gmo
+Scanning dependencies of target pofiles_58
+[ 39%] Generating bs.gmo
+[ 39%] Built target pofiles_76
+Scanning dependencies of target pofiles_44
+[ 39%] Built target pofiles_33
+Scanning dependencies of target pofiles_20
+[ 41%] Generating ar.gmo
+[ 39%] Built target pofiles_58
+Scanning dependencies of target pofiles_25
+[ 42%] Generating ckb.gmo
+Scanning dependencies of target pofiles_13
+[ 42%] Built target pofiles_44
+[ 43%] Generating id.gmo
+[ 44%] Generating sl.gmo
+[ 44%] Built target pofiles_20
+[ 44%] Built target pofiles_25
+Scanning dependencies of target com.ubuntu.calculator.pot
+Scanning dependencies of target pofiles_12
+Scanning dependencies of target pofiles_18
+[ 44%] Built target pofiles_13
+[ 46%] Generating translation template
+[ 47%] Generating af.gmo
+[ 48%] Generating br.gmo
+Scanning dependencies of target pofiles_47
+[ 48%] Built target pofiles_12
+[ 50%] Generating fr.gmo
+Scanning dependencies of target pofiles_32
+[ 50%] Built target pofiles_18
+Wrote ubuntu-calculator-app.desktop.in.in.h
+[ 50%] Built target pofiles_47
+../app/engine/CalculationHistory.qml:80: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:87: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:144: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:146: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:160: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:162: warning: unterminated character constant
+[ 51%] Generating fi.gmo
+Scanning dependencies of target pofiles_11
+[ 51%] Built target pofiles_32
+Scanning dependencies of target pofiles_57
+[ 52%] Generating de.gmo
+[ 53%] Generating nl.gmo
+Scanning dependencies of target pofiles_38
+[ 53%] Built target pofiles_11
+[ 55%] Generating shn.gmo
+Scanning dependencies of target pofiles_63
+[ 55%] Built target pofiles_57
+[ 55%] Built target pofiles_38
+[ 56%] Generating te.gmo
+Scanning dependencies of target pofiles_9
+Scanning dependencies of target pofiles_28
+[ 57%] Generating en_GB.gmo
+[ 57%] Built target pofiles_63
+Scanning dependencies of target pofiles_59
+[ 58%] Generating pt_BR.gmo
+[ 58%] Built target com.ubuntu.calculator.pot
+[ 58%] Built target pofiles_9
+Scanning dependencies of target pofiles_14
+[ 60%] Generating mk.gmo
+Scanning dependencies of target pofiles_10
+[ 61%] Generating fr_CA.gmo
+[ 58%] Built target pofiles_28
+[ 62%] Generating ug.gmo
+[ 61%] Built target pofiles_59
+Scanning dependencies of target pofiles_3
+[ 62%] Built target pofiles_10
+[ 62%] Built target pofiles_14
+Scanning dependencies of target pofiles_8
+[ 64%] Generating az.gmo
+[ 65%] Generating gl.gmo
+Scanning dependencies of target pofiles_31
+Scanning dependencies of target pofiles_1
+[ 66%] Generating uz.gmo
+[ 66%] Built target pofiles_3
+[ 67%] Generating cs.gmo
+[ 67%] Built target pofiles_8
+Scanning dependencies of target pofiles_7
+[ 67%] Built target pofiles_31
+[ 67%] Built target pofiles_1
+Scanning dependencies of target pofiles_35
+Scanning dependencies of target pofiles_4
+Scanning dependencies of target pofiles_5
+[ 69%] Generating hu.gmo
+[ 70%] Generating gd.gmo
+[ 71%] Generating ja.gmo
+[ 71%] Built target pofiles_7
+[ 73%] Built target pofiles_35
+[ 73%] Generating gu.gmo
+Scanning dependencies of target pofiles_69
+Scanning dependencies of target pofiles_21
+[ 73%] Built target pofiles_4
+[ 73%] Built target pofiles_5
+[ 74%] Generating ast.gmo
+Scanning dependencies of target pofiles_67
+[ 75%] Generating ru.gmo
+Scanning dependencies of target pofiles_30
+[ 76%] Generating ta.gmo
+[ 78%] Generating da.gmo
+[ 75%] Built target pofiles_69
+[ 78%] Built target pofiles_21
+Scanning dependencies of target pofiles_22
+[ 78%] Built target pofiles_67
+Scanning dependencies of target pofiles_46
+[ 78%] Built target pofiles_30
+Scanning dependencies of target pofiles_23
+[ 79%] Generating is.gmo
+Scanning dependencies of target pofiles_24
+[ 80%] Generating aa.gmo
+[ 82%] Generating zh_TW.gmo
+[ 80%] Built target pofiles_22
+[ 83%] Generating fa.gmo
+[ 82%] Built target pofiles_46
+Scanning dependencies of target pofiles_64
+[ 83%] Built target pofiles_23
+Scanning dependencies of target pofiles_26
+[ 84%] Generating lv.gmo
+[ 83%] Built target pofiles_24
+[ 85%] Generating el.gmo
+Scanning dependencies of target pofiles_72
+Scanning dependencies of target pofiles_27
+[ 87%] Generating fo.gmo
+[ 85%] Built target pofiles_64
+[ 87%] Built target pofiles_26
+Scanning dependencies of target pofiles_54
+Scanning dependencies of target pofiles_48
+[ 88%] Generating zh_CN.gmo
+[ 88%] Built target pofiles_72
+[ 89%] Generating ro.gmo
+[ 91%] Built target pofiles_27
+[ 91%] Generating eu.gmo
+Scanning dependencies of target pofiles_29
+Scanning dependencies of target pofiles_36
+[ 91%] Built target pofiles_48
+[ 92%] Generating ne.gmo
+[ 92%] Built target pofiles_54
+[ 93%] Generating be.gmo
+Scanning dependencies of target pofiles_42
+Scanning dependencies of target pofiles_37
+[ 93%] Built target pofiles_29
+Scanning dependencies of target pofiles_40
+[ 94%] Generating my.gmo
+[ 96%] Generating ca.gmo
+[ 93%] Built target pofiles_36
+[ 97%] Generating ms.gmo
+Scanning dependencies of target pofiles_41
+[ 97%] Built target pofiles_37
+[ 97%] Built target pofiles_42
+Scanning dependencies of target pofiles_43
+[ 97%] Built target pofiles_40
+[ 98%] Generating en_AU.gmo
+[100%] Generating cy.gmo
+[ 98%] Built target pofiles_41
+[100%] Built target pofiles_43
+yunit@yunitvm:~/builddir/calculator-app$ sudo make install
+[  1%] Merging translations into ubuntu-calculator-app.desktop
+Merging translations into ubuntu-calculator-app.desktop.
+[  1%] Built target ubuntu-calculator-app.desktop
+[  1%] Built target ubuntu-calculator-app_engine_QMlFiles
+[  1%] Built target ubuntu-calculator-app_ui_QMlFiles
+[  1%] Built target ubuntu-calculator-app_upstreamcomponents_QMlFiles
+[  1%] Built target calculator_welcomewizard_QMlFiles
+[  1%] Built target com_ubuntu_calculator_translation_files
+[  2%] Built target pofiles_75
+[  3%] Built target pofiles_74
+[  5%] Built target pofiles_71
+[  6%] Built target pofiles_70
+[  7%] Built target pofiles_68
+[  8%] Built target pofiles_66
+[ 10%] Built target pofiles_65
+[ 11%] Built target pofiles_61
+[ 12%] Built target pofiles_60
+[ 14%] Built target pofiles_56
+[ 15%] Built target pofiles_55
+[ 16%] Built target pofiles_52
+[ 17%] Built target pofiles_51
+[ 19%] Built target pofiles_50
+[ 20%] Built target pofiles_49
+[ 21%] Built target pofiles_19
+[ 23%] Built target pofiles_39
+[ 24%] Built target pofiles_53
+[ 25%] Built target pofiles_17
+[ 26%] Built target pofiles_45
+[ 28%] Built target pofiles_16
+[ 29%] Built target pofiles_34
+[ 30%] Built target pofiles_62
+[ 32%] Built target pofiles_15
+[ 33%] Built target pofiles_73
+[ 34%] Built target pofiles_2
+[ 35%] Built target pofiles_6
+[ 37%] Built target pofiles_33
+[ 38%] Built target pofiles_76
+[ 39%] Built target pofiles_58
+[ 41%] Built target pofiles_44
+[ 42%] Built target pofiles_20
+[ 43%] Built target pofiles_25
+[ 44%] Built target pofiles_13
+[ 46%] Generating translation template
+Wrote ubuntu-calculator-app.desktop.in.in.h
+../app/engine/CalculationHistory.qml:80: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:87: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:144: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:146: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:160: warning: unterminated character constant
+../app/engine/CalculationHistory.qml:162: warning: unterminated character constant
+[ 46%] Built target com.ubuntu.calculator.pot
+[ 47%] Built target pofiles_12
+[ 48%] Built target pofiles_18
+[ 50%] Built target pofiles_47
+[ 51%] Built target pofiles_32
+[ 52%] Built target pofiles_11
+[ 53%] Built target pofiles_57
+[ 55%] Built target pofiles_38
+[ 56%] Built target pofiles_63
+[ 57%] Built target pofiles_9
+[ 58%] Built target pofiles_28
+[ 60%] Built target pofiles_59
+[ 61%] Built target pofiles_10
+[ 62%] Built target pofiles_14
+[ 64%] Built target pofiles_3
+[ 65%] Built target pofiles_8
+[ 66%] Built target pofiles_31
+[ 67%] Built target pofiles_1
+[ 69%] Built target pofiles_7
+[ 70%] Built target pofiles_35
+[ 71%] Built target pofiles_4
+[ 73%] Built target pofiles_5
+[ 74%] Built target pofiles_69
+[ 75%] Built target pofiles_21
+[ 76%] Built target pofiles_67
+[ 78%] Built target pofiles_30
+[ 79%] Built target pofiles_22
+[ 80%] Built target pofiles_46
+[ 82%] Built target pofiles_23
+[ 83%] Built target pofiles_24
+[ 84%] Built target pofiles_64
+[ 85%] Built target pofiles_26
+[ 87%] Built target pofiles_72
+[ 88%] Built target pofiles_27
+[ 89%] Built target pofiles_54
+[ 91%] Built target pofiles_48
+[ 92%] Built target pofiles_29
+[ 93%] Built target pofiles_36
+[ 94%] Built target pofiles_37
+[ 96%] Built target pofiles_42
+[ 97%] Built target pofiles_40
+[ 98%] Built target pofiles_41
+[100%] Built target pofiles_43
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/bin/ubuntu-calculator-app
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/ubuntu-calculator-app.png
+-- Installing: /usr/share/applications/ubuntu-calculator-app.desktop
+-- Installing: /usr/share/ubuntu-calculator-app/ubuntu-calculator-app.png
+-- Installing: /usr/share/ubuntu-calculator-app/ubuntu-calculator-app.qml
+-- Installing: /usr/share/ubuntu-calculator-app/engine/MathJs.qml
+-- Installing: /usr/share/ubuntu-calculator-app/engine/CalculationHistory.qml
+-- Installing: /usr/share/ubuntu-calculator-app/engine/formula.js
+-- Installing: /usr/share/ubuntu-calculator-app/engine/math_source.js
+-- Installing: /usr/share/ubuntu-calculator-app/engine/math.js
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/access-sci-keyboard.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/delete-item-from-history.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/gift.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/copy-formula.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/edit-formula.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/rotate-keyboard.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/copy-item-from-history.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/edit-item-from-history.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/select-multiple-item-from-history.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/delete-formula.png
+-- Installing: /usr/share/ubuntu-calculator-app/graphics/fav-item-from-history.png
+-- Up-to-date: /usr/share/ubuntu-calculator-app/graphics/ubuntu-calculator-app.png
+-- Installing: /usr/share/ubuntu-calculator-app/ui/ActionButton.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/PortraitKeyboard.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/FavouritePage.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/KeyboardPage.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/LandscapeKeyboard.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/Walkthrough.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/CalcKeyboard.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/KeyboardButton.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/ScrollableView.qml
+-- Installing: /usr/share/ubuntu-calculator-app/ui/Screen.qml
+-- Installing: /usr/share/ubuntu-calculator-app/upstreamcomponents/EmptyState.qml
+-- Installing: /usr/share/ubuntu-calculator-app/upstreamcomponents/MultipleSelectionVisualModel.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/WelcomeWizard.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/SlideBase.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide1.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide2.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide3.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide4.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide5.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide6.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide7.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide8.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide9.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide10.qml
+-- Installing: /usr/share/ubuntu-calculator-app/welcomewizard/Slide11.qml
+-- Installing: /usr/lib/python3/dist-packages/ubuntu_calculator_app
+-- Installing: /usr/lib/python3/dist-packages/ubuntu_calculator_app/tests
+-- Installing: /usr/lib/python3/dist-packages/ubuntu_calculator_app/tests/test_main.py
+-- Installing: /usr/lib/python3/dist-packages/ubuntu_calculator_app/tests/__init__.py
+-- Installing: /usr/lib/python3/dist-packages/ubuntu_calculator_app/__init__.py
+-- Installing: /usr/share/locale/cs/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/gl/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ja/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/gu/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/pa/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/az/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/en_GB/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/fr_CA/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/af/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/sl/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ug/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/he/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/hi/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/am/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/br/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ka/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ckb/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ru/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/aa/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/zh_TW/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/fa/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/id/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/el/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/zh_CN/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/pt_BR/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ne/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/da/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/uz/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/eo/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/gd/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/be/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/my/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/shn/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/vi/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ms/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/en_AU/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ca/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/cy/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ar/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/et/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/is/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/eu/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ko/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/uk/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/hr/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ml/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/zh_HK/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ro/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/en_CA/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/tr/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/bs/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/mk/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/sk/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/km/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/mr/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/te/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/lv/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/sr/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ta/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ca@valencia/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/ast/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/sa/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/nb/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/fo/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/si/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/sv/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/com.ubuntu.calculator.mo
+-- Installing: /usr/share/locale/bg/LC_MESSAGES/com.ubuntu.calculator.mo
+yunit@yunitvm:~/builddir/calculator-app$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+
+
+

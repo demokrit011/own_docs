@@ -869,3 +869,465 @@ QT_QPA_PLATFORM=mirserver beru
 
 same error as allways...
 
+##### FREAKrun continued cmake
+
+okay, so basically i also created a snapshot of this, tried to install the latest mir (0.28.2) packages with the mir-team/staging PPA and see what it does but Yunit won't come up and i don't want to bother with that so i fell back to the "normal" Freakrun snapshot. My next idea was to look at the Terminal or Webbrowser app that came preinstalled and see how they are executed in the .desktop file and see what we can learn from this. Meanwhile i reached out to the OpenStore Telegram Group to help me but no reply so far.
+
+```
+sudo find / -name '*.desktop'
+```
+
+Before checking any of these i had the funny idea to just see what i can do via the graphical interface and whether the icons show up in the dash by now....
+
+**They do** at least for Beru. and it also starts up and says it cannot detect any books and whether i want to create a library folder. **Hurray** Clock-App icon is not shown and the ubports app was, as i said chaotically installed, not to the right directories so it is not shown in the dash. 
+
+*beru*
+
+In beru there is a "get books" button that has a few websites to choose from that directly open the browser (all of what i am writing is from testing right now this aka it works) however the download button from the browser does not seem to work right now (probably some problem with content hub). Beru scales very well and seems to work more or less flawless. Have to check if i can read a epub or PDF, maybe i will just send it via scp... (got huck finn from project gutenberg)
+
+```
+scp -P 3022 huck_finn.epub yunit@127.0.0.1:/home/yunit/Books/
+```
+
+having moved inside the VM and clicking on "search again" beru automatically recognised huck_finn being there and shows the cover art. We can open it, bottom edge gives options and everything as well as toc. Very nice, **works perfect** i'd say
+
+*clock-app*
+
+This is **less perfect** since it won't scale freely and the alarm does not do anything. All else seems fine except the missing icon.
+
+*ubports-app*
+
+this is not shown in the desk so we will try from ssh terminal
+
+```
+qmlscene /qml/Main.qml
+```
+
+okay, does not work, maybe again with the variable defined...
+
+```
+QT_QPA_PLATFORM=mirserver qmlscene /qml/Main.qml
+```
+
+nope, still nothing. Also both other apps will not start if trying from the terminal. there must be something different when run from the dash (**fails @ starting**)
+
+*2 system setting*
+
+by now we have btw 2 system-settings in the dash, i will ignore this for now...
+
+let's test all the cmake apps
+
+```
+cd ~/builddir/
+find . -name 'CMakeLists.txt'
+```
+
+we get the following apps: (i'll include whether it works here while testing)
+
+* camera-app - works
+* instant-fx - fails @ starting
+* kodimote - fails @ building
+* shorter - fails @ bulding
+* beru - works
+* UT-tweak-tool - fails @ building
+* tagger - fails @ building
+* notes-app - fails @ building
+* docviewer - fails @ building
+* messaging-app - fails @ building
+* calculator-app - works
+* dialer-app - works sort of
+* filemanager-app - fails @ building
+* mediaplayer-app - works
+* calendar-app - fails @ starting
+* ubports-app - fails @ starting
+* clock-app - works
+* gallery-app
+* address-book-app
+* sudoku-app
+
+that's 20 out of 30 so we have 2 thirds after this.
+
+i will go top-to-bottom but start with shorter because doniks was interested in this AFAIK ;-P
+
+*shorter*
+
+```
+cd community-apps/shorter/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+**fails @ building**, complains that "shorter.in" is not found. Moving on for now
+
+
+
+*camera-app*
+
+```
+cd ~/builddir/camera-app
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+seems to be properly installed (i allways check in the first lines after "Install the project..." if something goes to ```/usr/bin/app-xyz``` which is the normal way). Since we have learned that restarting the VM makes it possible to run apps from the dash we will do a reboot after each successfull installation
+
+After reboot, Camera is shown WITH icon in the dash. but it loads very long, might be a problem with the virtualisation (don't know whether a VM can just access my laptops cam...) well let's just say it **works**
+
+
+
+*instant-fx*
+
+```
+cd ~/builddir/community-apps/instantfx/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+this is also properly installed, after reboot it is shown in the dash WITHOUT icon but won't start. **fails @ starting** 
+
+
+
+*kodimote*
+
+```
+cd ~/builddir/community-apps/instantfx/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+**fails @ building** because it is build on QT 4.x for complete error see log file.
+
+
+
+*UT tweak tool*
+
+```
+cd ~/builddir/community-apps/trunk/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+```
+
+**fails @ building** problems with pamauthentication, no clue but not really interested in that app right now so moving on...
+
+
+
+*tagger*
+
+```
+cd ~/builddir/community-apps/tagger/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+```
+
+**fails @ building** no clue, see log (lines 1384 ff)
+
+
+
+*notes-app*
+
+```
+cd ~/builddir/notes-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+**fails @ building** some problem with Qt5Organizer not being found or configured...
+
+```
+apt-cache search QT5Organizer
+```
+
+brings up
+
+> libqt5organizer5 - Qt PIM module, Organizer library
+
+```
+sudo apt install libqt5organizer5
+```
+
+but this is allready installed...
+
+
+
+*docviewer*
+
+```
+cd ~/builddir/docviewer-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+```
+
+**fails @ building** 
+
+> /home/yunit/builddir/docviewer-app/src/plugin/poppler-qml-plugin/verticalview.h:20:48: fatal error: private/qquickitemchangelistener_p.h: No such file or directory
+
+
+
+
+
+*messaging-app*
+
+```
+cd ~/builddir/messaging-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+**fails @ building** problems with oackage Qt5Versit and perhaps libnotify
+
+
+
+*calculator-app*
+
+```
+cd ~/builddir/calculator-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+this installs properly, after rebooting the VM it **works like a charm** from the dash.
+
+
+
+**Note, here the log file is slplit because it is just getting too long (Freakrun-continued2 afterwards)**
+
+
+
+*dialer-app*
+
+```
+cd ~/builddir/dialer-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+installs properly, after reboot of VM, on first notice, this app even got an icon in the sidestage-quick-start automatically. However upon starting i just get a white window that's scalable. Since i am on a laptop this might be normal ;-P i'll mark it as **worksish**
+
+
+
+*filemanager-app*
+
+```
+cd ~/builddir/filemanager-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+fails because it cannot find *libsmbclient*
+
+```
+apt-cache search libsmbclient
+```
+
+installing the non-dev version...
+
+```
+sudo apt install libsmbclient
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+same error, let's try libsmbclient-dev
+
+```
+sudo apt install libsmbclient-dev
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+voila, we can move on...
+
+```
+make -j4
+```
+
+**fails @ building** again because of pamauthentication
+
+> /home/yunit/builddir/filemanager-app/src/plugin/pamauthentication/pamauthentication.cpp:24:31: fatal error: security/pam_appl.h: No such file or directory
+
+
+
+*mediaplayer-app*
+
+```
+cd ~/builddir/mediaplayer-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+installs properly, after rebooting VM it **works** from the dash. However only browser is installed which can give files via content-hub to mediaplayer so i cannot test thoroughly.
+
+
+
+*calendar-app*
+
+```
+cd ~/builddir/calendar-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+okay this installs but in the same brutal, chaotic way as the ubports app (directly to rootfs) so it won't show in the dash and it won't start with the *qmlscence* command.
+
+but let's try a reboot and see... no nothing **fails @ starting**
+
+
+
+TODO:
+
+*gallery-app*
+
+*address-book-app*
+
+*sudoku-app*
+
+
+
+##### Freakrun continued qmake
+
+let's see what we got
+
+```
+cd ~/builddir/
+find . -name '*.pro'
+```
+
+interestingly, we can see that apps or parts of those we included into the cmake list are here again and a few things immediately are interesting: 
+
+* kodimote has a subfolder "apps" with "ubuntu" inside, maybe we should only build and install that one?!
+
+
+
+**pure qmake apps**
+
+(i consider those that have in the source folder a <appname>.pro)
+
+* kodimote - fails @ building
+* guitar-tools
+* shorter - fails @ starting
+* openstore
+* ubtd
+* timer - fails @ starting
+* uMatriks
+* telegram
+
+
+
+let's just try one or two, should have stopped a while ago -.-
+
+
+
+let's do shorter, timer and uMatriks
+
+*shorter*
+
+```
+cd ~/builddir/community-apps/shorter/
+qmake shorts-app.pro
+make -j4
+sudo make install
+```
+
+on the last step, it complains that it cannot open "mainfest.json" i have seen this for the openstore before and it is caused because THERE IS NO SUCH FILE. instead it's called "manifest.json.in" so we just rename it and rerun the make install
+
+```
+mv manifest.json.in manifest.json
+sudo make install
+```
+
+this seems to have worked but has no nice "i am finished message" but one of the last lines is
+
+> /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall -exe shorts /lib/x86_64-linux-gnu/bin/shorts
+
+so we should be able to launch it using
+
+```
+cd /lib/x86_64-linux-gnu/bin/
+./shorts
+```
+
+but again we get the known and beloved error of mir not knowing the standard VT... *sigh* well we'll just do a reboot and see whether we see it in the dash... no, no luck either
+
+**fails @ starting**
+
+*timer*
+
+```
+cd ~/builddir/community-apps/timer/
+qmake Timer.pro
+make -j4
+sudo make install
+```
+
+installs like a charm but directly into the rootfs... *Grrr* if i ls the rootfs by now it looks like a warzone when trying to start the app via
+
+```
+qmlscene /Timer/Main.qml
+```
+
+we get the same error as allways....
+
+**fails @ starting**
+
+
+
+*uMatriks*
+
+```
+cd ~/builddir/community-apps/uMatriks/
+qmake uMatriks.pro
+make -j4
+```
+
+**fails @ building** something with libqmatrixclient, see log
+
+
+
+OOkkay, last but not least, kodimote, just because it failed with cmake....
+
+*kodimote*
+
+```
+cd ~/builddir/community-apps/kodimote/apps/ubuntu/
+qmake ubuntu.pro
+make -j4
+```
+
+**fails @ building** no rule to make libkodimote.a...
+
+
+
+Enough for today.
+
+
+
+##### Coping with the mir-server error
+
+Some apps i can build but they won't start or only from the dash... The TG group is very helpfull and so far we have done a few things that at least give other errors. We changed the prefix to the "qmlscene" command to be ```QT_QPA_PLATFORM=ubuntumirclient MIR_SOCKET=/run/mir_socket``` which leads to segfaults. Since from the dash this works, we wll see what we can do, let's find out which apps that are:
+
+* beru
+* calculator
+* camera
+* clock
+* instantfx
+* mediaplayer
+* dialer
+
+All of those have a binary in /usr/bin/
+
+hm since it is a binary we cannot really see anything from that... well let's see what all the great minds come up with to recuse me xD
+
+One thing so i don't loose it (from Alan Griffiths
+
+> Unity8 (and  presumably Yunit) identifies applications by their command line and looks for "--desktop_file_hint=<some .desktop file>". Just launch the terminal and look for the command with ps -ef to get an example.
+
+starting beru from the dash brought up a difference between ```ps -ef``` before and after:
+
+>UID        PID  PPID  C STIME TTY          TIME CMD
+>
+>yunit     4195  1606  0 13:43 ?        00:00:00 /bin/bash /usr/share/beru/beru
+>yunit     4199  4195 21 13:43 ?        00:00:36 /usr/lib/x86_64-linux-gnu/qt5/bin/qmlscene -I /usr/share/beru /usr/share/beru/ui/main.qml --appargs=
+>yunit     4205  4199  0 13:43 ?        00:00:00 /usr/lib/x86_64-linux-gnu/oxide-qt/chrome-sandbox /usr/lib/x86_64-linux-gnu/oxide-qt/oxide-renderer --type=zygote --shared-memory-override-path=/dev/shm
+>yunit     4206  4205  0 13:43 ?        00:00:00 /usr/lib/x86_64-linux-gnu/oxide-qt/oxide-renderer --type=zygote --shared-memory-override-path=/dev/shm/beru.oxide --disable-gpu-compositing
+>yunit     4208  4206  0 13:43 ?        00:00:00 /usr/lib/x86_64-linux-gnu/oxide-qt/oxide-renderer --type=zygote --shared-memory-override-path=/dev/shm/beru.oxide --disable-gpu-compositing
+
+well this doesn't help tooo much right now, but we'll look into it some other time.

@@ -1,0 +1,413 @@
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Nov 17 12:01:58 2017 from 10.0.2.2
+yunit@yunitvm:~$ cd builddir/
+yunit@yunitvm:~/builddir$ find . -name '.pro'
+yunit@yunitvm:~/builddir$ find . -name '*.pro'
+./community-apps/instantfx/tools/brightness-contrat-map-creator/brightness-contrast-map-creator.pro
+./community-apps/instantfx/tools/color-temperature-map-creator/color-temperature-map-creator.pro
+./community-apps/kodimote/apps/apps.pro
+./community-apps/kodimote/apps/generic/generic.pro
+./community-apps/kodimote/apps/ubuntu/ubuntu.pro
+./community-apps/kodimote/apps/harmattan/harmattan.pro
+./community-apps/kodimote/apps/sailfish/sailfish.pro
+./community-apps/kodimote/kodimote.pro
+./community-apps/kodimote/libkodimote/libkodimote.pro
+./community-apps/guitar-tools/guitar-tools/guitar-tools.pro
+./community-apps/guitar-tools/guitar-tools.pro
+./community-apps/shorter/shorts-app.pro
+./community-apps/shorter/shorts/shorts.pro
+./community-apps/openstore-app/openstore/openstore.pro
+./community-apps/openstore-app/osserviceregistry/osserviceregistry.pro
+./community-apps/openstore-app/openstore.pro
+./community-apps/ubtd/ubtd.pro
+./community-apps/ubtd/shareplugin/shareplugin.pro
+./community-apps/ubtd/app/app.pro
+./community-apps/timer/Timer/Timer.pro
+./community-apps/timer/Timer.pro
+./community-apps/uMatriks/lib/Matrix/Matrix.pro
+./community-apps/uMatriks/uMatriks/uMatriks.pro
+./community-apps/uMatriks/uMatriks.pro
+./notes-app/po/po.pro
+./filemanager-app/src/plugin/test_folderlistmodel/simpleUI/simpleui.pro
+./filemanager-app/src/plugin/test_folderlistmodel/regression/regression_folderlilstmodel.pro
+./filemanager-app/src/plugin/test_placesmodel/test_placesmodel.pro
+./filemanager-app/src/plugin/folderlistmodel/folderlistmodel.pro
+./filemanager-app/src/plugin/folderlistmodel/smb/qsambaclient/qsambaclient_test.pro
+./filemanager-app/po/po.pro
+./calendar-app/po/po.pro
+./telegram-app/telegram/telegram.pro
+./telegram-app/telegram/push/push.pro
+./telegram-app/telegram/scope/scope.pro
+./telegram-app/telegram/app/app.pro
+./telegram-app/telegram/app/asemantools/asemantools.pro
+./sudoku-app/po/po.pro
+yunit@yunitvm:~/builddir$ cd community-apps/shorter/
+yunit@yunitvm:~/builddir/community-apps/shorter$ qmake short
+shorter.apparmor       shorter.desktop.in.in  shorts-app.pro         
+shorter.desktop.in     shorts/                shorts.png             
+yunit@yunitvm:~/builddir/community-apps/shorter$ qmake shorts-app.pro 
+Info: creating stash file /home/yunit/builddir/community-apps/shorter/.qmake.stash
+yunit@yunitvm:~/builddir/community-apps/shorter$ make -j4
+make: *** No rule to make target '/home/yunit/builddir/community-apps/shorter/manifest.json.4pro', needed by '/home/yunit/builddir/community-apps/shorter/manifest.json'. Stop.
+make: *** Waiting for unfinished jobs....
+cd shorts/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -o Makefile /home/yunit/builddir/community-apps/shorter/shorts/shorts.pro ) && make -f Makefile 
+Project MESSAGE: ..\shorts.apparmor ..\shorts.desktop ..\shorts.png ..\contenthub.json qml/utils/databasemodule_v2.js qml/utils/dateutils.js qml/utils/imgSeparator.js qml/components/ArticleViewItem.qml qml/pages/TopicManagementPage.qml qml/pages/SettingsPage.qml qml/components/GoogleFeedApi.qml qml/components/GridModeItem.qml qml/components/ListModeItem.qml qml/components/NetworkManager.qml qml/components/OptionsKeeper.qml qml/components/OrganicGrid.qml qml/components/PageLoader.qml qml/components/ReadingOptions.qml qml/components/DarkModeShader.qml qml/components/FeedComponent.qml qml/components/TopicComponent.qml qml/delegates/ArticleFullImg.qml qml/delegates/ArticleOneImgA.qml qml/delegates/ArticleTextA.qml qml/delegates/ArticleTextB.qml qml/pages/AppendFeedPage.qml qml/pages/ArticleViewPage.qml qml/pages/ChooseTopicPage.qml qml/pages/CreateTopicPage.qml qml/pages/EditFeedPage.qml qml/pages/SwipeDelete.qml qml/pages/YadLoginPage.qml qml/tabs/BaseTab.qml qml/tabs/SavedTab.qml qml/tabs/ShortsTab.qml qml/tabs/TopicTab.qml qml/shorts-app.qml qml/content/SharePage.qml qml/content/YadApi.qml qml/nongoogle/AppendNGFeedPage.qml qml/nongoogle/Positioner.qml qml/nongoogle/XmlNetwork.qml qml/pages/MainPage.qml qml/components/ActionIcon.qml
+make[1]: Entering directory '/home/yunit/builddir/community-apps/shorter/shorts'
+g++ -c -m64 -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o main.o main.cpp
+g++ -c -m64 -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o CachingNetworkManagerFactory.o CachingNetworkManagerFactory.cpp
+g++ -c -m64 -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o utilities.o xml2json/utilities.cpp
+g++ -c -m64 -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o networkmanager.o networkmanager.cpp
+/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name shorts shorts.qrc -o qrc_shorts.cpp
+g++ -m64 -pipe -O2 -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
+g++ -c -m64 -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o qrc_shorts.o qrc_shorts.cpp
+/usr/lib/x86_64-linux-gnu/qt5/bin/moc -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/yunit/builddir/community-apps/shorter/shorts -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include xml2json/utilities.h -o moc_utilities.cpp
+In file included from xml2json/xml2json.hpp:11:0,
+                 from xml2json/utilities.cpp:2:
+xml2json/rapidxml/rapidxml.hpp: In instantiation of ‘void rapidxml::xml_node<Ch>::xmlns_lookup(Ch*&, size_t&, Ch*, size_t) const [with Ch = char; size_t = long unsigned int]’:
+xml2json/rapidxml/rapidxml.hpp:1027:25:   required from ‘Ch* rapidxml::xml_node<Ch>::xmlns() const [with Ch = char]’
+xml2json/rapidxml/rapidxml.hpp:1122:23:   required from ‘rapidxml::xml_node<Ch>* rapidxml::xml_node<Ch>::first_node(const Ch*, const Ch*, std::size_t, std::size_t, bool) const [with Ch = char; std::size_t = long unsigned int]’
+xml2json/xml2json.hpp:109:37:   required from here
+xml2json/rapidxml/rapidxml.hpp:1058:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     if ((attrname - freeme) >= (prefix_size + 6)) break;
+                                             ^
+/usr/lib/x86_64-linux-gnu/qt5/bin/moc -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/yunit/builddir/community-apps/shorter/shorts -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include networkmanager.h -o moc_networkmanager.cpp
+g++ -c -m64 -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o moc_utilities.o moc_utilities.cpp
+g++ -c -m64 -pipe -O2 -std=gnu++11 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o moc_networkmanager.o moc_networkmanager.cpp
+g++ -m64 -Wl,-O1 -o shorts main.o CachingNetworkManagerFactory.o utilities.o networkmanager.o qrc_shorts.o moc_utilities.o moc_networkmanager.o   -L/usr/X11R6/lib64 -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lGL -lpthread 
+make[1]: Leaving directory '/home/yunit/builddir/community-apps/shorter/shorts'
+yunit@yunitvm:~/builddir/community-apps/shorter$ sudo make install
+[sudo] password for yunit: 
+cd shorts/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -o Makefile /home/yunit/builddir/community-apps/shorter/shorts/shorts.pro ) && make -f Makefile install
+make[1]: Entering directory '/home/yunit/builddir/community-apps/shorter/shorts'
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/../shorts.png /./shorts.png
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/../contenthub.json /./contenthub.json
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/utils/databasemodule_v2.js /./databasemodule_v2.js
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/utils/dateutils.js /./dateutils.js
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/utils/imgSeparator.js /./imgSeparator.js
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ArticleViewItem.qml /./ArticleViewItem.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/TopicManagementPage.qml /./TopicManagementPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/SettingsPage.qml /./SettingsPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/GoogleFeedApi.qml /./GoogleFeedApi.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/GridModeItem.qml /./GridModeItem.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ListModeItem.qml /./ListModeItem.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/NetworkManager.qml /./NetworkManager.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/OptionsKeeper.qml /./OptionsKeeper.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/OrganicGrid.qml /./OrganicGrid.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/PageLoader.qml /./PageLoader.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ReadingOptions.qml /./ReadingOptions.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/DarkModeShader.qml /./DarkModeShader.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/FeedComponent.qml /./FeedComponent.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/TopicComponent.qml /./TopicComponent.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleFullImg.qml /./ArticleFullImg.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleOneImgA.qml /./ArticleOneImgA.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleTextA.qml /./ArticleTextA.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleTextB.qml /./ArticleTextB.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/AppendFeedPage.qml /./AppendFeedPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/ArticleViewPage.qml /./ArticleViewPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/ChooseTopicPage.qml /./ChooseTopicPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/CreateTopicPage.qml /./CreateTopicPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/EditFeedPage.qml /./EditFeedPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/YadLoginPage.qml /./YadLoginPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/BaseTab.qml /./BaseTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/SavedTab.qml /./SavedTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/ShortsTab.qml /./ShortsTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/TopicTab.qml /./TopicTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/shorts-app.qml /./shorts-app.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/content/SharePage.qml /./SharePage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/content/YadApi.qml /./YadApi.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/nongoogle/AppendNGFeedPage.qml /./AppendNGFeedPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/nongoogle/Positioner.qml /./Positioner.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/nongoogle/XmlNetwork.qml /./XmlNetwork.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/MainPage.qml /./MainPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ActionIcon.qml /./ActionIcon.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall -exe shorts /lib/x86_64-linux-gnu/bin/shorts
+strip /lib/x86_64-linux-gnu/bin/shorts
+make[1]: Leaving directory '/home/yunit/builddir/community-apps/shorter/shorts'
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/manifest.json /manifest.json
+Error copying /home/yunit/builddir/community-apps/shorter/manifest.json to /manifest.json: Cannot open /home/yunit/builddir/community-apps/shorter/manifest.json for input
+Makefile:243: recipe for target 'install_manifest_file_install' failed
+make: [install_manifest_file_install] Error 3 (ignored)
+yunit@yunitvm:~/builddir/community-apps/shorter$ mv manifest.json.in manifest.json
+yunit@yunitvm:~/builddir/community-apps/shorter$ sudo make install
+cd shorts/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -o Makefile /home/yunit/builddir/community-apps/shorter/shorts/shorts.pro ) && make -f Makefile install
+make[1]: Entering directory '/home/yunit/builddir/community-apps/shorter/shorts'
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/../shorts.png /./shorts.png
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/../contenthub.json /./contenthub.json
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/utils/databasemodule_v2.js /./databasemodule_v2.js
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/utils/dateutils.js /./dateutils.js
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/utils/imgSeparator.js /./imgSeparator.js
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ArticleViewItem.qml /./ArticleViewItem.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/TopicManagementPage.qml /./TopicManagementPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/SettingsPage.qml /./SettingsPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/GoogleFeedApi.qml /./GoogleFeedApi.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/GridModeItem.qml /./GridModeItem.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ListModeItem.qml /./ListModeItem.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/NetworkManager.qml /./NetworkManager.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/OptionsKeeper.qml /./OptionsKeeper.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/OrganicGrid.qml /./OrganicGrid.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/PageLoader.qml /./PageLoader.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ReadingOptions.qml /./ReadingOptions.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/DarkModeShader.qml /./DarkModeShader.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/FeedComponent.qml /./FeedComponent.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/TopicComponent.qml /./TopicComponent.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleFullImg.qml /./ArticleFullImg.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleOneImgA.qml /./ArticleOneImgA.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleTextA.qml /./ArticleTextA.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/delegates/ArticleTextB.qml /./ArticleTextB.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/AppendFeedPage.qml /./AppendFeedPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/ArticleViewPage.qml /./ArticleViewPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/ChooseTopicPage.qml /./ChooseTopicPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/CreateTopicPage.qml /./CreateTopicPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/EditFeedPage.qml /./EditFeedPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/YadLoginPage.qml /./YadLoginPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/BaseTab.qml /./BaseTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/SavedTab.qml /./SavedTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/ShortsTab.qml /./ShortsTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/tabs/TopicTab.qml /./TopicTab.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/shorts-app.qml /./shorts-app.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/content/SharePage.qml /./SharePage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/content/YadApi.qml /./YadApi.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/nongoogle/AppendNGFeedPage.qml /./AppendNGFeedPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/nongoogle/Positioner.qml /./Positioner.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/nongoogle/XmlNetwork.qml /./XmlNetwork.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/pages/MainPage.qml /./MainPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/shorts/qml/components/ActionIcon.qml /./ActionIcon.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall -exe shorts /lib/x86_64-linux-gnu/bin/shorts
+strip /lib/x86_64-linux-gnu/bin/shorts
+make[1]: Leaving directory '/home/yunit/builddir/community-apps/shorter/shorts'
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/shorter/manifest.json /manifest.json
+yunit@yunitvm:~/builddir/community-apps/shorter$ cd /lib/x86_64-linux-gnu/bin/
+yunit@yunitvm:/lib/x86_64-linux-gnu/bin$ ls
+shorts
+yunit@yunitvm:/lib/x86_64-linux-gnu/bin$ ./shorts 
+QXcbConnection: Could not connect to display 
+Aborted (core dumped
+yunit@yunitvm:~$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Nov 17 12:15:24 2017 from 10.0.2.2
+yunit@yunitvm:~$ cd builddir/community-apps/timer/
+yunit@yunitvm:~/builddir/community-apps/timer$ ls
+manifest.json.in  po  Timer  Timer.pro
+yunit@yunitvm:~/builddir/community-apps/timer$ qmake Timer.pro 
+Info: creating stash file /home/yunit/builddir/community-apps/timer/.qmake.stash
+yunit@yunitvm:~/builddir/community-apps/timer$ make -j4
+sed s/@CLICK_ARCH@/amd64/g /home/yunit/builddir/community-apps/timer/manifest.json.in > /home/yunit/builddir/community-apps/timer/manifest.json
+make: Circular /home/yunit/builddir/community-apps/timer/Timer/Timer.desktop <- /home/yunit/builddir/community-apps/timer/Timer/Timer.desktop dependency dropped.
+cd Timer/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -o Makefile /home/yunit/builddir/community-apps/timer/Timer/Timer.pro ) && make -f Makefile 
+mkdir -p /home/yunit/builddir/community-apps/timer/Timer && cd /home/yunit/builddir/community-apps/timer/Timer && intltool-extract --type=gettext/ini --update --srcdir=/home/yunit/builddir/community-apps/timer/Timer Timer.desktop
+make[1]: Entering directory '/home/yunit/builddir/community-apps/timer/Timer'
+make[1]: Nothing to be done for 'first'.
+make[1]: Leaving directory '/home/yunit/builddir/community-apps/timer/Timer'
+Wrote Timer.desktop.h
+mkdir -p /home/yunit/builddir/community-apps/timer/po && xgettext -o /home/yunit/builddir/community-apps/timer/po/timer.mivoligo.pot --qt --c++ --from-code=UTF-8 --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 --keyword=N_ /home/yunit/builddir/community-apps/timer/Timer/AboutPage.qml /home/yunit/builddir/community-apps/timer/Timer/ClickyIcon.qml /home/yunit/builddir/community-apps/timer/Timer/DefaultSoundPage.qml /home/yunit/builddir/community-apps/timer/Timer/EditTimer.qml /home/yunit/builddir/community-apps/timer/Timer/FavPage.qml /home/yunit/builddir/community-apps/timer/Timer/InfoBubble.qml /home/yunit/builddir/community-apps/timer/Timer/InfoPage.qml /home/yunit/builddir/community-apps/timer/Timer/Main.qml /home/yunit/builddir/community-apps/timer/Timer/MainPage.qml /home/yunit/builddir/community-apps/timer/Timer/ProgressCircle.qml /home/yunit/builddir/community-apps/timer/Timer/SettingsPage.qml /home/yunit/builddir/community-apps/timer/Timer/SoundSettingExtra.qml /home/yunit/builddir/community-apps/timer/Timer/ThemePage.qml /home/yunit/builddir/community-apps/timer/Timer/TimerElement.qml /home/yunit/builddir/community-apps/timer/Timer/TimerListItem.qml /home/yunit/builddir/community-apps/timer/Timer/TimerPreview.qml /home/yunit/builddir/community-apps/timer/Timer/TimerSetterExtra.qml /home/yunit/builddir/community-apps/timer/Timer/TimerSetterMain.qml /home/yunit/builddir/community-apps/timer/Timer/TimeSetter.qml /home/yunit/builddir/community-apps/timer/Timer/Warning.qml /home/yunit/builddir/community-apps/timer/Timer/Storage.js /home/yunit/builddir/community-apps/timer/Timer/Timer.desktop.h
+yunit@yunitvm:~/builddir/community-apps/timer$ sudo make install
+[sudo] password for yunit: 
+cd Timer/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -o Makefile /home/yunit/builddir/community-apps/timer/Timer/Timer.pro ) && make -f Makefile install
+make[1]: Entering directory '/home/yunit/builddir/community-apps/timer/Timer'
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/Timer.apparmor /Timer/Timer.apparmor
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/Timer.png /Timer/Timer.png
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/AboutPage.qml /Timer/AboutPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/ClickyIcon.qml /Timer/ClickyIcon.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/DefaultSoundPage.qml /Timer/DefaultSoundPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/EditTimer.qml /Timer/EditTimer.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/FavPage.qml /Timer/FavPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/InfoBubble.qml /Timer/InfoBubble.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/InfoPage.qml /Timer/InfoPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/Main.qml /Timer/Main.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/MainPage.qml /Timer/MainPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/ProgressCircle.qml /Timer/ProgressCircle.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/SettingsPage.qml /Timer/SettingsPage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/SoundSettingExtra.qml /Timer/SoundSettingExtra.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/ThemePage.qml /Timer/ThemePage.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/TimerElement.qml /Timer/TimerElement.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/TimerListItem.qml /Timer/TimerListItem.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/TimerPreview.qml /Timer/TimerPreview.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/TimerSetterExtra.qml /Timer/TimerSetterExtra.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/TimerSetterMain.qml /Timer/TimerSetterMain.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/TimeSetter.qml /Timer/TimeSetter.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/Warning.qml /Timer/Warning.qml
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/Storage.js /Timer/Storage.js
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/Timer.desktop /Timer/Timer.desktop
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/images/add-to-favs.svg /Timer/add-to-favs.svg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/images/Colores /Timer/Colores
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/images/Imitatio /Timer/Imitatio
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/images/Standard /Timer/Standard
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Beeps.ogg /Timer/Beeps.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Buzz.ogg /Timer/Buzz.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Campanula.ogg /Timer/Campanula.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Drrr.ogg /Timer/Drrr.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Fanfare.ogg /Timer/Fanfare.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Harp.ogg /Timer/Harp.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Joy.ogg /Timer/Joy.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Military.ogg /Timer/Military.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Progressive.ogg /Timer/Progressive.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Riff.ogg /Timer/Riff.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Tempus.ogg /Timer/Tempus.ogg
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/Timer/sounds/Woods.ogg /Timer/Woods.ogg
+make[1]: Leaving directory '/home/yunit/builddir/community-apps/timer/Timer'
+/usr/lib/x86_64-linux-gnu/qt5/bin/qmake -install qinstall /home/yunit/builddir/community-apps/timer/manifest.json /manifest.json
+yunit@yunitvm:~/builddir/community-apps/timer$ cd ..
+yunit@yunitvm:~/builddir/community-apps$ ti
+tic          tifftopnm    time         timedatectl  timeout      times        tipc         
+yunit@yunitvm:~/builddir/community-apps$ ti
+tic          tifftopnm    time         timedatectl  timeout      times        tipc         
+yunit@yunitvm:~/builddir/community-apps$ ls /lib/
+apparmor/                             modules/
+cpp                                   modules-load.d/
+crda/                                 open-iscsi/
+cryptsetup/                           recovery-mode/
+firmware/                             resolvconf/
+hdparm/                               systemd/
+ifupdown/                             sysvinit/
+init/                                 terminfo/
+klibc-k3La8MUnuzHQ0_kG8hokcGAC0PA.so  udev/
+libhandle.so.1                        ufw/
+libhandle.so.1.0.3                    x86_64-linux-gnu/
+lsb/                                  xtables/
+modprobe.d/                           
+yunit@yunitvm:~/builddir/community-apps$ ls /lib/x86_64-linux-gnu/bin/
+shorts
+yunit@yunitvm:~/builddir/community-apps$ ls /
+ActionIcon.qml        com.ubuntu.calendar.apparmor                 FeedComponent.qml  mnt                 run               TopicComponent.qml
+AppendFeedPage.qml    com.ubuntu.calendar_calendar.application     GoogleFeedApi.qml  NetworkManager.qml  SavedTab.qml      TopicManagementPage.qml
+AppendNGFeedPage.qml  com.ubuntu.calendar_calendar.desktop         GridModeItem.qml   node_modules        sbin              TopicTab.qml
+ArticleFullImg.qml    com.ubuntu.calendar_calendar.url-dispatcher  home               opt                 SettingsPage.qml  usr
+ArticleOneImgA.qml    com.ubuntu.ubports.apparmor                  imgSeparator.js    OptionsKeeper.qml   share             var
+ArticleTextA.qml      com.ubuntu.ubports.desktop                   initrd.img         OrganicGrid.qml     SharePage.qml     vmlinuz
+ArticleTextB.qml      contenthub.json                              initrd.img.old     PageLoader.qml      shorts-app.qml    vmlinuz.old
+ArticleViewItem.qml   CreateTopicPage.qml                          lib                Positioner.qml      shorts.png        XmlNetwork.qml
+ArticleViewPage.qml   DarkModeShader.qml                           lib64              proc                ShortsTab.qml     YadApi.qml
+assets                databasemodule_v2.js                         ListModeItem.qml   push-helper         snap              YadLoginPage.qml
+BaseTab.qml           dateutils.js                                 lost+found         push-helper.json    srv
+bin                   dev                                          MainPage.qml       qml                 sys
+boot                  EditFeedPage.qml                             manifest.json      ReadingOptions.qml  Timer
+ChooseTopicPage.qml   etc                                          media              root                tmp
+yunit@yunitvm:~/builddir/community-apps$ qmlscene /Timer/
+AboutPage.qml          DefaultSoundPage.qml   InfoBubble.qml         Progressive.ogg        ThemePage.qml          TimerSetterExtra.qml
+add-to-favs.svg        Drrr.ogg               InfoPage.qml           Riff.ogg               Timer.apparmor         TimerSetterMain.qml
+Beeps.ogg              EditTimer.qml          Joy.ogg                SettingsPage.qml       Timer.desktop          TimeSetter.qml
+Buzz.ogg               Fanfare.ogg            MainPage.qml           SoundSettingExtra.qml  TimerElement.qml       Warning.qml
+Campanula.ogg          FavPage.qml            Main.qml               Standard/              TimerListItem.qml      Woods.ogg
+ClickyIcon.qml         Harp.ogg               Military.ogg           Storage.js             Timer.png              
+Colores/               Imitatio/              ProgressCircle.qml     Tempus.ogg             TimerPreview.qml       
+yunit@yunitvm:~/builddir/community-apps$ qmlscene /Timer/Main.qml 
+QXcbConnection: Could not connect to display 
+Aborted (core dumped)
+yunit@yunitvm:~/builddir/community-apps$ QT_QPA_PLATFORM=mirserver qmlscene /Timer/Main.qml 
+[2017-11-17 12:38:52.580675] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+[2017-11-17 12:38:52.581199] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+[2017-11-17 12:38:52.582257] mirserver: Starting
+[2017-11-17 12:38:52.582750] mircommon: Loading modules from: /usr/lib/x86_64-linux-gnu/mir/server-platform
+[2017-11-17 12:38:52.583145] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/graphics-mesa-kms.so.12
+[2017-11-17 12:38:52.583462] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/server-mesa-x11.so.12
+[2017-11-17 12:38:52.584434] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/input-evdev.so.6
+[2017-11-17 12:38:52.586481] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+[2017-11-17 12:38:52.586917] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+[2017-11-17 12:38:52.587416] mirserver: Selected driver: mir:mesa-kms (version 0.26.3)
+Exception while creating graphics platform
+ERROR: /build/mir-O8_xaj/mir-0.26.3+16.04.20170605/src/platforms/mesa/server/kms/linux_virtual_terminal.cpp(220): Throw in function int mir::graphics::mesa::LinuxVirtualTerminal::find_active_vt_number()
+Dynamic exception type: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+std::exception::what: Failed to find the current VT
+
+
+yunit@yunitvm:~/builddir/community-apps$ cd uMatriks/
+yunit@yunitvm:~/builddir/community-apps/uMatriks$ ls
+clickable.json  lib  LICENSE  manifest.json.in  po  README.md  uMatriks  uMatriks.pro
+yunit@yunitvm:~/builddir/community-apps/uMatriks$ qmake uMatriks.pro 
+Info: creating stash file /home/yunit/builddir/community-apps/uMatriks/.qmake.stash
+yunit@yunitvm:~/builddir/community-apps/uMatriks$ make -j4
+sed s/@CLICK_ARCH@/amd64/g /home/yunit/builddir/community-apps/uMatriks/manifest.json.in > /home/yunit/builddir/community-apps/uMatriks/manifest.json
+make: Circular /home/yunit/builddir/community-apps/uMatriks/uMatriks/uMatriks.desktop <- /home/yunit/builddir/community-apps/uMatriks/uMatriks/uMatriks.desktop dependency dropped.
+cd uMatriks/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -o Makefile /home/yunit/builddir/community-apps/uMatriks/uMatriks/uMatriks.pro ) && make -f Makefile 
+cd lib/Matrix/ && ( test -e Makefile || /usr/lib/x86_64-linux-gnu/qt5/bin/qmake -o Makefile /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/Matrix.pro ) && make -f Makefile 
+mkdir -p /home/yunit/builddir/community-apps/uMatriks/uMatriks && cd /home/yunit/builddir/community-apps/uMatriks/uMatriks && intltool-extract --type=gettext/ini --update --srcdir=/home/yunit/builddir/community-apps/uMatriks/uMatriks uMatriks.desktop
+Wrote uMatriks.desktop.h
+mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && xgettext -o /home/yunit/builddir/community-apps/uMatriks/po/umatriks.larreamikel.pot --qt --c++ --from-code=UTF-8 --add-comments=TRANSLATORS --keyword=tr --keyword=tr:1,2 --keyword=N_ /home/yunit/builddir/community-apps/uMatriks/uMatriks/About.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/BasePage.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/ChatRoom.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/DialogJoinRoom.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/Login.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/Main.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/MemberList.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/RoomList.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/RoomView.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/Theme.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/WelcomePage.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/components/ChatBubble.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/tests/unit/tst_main.qml /home/yunit/builddir/community-apps/uMatriks/uMatriks/jschat.js /home/yunit/builddir/community-apps/uMatriks/uMatriks/utils.js /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/main.cpp /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/matrix.cpp /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/matrixconn.cpp /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/models/imageprovider.cpp /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/models/messageeventmodel.cpp /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/models/roomlistmodel.cpp /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/matrix.h /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/matrixconn.h /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/models/imageprovider.h /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/models/messageeventmodel.h /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/models/roomlistmodel.h /home/yunit/builddir/community-apps/uMatriks/uMatriks/uMatriks.desktop.h
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d ca -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/ca.po.updated
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d cz -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/cz.po.updated
+make[1]: Entering directory '/home/yunit/builddir/community-apps/uMatriks/uMatriks'
+make[1]: Nothing to be done for 'first'.
+make[1]: Leaving directory '/home/yunit/builddir/community-apps/uMatriks/uMatriks'
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d de -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/de.po.updated
+Cannot read /home/yunit/builddir/community-apps/uMatriks/lib/Matrix/libqmatrixclient/libqmatrixclient.pri: No such file or directory
+make[1]: Entering directory '/home/yunit/builddir/community-apps/uMatriks/lib/Matrix'
+g++ -c -m64 -pipe -O2 -std=gnu++11 -D_REENTRANT -Wall -W -fPIC -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o matrix.o matrix.cpp
+Merging ./cz.po with umatriks.larreamikel.pot...Merging ./ca.po with umatriks.larreamikel.pot...Merging ./de.po with umatriks.larreamikel.pot......... done.
+..... done.
+. done.
+29 translated messages35 translated messages, 6 untranslated messages.
+.
+29 translated messages, 6 untranslated messages.
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d es -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/es.po.updated
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d eu -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/eu.po.updated
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d fr -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/fr.po.updated
+Merging ./es.po with umatriks.larreamikel.pot...Merging ./fr.po with umatriks.larreamikel.pot...Merging ./eu.po with umatriks.larreamikel.pot............ done.
+ done.
+... done.
+29 translated messages, 6 untranslated messages.
+29 translated messages23 translated messages, 1 fuzzy translation, 11 untranslated messages.
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d nb -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/nb.po.updated
+, 6 untranslated messages.
+g++ -c -m64 -pipe -O2 -std=gnu++11 -D_REENTRANT -Wall -W -fPIC -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -o roomlistmodel.o models/roomlistmodel.cpp
+cd /home/yunit/builddir/community-apps/uMatriks/po && LC_ALL=C intltool-update -d ru -g umatriks.larreamikel -x && mkdir -p /home/yunit/builddir/community-apps/uMatriks/po && touch /home/yunit/builddir/community-apps/uMatriks/po/ru.po.updated
+Merging ./nb.po with umatriks.larreamikel.pot...Merging ./ru.po with umatriks.larreamikel.pot...matrix.cpp:5:24: fatal error: connection.h: No such file or directory
+compilation terminated.
+..... done.
+... done.
+Makefile:441: recipe for target 'matrix.o' failed
+make[1]: *** [matrix.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+13 translated messages29 translated messages, 1 fuzzy translation, 21 untranslated messages.
+, 6 untranslated messages.
+mkdir -p po/ca && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/ca/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/ca.po
+mkdir -p po/cz && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/cz/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/cz.po
+mkdir -p po/de && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/de/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/de.po
+mkdir -p po/es && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/es/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/es.po
+mkdir -p po/eu && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/eu/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/eu.po
+mkdir -p po/fr && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/fr/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/fr.po
+mkdir -p po/nb && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/nb/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/nb.po
+mkdir -p po/ru && LC_ALL=C msgfmt -o /home/yunit/builddir/community-apps/uMatriks/po/ru/umatriks.larreamikel.mo /home/yunit/builddir/community-apps/uMatriks/po/ru.po
+models/roomlistmodel.cpp:25:41: fatal error: libqmatrixclient/connection.h: No such file or directory
+compilation terminated.
+Makefile:444: recipe for target 'roomlistmodel.o' failed
+make[1]: *** [roomlistmodel.o] Error 1
+make[1]: Leaving directory '/home/yunit/builddir/community-apps/uMatriks/lib/Matrix'
+Makefile:70: recipe for target 'sub-lib-Matrix-make_first' failed
+make: *** [sub-lib-Matrix-make_first] Error 2
+yunit@yunitvm:~/builddir/community-apps/uMatriks$ cd ../kodimote/apps/ubuntu/
+yunit@yunitvm:~/builddir/community-apps/kodimote/apps/ubuntu$ ls
+images.qrc       kodimote80.png     kodimote-contenthub.json  kodimote-square.svg  main.cpp          qml            ubuntuhelper.cpp  ubuntu.pro
+kodimote256.png  kodimote.apparmor  kodimote.desktop          kodimote.svg         manifest.json.in  resources.qrc  ubuntuhelper.h
+yunit@yunitvm:~/builddir/community-apps/kodimote/apps/ubuntu$ qmake ubuntu.pro 
+Info: creating stash file /home/yunit/builddir/community-apps/kodimote/apps/ubuntu/.qmake.stash
+yunit@yunitvm:~/builddir/community-apps/kodimote/apps/ubuntu$ make -j4
+make: *** No rule to make target '../../libkodimote/libkodimote.a', needed by 'kodimote'. Stop.
+yunit@yunitvm:~/builddir/community-apps/kodimote/apps/ubuntu$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+

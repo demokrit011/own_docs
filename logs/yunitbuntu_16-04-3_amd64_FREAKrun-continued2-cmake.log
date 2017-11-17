@@ -1,0 +1,2060 @@
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Nov 17 11:18:46 2017 from 10.0.2.2
+yunit@yunitvm:~$ cd builddir/dialer-app/
+yunit@yunitvm:~/builddir/dialer-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find Lcov (missing:  LCOV_EXECUTABLE GENHTML_EXECUTABLE) 
+-- Could NOT find gcovr (missing:  GCOVR_EXECUTABLE) 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLICK_MODE
+
+
+-- Build files have been written to: /home/yunit/builddir/dialer-app
+yunit@yunitvm:~/builddir/dialer-app$ make -j4
+Scanning dependencies of target pofiles_70
+Scanning dependencies of target pofiles_71
+Scanning dependencies of target pofiles_75
+Scanning dependencies of target pofiles_74
+[  1%] Generating es.gmo
+[  2%] Generating sv.gmo
+[  4%] Generating ast.gmo
+[  3%] Generating ca@valencia.gmo
+[  4%] Built target pofiles_70
+[  4%] Built target pofiles_74
+[  4%] Built target pofiles_75
+[  4%] Built target pofiles_71
+Scanning dependencies of target pofiles_65
+Scanning dependencies of target pofiles_68
+Scanning dependencies of target pofiles_61
+Scanning dependencies of target pofiles_66
+[  6%] Generating nl.gmo
+[  7%] Generating sr.gmo
+[  8%] Generating mr.gmo
+[  9%] Generating lv.gmo
+[  9%] Built target pofiles_65
+[  9%] Built target pofiles_61
+[  9%] Built target pofiles_68
+[  9%] Built target pofiles_66
+Scanning dependencies of target pofiles_60
+Scanning dependencies of target pofiles_55
+Scanning dependencies of target pofiles_56
+Scanning dependencies of target pofiles_52
+[ 11%] Generating ko.gmo
+[ 12%] Generating fr.gmo
+[ 13%] Generating tr.gmo
+[ 14%] Generating uk.gmo
+[ 14%] Built target pofiles_52
+[ 14%] Built target pofiles_55
+[ 14%] Built target pofiles_60
+[ 14%] Built target pofiles_56
+Scanning dependencies of target pofiles_51
+Scanning dependencies of target pofiles_50
+Scanning dependencies of target pofiles_19
+Scanning dependencies of target pofiles_49
+[ 16%] Generating et.gmo
+[ 17%] Generating is.gmo
+[ 19%] Generating ar.gmo
+[ 18%] Generating he.gmo
+[ 19%] Built target pofiles_51
+[ 19%] Built target pofiles_50
+[ 19%] Built target pofiles_49
+[ 19%] Built target pofiles_19
+Scanning dependencies of target pofiles_39
+Scanning dependencies of target pofiles_53
+Scanning dependencies of target pofiles_17
+Scanning dependencies of target pofiles_45
+[ 20%] Generating gd.gmo
+[ 22%] Generating sl.gmo
+[ 23%] Generating ku.gmo
+[ 24%] Generating en_AU.gmo
+[ 24%] Built target pofiles_39
+[ 24%] Built target pofiles_17
+[ 24%] Built target pofiles_53
+[ 24%] Built target pofiles_45
+Scanning dependencies of target pofiles_16
+Scanning dependencies of target pofiles_34
+Scanning dependencies of target pofiles_62
+Scanning dependencies of target pofiles_15
+[ 25%] Generating de.gmo
+[ 27%] Generating bs.gmo
+[ 28%] Generating ne.gmo
+[ 29%] Generating oc.gmo
+[ 29%] Built target pofiles_62
+[ 29%] Built target pofiles_16
+[ 29%] Built target pofiles_34
+[ 29%] Built target pofiles_15
+Scanning dependencies of target pofiles_6
+Scanning dependencies of target pofiles_33
+Scanning dependencies of target pofiles_73
+Scanning dependencies of target pofiles_2
+[ 30%] Generating si.gmo
+[ 32%] Generating pt_BR.gmo
+[ 33%] Generating ja.gmo
+[ 34%] Generating kn.gmo
+[ 34%] Built target pofiles_2
+[ 34%] Built target pofiles_6
+[ 34%] Built target pofiles_33
+[ 34%] Built target pofiles_73
+Scanning dependencies of target pofiles_58
+Scanning dependencies of target pofiles_25
+Scanning dependencies of target pofiles_44
+Scanning dependencies of target pofiles_20
+[ 35%] Generating bem.gmo
+[ 37%] Generating zh_HK.gmo
+[ 38%] Generating ru.gmo
+[ 39%] Generating ms.gmo
+[ 39%] Built target pofiles_58
+[ 39%] Built target pofiles_25
+[ 39%] Built target pofiles_20
+[ 39%] Built target pofiles_44
+Scanning dependencies of target pofiles_12
+Scanning dependencies of target pofiles_47
+Scanning dependencies of target pofiles_13
+Scanning dependencies of target pofiles_18
+[ 40%] Generating ug.gmo
+[ 41%] Generating ca.gmo
+[ 43%] Generating fr_CA.gmo
+[ 44%] Generating en_GB.gmo
+[ 44%] Built target pofiles_47
+[ 44%] Built target pofiles_13
+[ 44%] Built target pofiles_12
+[ 44%] Built target pofiles_18
+Scanning dependencies of target pofiles_57
+Scanning dependencies of target pofiles_32
+Scanning dependencies of target pofiles_38
+Scanning dependencies of target pofiles_11
+[ 45%] Generating az.gmo
+[ 49%] Generating eo.gmo
+[ 46%] Generating hr.gmo
+[ 48%] Generating zh_CN.gmo
+[ 49%] Built target pofiles_32
+[ 49%] Built target pofiles_38
+[ 49%] Built target pofiles_11
+[ 49%] Built target pofiles_57
+Scanning dependencies of target pofiles_5
+Scanning dependencies of target pofiles_67
+Scanning dependencies of target pofiles_21
+Scanning dependencies of target pofiles_69
+[ 50%] Generating pt.gmo
+[ 54%] Generating hi.gmo
+[ 51%] Generating ta.gmo
+[ 53%] Generating gl.gmo
+[ 54%] Built target pofiles_67
+[ 54%] Built target pofiles_21
+[ 54%] Built target pofiles_5
+[ 54%] Built target pofiles_69
+Scanning dependencies of target pofiles_30
+Scanning dependencies of target pofiles_10
+Scanning dependencies of target pofiles_59
+Scanning dependencies of target pofiles_14
+[ 55%] Generating id.gmo
+[ 59%] Generating ro.gmo
+[ 56%] Generating lo.gmo
+[ 58%] Generating ia.gmo
+[ 59%] Built target pofiles_10
+[ 59%] Built target pofiles_14
+[ 59%] Built target pofiles_59
+[ 59%] Built target pofiles_30
+Scanning dependencies of target pofiles_31
+Scanning dependencies of target pofiles_1
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_3
+[ 60%] Generating nn.gmo
+[ 61%] Generating cs.gmo
+[ 62%] Generating el.gmo
+[ 64%] Generating pa.gmo
+[ 64%] Built target pofiles_1
+[ 64%] Built target pofiles_8
+[ 64%] Built target pofiles_31
+[ 64%] Built target pofiles_3
+Scanning dependencies of target pofiles_7
+Scanning dependencies of target pofiles_63
+Scanning dependencies of target pofiles_35
+Scanning dependencies of target pofiles_4
+[ 65%] Generating da.gmo
+[ 66%] Generating pl.gmo
+[ 67%] Generating sk.gmo
+[ 69%] Generating bn.gmo
+[ 69%] Built target pofiles_7
+[ 69%] Built target pofiles_35
+[ 69%] Built target pofiles_63
+[ 69%] Built target pofiles_4
+Scanning dependencies of target pofiles_28
+Scanning dependencies of target pofiles_22
+Scanning dependencies of target pofiles_9
+Scanning dependencies of target pofiles_46
+[ 70%] Generating zh_TW.gmo
+[ 71%] Generating sq.gmo
+[ 72%] Generating tg.gmo
+[ 74%] Generating hu.gmo
+[ 74%] Built target pofiles_28
+[ 74%] Built target pofiles_46
+[ 74%] Built target pofiles_22
+[ 74%] Built target pofiles_9
+Scanning dependencies of target pofiles_24
+Scanning dependencies of target pofiles_26
+Scanning dependencies of target pofiles_64
+Scanning dependencies of target pofiles_23
+[ 75%] Generating km.gmo
+[ 76%] Generating th.gmo
+[ 77%] Generating am.gmo
+[ 79%] Generating br.gmo
+[ 79%] Built target pofiles_24
+[ 79%] Built target pofiles_23
+[ 79%] Built target pofiles_26
+[ 79%] Built target pofiles_64
+Scanning dependencies of target pofiles_27
+Scanning dependencies of target pofiles_54
+Scanning dependencies of target pofiles_72
+Scanning dependencies of target pofiles_48
+[ 80%] Generating eu.gmo
+[ 83%] Generating cy.gmo
+[ 81%] Generating aa.gmo
+[ 82%] Generating nb.gmo
+[ 83%] Built target pofiles_72
+[ 83%] Built target pofiles_48
+[ 83%] Built target pofiles_27
+[ 83%] Built target pofiles_54
+Scanning dependencies of target pofiles_36
+Scanning dependencies of target pofiles_37
+Scanning dependencies of target pofiles_42
+Scanning dependencies of target pofiles_29
+[ 85%] Generating it.gmo
+[ 86%] Generating shn.gmo
+[ 87%] Generating fa.gmo
+[ 88%] Generating fi.gmo
+[ 88%] Built target pofiles_37
+[ 88%] Built target pofiles_42
+[ 88%] Built target pofiles_36
+[ 88%] Built target pofiles_29
+Scanning dependencies of target pofiles_40
+Scanning dependencies of target pofiles_43
+Scanning dependencies of target dialer-app_automoc
+Scanning dependencies of target pofiles_41
+[ 90%] Generating be.gmo
+[ 91%] Generating vi.gmo
+[ 92%] Generating my.gmo
+[ 93%] Automatic moc for target dialer-app
+Generating moc_dialerapplication.cpp
+[ 93%] Built target pofiles_41
+[ 93%] Built target pofiles_40
+[ 93%] Built target pofiles_43
+Scanning dependencies of target dialer_app_QMlFiles
+Scanning dependencies of target dialer-app.desktop
+Scanning dependencies of target dialer_dialer_QMlFiles
+[ 95%] Merging translations into dialer-app.desktop
+[ 95%] Built target dialer_dialer_QMlFiles
+[ 95%] Built target dialer_app_QMlFiles
+Scanning dependencies of target dialer_history_QMlFiles
+Scanning dependencies of target dialer_livecall_QMlFiles
+[ 95%] Built target dialer_history_QMlFiles
+[ 95%] Built target dialer_livecall_QMlFiles
+Scanning dependencies of target dialer_contactviewpage_QMlFiles
+Scanning dependencies of target dialer_contacts_QMlFiles
+[ 95%] Built target dialer_contactviewpage_QMlFiles
+[ 95%] Built target dialer_contacts_QMlFiles
+Scanning dependencies of target dialer_contacteditor_QMlFiles
+Scanning dependencies of target dialer_dialogs_QMlFiles
+[ 95%] Built target dialer_contacteditor_QMlFiles
+[ 95%] Built target dialer_dialogs_QMlFiles
+Scanning dependencies of target dialer__account_settings_QMlFiles
+Scanning dependencies of target dialer_settings_QMlFiles
+[ 95%] Built target dialer__account_settings_QMlFiles
+[ 95%] Built target dialer-app_automoc
+[ 95%] Built target dialer_settings_QMlFiles
+Scanning dependencies of target tst_QmlFiles
+Scanning dependencies of target dialer-app
+[ 95%] Built target tst_QmlFiles
+[ 95%] Built target dialer-app.desktop
+[ 96%] Building CXX object src/CMakeFiles/dialer-app.dir/main.cpp.o
+[ 98%] Building CXX object src/CMakeFiles/dialer-app.dir/dialerapplication.cpp.o
+[ 97%] Building CXX object src/CMakeFiles/dialer-app.dir/dialer-app_automoc.cpp.o
+[100%] Linking CXX executable dialer-app
+[100%] Built target dialer-app
+yunit@yunitvm:~/builddir/dialer-app$ sudo make install
+[sudo] password for yunit: 
+[  1%] Built target pofiles_75
+[  2%] Built target pofiles_74
+[  3%] Built target pofiles_71
+[  4%] Built target pofiles_70
+[  6%] Built target pofiles_68
+[  7%] Built target pofiles_66
+[  8%] Built target pofiles_65
+[  9%] Built target pofiles_61
+[ 11%] Built target pofiles_60
+[ 12%] Built target pofiles_56
+[ 13%] Built target pofiles_55
+[ 14%] Built target pofiles_52
+[ 16%] Built target pofiles_51
+[ 17%] Built target pofiles_50
+[ 18%] Built target pofiles_49
+[ 19%] Built target pofiles_19
+[ 20%] Built target pofiles_39
+[ 22%] Built target pofiles_53
+[ 23%] Built target pofiles_17
+[ 24%] Built target pofiles_45
+[ 25%] Built target pofiles_16
+[ 27%] Built target pofiles_34
+[ 28%] Built target pofiles_62
+[ 29%] Built target pofiles_15
+[ 30%] Built target pofiles_73
+[ 32%] Built target pofiles_2
+[ 33%] Built target pofiles_6
+[ 34%] Built target pofiles_33
+[ 35%] Built target pofiles_58
+[ 37%] Built target pofiles_44
+[ 38%] Built target pofiles_20
+[ 39%] Built target pofiles_25
+[ 40%] Built target pofiles_13
+[ 41%] Built target pofiles_12
+[ 43%] Built target pofiles_18
+[ 44%] Built target pofiles_47
+[ 45%] Built target pofiles_32
+[ 46%] Built target pofiles_11
+[ 48%] Built target pofiles_57
+[ 49%] Built target pofiles_38
+[ 50%] Built target pofiles_69
+[ 51%] Built target pofiles_21
+[ 53%] Built target pofiles_5
+[ 54%] Built target pofiles_67
+[ 55%] Built target pofiles_30
+[ 56%] Built target pofiles_59
+[ 58%] Built target pofiles_10
+[ 59%] Built target pofiles_14
+[ 60%] Built target pofiles_3
+[ 61%] Built target pofiles_8
+[ 62%] Built target pofiles_31
+[ 64%] Built target pofiles_1
+[ 65%] Built target pofiles_7
+[ 66%] Built target pofiles_35
+[ 67%] Built target pofiles_4
+[ 69%] Built target pofiles_63
+[ 70%] Built target pofiles_9
+[ 71%] Built target pofiles_28
+[ 72%] Built target pofiles_22
+[ 74%] Built target pofiles_46
+[ 75%] Built target pofiles_23
+[ 76%] Built target pofiles_24
+[ 77%] Built target pofiles_64
+[ 79%] Built target pofiles_26
+[ 80%] Built target pofiles_72
+[ 81%] Built target pofiles_27
+[ 82%] Built target pofiles_54
+[ 83%] Built target pofiles_48
+[ 85%] Built target pofiles_29
+[ 86%] Built target pofiles_36
+[ 87%] Built target pofiles_37
+[ 88%] Built target pofiles_42
+[ 90%] Built target pofiles_40
+[ 91%] Built target pofiles_41
+[ 92%] Built target pofiles_43
+[ 93%] Automatic moc for target dialer-app
+[ 93%] Built target dialer-app_automoc
+[ 98%] Built target dialer-app
+[100%] Merging translations into dialer-app.desktop
+[100%] Built target dialer-app.desktop
+[100%] Built target dialer_app_QMlFiles
+[100%] Built target dialer_dialer_QMlFiles
+[100%] Built target dialer_history_QMlFiles
+[100%] Built target dialer_livecall_QMlFiles
+[100%] Built target dialer_contacts_QMlFiles
+[100%] Built target dialer_contactviewpage_QMlFiles
+[100%] Built target dialer_contacteditor_QMlFiles
+[100%] Built target dialer_dialogs_QMlFiles
+[100%] Built target dialer_settings_QMlFiles
+[100%] Built target dialer__account_settings_QMlFiles
+[100%] Built target tst_QmlFiles
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/share/locale/nn/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/kn/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/cs/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/gl/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ja/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/bn/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/pa/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/lo/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/az/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/en_GB/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/fr_CA/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ia/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/oc/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/sl/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ug/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/he/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/bem/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/hi/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/tg/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/am/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/br/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ru/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/th/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/aa/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/zh_TW/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/fa/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/id/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/el/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/zh_CN/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/pt_BR/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ne/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/da/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/eo/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/gd/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/be/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/my/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/shn/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/vi/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ms/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/en_AU/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/sq/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ca/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/cy/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ar/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/et/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/is/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ku/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/eu/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ko/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/uk/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/hr/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/zh_HK/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ro/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/tr/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/bs/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/sk/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/km/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/mr/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/lv/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/sr/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ta/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ca@valencia/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/ast/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/nb/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/si/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/sv/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/dialer-app.mo
+-- Installing: /usr/bin/dialer-app
+-- Installing: /usr/share/applications/dialer-app.desktop
+-- Installing: /usr/share/url-dispatcher/urls/dialer-app.url-dispatcher
+-- Installing: /usr/share/dialer-app/dialer-app.qml
+-- Installing: /usr/share/dialer-app/InputInfo.qml
+-- Installing: /usr/share/dialer-app/AccountsModel.qml
+-- Installing: /usr/share/dialer-app/assets
+-- Installing: /usr/share/dialer-app/assets/dialer-app.png
+-- Installing: /usr/share/dialer-app/assets/swipe_arrow.svg
+-- Installing: /usr/share/dialer-app/assets/dialer-app-screenshot.png
+-- Installing: /usr/share/dialer-app/MMI
+-- Installing: /usr/share/dialer-app/MMI/IMEI.qml
+-- Installing: /usr/share/dialer-app/MMI/IMEIDialog.qml
+-- Installing: /usr/share/dialer-app/DialerPage/TextInputPopover.qml
+-- Installing: /usr/share/dialer-app/DialerPage/DialerPage.qml
+-- Installing: /usr/share/dialer-app/DialerPage/CustomButton.qml
+-- Installing: /usr/share/dialer-app/DialerPage/DialerBottomEdge.qml
+-- Installing: /usr/share/dialer-app/DialerPage/KeypadButton.qml
+-- Installing: /usr/share/dialer-app/DialerPage/KeypadEntry.qml
+-- Installing: /usr/share/dialer-app/DialerPage/CallButton.qml
+-- Installing: /usr/share/dialer-app/DialerPage/Keypad.qml
+-- Installing: /usr/share/dialer-app/HistoryPage/HistoryDetailsPage.qml
+-- Installing: /usr/share/dialer-app/HistoryPage/ExpandableButton.qml
+-- Installing: /usr/share/dialer-app/HistoryPage/HistoryDelegate.qml
+-- Installing: /usr/share/dialer-app/HistoryPage/SwipeItemDemo.qml
+-- Installing: /usr/share/dialer-app/HistoryPage/HistoryPage.qml
+-- Installing: /usr/share/dialer-app/HistoryPage/dateUtils.js
+-- Installing: /usr/share/dialer-app/LiveCallPage/LiveCallKeypadButton.qml
+-- Installing: /usr/share/dialer-app/LiveCallPage/StopWatch.qml
+-- Installing: /usr/share/dialer-app/LiveCallPage/HangupButton.qml
+-- Installing: /usr/share/dialer-app/LiveCallPage/ConferenceCallDisplay.qml
+-- Installing: /usr/share/dialer-app/LiveCallPage/LiveCall.qml
+-- Installing: /usr/share/dialer-app/LiveCallPage/MultiCallDisplay.qml
+-- Installing: /usr/share/dialer-app/ContactsPage/KeyboardRectagle.qml
+-- Installing: /usr/share/dialer-app/ContactsPage/ContactsPage.qml
+-- Installing: /usr/share/dialer-app/ContactViewPage/DialerContactViewPage.qml
+-- Installing: /usr/share/dialer-app/ContactEditorPage/DialerContactEditorPage.qml
+-- Installing: /usr/share/dialer-app/Dialogs/SetDefaultSIMCardDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/NotificationDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/DisableFlightModeDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/SimLockedDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/UssdErrorDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/NoDefaultSIMCardDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/FlightModeProgressDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/UssdProgressDialog.qml
+-- Installing: /usr/share/dialer-app/Dialogs/UssdResponseDialog.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/SettingsItemTitle.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/VCardParser.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/SettingsTextField.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/CallForwarding.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/CallForwardItem.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/KeyboardRectangle.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/NoSims.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/SettingsPage.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/Ofono.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/ServiceInfo.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/OnlineAccountsHelper.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/Services.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/CallWaiting.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/MultiSim.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/SingleSim.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/callForwardingUtils.js
+-- Installing: /usr/share/dialer-app/SettingsPage/dateUtils.js
+-- Installing: /usr/share/dialer-app/SettingsPage/AccountSettings/sip.qml
+-- Installing: /usr/share/dialer-app/SettingsPage/AccountSettings/SipNumberRewrite.qml
+-- Installing: /usr/share/accounts/applications/dialer-app.application
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/testdata/vcard.vcf
+-- Up-to-date: /usr/lib/python3/dist-packages/dialer_app
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests/test_logs.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests/test_contacts.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests/__init__.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests/test_multi_calls.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests/test_dialer.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests/test_calls.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/tests/test_ussd.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/helpers.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/ListItemWithActions.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/fixture_setup.py
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/data
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/data/history.sqlite
+-- Installing: /usr/lib/python3/dist-packages/dialer_app/__init__.py
+yunit@yunitvm:~/builddir/dialer-app$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Nov 17 11:49:31 2017 from 10.0.2.2
+yunit@yunitvm:~$ cd builddir/filemanager-app/
+yunit@yunitvm:~/builddir/filemanager-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- samba include=SAMBA_INCLUDE_DIR-NOTFOUND
+-- samba lib=SAMBA_LIBRARIES-NOTFOUND=SAMBA_LIBRARIES-NOTFOUND
+CMake Error at src/plugin/folderlistmodel/CMakeLists.txt:122 (message):
+  Could not find Samba libsmbclient
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/yunit/builddir/filemanager-app/CMakeFiles/CMakeOutput.log".
+yunit@yunitvm:~/builddir/filemanager-app$ apt-cache search libsmbclient
+libsmbclient - shared library for communication with SMB/CIFS servers
+libsmbclient-dev - development files for libsmbclient
+libfilesys-smbclient-perl - perl interface to access Samba filesystem
+php-smb - php wrapper for smbclient and libsmbclient-php
+php-smbclient - PHP wrapper for libsmbclient
+yunit@yunitvm:~/builddir/filemanager-app$ sudo apt install libsmbclient
+[sudo] password for yunit: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libldb1 libpython2.7 libtevent0 libwbclient0 python-talloc samba-libs
+The following NEW packages will be installed
+  libldb1 libpython2.7 libsmbclient libtevent0 libwbclient0 python-talloc samba-libs
+0 to upgrade, 7 to newly install, 0 to remove and 0 not to upgrade.
+Need to get 6,466 kB of archives.
+After this operation, 27.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://gb.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwbclient0 amd64 2:4.3.11+dfsg-0ubuntu0.16.04.11 [30.2 kB]
+Get:2 http://gb.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtevent0 amd64 0.9.28-0ubuntu0.16.04.1 [26.1 kB]
+Get:3 http://gb.archive.ubuntu.com/ubuntu xenial/main amd64 libldb1 amd64 2:1.1.24-1ubuntu3 [108 kB]
+Get:4 http://gb.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7 amd64 2.7.12-1ubuntu0~16.04.1 [1,070 kB]
+Get:5 http://gb.archive.ubuntu.com/ubuntu xenial/main amd64 python-talloc amd64 2.1.5-2 [7,506 B]
+Get:6 http://gb.archive.ubuntu.com/ubuntu xenial-updates/main amd64 samba-libs amd64 2:4.3.11+dfsg-0ubuntu0.16.04.11 [5,172 kB]
+Get:7 http://gb.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsmbclient amd64 2:4.3.11+dfsg-0ubuntu0.16.04.11 [53.2 kB]
+Fetched 6,466 kB in 4s (1,443 kB/s)
+Selecting previously unselected package libwbclient0:amd64.
+(Reading database ... 169386 files and directories currently installed.)
+Preparing to unpack .../libwbclient0_2%3a4.3.11+dfsg-0ubuntu0.16.04.11_amd64.deb ...
+Unpacking libwbclient0:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+Selecting previously unselected package libtevent0:amd64.
+Preparing to unpack .../libtevent0_0.9.28-0ubuntu0.16.04.1_amd64.deb ...
+Unpacking libtevent0:amd64 (0.9.28-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libldb1:amd64.
+Preparing to unpack .../libldb1_2%3a1.1.24-1ubuntu3_amd64.deb ...
+Unpacking libldb1:amd64 (2:1.1.24-1ubuntu3) ...
+Selecting previously unselected package libpython2.7:amd64.
+Preparing to unpack .../libpython2.7_2.7.12-1ubuntu0~16.04.1_amd64.deb ...
+Unpacking libpython2.7:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Selecting previously unselected package python-talloc.
+Preparing to unpack .../python-talloc_2.1.5-2_amd64.deb ...
+Unpacking python-talloc (2.1.5-2) ...
+Selecting previously unselected package samba-libs:amd64.
+Preparing to unpack .../samba-libs_2%3a4.3.11+dfsg-0ubuntu0.16.04.11_amd64.deb ...
+Unpacking samba-libs:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+Selecting previously unselected package libsmbclient:amd64.
+Preparing to unpack .../libsmbclient_2%3a4.3.11+dfsg-0ubuntu0.16.04.11_amd64.deb ...
+Unpacking libsmbclient:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libwbclient0:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+Setting up libtevent0:amd64 (0.9.28-0ubuntu0.16.04.1) ...
+Setting up libldb1:amd64 (2:1.1.24-1ubuntu3) ...
+Setting up libpython2.7:amd64 (2.7.12-1ubuntu0~16.04.1) ...
+Setting up python-talloc (2.1.5-2) ...
+Setting up samba-libs:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+Setting up libsmbclient:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+yunit@yunitvm:~/builddir/filemanager-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- samba include=SAMBA_INCLUDE_DIR-NOTFOUND
+-- samba lib=SAMBA_LIBRARIES-NOTFOUND=SAMBA_LIBRARIES-NOTFOUND
+CMake Error at src/plugin/folderlistmodel/CMakeLists.txt:122 (message):
+  Could not find Samba libsmbclient
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/yunit/builddir/filemanager-app/CMakeFiles/CMakeOutput.log".
+yunit@yunitvm:~/builddir/filemanager-app$ sudo apt install libsmbclient-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed
+  libsmbclient-dev
+0 to upgrade, 1 to newly install, 0 to remove and 0 not to upgrade.
+Need to get 40.9 kB of archives.
+After this operation, 297 kB of additional disk space will be used.
+Get:1 http://gb.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsmbclient-dev amd64 2:4.3.11+dfsg-0ubuntu0.16.04.11 [40.9 kB]
+Fetched 40.9 kB in 0s (153 kB/s)      
+Selecting previously unselected package libsmbclient-dev:amd64.
+(Reading database ... 169601 files and directories currently installed.)
+Preparing to unpack .../libsmbclient-dev_2%3a4.3.11+dfsg-0ubuntu0.16.04.11_amd64.deb ...
+Unpacking libsmbclient-dev:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+Setting up libsmbclient-dev:amd64 (2:4.3.11+dfsg-0ubuntu0.16.04.11) ...
+yunit@yunitvm:~/builddir/filemanager-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- samba include=/usr/include/samba-4.0
+-- samba lib=/usr/lib/x86_64-linux-gnu/libsmbclient.so=/usr/lib/x86_64-linux-gnu/libsmbclient.so
+-- Found samba: include=/usr/include/samba-4.0  library=/usr/lib/x86_64-linux-gnu/libsmbclient.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/builddir/filemanager-app
+yunit@yunitvm:~/builddir/filemanager-app$ make -j4
+Scanning dependencies of target pofiles_56
+Scanning dependencies of target pofiles_60
+Scanning dependencies of target com.ubuntu.filemanager.desktop
+Scanning dependencies of target pofiles_61
+[  1%] Generating sv.gmo
+[  2%] Generating ta.gmo
+[  3%] Merging translations into com.ubuntu.filemanager.desktop...
+[  2%] Generating es.gmo
+[  3%] Built target pofiles_60
+[  3%] Built target pofiles_56
+Scanning dependencies of target pofiles_55
+[  3%] Built target pofiles_61
+Scanning dependencies of target pofiles_52
+[  4%] Generating sr.gmo
+Scanning dependencies of target pofiles_51
+[  5%] Generating km.gmo
+[  6%] Generating sk.gmo
+[  6%] Built target pofiles_55
+[  6%] Built target pofiles_52
+Scanning dependencies of target pofiles_50
+Scanning dependencies of target pofiles_49
+[  6%] Built target pofiles_51
+[  7%] Generating bs.gmo
+[  8%] Generating nl.gmo
+Scanning dependencies of target pofiles_19
+[  8%] Generating zh_TW.gmo
+[  8%] Built target pofiles_49
+Scanning dependencies of target pofiles_39
+[  9%] Generating ar.gmo
+[  9%] Built target pofiles_19
+Scanning dependencies of target pofiles_53
+[  9%] Built target pofiles_39
+[  9%] Built target pofiles_50
+[ 10%] Generating lv.gmo
+Scanning dependencies of target pofiles_17
+Scanning dependencies of target pofiles_62
+[ 11%] Generating ckb.gmo
+[ 11%] Built target pofiles_53
+[ 12%] Generating bg.gmo
+Scanning dependencies of target pofiles_15
+[ 12%] Built target pofiles_62
+[ 12%] Built target pofiles_17
+[ 13%] Generating am.gmo
+Scanning dependencies of target pofiles_2
+Scanning dependencies of target pofiles_6
+[ 14%] Generating pa.gmo
+[ 15%] Generating cs.gmo
+[ 15%] Built target pofiles_15
+Merging translations into com.ubuntu.filemanager.desktop.
+Scanning dependencies of target pofiles_33
+[ 15%] Built target pofiles_2
+[ 15%] Built target pofiles_6
+[ 15%] Built target com.ubuntu.filemanager.desktop
+[ 16%] Generating my.gmo
+Scanning dependencies of target pofiles_44
+Scanning dependencies of target pofiles_20
+Scanning dependencies of target pofiles_58
+[ 16%] Generating sa.gmo
+[ 17%] Generating ml.gmo
+[ 17%] Built target pofiles_33
+[ 18%] Generating fa.gmo
+Scanning dependencies of target pofiles_25
+[ 18%] Built target pofiles_20
+[ 18%] Built target pofiles_58
+[ 19%] Generating da.gmo
+[ 19%] Built target pofiles_44
+Scanning dependencies of target com.ubuntu.filemanager.pot
+Scanning dependencies of target pofiles_12
+[ 19%] Built target pofiles_25
+Scanning dependencies of target pofiles_13
+[ 20%] Generating ug.gmo
+[ 21%] Generating sl.gmo
+[ 21%] Generating translation template...
+Scanning dependencies of target pofiles_18
+[ 22%] Generating ru.gmo
+[ 22%] Built target pofiles_12
+[ 22%] Built target pofiles_13
+Wrote com.ubuntu.filemanager.desktop.in.in.h
+Scanning dependencies of target pofiles_32
+[ 22%] Built target pofiles_18
+Scanning dependencies of target pofiles_47
+[ 23%] Generating be.gmo
+Scanning dependencies of target pofiles_11
+[ 24%] Generating sc.gmo
+[ 25%] Generating de.gmo
+[ 25%] Built target pofiles_32
+[ 25%] Built target pofiles_47
+Scanning dependencies of target pofiles_57
+Scanning dependencies of target pofiles_38
+[ 25%] Built target pofiles_11
+[ 26%] Generating ast.gmo
+[ 26%] Generating ca.gmo
+Scanning dependencies of target pofiles_9
+[ 26%] Built target com.ubuntu.filemanager.pot
+[ 26%] Built target pofiles_38
+Scanning dependencies of target pofiles_28
+[ 27%] Generating en_GB.gmo
+[ 27%] Built target pofiles_57
+Scanning dependencies of target pofiles_59
+[ 28%] Generating lt.gmo
+[ 29%] Generating nb.gmo
+Scanning dependencies of target pofiles_10
+[ 29%] Built target pofiles_28
+[ 29%] Built target pofiles_9
+[ 29%] Generating fr_CA.gmo
+[ 29%] Built target pofiles_59
+Scanning dependencies of target pofiles_14
+Scanning dependencies of target pofiles_16
+Scanning dependencies of target pofiles_45
+[ 29%] Built target pofiles_10
+[ 30%] Generating zh_HK.gmo
+[ 31%] Generating br.gmo
+[ 31%] Generating he.gmo
+Scanning dependencies of target pofiles_34
+[ 31%] Built target pofiles_14
+[ 31%] Built target pofiles_16
+[ 31%] Generating shn.gmo
+[ 31%] Built target pofiles_45
+Scanning dependencies of target pofiles_3
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_31
+[ 31%] Built target pofiles_34
+[ 32%] Generating lo.gmo
+[ 33%] Generating pl.gmo
+[ 34%] Generating gd.gmo
+Scanning dependencies of target pofiles_1
+[ 34%] Built target pofiles_31
+[ 34%] Built target pofiles_8
+[ 35%] Generating kn.gmo
+[ 34%] Built target pofiles_3
+Scanning dependencies of target pofiles_7
+Scanning dependencies of target pofiles_35
+Scanning dependencies of target pofiles_4
+[ 36%] Generating hu.gmo
+[ 37%] Generating ms.gmo
+[ 35%] Built target pofiles_1
+[ 38%] Generating gl.gmo
+Scanning dependencies of target pofiles_5
+[ 38%] Built target pofiles_7
+[ 38%] Generating ja.gmo
+[ 38%] Built target pofiles_4
+[ 38%] Built target pofiles_35
+Scanning dependencies of target pofiles_21
+Scanning dependencies of target pofiles_30
+[ 39%] Generating id.gmo
+Scanning dependencies of target pofiles_22
+[ 39%] Built target pofiles_5
+[ 39%] Generating el.gmo
+[ 39%] Generating eo.gmo
+Scanning dependencies of target pofiles_46
+[ 39%] Built target pofiles_21
+[ 39%] Built target pofiles_22
+[ 39%] Built target pofiles_30
+[ 39%] Generating ro.gmo
+Scanning dependencies of target pofiles_23
+Scanning dependencies of target pofiles_24
+Scanning dependencies of target pofiles_26
+[ 40%] Generating zh_CN.gmo
+[ 40%] Built target pofiles_46
+[ 41%] Generating pt_BR.gmo
+[ 41%] Generating uz.gmo
+Scanning dependencies of target pofiles_27
+[ 41%] Built target pofiles_23
+[ 42%] Generating fi.gmo
+Scanning dependencies of target pofiles_54
+[ 42%] Built target pofiles_24
+[ 42%] Built target pofiles_26
+Scanning dependencies of target pofiles_29
+[ 42%] Generating pt.gmo
+Scanning dependencies of target pofiles_48
+[ 42%] Built target pofiles_27
+[ 43%] Generating tr.gmo
+[ 44%] Built target pofiles_54
+Scanning dependencies of target pofiles_36
+[ 44%] Generating it.gmo
+[ 44%] Built target pofiles_48
+Scanning dependencies of target pofiles_37
+[ 45%] Generating en_AU.gmo
+Scanning dependencies of target pofiles_42
+[ 45%] Built target pofiles_29
+[ 46%] Generating sq.gmo
+Scanning dependencies of target pofiles_40
+[ 46%] Generating eu.gmo
+[ 46%] Built target pofiles_36
+[ 46%] Built target pofiles_37
+[ 47%] Generating fr.gmo
+Scanning dependencies of target pofiles_41
+[ 47%] Built target pofiles_42
+Scanning dependencies of target pofiles_43
+[ 48%] Generating ku.gmo
+Scanning dependencies of target com_ubuntu_filemanager_PYTHONEMULATORFiles
+[ 49%] Generating uk.gmo
+[ 48%] Built target pofiles_40
+Scanning dependencies of target com_ubuntu_filemanager_PYTHONTESTFiles
+[ 49%] Built target pofiles_41
+[ 49%] Built target com_ubuntu_filemanager_PYTHONEMULATORFiles
+[ 49%] Built target pofiles_43
+[ 49%] Built target com_ubuntu_filemanager_PYTHONTESTFiles
+Scanning dependencies of target PlacesModel_automoc
+Scanning dependencies of target PamAuthentication_automoc
+Scanning dependencies of target nemofolderlistmodel_automoc
+[ 50%] Automatic moc for target PlacesModel
+[ 51%] Automatic moc for target nemofolderlistmodel
+[ 52%] Automatic moc for target PamAuthentication
+Scanning dependencies of target Archives_automoc
+Generating moc_pamauthentication.cpp
+[ 52%] Automatic moc for target Archives
+Generating moc_placesmodel.cpp
+Generating moc_clipboard.cpp
+Generating moc_archives.cpp
+Generating moc_archives_plugin.cpp
+Generating moc_diritemabstractlistmodel.cpp
+Generating moc_pamauthentication_plugin.cpp
+Generating moc_placesmodel_plugin.cpp
+Generating moc_dirmodel.cpp
+Generating moc_qmtabparser.cpp
+[ 52%] Built target PamAuthentication_automoc
+[ 52%] Built target Archives_automoc
+Scanning dependencies of target filemanager_automoc
+Scanning dependencies of target PamAuthentication
+[ 52%] Automatic moc for target filemanager
+[ 52%] Built target PlacesModel_automoc
+[ 52%] Built target filemanager_automoc
+Scanning dependencies of target Archives
+/home/yunit/builddir/filemanager-app/src/plugin/folderlistmodel/dirmodel.h:581: Warning: Class DirModel implements the interface QQmlParserStatus but does not list it in Q_INTERFACES. qobject_cast to QQmlParserStatus will not work!
+Generating moc_dirselection.cpp
+[ 53%] Building CXX object src/plugin/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication.cpp.o
+Scanning dependencies of target PlacesModel
+[ 53%] Building CXX object src/plugin/archives/CMakeFiles/Archives.dir/archives.cpp.o
+Generating moc_disklocation.cpp
+[ 54%] Building CXX object src/plugin/placesmodel/CMakeFiles/PlacesModel.dir/placesmodel.cpp.o
+Generating moc_disklocationitemfile.cpp
+Generating moc_externalfswatcher.cpp
+Generating moc_filesystemaction.cpp
+Generating moc_iorequest.cpp
+/home/yunit/builddir/filemanager-app/src/plugin/pamauthentication/pamauthentication.cpp:24:31: fatal error: security/pam_appl.h: No such file or directory
+compilation terminated.
+src/plugin/pamauthentication/CMakeFiles/PamAuthentication.dir/build.make:62: recipe for target 'src/plugin/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication.cpp.o' failed
+make[2]: *** [src/plugin/pamauthentication/CMakeFiles/PamAuthentication.dir/pamauthentication.cpp.o] Error 1
+CMakeFiles/Makefile2:3062: recipe for target 'src/plugin/pamauthentication/CMakeFiles/PamAuthentication.dir/all' failed
+make[1]: *** [src/plugin/pamauthentication/CMakeFiles/PamAuthentication.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 55%] Building CXX object src/plugin/placesmodel/CMakeFiles/PlacesModel.dir/placesmodel_plugin.cpp.o
+Generating moc_iorequestworker.cpp
+Generating moc_ioworkerthread.cpp
+Generating moc_location.cpp
+Generating moc_locationitemfile.cpp
+Generating moc_locationsfactory.cpp
+Generating moc_networklistworker.cpp
+Generating moc_plugin.cpp
+Generating moc_smblocationitemfile.cpp
+Generating moc_smbplaces.cpp
+Generating moc_smblocation.cpp
+Generating moc_trashlocation.cpp
+[ 55%] Built target nemofolderlistmodel_automoc
+[ 56%] Building CXX object src/plugin/placesmodel/CMakeFiles/PlacesModel.dir/qmtabparser.cpp.o
+[ 57%] Building CXX object src/plugin/archives/CMakeFiles/Archives.dir/archives_plugin.cpp.o
+[ 57%] Building CXX object src/plugin/placesmodel/CMakeFiles/PlacesModel.dir/PlacesModel_automoc.cpp.o
+[ 58%] Building CXX object src/plugin/archives/CMakeFiles/Archives.dir/Archives_automoc.cpp.o
+[ 59%] Linking CXX shared module libPlacesModel.so
+[ 59%] Built target PlacesModel
+[ 60%] Linking CXX shared module libArchives.so
+[ 60%] Built target Archives
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2
+yunit@yunitvm:~/builddir/filemanager-app$ cd ../mediaplayer-app/
+yunit@yunitvm:~/builddir/mediaplayer-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find Lcov (missing:  LCOV_EXECUTABLE GENHTML_EXECUTABLE) 
+-- Could NOT find gcovr (missing:  GCOVR_EXECUTABLE) 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Autopilot tests disabled: autopilot binary not found
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+Found data/mediaplayer-app.desktop.in.in;src/main.cpp;src/mediaplayer.cpp;src/qml/VideoImport.qml;src/qml/VideoImportDialog.qml;src/qml/common/GlowButton.qml;src/qml/common/VideoInfo.qml;src/qml/common/VisibilityController.qml;src/qml/common/visibilityBehaviors/AlwaysVisibleBehavior.qml;src/qml/common/visibilityBehaviors/AutoHideBehavior.qml;src/qml/common/visibilityBehaviors/BaseBehavior.qml;src/qml/common/visibilityBehaviors/ImmediateHideBehavior.qml;src/qml/common/visibilityBehaviors/TimeoutBehavior.qml;src/qml/player.qml;src/qml/player/AbstractPlayer.qml;src/qml/player/Controls.qml;src/qml/player/ControlsMask.qml;src/qml/player/HLine.qml;src/qml/player/IconButton.qml;src/qml/player/SceneCoverFlow.qml;src/qml/player/SceneFrame.qml;src/qml/player/SceneSelector.qml;src/qml/player/TimeLabel.qml;src/qml/player/TimeLine.qml;src/qml/player/ToolBar.qml;src/qml/player/VLine.qml;src/qml/player/VideoPlayer.qml;src/qml/player/VideoSlider.qml;src/qml/sdk/DraggingArea.qml;src/qml/sdk/GenericToolbar.qml;src/thumbnail-pipeline-gst.cpp;src/thumbnail-provider.cpp
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLICK_MODE
+
+
+-- Build files have been written to: /home/yunit/builddir/mediaplayer-app
+yunit@yunitvm:~/builddir/mediaplayer-app$ make -j4
+Scanning dependencies of target mediaplayer_app_QmlFiles
+Scanning dependencies of target mediaplayer-app.desktop
+Scanning dependencies of target pofiles_71
+Scanning dependencies of target mediaplayer-app_automoc
+[  1%] Generating es.gmo
+[  1%] Built target mediaplayer_app_QmlFiles
+[  2%] Automatic moc for target mediaplayer-app
+[  3%] Merging translations into mediaplayer-app.desktop
+Scanning dependencies of target pofiles_70
+Generating moc_mediaplayer.cpp
+[  5%] Generating sv.gmo
+[  5%] Built target pofiles_71
+Scanning dependencies of target pofiles_68
+[  5%] Built target pofiles_70
+Scanning dependencies of target pofiles_66
+[  6%] Generating nb.gmo
+[  7%] Generating ca@valencia.gmo
+[  7%] Built target mediaplayer-app.desktop
+[  7%] Built target pofiles_68
+[  7%] Built target pofiles_66
+Scanning dependencies of target pofiles_61
+Scanning dependencies of target pofiles_65
+[  8%] Generating ta.gmo
+Scanning dependencies of target pofiles_60
+[ 10%] Generating te.gmo
+[ 11%] Generating km.gmo
+[ 11%] Built target pofiles_61
+[ 11%] Built target pofiles_65
+[ 11%] Built target pofiles_60
+Scanning dependencies of target pofiles_55
+Scanning dependencies of target pofiles_56
+[ 11%] Built target mediaplayer-app_automoc
+Scanning dependencies of target pofiles_52
+[ 13%] Generating tr.gmo
+[ 12%] Generating nl.gmo
+[ 15%] Generating ml.gmo
+Scanning dependencies of target pofiles_51
+[ 16%] Generating hr.gmo
+[ 15%] Built target pofiles_55
+[ 15%] Built target pofiles_56
+Scanning dependencies of target pofiles_49
+[ 16%] Built target pofiles_52
+Scanning dependencies of target pofiles_50
+[ 16%] Built target pofiles_51
+[ 17%] Generating ko.gmo
+Scanning dependencies of target pofiles_39
+Scanning dependencies of target pofiles_19
+[ 18%] Generating uk.gmo
+[ 20%] Generating br.gmo
+[ 21%] Built target pofiles_50
+[ 21%] Generating ms.gmo
+[ 21%] Built target pofiles_49
+[ 21%] Built target pofiles_19
+Scanning dependencies of target pofiles_53
+[ 21%] Built target pofiles_39
+Scanning dependencies of target pofiles_17
+[ 22%] Generating zh_HK.gmo
+Scanning dependencies of target pofiles_45
+[ 24%] Generating hi.gmo
+Scanning dependencies of target pofiles_16
+[ 25%] Generating is.gmo
+[ 25%] Built target pofiles_17
+[ 26%] Generating he.gmo
+[ 24%] Built target pofiles_53
+Scanning dependencies of target pofiles_62
+Scanning dependencies of target pofiles_34
+[ 26%] Built target pofiles_45
+[ 26%] Built target pofiles_16
+[ 27%] Generating lv.gmo
+[ 29%] Generating gd.gmo
+Scanning dependencies of target pofiles_15
+Scanning dependencies of target pofiles_2
+[ 30%] Generating ug.gmo
+[ 29%] Built target pofiles_62
+[ 31%] Generating pl.gmo
+[ 29%] Built target pofiles_34
+Scanning dependencies of target pofiles_6
+Scanning dependencies of target pofiles_33
+[ 31%] Built target pofiles_15
+[ 31%] Built target pofiles_2
+[ 32%] Generating hu.gmo
+Scanning dependencies of target pofiles_44
+[ 34%] Generating it.gmo
+Scanning dependencies of target pofiles_58
+[ 35%] Generating ar.gmo
+[ 36%] Generating mk.gmo
+[ 36%] Built target pofiles_33
+[ 36%] Built target pofiles_6
+Scanning dependencies of target pofiles_25
+Scanning dependencies of target pofiles_20
+[ 36%] Built target pofiles_58
+[ 36%] Built target pofiles_44
+Scanning dependencies of target pofiles_12
+[ 37%] Generating fa.gmo
+Scanning dependencies of target pofiles_13
+[ 39%] Generating ru.gmo
+[ 40%] Generating de.gmo
+[ 41%] Generating oc.gmo
+[ 40%] Built target pofiles_25
+[ 41%] Built target pofiles_20
+Scanning dependencies of target pofiles_18
+Scanning dependencies of target pofiles_47
+[ 41%] Built target pofiles_12
+[ 41%] Built target pofiles_13
+[ 43%] Generating ku.gmo
+Scanning dependencies of target pofiles_11
+[ 44%] Generating am.gmo
+Scanning dependencies of target pofiles_32
+[ 45%] Generating fi.gmo
+[ 45%] Built target pofiles_18
+[ 46%] Generating ia.gmo
+[ 45%] Built target pofiles_47
+Scanning dependencies of target pofiles_57
+[ 46%] Built target pofiles_32
+Scanning dependencies of target pofiles_38
+[ 46%] Built target pofiles_11
+[ 48%] Generating vi.gmo
+[ 49%] Generating bs.gmo
+Scanning dependencies of target pofiles_21
+Scanning dependencies of target pofiles_69
+[ 50%] Generating fo.gmo
+[ 51%] Generating th.gmo
+[ 49%] Built target pofiles_38
+[ 51%] Built target pofiles_57
+Scanning dependencies of target pofiles_5
+[ 51%] Built target pofiles_21
+[ 51%] Built target pofiles_69
+Scanning dependencies of target pofiles_67
+[ 53%] Generating pa.gmo
+Scanning dependencies of target pofiles_30
+Scanning dependencies of target pofiles_59
+[ 54%] Generating ast.gmo
+[ 55%] Generating sk.gmo
+[ 56%] Generating ne.gmo
+[ 56%] Built target pofiles_5
+[ 56%] Built target pofiles_67
+Scanning dependencies of target pofiles_14
+Scanning dependencies of target pofiles_10
+[ 56%] Built target pofiles_59
+[ 56%] Built target pofiles_30
+Scanning dependencies of target pofiles_3
+Scanning dependencies of target pofiles_8
+[ 58%] Generating fr_CA.gmo
+[ 59%] Generating sl.gmo
+[ 60%] Generating az.gmo
+[ 62%] Generating gl.gmo
+[ 60%] Built target pofiles_14
+[ 62%] Built target pofiles_10
+Scanning dependencies of target pofiles_31
+[ 62%] Built target pofiles_8
+Scanning dependencies of target pofiles_1
+[ 62%] Built target pofiles_3
+[ 63%] Generating da.gmo
+Scanning dependencies of target pofiles_7
+[ 64%] Generating cs.gmo
+Scanning dependencies of target pofiles_35
+[ 65%] Generating be.gmo
+[ 65%] Built target pofiles_31
+[ 67%] Generating lo.gmo
+[ 67%] Built target pofiles_1
+Scanning dependencies of target pofiles_4
+[ 67%] Built target pofiles_35
+[ 67%] Built target pofiles_7
+Scanning dependencies of target pofiles_63
+[ 68%] Generating pt.gmo
+Scanning dependencies of target pofiles_28
+[ 69%] Generating ja.gmo
+Scanning dependencies of target pofiles_9
+[ 70%] Generating zh_CN.gmo
+[ 72%] Built target pofiles_4
+[ 72%] Generating en_GB.gmo
+[ 72%] Built target pofiles_63
+Scanning dependencies of target pofiles_46
+[ 72%] Built target pofiles_28
+Scanning dependencies of target pofiles_22
+[ 72%] Built target pofiles_9
+[ 73%] Generating fr.gmo
+[ 74%] Generating aa.gmo
+Scanning dependencies of target pofiles_23
+Scanning dependencies of target pofiles_24
+[ 75%] Generating zh_TW.gmo
+[ 77%] Generating hy.gmo
+[ 74%] Built target pofiles_22
+[ 77%] Built target pofiles_46
+Scanning dependencies of target pofiles_26
+[ 77%] Built target pofiles_23
+[ 77%] Built target pofiles_24
+Scanning dependencies of target pofiles_64
+[ 78%] Generating sr.gmo
+Scanning dependencies of target pofiles_72
+[ 79%] Generating id.gmo
+Scanning dependencies of target mediaplayer-app.pot
+[ 81%] Generating bg.gmo
+[ 82%] Generating translation template
+[ 82%] Built target pofiles_26
+[ 82%] Built target pofiles_64
+Scanning dependencies of target pofiles_27
+[ 82%] Built target pofiles_72
+Scanning dependencies of target pofiles_54
+[ 83%] Generating el.gmo
+Scanning dependencies of target pofiles_48
+[ 84%] Generating ro.gmo
+Wrote data/mediaplayer-app.desktop.in.in.h
+[ 86%] Generating eu.gmo
+[ 84%] Built target pofiles_27
+[ 86%] Built target pofiles_54
+Scanning dependencies of target pofiles_36
+Scanning dependencies of target pofiles_29
+[ 86%] Built target mediaplayer-app.pot
+[ 87%] Generating pt_BR.gmo
+[ 86%] Built target pofiles_48
+Scanning dependencies of target pofiles_37
+[ 88%] Generating my.gmo
+[ 89%] Generating shn.gmo
+Scanning dependencies of target pofiles_42
+[ 89%] Built target pofiles_29
+[ 89%] Built target pofiles_36
+[ 91%] Generating ca.gmo
+Scanning dependencies of target pofiles_41
+Scanning dependencies of target pofiles_40
+[ 92%] Generating en_AU.gmo
+[ 91%] Built target pofiles_37
+[ 93%] Generating sq.gmo
+[ 93%] Built target pofiles_42
+Scanning dependencies of target pofiles_43
+[ 93%] Built target pofiles_40
+[ 93%] Built target pofiles_41
+Scanning dependencies of target mediaplayer-app
+[ 94%] Generating cy.gmo
+[ 94%] Built target pofiles_43
+[ 96%] Building CXX object src/CMakeFiles/mediaplayer-app.dir/main.cpp.o
+[ 97%] Building CXX object src/CMakeFiles/mediaplayer-app.dir/mediaplayer.cpp.o
+[ 98%] Building CXX object src/CMakeFiles/mediaplayer-app.dir/mediaplayer-app_automoc.cpp.o
+[100%] Linking CXX executable mediaplayer-app
+[100%] Built target mediaplayer-app
+yunit@yunitvm:~/builddir/mediaplayer-app$ sudo make install
+[  1%] Merging translations into mediaplayer-app.desktop
+[  1%] Built target mediaplayer-app.desktop
+[  2%] Automatic moc for target mediaplayer-app
+[  2%] Built target mediaplayer-app_automoc
+[  7%] Built target mediaplayer-app
+[  7%] Built target mediaplayer_app_QmlFiles
+[  8%] Built target pofiles_71
+[ 10%] Built target pofiles_70
+[ 11%] Built target pofiles_68
+[ 12%] Built target pofiles_66
+[ 13%] Built target pofiles_65
+[ 15%] Built target pofiles_61
+[ 16%] Built target pofiles_60
+[ 17%] Built target pofiles_56
+[ 18%] Built target pofiles_55
+[ 20%] Built target pofiles_52
+[ 21%] Built target pofiles_51
+[ 22%] Built target pofiles_50
+[ 24%] Built target pofiles_49
+[ 25%] Built target pofiles_19
+[ 26%] Built target pofiles_39
+[ 27%] Built target pofiles_53
+[ 29%] Built target pofiles_17
+[ 30%] Built target pofiles_45
+[ 31%] Built target pofiles_16
+[ 32%] Built target pofiles_34
+[ 34%] Built target pofiles_62
+[ 35%] Built target pofiles_15
+[ 36%] Built target pofiles_2
+[ 37%] Built target pofiles_6
+[ 39%] Built target pofiles_33
+[ 40%] Built target pofiles_58
+[ 41%] Built target pofiles_44
+[ 43%] Built target pofiles_20
+[ 44%] Built target pofiles_25
+[ 45%] Built target pofiles_13
+[ 46%] Built target pofiles_12
+[ 48%] Built target pofiles_18
+[ 49%] Built target pofiles_47
+[ 50%] Built target pofiles_32
+[ 51%] Built target pofiles_11
+[ 53%] Built target pofiles_57
+[ 54%] Built target pofiles_38
+[ 55%] Built target pofiles_69
+[ 56%] Built target pofiles_21
+[ 58%] Built target pofiles_5
+[ 59%] Built target pofiles_67
+[ 60%] Built target pofiles_30
+[ 62%] Built target pofiles_59
+[ 63%] Built target pofiles_10
+[ 64%] Built target pofiles_14
+[ 65%] Built target pofiles_3
+[ 67%] Built target pofiles_8
+[ 68%] Built target pofiles_31
+[ 69%] Built target pofiles_1
+[ 70%] Built target pofiles_7
+[ 72%] Built target pofiles_35
+[ 73%] Built target pofiles_4
+[ 74%] Built target pofiles_63
+[ 75%] Built target pofiles_9
+[ 77%] Built target pofiles_28
+[ 78%] Built target pofiles_22
+[ 79%] Built target pofiles_46
+[ 81%] Built target pofiles_23
+[ 82%] Built target pofiles_24
+[ 83%] Built target pofiles_64
+[ 84%] Built target pofiles_26
+[ 86%] Generating translation template
+Wrote data/mediaplayer-app.desktop.in.in.h
+[ 86%] Built target mediaplayer-app.pot
+[ 87%] Built target pofiles_72
+[ 88%] Built target pofiles_27
+[ 89%] Built target pofiles_54
+[ 91%] Built target pofiles_48
+[ 92%] Built target pofiles_29
+[ 93%] Built target pofiles_36
+[ 94%] Built target pofiles_37
+[ 96%] Built target pofiles_42
+[ 97%] Built target pofiles_40
+[ 98%] Built target pofiles_41
+[100%] Built target pofiles_43
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/share/applications/mediaplayer-app.desktop
+-- Installing: /usr/share/mediaplayer-app/mediaplayer-app.png
+-- Installing: /usr/share/mediaplayer-app/mediaplayer-app-symbolic.svg
+-- Installing: /usr/share/url-dispatcher/urls/mediaplayer-app.url-dispatcher
+-- Installing: /usr/share/content-hub/peers/mediaplayer-app
+-- Installing: /usr/bin/mediaplayer-app
+-- Installing: /usr/share/mediaplayer-app/qml
+-- Installing: /usr/share/mediaplayer-app/qml/Makefile
+-- Installing: /usr/share/mediaplayer-app/qml/VideoImportDialog.qml
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/mediaplayer_app_QmlFiles.dir
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/mediaplayer_app_QmlFiles.dir/depend.internal
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/mediaplayer_app_QmlFiles.dir/progress.make
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/mediaplayer_app_QmlFiles.dir/DependInfo.cmake
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/mediaplayer_app_QmlFiles.dir/build.make
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/mediaplayer_app_QmlFiles.dir/cmake_clean.cmake
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/mediaplayer_app_QmlFiles.dir/depend.make
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/CMakeDirectoryInformation.cmake
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeFiles/progress.marks
+-- Installing: /usr/share/mediaplayer-app/qml/CMakeLists.txt
+-- Installing: /usr/share/mediaplayer-app/qml/player
+-- Installing: /usr/share/mediaplayer-app/qml/player/TimeLine.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/HLine.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/AbstractPlayer.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_play@20.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/scene_selection_glow.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/scene_position_rounded.sci
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/timeline_loaded.sci
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/bubble.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_pause.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/timeline_watched.sci
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_pause@20.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/slider_handle.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_pause_orange.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/play_glow.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_rewind_orange.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/bubble.sci
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_settings@20.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/timeline_loaded.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_share@20.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_stop_orange.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_forward_orange.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/scene_position_rounded.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_forward.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/slider_bg.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_exitfscreen@20.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_stop.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_rewind.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/timeline_watched.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/slider_shape.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_play_orange.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/artwork/icon_play.png
+-- Installing: /usr/share/mediaplayer-app/qml/player/SceneFrame.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/VLine.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/ToolBar.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/ControlsMask.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/SceneCoverFlow.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/VideoPlayer.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/VideoSlider.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/SceneSelector.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/Controls.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/IconButton.qml
+-- Installing: /usr/share/mediaplayer-app/qml/player/TimeLabel.qml
+-- Installing: /usr/share/mediaplayer-app/qml/cmake_install.cmake
+-- Installing: /usr/share/mediaplayer-app/qml/player.qml
+-- Installing: /usr/share/mediaplayer-app/qml/sdk
+-- Installing: /usr/share/mediaplayer-app/qml/sdk/mathUtils.js
+-- Installing: /usr/share/mediaplayer-app/qml/sdk/GenericToolbar.qml
+-- Installing: /usr/share/mediaplayer-app/qml/sdk/DraggingArea.qml
+-- Installing: /usr/share/mediaplayer-app/qml/VideoImport.qml
+-- Installing: /usr/share/mediaplayer-app/qml/CTestTestfile.cmake
+-- Installing: /usr/share/mediaplayer-app/qml/common
+-- Installing: /usr/share/mediaplayer-app/qml/common/artwork
+-- Installing: /usr/share/mediaplayer-app/qml/common/artwork/button_glow.sci
+-- Installing: /usr/share/mediaplayer-app/qml/common/artwork/arrow.png
+-- Installing: /usr/share/mediaplayer-app/qml/common/artwork/button_glow.png
+-- Installing: /usr/share/mediaplayer-app/qml/common/artwork/media_player_bar.sci
+-- Installing: /usr/share/mediaplayer-app/qml/common/artwork/media_player_bar.png
+-- Installing: /usr/share/mediaplayer-app/qml/common/units.js
+-- Installing: /usr/share/mediaplayer-app/qml/common/visibilityBehaviors
+-- Installing: /usr/share/mediaplayer-app/qml/common/visibilityBehaviors/AlwaysVisibleBehavior.qml
+-- Installing: /usr/share/mediaplayer-app/qml/common/visibilityBehaviors/AutoHideBehavior.qml
+-- Installing: /usr/share/mediaplayer-app/qml/common/visibilityBehaviors/ImmediateHideBehavior.qml
+-- Installing: /usr/share/mediaplayer-app/qml/common/visibilityBehaviors/BaseBehavior.qml
+-- Installing: /usr/share/mediaplayer-app/qml/common/visibilityBehaviors/TimeoutBehavior.qml
+-- Installing: /usr/share/mediaplayer-app/qml/common/VideoInfo.qml
+-- Installing: /usr/share/mediaplayer-app/qml/common/GlowButton.qml
+-- Installing: /usr/share/mediaplayer-app/qml/common/utils.js
+-- Installing: /usr/share/mediaplayer-app/qml/common/VisibilityController.qml
+-- Installing: /usr/share/mediaplayer-app/videos/small.ogg
+-- Installing: /usr/share/mediaplayer-app/videos/small.wmv
+-- Installing: /usr/share/mediaplayer-app/videos/h264.avi
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/tests
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/tests/__init__.py
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/tests/test_player.py
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/tests/test_player_with_video.py
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/__init__.py
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/emulators
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/emulators/__init__.py
+-- Installing: /usr/lib/python3/dist-packages/mediaplayer_app/emulators/main_window.py
+-- Installing: /usr/share/locale/cs/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/gl/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ja/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/pa/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/lo/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/az/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/en_GB/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/fr_CA/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ia/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/oc/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/sl/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ug/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/he/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/hi/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/am/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/br/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ru/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/th/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/aa/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/hy/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/zh_TW/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/fa/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/id/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/el/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/zh_CN/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/pt_BR/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ne/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/da/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/gd/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/be/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/my/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/shn/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/vi/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ms/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/en_AU/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/sq/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ca/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/cy/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ar/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/is/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ku/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/eu/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ko/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/uk/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/hr/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ml/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/zh_HK/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ro/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/tr/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/bs/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/mk/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/sk/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/km/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/te/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/lv/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/sr/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ta/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ca@valencia/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/ast/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/nb/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/fo/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/sv/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/mediaplayer-app.mo
+-- Installing: /usr/share/locale/bg/LC_MESSAGES/mediaplayer-app.mo
+yunit@yunitvm:~/builddir/mediaplayer-app$ sudo reboot 
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Nov 17 11:53:24 2017 from 10.0.2.2
+yunit@yunitvm:~$ cd builddir/calendar-app/
+yunit@yunitvm:~/builddir/calendar-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CLICK_MODE
+
+
+-- Build files have been written to: /home/yunit/builddir/calendar-app
+yunit@yunitvm:~/builddir/calendar-app$ make -j4
+Scanning dependencies of target pofiles_71
+Scanning dependencies of target pofiles_74
+Scanning dependencies of target com.ubuntu.calendar_calendar.desktop
+Scanning dependencies of target pofiles_75
+[  2%] Generating nb.gmo
+[  3%] Generating fo.gmo
+[  1%] Generating ta.gmo
+[  4%] Merging translations into com.ubuntu.calendar_calendar.desktop...
+[  4%] Built target pofiles_75
+[  4%] Built target pofiles_71
+[  4%] Built target pofiles_74
+Scanning dependencies of target pofiles_66
+Scanning dependencies of target pofiles_68
+Scanning dependencies of target pofiles_70
+[  6%] Generating km.gmo
+[  7%] Generating sr.gmo
+[  8%] Generating lv.gmo
+[  8%] Built target pofiles_70
+[  8%] Built target pofiles_66
+[  8%] Built target pofiles_68
+Scanning dependencies of target pofiles_61
+Scanning dependencies of target pofiles_79
+Scanning dependencies of target pofiles_65
+[  9%] Generating sc.gmo
+[ 11%] Generating bg.gmo
+[ 12%] Generating sk.gmo
+[ 12%] Built target pofiles_61
+[ 12%] Built target pofiles_65
+[ 12%] Built target pofiles_79
+Scanning dependencies of target pofiles_60
+Scanning dependencies of target pofiles_55
+Scanning dependencies of target pofiles_56
+[ 13%] Generating en_CA.gmo
+[ 14%] Generating hr.gmo
+[ 16%] Generating uk.gmo
+[ 16%] Built target pofiles_56
+[ 16%] Built target pofiles_60
+Merging translations into com.ubuntu.calendar_calendar.desktop.
+[ 16%] Built target pofiles_55
+Scanning dependencies of target pofiles_51
+[ 16%] Built target com.ubuntu.calendar_calendar.desktop
+Scanning dependencies of target pofiles_52
+Scanning dependencies of target pofiles_50
+Scanning dependencies of target pofiles_78
+[ 17%] Generating fr.gmo
+[ 18%] Generating is.gmo
+[ 19%] Generating ku.gmo
+[ 19%] Built target pofiles_52
+[ 19%] Built target pofiles_51
+[ 20%] Generating es.gmo
+[ 20%] Built target pofiles_50
+Scanning dependencies of target pofiles_19
+Scanning dependencies of target pofiles_49
+Scanning dependencies of target pofiles_39
+[ 20%] Built target pofiles_78
+[ 24%] Generating et.gmo
+[ 22%] Generating am.gmo
+[ 23%] Generating be.gmo
+Scanning dependencies of target pofiles_53
+[ 24%] Built target pofiles_19
+[ 24%] Built target pofiles_39
+[ 25%] Generating eu.gmo
+[ 24%] Built target pofiles_49
+Scanning dependencies of target pofiles_17
+Scanning dependencies of target pofiles_45
+Scanning dependencies of target pofiles_16
+[ 27%] Generating he.gmo
+[ 28%] Generating sq.gmo
+[ 28%] Built target pofiles_53
+Scanning dependencies of target pofiles_34
+[ 29%] Generating ug.gmo
+[ 29%] Built target pofiles_45
+[ 29%] Built target pofiles_17
+Scanning dependencies of target pofiles_62
+[ 30%] Generating fi.gmo
+[ 30%] Built target pofiles_16
+Scanning dependencies of target pofiles_15
+Scanning dependencies of target pofiles_73
+[ 32%] Generating tr.gmo
+[ 33%] Generating sl.gmo
+[ 34%] Generating ast.gmo
+[ 32%] Built target pofiles_34
+[ 34%] Built target pofiles_15
+[ 34%] Built target pofiles_62
+Scanning dependencies of target pofiles_2
+[ 34%] Built target pofiles_73
+Scanning dependencies of target pofiles_33
+Scanning dependencies of target pofiles_6
+[ 35%] Generating pl.gmo
+[ 37%] Generating gu.gmo
+Scanning dependencies of target pofiles_76
+[ 38%] Built target pofiles_2
+[ 38%] Generating uz.gmo
+[ 39%] Generating si.gmo
+Scanning dependencies of target pofiles_58
+[ 39%] Built target pofiles_6
+[ 39%] Built target pofiles_33
+[ 39%] Built target pofiles_76
+Scanning dependencies of target pofiles_20
+Scanning dependencies of target pofiles_44
+[ 40%] Generating zh_HK.gmo
+[ 41%] Generating en_AU.gmo
+[ 41%] Built target pofiles_58
+[ 43%] Generating br.gmo
+Scanning dependencies of target pofiles_25
+[ 44%] Generating zh_TW.gmo
+Scanning dependencies of target pofiles_13
+[ 44%] Built target pofiles_44
+[ 44%] Built target pofiles_20
+Scanning dependencies of target pofiles_12
+[ 45%] Generating de.gmo
+[ 45%] Built target pofiles_25
+Scanning dependencies of target pofiles_18
+Scanning dependencies of target pofiles_47
+[ 45%] Built target pofiles_13
+[ 46%] Generating hi.gmo
+[ 48%] Generating fr_CA.gmo
+[ 49%] Generating cy.gmo
+Scanning dependencies of target pofiles_32
+[ 49%] Built target pofiles_18
+[ 49%] Built target pofiles_12
+[ 50%] Generating st.gmo
+Scanning dependencies of target pofiles_57
+Scanning dependencies of target pofiles_11
+[ 50%] Built target pofiles_47
+Scanning dependencies of target pofiles_38
+[ 51%] Generating en_GB.gmo
+[ 50%] Built target pofiles_32
+[ 53%] Generating ml.gmo
+Scanning dependencies of target pofiles_63
+[ 54%] Generating gd.gmo
+[ 54%] Built target pofiles_11
+[ 54%] Built target pofiles_57
+Scanning dependencies of target pofiles_9
+[ 54%] Built target pofiles_38
+[ 55%] Generating nl.gmo
+Scanning dependencies of target pofiles_28
+[ 56%] Generating el.gmo
+[ 56%] Built target pofiles_63
+[ 58%] Generating lo.gmo
+Scanning dependencies of target pofiles_59
+[ 59%] Generating ro.gmo
+[ 59%] Built target pofiles_9
+Scanning dependencies of target pofiles_10
+[ 59%] Built target pofiles_28
+[ 60%] Generating az.gmo
+[ 60%] Built target pofiles_59
+Scanning dependencies of target pofiles_14
+Scanning dependencies of target com.ubuntu.calendar.pot
+Scanning dependencies of target pofiles_3
+[ 61%] Generating translation template
+[ 62%] Generating af.gmo
+[ 62%] Built target pofiles_10
+Scanning dependencies of target pofiles_8
+[ 64%] Generating gl.gmo
+[ 64%] Built target pofiles_14
+[ 65%] Generating hu.gmo
+Wrote com.ubuntu.calendar_calendar.desktop.in.h
+Scanning dependencies of target pofiles_31
+[ 65%] Built target pofiles_3
+[ 66%] Generating da.gmo
+Scanning dependencies of target pofiles_1
+[ 66%] Built target pofiles_8
+[ 66%] Built target pofiles_31
+[ 67%] Generating cs.gmo
+Scanning dependencies of target pofiles_7
+Scanning dependencies of target pofiles_35
+[ 69%] Generating pa.gmo
+[ 69%] Built target pofiles_1
+[ 70%] Generating xh.gmo
+[ 69%] Built target com.ubuntu.calendar.pot
+Scanning dependencies of target pofiles_4
+[ 70%] Built target pofiles_7
+Scanning dependencies of target pofiles_5
+[ 70%] Built target pofiles_35
+[ 71%] Generating ja.gmo
+Scanning dependencies of target pofiles_69
+[ 72%] Generating bn.gmo
+Scanning dependencies of target pofiles_21
+[ 74%] Generating pt.gmo
+[ 72%] Built target pofiles_4
+[ 75%] Generating ka.gmo
+[ 74%] Built target pofiles_5
+Scanning dependencies of target pofiles_77
+[ 75%] Built target pofiles_69
+Scanning dependencies of target pofiles_67
+Scanning dependencies of target pofiles_30
+[ 76%] Generating sv.gmo
+[ 75%] Built target pofiles_21
+Scanning dependencies of target pofiles_22
+[ 77%] Generating te.gmo
+[ 79%] Generating pt_BR.gmo
+[ 77%] Built target pofiles_77
+[ 80%] Generating ckb.gmo
+Scanning dependencies of target pofiles_46
+[ 80%] Built target pofiles_67
+[ 80%] Built target pofiles_30
+[ 81%] Generating ca.gmo
+Scanning dependencies of target pofiles_23
+Scanning dependencies of target pofiles_24
+[ 81%] Built target pofiles_22
+[ 82%] Generating ru.gmo
+Scanning dependencies of target pofiles_64
+[ 83%] Generating aa.gmo
+[ 83%] Built target pofiles_46
+Scanning dependencies of target pofiles_26
+[ 85%] Generating bs.gmo
+[ 83%] Built target pofiles_24
+[ 85%] Built target pofiles_23
+[ 86%] Generating fa.gmo
+Scanning dependencies of target pofiles_72
+[ 86%] Built target pofiles_64
+Scanning dependencies of target pofiles_27
+Scanning dependencies of target pofiles_54
+[ 87%] Generating ca@valencia.gmo
+[ 88%] Generating id.gmo
+[ 86%] Built target pofiles_26
+[ 90%] Generating ko.gmo
+[ 88%] Built target pofiles_72
+Scanning dependencies of target pofiles_48
+[ 90%] Built target pofiles_27
+[ 91%] Generating ar.gmo
+Scanning dependencies of target pofiles_29
+Scanning dependencies of target pofiles_36
+[ 91%] Built target pofiles_54
+[ 92%] Generating zh_CN.gmo
+Scanning dependencies of target pofiles_37
+[ 93%] Generating it.gmo
+[ 93%] Built target pofiles_48
+[ 95%] Generating eo.gmo
+Scanning dependencies of target pofiles_42
+[ 95%] Built target pofiles_29
+[ 95%] Built target pofiles_36
+[ 96%] Generating vi.gmo
+Scanning dependencies of target pofiles_40
+[ 96%] Built target pofiles_37
+Scanning dependencies of target pofiles_41
+[ 97%] Generating my.gmo
+Scanning dependencies of target pofiles_43
+[ 98%] Generating shn.gmo
+[ 98%] Built target pofiles_42
+[100%] Generating ms.gmo
+[100%] Built target pofiles_40
+[100%] Built target pofiles_41
+[100%] Built target pofiles_43
+yunit@yunitvm:~/builddir/calendar-app$ sudo make install
+[sudo] password for yunit: 
+[  1%] Merging translations into com.ubuntu.calendar_calendar.desktop...
+Merging translations into com.ubuntu.calendar_calendar.desktop.
+[  1%] Built target com.ubuntu.calendar_calendar.desktop
+[  2%] Built target pofiles_75
+[  3%] Built target pofiles_74
+[  4%] Built target pofiles_71
+[  6%] Built target pofiles_70
+[  7%] Built target pofiles_68
+[  8%] Built target pofiles_66
+[  9%] Built target pofiles_65
+[ 11%] Built target pofiles_79
+[ 12%] Built target pofiles_61
+[ 13%] Built target pofiles_60
+[ 14%] Built target pofiles_56
+[ 16%] Built target pofiles_55
+[ 17%] Built target pofiles_52
+[ 18%] Built target pofiles_51
+[ 19%] Built target pofiles_50
+[ 20%] Built target pofiles_78
+[ 22%] Built target pofiles_49
+[ 23%] Built target pofiles_19
+[ 24%] Built target pofiles_39
+[ 25%] Built target pofiles_53
+[ 27%] Built target pofiles_17
+[ 28%] Built target pofiles_45
+[ 29%] Built target pofiles_16
+[ 30%] Built target pofiles_34
+[ 32%] Built target pofiles_62
+[ 33%] Built target pofiles_15
+[ 34%] Built target pofiles_73
+[ 35%] Built target pofiles_2
+[ 37%] Built target pofiles_6
+[ 38%] Built target pofiles_33
+[ 39%] Built target pofiles_76
+[ 40%] Built target pofiles_58
+[ 41%] Built target pofiles_44
+[ 43%] Built target pofiles_20
+[ 44%] Built target pofiles_25
+[ 45%] Built target pofiles_13
+[ 46%] Built target pofiles_12
+[ 48%] Built target pofiles_18
+[ 49%] Built target pofiles_47
+[ 50%] Built target pofiles_32
+[ 51%] Built target pofiles_11
+[ 53%] Built target pofiles_57
+[ 54%] Built target pofiles_38
+[ 55%] Built target pofiles_63
+[ 56%] Built target pofiles_9
+[ 58%] Built target pofiles_28
+[ 59%] Built target pofiles_59
+[ 60%] Built target pofiles_10
+[ 61%] Built target pofiles_14
+[ 62%] Generating translation template
+Wrote com.ubuntu.calendar_calendar.desktop.in.h
+[ 62%] Built target com.ubuntu.calendar.pot
+[ 64%] Built target pofiles_3
+[ 65%] Built target pofiles_8
+[ 66%] Built target pofiles_31
+[ 67%] Built target pofiles_1
+[ 69%] Built target pofiles_7
+[ 70%] Built target pofiles_35
+[ 71%] Built target pofiles_4
+[ 72%] Built target pofiles_5
+[ 74%] Built target pofiles_69
+[ 75%] Built target pofiles_21
+[ 76%] Built target pofiles_77
+[ 77%] Built target pofiles_67
+[ 79%] Built target pofiles_30
+[ 80%] Built target pofiles_22
+[ 81%] Built target pofiles_46
+[ 82%] Built target pofiles_23
+[ 83%] Built target pofiles_24
+[ 85%] Built target pofiles_64
+[ 86%] Built target pofiles_26
+[ 87%] Built target pofiles_72
+[ 88%] Built target pofiles_27
+[ 90%] Built target pofiles_54
+[ 91%] Built target pofiles_48
+[ 92%] Built target pofiles_29
+[ 93%] Built target pofiles_36
+[ 95%] Built target pofiles_37
+[ 96%] Built target pofiles_42
+[ 97%] Built target pofiles_40
+[ 98%] Built target pofiles_41
+[100%] Built target pofiles_43
+Install the project...
+-- Install configuration: ""
+-- Installing: //manifest.json
+-- Installing: //com.ubuntu.calendar.apparmor
+-- Installing: //com.ubuntu.calendar_calendar.application
+-- Installing: //com.ubuntu.calendar_calendar.url-dispatcher
+-- Installing: //push-helper
+-- Installing: //push-helper.json
+-- Up-to-date: //qml
+-- Installing: //qml/CalendarChoicePopup.qml
+-- Installing: //qml/TimeLineHeader.qml
+-- Installing: //qml/EventRepetition.qml
+-- Installing: //qml/EventListModel.qml
+-- Installing: //qml/ColorPickerDialog.qml
+-- Installing: //qml/SimpleDivider.qml
+-- Installing: //qml/Recurrence.js
+-- Installing: //qml/calendar.qml
+-- Installing: //qml/EventUtils.qml
+-- Installing: //qml/OnlineAccountsDummy.qml
+-- Installing: //qml/calendarTests.qml
+-- Installing: //qml/TimeLineBaseComponent.qml
+-- Installing: //qml/WeekView.qml
+-- Installing: //qml/PageWithBottomEdge.qml
+-- Installing: //qml/NewEvent.qml
+-- Installing: //qml/dateExt.js
+-- Installing: //qml/PathViewBase.qml
+-- Installing: //qml/TimeLineBackground.qml
+-- Installing: //qml/YearViewDelegate.qml
+-- Installing: //qml/DayView.qml
+-- Installing: //qml/Defines.js
+-- Installing: //qml/OptionSelectorPage.qml
+-- Installing: //qml/HeaderDateComponent.qml
+-- Installing: //qml/NewEventEntryField.qml
+-- Installing: //qml/TimeLineBase.qml
+-- Installing: //qml/AllDayEventComponent.qml
+-- Installing: //qml/ContactChoicePopup.qml
+-- Installing: //qml/MonthComponentWithEventsDateDelegate.qml
+-- Installing: //qml/NewEventBottomEdge.qml
+-- Installing: //qml/YearView.qml
+-- Installing: //qml/RemindersModel.qml
+-- Installing: //qml/colorUtils.js
+-- Installing: //qml/CustomPickers
+-- Installing: //qml/CustomPickers/qmldir
+-- Installing: //qml/CustomPickers/1.0
+-- Installing: //qml/CustomPickers/1.0/DayModel.qml
+-- Installing: //qml/CustomPickers/1.0/PickerRow.qml
+-- Installing: //qml/CustomPickers/1.0/SecondsModel.qml
+-- Installing: //qml/CustomPickers/1.0/Picker.qml
+-- Installing: //qml/CustomPickers/1.0/PickerPanel.qml
+-- Installing: //qml/CustomPickers/1.0/DialerHand.qml
+-- Installing: //qml/CustomPickers/1.0/HoursModel.qml
+-- Installing: //qml/CustomPickers/1.0/PickerModelBase.qml
+-- Installing: //qml/CustomPickers/1.0/PickerDelegate.qml
+-- Installing: //qml/CustomPickers/1.0/FiveMinutesModel.qml
+-- Installing: //qml/CustomPickers/1.0/DatePicker.qml
+-- Installing: //qml/CustomPickers/1.0/MinutesModel.qml
+-- Installing: //qml/CustomPickers/1.0/YearModel.qml
+-- Installing: //qml/CustomPickers/1.0/Dialer.qml
+-- Installing: //qml/CustomPickers/1.0/DialerHandGroup.qml
+-- Installing: //qml/CustomPickers/1.0/MonthModel.qml
+-- Installing: //qml/KeyboardRectangle.qml
+-- Installing: //qml/RecurrenceLabelDefines.qml
+-- Installing: //qml/LimitLabelModel.qml
+-- Installing: //qml/SettingsPage.qml
+-- Installing: //qml/RemindersPage.qml
+-- Installing: //qml/DayHeaderBackground.qml
+-- Installing: //qml/MonthView.qml
+-- Installing: //qml/ScrollAnimation.qml
+-- Installing: //qml/MonthComponent.qml
+-- Installing: //qml/DeleteConfirmationDialog.qml
+-- Installing: //qml/EventDetails.qml
+-- Installing: //qml/NewEventTimePicker.qml
+-- Installing: //qml/calendar_canvas.js
+-- Installing: //qml/ViewHeader.qml
+-- Installing: //qml/3rd-party
+-- Installing: //qml/3rd-party/lunar.js
+-- Installing: //qml/EditEventConfirmationDialog.qml
+-- Installing: //qml/TimeLineTimeScale.qml
+-- Installing: //qml/Scroller.qml
+-- Installing: //qml/OnlineAccountsHelper.qml
+-- Installing: //qml/ViewType.js
+-- Installing: //qml/EventBubble.qml
+-- Installing: //qml/EventActions.qml
+-- Installing: //qml/calendar_canvas_worker.js
+-- Installing: //qml/TimeSeparator.qml
+-- Installing: //qml/MonthWithEventsComponent.qml
+-- Installing: //qml/AgendaView.qml
+-- Installing: //qml/TimeLineHeaderComponent.qml
+-- Up-to-date: //assets
+-- Installing: //assets/calendar-app@30.png
+-- Installing: //assets/PageHeaderBaseDividerLight@18.png
+-- Installing: //assets/PageHeaderBaseDividerBottom@18.png
+-- Installing: //assets/calendar-app-symbolic.svg
+-- Installing: //com.ubuntu.calendar_calendar.desktop
+-- Installing: /share/locale/cs/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/pl/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/gl/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ja/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/bn/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/gu/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/pa/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/hu/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/lo/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/az/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/en_GB/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/fr_CA/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/de/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/af/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/sl/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ug/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/he/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/hi/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/am/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/br/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ka/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ckb/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ru/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/aa/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/zh_TW/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/fa/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/id/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/el/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/zh_CN/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/pt_BR/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/da/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/st/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/uz/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/fi/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/xh/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/it/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/eo/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/gd/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/be/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/my/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/shn/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/vi/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ms/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/en_AU/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/sq/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ca/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/cy/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ar/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/et/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/is/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/fr/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ku/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/eu/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ko/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/uk/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/hr/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ml/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/zh_HK/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ro/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/en_CA/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/sc/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/tr/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/nl/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/bs/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/sk/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/km/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/te/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/lv/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/pt/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/sr/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ta/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ca@valencia/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/ast/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/nb/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/fo/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/si/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/sv/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/es/LC_MESSAGES/com.ubuntu.calendar.mo
+-- Installing: /share/locale/bg/LC_MESSAGES/com.ubuntu.calendar.mo
+yunit@yunitvm:~/builddir/calendar-app$ less /com.ubuntu.calendar
+com.ubuntu.calendar.apparmor                 com.ubuntu.calendar_calendar.desktop
+com.ubuntu.calendar_calendar.application     com.ubuntu.calendar_calendar.url-dispatcher
+yunit@yunitvm:~/builddir/calendar-app$ less /com.ubuntu.calendar_calendar.desktop 
+yunit@yunitvm:~/builddir/calendar-app$ qmlscene /qml/calendar
+calendar_canvas.js         calendar_canvas_worker.js  calendar.qml               calendarTests.qml
+yunit@yunitvm:~/builddir/calendar-app$ qmlscene /qml/calendar.qml 
+QXcbConnection: Could not connect to display 
+Aborted (core dumped)
+yunit@yunitvm:~/builddir/calendar-app$ QT_QPA_PLATTFORM=mirserver qmlscene /qml/calendar.qml 
+QXcbConnection: Could not connect to display 
+Aborted (core dumped)
+yunit@yunitvm:~/builddir/calendar-app$ QT_QPA_PLATFORM=mirserver qmlscene /qml/calendar.qml 
+[2017-11-17 12:07:34.508369] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+[2017-11-17 12:07:34.509049] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+[2017-11-17 12:07:34.509943] mirserver: Starting
+[2017-11-17 12:07:34.510329] mircommon: Loading modules from: /usr/lib/x86_64-linux-gnu/mir/server-platform
+[2017-11-17 12:07:34.510660] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/graphics-mesa-kms.so.12
+[2017-11-17 12:07:34.510914] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/server-mesa-x11.so.12
+[2017-11-17 12:07:34.511682] mircommon: Loading module: /usr/lib/x86_64-linux-gnu/mir/server-platform/input-evdev.so.6
+[2017-11-17 12:07:34.513486] mirplatform: Found graphics driver: mir:mesa-kms (version 0.26.3)
+[2017-11-17 12:07:34.513774] mirplatform: Found graphics driver: mir:mesa-x11 (version 0.26.3)
+[2017-11-17 12:07:34.514168] mirserver: Selected driver: mir:mesa-kms (version 0.26.3)
+Exception while creating graphics platform
+ERROR: /build/mir-O8_xaj/mir-0.26.3+16.04.20170605/src/platforms/mesa/server/kms/linux_virtual_terminal.cpp(220): Throw in function int mir::graphics::mesa::LinuxVirtualTerminal::find_active_vt_number()
+Dynamic exception type: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<std::runtime_error> >
+std::exception::what: Failed to find the current VT
+
+
+yunit@yunitvm:~/builddir/calendar-app$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+
