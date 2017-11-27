@@ -1,0 +1,111 @@
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+4 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Mon Nov 27 21:04:12 2017 from 10.0.2.2
+yunit@yunitvm:~$ apt-cache search ubuntu-app-launch
+libubuntu-app-launch2 - library for sending requests to the ubuntu app launch
+libubuntu-app-launch2-dev - library for sending requests to the ubuntu app launch
+ubuntu-app-launch - Session init system job for Launching Applications
+ubuntu-app-launch-profiler - Qt Components for Ubuntu - startup time profiling tool
+ubuntu-app-launch-tools - Tools for working wtih launched applications
+gir1.2-ubuntu-app-launch-2 - typelib file for libubuntu-app-launch3
+libubuntu-app-launch3 - library for sending requests to the ubuntu app launch
+gir1.2-ubuntu-app-launch-3 - typelib file for libubuntu-app-launch4
+libubuntu-app-launch3-dev - library for sending requests to the ubuntu app launch
+libubuntu-app-launch4 - library for sending requests to the ubuntu app launch
+yunit@yunitvm:~$ sudo apt install ubuntu-app-launch
+[sudo] password for yunit: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ubuntu-app-launch is already the newest version (0.12+17.04.20170404.2-0yunit0+ubuntu+16.04).
+ubuntu-app-launch set to manually installed.
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.10.0-28 linux-headers-4.10.0-28-generic
+  linux-image-4.10.0-28-generic linux-image-extra-4.10.0-28-generic
+Use 'sudo apt autoremove' to remove them.
+0 to upgrade, 0 to newly install, 0 to remove and 7 not to upgrade.
+yunit@yunitvm:~$ sudo apt install ubuntu-app-launch-tools 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.10.0-28 linux-headers-4.10.0-28-generic
+  linux-image-4.10.0-28-generic linux-image-extra-4.10.0-28-generic
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed
+  ubuntu-app-launch-tools
+0 to upgrade, 1 to newly install, 0 to remove and 7 not to upgrade.
+Need to get 56.6 kB of archives.
+After this operation, 361 kB of additional disk space will be used.
+Get:1 http://archive.yunit.io/ubuntu xenial/main amd64 ubuntu-app-launch-tools amd64 0.12+17.04.20170404.2-0yunit0+ubuntu+16.04 [56.6 kB]
+Fetched 56.6 kB in 0s (77.2 kB/s)            
+Selecting previously unselected package ubuntu-app-launch-tools.
+(Reading database ... 203693 files and directories currently installed.)
+Preparing to unpack .../ubuntu-app-launch-tools_0.12+17.04.20170404.2-0yunit0+ubuntu+16.04_amd64.deb ...
+Unpacking ubuntu-app-launch-tools (0.12+17.04.20170404.2-0yunit0+ubuntu+16.04) ...
+Setting up ubuntu-app-launch-tools (0.12+17.04.20170404.2-0yunit0+ubuntu+16.04) ...
+yunit@yunitvm:~$ QT_QPA_PLATFORM=ubuntumirclient UNITY_MIR_SOCKET=/run/mir_socket MIR_SOCKET=/var/run/mir_socket beru
+Loading module: 'libubuntu_application_api_desktop_mirclient.so.3.0.0'
+pci id for fd 10: 80ee:beef, driver (null)
+[1127/213240.949124:WARNING:audio_manager.cc(321)] Multiple instances of AudioManager detected
+[1127/213240.949347:WARNING:audio_manager.cc(278)] Multiple instances of AudioManager detected
+[1127/213241.088908:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+APP_ID isn't set, the handler can not be registered
+Cannot find EGLConfig, returning null config
+file:///usr/lib/x86_64-linux-gnu/qt5/qml/Ubuntu/Content/ContentPeerPicker11.qml:205: TypeError: Cannot read property 'peers' of null
+/usr/share/beru/beru: line 3:  1986 Segmentation fault      (core dumped) QT_SELECT=5 qmlscene -I "$DIR" "$DIR/ui/main.qml" --appargs="$*"
+yunit@yunitvm:~$ ubuntu-app-launch
+ubuntu-app-launch         ubuntu-app-launch-appids  
+yunit@yunitvm:~$ ubuntu-app-launch --help
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Invalid app ID: --help
+Aborted (core dumped)
+yunit@yunitvm:~$ ubuntu-app-launch beru
+Started: beru
+yunit@yunitvm:~$ ubuntu-app-launch beru
+Started: beru
+yunit@yunitvm:~$ ubuntu-app-launch-appids 
+
+(process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+
+(process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+
+(process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+
+(process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+instantfx.sverzegnassi
+ubuntu-system-settings
+display-im6
+display-im6.q16
+byobu
+credentials-preferences
+gallery-app
+system-config-printer
+libertine-manager-app
+ubuntu-calculator-app
+webbrowser-app
+mediaplayer-app
+ibus-setup
+ubuntu-clock-app
+unity8-dash
+vim
+beru
+nm-connection-editor
+dialer-app
+com.ubuntu.sudoku_sudoku
+camera-app
+yunit@yunitvm:~$ ubuntu-app-launch ubuntu-system-settings
+Started: ubuntu-system-settings
+yunit@yunitvm:~$ Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+

@@ -1,0 +1,511 @@
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+4 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Wed Nov 22 20:54:18 2017 from 10.0.2.2
+yunit@yunitvm:~$ cd builddir/address-book-app/
+yunit@yunitvm:~/builddir/address-book-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Autopilot tests disabled: autopilot binary not found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+CMake Error at CMakeLists.txt:23 (find_package):
+  By not providing "FindQt5Contacts.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "Qt5Contacts", but CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5Contacts" with
+  any of the following names:
+
+    Qt5ContactsConfig.cmake
+    qt5contacts-config.cmake
+
+  Add the installation prefix of "Qt5Contacts" to CMAKE_PREFIX_PATH or set
+  "Qt5Contacts_DIR" to a directory containing one of the above files.  If
+  "Qt5Contacts" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/yunit/builddir/address-book-app/CMakeFiles/CMakeOutput.log".
+yunit@yunitvm:~/builddir/address-book-app$ apt-cache search Qt5Contacts
+libqt5contacts5 - Qt PIM module, Contacts library
+yunit@yunitvm:~/builddir/address-book-app$ sudo apt install libqt5con
+libqt5concurrent5  libqt5contacts5    
+yunit@yunitvm:~/builddir/address-book-app$ sudo apt install libqt5contacts5 
+[sudo] password for yunit: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+libqt5contacts5 is already the newest version (5.0~git20140515~29475884-0yunit1+ubuntu+16.04).
+libqt5contacts5 set to manually installed.
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.10.0-28 linux-headers-4.10.0-28-generic
+  linux-image-4.10.0-28-generic linux-image-extra-4.10.0-28-generic
+Use 'sudo apt autoremove' to remove them.
+0 to upgrade, 0 to newly install, 0 to remove and 7 not to upgrade.
+yunit@yunitvm:~/builddir/address-book-app$ cd ../sudoku-app/
+yunit@yunitvm:~/builddir/sudoku-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/builddir/sudoku-app
+yunit@yunitvm:~/builddir/sudoku-app$ make -j4
+Scanning dependencies of target sudoku-app_ComponentsFiles
+Scanning dependencies of target com.ubuntu.sudoku_sudoku.desktop
+Scanning dependencies of target sudoku-app_JsFiles
+Scanning dependencies of target sudoku-app_QMlFiles
+[  0%] Built target sudoku-app_JsFiles
+[  0%] Built target sudoku-app_ComponentsFiles
+[  0%] Built target sudoku-app_QMlFiles
+[  1%] Merging translations into com.ubuntu.sudoku_sudoku.desktop
+Scanning dependencies of target pofiles_65
+Scanning dependencies of target pofiles_60
+Scanning dependencies of target pofiles_61
+[  2%] Generating fo.gmo
+[  4%] Generating bg.gmo
+[  5%] Generating nb.gmo
+[  5%] Built target pofiles_65
+[  5%] Built target pofiles_61
+[  5%] Built target pofiles_60
+Merging translations into com.ubuntu.sudoku_sudoku.desktop.
+Scanning dependencies of target pofiles_55
+Scanning dependencies of target pofiles_52
+[  5%] Built target com.ubuntu.sudoku_sudoku.desktop
+Scanning dependencies of target pofiles_56
+Scanning dependencies of target pofiles_51
+[  7%] Generating km.gmo
+[  8%] Generating sr.gmo
+[ 10%] Generating pt.gmo
+[ 10%] Built target pofiles_52
+[ 10%] Built target pofiles_55
+[ 10%] Built target pofiles_56
+[ 11%] Generating sk.gmo
+Scanning dependencies of target pofiles_19
+Scanning dependencies of target pofiles_50
+Scanning dependencies of target pofiles_49
+[ 11%] Built target pofiles_51
+[ 13%] Generating bs.gmo
+[ 16%] Generating nl.gmo
+[ 14%] Generating ru.gmo
+Scanning dependencies of target pofiles_39
+[ 16%] Built target pofiles_50
+[ 17%] Generating fr.gmo
+[ 17%] Built target pofiles_19
+[ 17%] Built target pofiles_49
+Scanning dependencies of target pofiles_17
+Scanning dependencies of target pofiles_45
+[ 17%] Built target pofiles_39
+Scanning dependencies of target pofiles_53
+[ 19%] Generating ka.gmo
+[ 20%] Generating te.gmo
+Scanning dependencies of target pofiles_16
+[ 22%] Generating zh_HK.gmo
+[ 23%] Generating br.gmo
+[ 23%] Built target pofiles_53
+[ 23%] Built target pofiles_17
+[ 23%] Built target pofiles_45
+Scanning dependencies of target pofiles_62
+Scanning dependencies of target pofiles_15
+Scanning dependencies of target pofiles_34
+[ 23%] Built target pofiles_16
+[ 25%] Generating si.gmo
+[ 26%] Generating am.gmo
+[ 28%] Generating en_AU.gmo
+Scanning dependencies of target pofiles_2
+[ 29%] Generating pl.gmo
+[ 29%] Built target pofiles_62
+[ 29%] Built target pofiles_34
+[ 29%] Built target pofiles_15
+Scanning dependencies of target pofiles_6
+Scanning dependencies of target pofiles_33
+[ 29%] Built target pofiles_2
+Scanning dependencies of target pofiles_58
+[ 31%] Generating hu.gmo
+[ 32%] Generating ca@valencia.gmo
+[ 34%] Generating ms.gmo
+Scanning dependencies of target pofiles_44
+[ 35%] Generating ml.gmo
+[ 35%] Built target pofiles_58
+[ 35%] Built target pofiles_33
+[ 34%] Built target pofiles_6
+Scanning dependencies of target pofiles_20
+Scanning dependencies of target pofiles_25
+Scanning dependencies of target pofiles_13
+[ 35%] Built target pofiles_44
+[ 37%] Generating pt_BR.gmo
+Scanning dependencies of target pofiles_12
+[ 38%] Generating zh_TW.gmo
+[ 40%] Generating he.gmo
+[ 41%] Generating ug.gmo
+[ 41%] Built target pofiles_25
+[ 41%] Built target pofiles_13
+[ 41%] Built target pofiles_20
+[ 41%] Built target pofiles_12
+Scanning dependencies of target pofiles_18
+Scanning dependencies of target pofiles_47
+Scanning dependencies of target pofiles_32
+Scanning dependencies of target pofiles_11
+[ 46%] Generating en_CA.gmo
+[ 43%] Generating shn.gmo
+[ 44%] Generating ckb.gmo
+[ 47%] Generating sl.gmo
+[ 47%] Built target pofiles_47
+[ 47%] Built target pofiles_18
+[ 47%] Built target pofiles_32
+Scanning dependencies of target pofiles_38
+Scanning dependencies of target pofiles_57
+Scanning dependencies of target pofiles_63
+[ 47%] Built target pofiles_11
+[ 49%] Generating is.gmo
+Scanning dependencies of target pofiles_9
+[ 50%] Generating sv.gmo
+[ 52%] Generating ta.gmo
+[ 53%] Generating fr_CA.gmo
+[ 52%] Built target pofiles_38
+[ 52%] Built target pofiles_57
+[ 53%] Built target pofiles_63
+Scanning dependencies of target pofiles_28
+[ 53%] Built target pofiles_9
+Scanning dependencies of target pofiles_59
+Scanning dependencies of target pofiles_14
+Scanning dependencies of target pofiles_10
+[ 55%] Generating it.gmo
+[ 56%] Generating ast.gmo
+[ 58%] Generating hi.gmo
+[ 59%] Generating de.gmo
+[ 58%] Built target pofiles_28
+[ 59%] Built target pofiles_14
+[ 59%] Built target pofiles_59
+Scanning dependencies of target pofiles_3
+Scanning dependencies of target com.ubuntu.sudoku.pot
+Scanning dependencies of target pofiles_8
+[ 59%] Built target pofiles_10
+[ 61%] Generating gl.gmo
+[ 62%] Generating com.ubuntu.sudoku.pot translation template /home/yunit/builddir/sudoku-app/po
+[ 64%] Generating en_GB.gmo
+Scanning dependencies of target pofiles_31
+[ 65%] Generating my.gmo
+[ 64%] Built target pofiles_8
+[ 64%] Built target pofiles_3
+Scanning dependencies of target pofiles_7
+Wrote com.ubuntu.sudoku_sudoku.desktop.in.in.h
+Scanning dependencies of target pofiles_1
+[ 65%] Built target pofiles_31
+[ 67%] Generating cs.gmo
+[ 68%] Generating az.gmo
+Scanning dependencies of target pofiles_35
+[ 70%] Generating ca.gmo
+[ 70%] Built target pofiles_1
+[ 68%] Built target com.ubuntu.sudoku.pot
+[ 70%] Built target pofiles_7
+Scanning dependencies of target pofiles_5
+[ 70%] Built target pofiles_35
+Scanning dependencies of target pofiles_21
+Scanning dependencies of target pofiles_4
+[ 71%] Generating ja.gmo
+Scanning dependencies of target pofiles_30
+[ 73%] Generating pa.gmo
+[ 74%] Generating fa.gmo
+[ 76%] Generating gd.gmo
+[ 74%] Built target pofiles_5
+[ 74%] Built target pofiles_4
+[ 74%] Built target pofiles_21
+Scanning dependencies of target pofiles_46
+[ 76%] Built target pofiles_30
+Scanning dependencies of target pofiles_23
+Scanning dependencies of target pofiles_22
+[ 77%] Generating id.gmo
+Scanning dependencies of target pofiles_24
+[ 79%] Generating ro.gmo
+[ 80%] Generating el.gmo
+[ 82%] Generating zh_CN.gmo
+[ 80%] Built target pofiles_46
+[ 80%] Built target pofiles_22
+[ 82%] Built target pofiles_23
+Scanning dependencies of target pofiles_64
+Scanning dependencies of target pofiles_27
+Scanning dependencies of target pofiles_26
+[ 82%] Built target pofiles_24
+[ 83%] Generating es.gmo
+[ 85%] Generating da.gmo
+[ 86%] Generating fi.gmo
+Scanning dependencies of target pofiles_54
+[ 88%] Generating lv.gmo
+[ 86%] Built target pofiles_27
+[ 88%] Built target pofiles_64
+[ 88%] Built target pofiles_26
+Scanning dependencies of target pofiles_48
+Scanning dependencies of target pofiles_36
+Scanning dependencies of target pofiles_29
+[ 88%] Built target pofiles_54
+[ 91%] Generating tr.gmo
+[ 92%] Generating eo.gmo
+[ 89%] Generating ar.gmo
+Scanning dependencies of target pofiles_37
+[ 94%] Generating et.gmo
+[ 94%] Built target pofiles_48
+[ 94%] Built target pofiles_36
+[ 94%] Built target pofiles_29
+Scanning dependencies of target pofiles_40
+[ 94%] Built target pofiles_37
+Scanning dependencies of target pofiles_41
+Scanning dependencies of target pofiles_42
+[ 95%] Generating eu.gmo
+[ 97%] Generating uk.gmo
+Scanning dependencies of target pofiles_43
+[ 98%] Generating ko.gmo
+[100%] Generating hr.gmo
+[ 98%] Built target pofiles_42
+[100%] Built target pofiles_41
+[100%] Built target pofiles_40
+[100%] Built target pofiles_43
+yunit@yunitvm:~/builddir/sudoku-app$ sudo make install
+[  0%] Built target sudoku-app_QMlFiles
+[  1%] Merging translations into com.ubuntu.sudoku_sudoku.desktop
+Merging translations into com.ubuntu.sudoku_sudoku.desktop.
+[  1%] Built target com.ubuntu.sudoku_sudoku.desktop
+[  1%] Built target sudoku-app_ComponentsFiles
+[  1%] Built target sudoku-app_JsFiles
+[  2%] Built target pofiles_65
+[  4%] Built target pofiles_61
+[  5%] Built target pofiles_60
+[  7%] Built target pofiles_56
+[  8%] Built target pofiles_55
+[ 10%] Built target pofiles_52
+[ 11%] Built target pofiles_51
+[ 13%] Built target pofiles_50
+[ 14%] Built target pofiles_49
+[ 16%] Built target pofiles_19
+[ 17%] Built target pofiles_39
+[ 19%] Built target pofiles_53
+[ 20%] Built target pofiles_17
+[ 22%] Built target pofiles_45
+[ 23%] Built target pofiles_16
+[ 25%] Built target pofiles_34
+[ 26%] Built target pofiles_62
+[ 28%] Built target pofiles_15
+[ 29%] Built target pofiles_2
+[ 31%] Built target pofiles_6
+[ 32%] Built target pofiles_33
+[ 34%] Built target pofiles_58
+[ 35%] Built target pofiles_44
+[ 37%] Built target pofiles_20
+[ 38%] Built target pofiles_25
+[ 40%] Built target pofiles_13
+[ 41%] Built target pofiles_12
+[ 43%] Built target pofiles_18
+[ 44%] Built target pofiles_47
+[ 46%] Built target pofiles_32
+[ 47%] Built target pofiles_11
+[ 49%] Built target pofiles_57
+[ 50%] Built target pofiles_38
+[ 52%] Built target pofiles_63
+[ 53%] Built target pofiles_9
+[ 55%] Built target pofiles_28
+[ 56%] Built target pofiles_14
+[ 58%] Built target pofiles_59
+[ 59%] Built target pofiles_10
+[ 61%] Generating com.ubuntu.sudoku.pot translation template /home/yunit/builddir/sudoku-app/po
+Wrote com.ubuntu.sudoku_sudoku.desktop.in.in.h
+[ 61%] Built target com.ubuntu.sudoku.pot
+[ 62%] Built target pofiles_3
+[ 64%] Built target pofiles_8
+[ 65%] Built target pofiles_31
+[ 67%] Built target pofiles_1
+[ 68%] Built target pofiles_7
+[ 70%] Built target pofiles_35
+[ 71%] Built target pofiles_4
+[ 73%] Built target pofiles_5
+[ 74%] Built target pofiles_21
+[ 76%] Built target pofiles_30
+[ 77%] Built target pofiles_22
+[ 79%] Built target pofiles_46
+[ 80%] Built target pofiles_23
+[ 82%] Built target pofiles_24
+[ 83%] Built target pofiles_64
+[ 85%] Built target pofiles_26
+[ 86%] Built target pofiles_27
+[ 88%] Built target pofiles_54
+[ 89%] Built target pofiles_48
+[ 91%] Built target pofiles_29
+[ 92%] Built target pofiles_36
+[ 94%] Built target pofiles_37
+[ 95%] Built target pofiles_42
+[ 97%] Built target pofiles_40
+[ 98%] Built target pofiles_41
+[100%] Built target pofiles_43
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/bin/sudoku-app
+-- Installing: /usr/share/sudoku-app/components
+-- Installing: /usr/share/sudoku-app/components/Makefile
+-- Installing: /usr/share/sudoku-app/components/SudokuDialogButton.qml
+-- Installing: /usr/share/sudoku-app/components/ManageProfileDialog.qml
+-- Installing: /usr/share/sudoku-app/components/BottomEdge.qml
+-- Installing: /usr/share/sudoku-app/components/HighscoresTab.qml
+-- Installing: /usr/share/sudoku-app/components/SudokuButtonsGrid.qml
+-- Installing: /usr/share/sudoku-app/components/SudokuBlocksGrid.qml
+-- Installing: /usr/share/sudoku-app/components/NewGameSelectionButton.qml
+-- Installing: /usr/share/sudoku-app/components/SudokuButton.qml
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/CMakeDirectoryInformation.cmake
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/progress.marks
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/sudoku-app_ComponentsFiles.dir
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/sudoku-app_ComponentsFiles.dir/depend.internal
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/sudoku-app_ComponentsFiles.dir/progress.make
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/sudoku-app_ComponentsFiles.dir/DependInfo.cmake
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/sudoku-app_ComponentsFiles.dir/build.make
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/sudoku-app_ComponentsFiles.dir/cmake_clean.cmake
+-- Installing: /usr/share/sudoku-app/components/CMakeFiles/sudoku-app_ComponentsFiles.dir/depend.make
+-- Installing: /usr/share/sudoku-app/components/SingleValueListItem.qml
+-- Installing: /usr/share/sudoku-app/components/CMakeLists.txt
+-- Installing: /usr/share/sudoku-app/components/RadialAction.qml
+-- Installing: /usr/share/sudoku-app/components/ColorSchemeSimple.qml
+-- Installing: /usr/share/sudoku-app/components/cmake_install.cmake
+-- Installing: /usr/share/sudoku-app/components/TabsList.qml
+-- Installing: /usr/share/sudoku-app/components/AddProfileDialog.qml
+-- Installing: /usr/share/sudoku-app/components/AboutTab.qml
+-- Installing: /usr/share/sudoku-app/components/ColorSchemeDefault.qml
+-- Installing: /usr/share/sudoku-app/components/BottomEdgeSlide.qml
+-- Installing: /usr/share/sudoku-app/components/DialogButton.qml
+-- Installing: /usr/share/sudoku-app/components/BigBlock.qml
+-- Installing: /usr/share/sudoku-app/components/SettingsTab.qml
+-- Installing: /usr/share/sudoku-app/components/CTestTestfile.cmake
+-- Installing: /usr/share/sudoku-app/components/ColorSchemeUbuntu.qml
+-- Installing: /usr/share/sudoku-app/icons
+-- Installing: /usr/share/sudoku-app/icons/all-users.svg
+-- Installing: /usr/share/sudoku-app/icons/about.png
+-- Installing: /usr/share/sudoku-app/icons/close.svg
+-- Installing: /usr/share/sudoku-app/icons/new_game_ubuntu.svg
+-- Installing: /usr/share/sudoku-app/icons/single-user.svg
+-- Installing: /usr/share/sudoku-app/icons/hint.svg
+-- Installing: /usr/share/sudoku-app/js
+-- Installing: /usr/share/sudoku-app/js/Makefile
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/CMakeDirectoryInformation.cmake
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/sudoku-app_JsFiles.dir
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/sudoku-app_JsFiles.dir/depend.internal
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/sudoku-app_JsFiles.dir/progress.make
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/sudoku-app_JsFiles.dir/DependInfo.cmake
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/sudoku-app_JsFiles.dir/build.make
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/sudoku-app_JsFiles.dir/cmake_clean.cmake
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/sudoku-app_JsFiles.dir/depend.make
+-- Installing: /usr/share/sudoku-app/js/CMakeFiles/progress.marks
+-- Installing: /usr/share/sudoku-app/js/CMakeLists.txt
+-- Installing: /usr/share/sudoku-app/js/cmake_install.cmake
+-- Installing: /usr/share/sudoku-app/js/SudokuCU.js
+-- Installing: /usr/share/sudoku-app/js/localStorage.js
+-- Installing: /usr/share/sudoku-app/js/CTestTestfile.cmake
+-- Installing: /usr/share/sudoku-app/sudoku-app.qml
+-- Installing: /usr/share/sudoku-app/SudokuGameIcon.png
+-- Installing: /usr/share/applications/com.ubuntu.sudoku_sudoku.desktop
+-- Installing: /usr/share/locale/cs/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/gl/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ja/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/pa/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/az/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/en_GB/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/fr_CA/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/sl/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ug/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/he/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/hi/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/am/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/br/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ka/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ckb/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ru/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/zh_TW/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/fa/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/id/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/el/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/zh_CN/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/pt_BR/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/da/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/eo/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/gd/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/my/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/shn/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ms/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/en_AU/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ca/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ar/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/et/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/is/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/eu/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ko/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/uk/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/hr/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ml/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/zh_HK/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ro/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/en_CA/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/tr/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/bs/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/sk/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/km/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/te/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/lv/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/sr/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ta/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ca@valencia/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/ast/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/nb/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/fo/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/si/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/sv/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/share/locale/bg/LC_MESSAGES/com.ubuntu.sudoku.mo
+-- Installing: /usr/lib/python3/dist-packages/sudoku_app
+-- Installing: /usr/lib/python3/dist-packages/sudoku_app/tests
+-- Installing: /usr/lib/python3/dist-packages/sudoku_app/tests/__init__.py
+-- Installing: /usr/lib/python3/dist-packages/sudoku_app/tests/test_settings.py
+-- Installing: /usr/lib/python3/dist-packages/sudoku_app/tests/test_sudoku.py
+-- Installing: /usr/lib/python3/dist-packages/sudoku_app/__init__.py
+-- Installing: /usr/lib/python3/dist-packages/sudoku_app/settings.py
+yunit@yunitvm:~/builddir/sudoku-app$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.

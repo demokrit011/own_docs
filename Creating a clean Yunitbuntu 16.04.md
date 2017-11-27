@@ -942,7 +942,7 @@ we get the following apps: (i'll include whether it works here while testing)
 * ubports-app - fails @ starting
 * clock-app - works
 * gallery-app - works
-* address-book-app
+* address-book-app - fails @ building
 * sudoku-app
 
 that's 20 out of 30 so we have 2 thirds after this.
@@ -1187,7 +1187,23 @@ sudo make install
 
 *address-book-app*
 
+```
+cd ~/builddir/address-book-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+```
+
+**fails @ building** cause Qt5Contacts is not configured correctly (via CMAKE_PREFIX_PATH or something), but ```libqt5contacts5``` is installed allready (see yunitbuntu_16-04-3_amd64_FREAKrun_-3rd-epsiode_cmake.log )
+
 *sudoku-app*
+
+```
+cd ~/builddir/sudoku-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+builds but cannot open
 
 
 
@@ -1216,7 +1232,7 @@ interestingly, we can see that apps or parts of those we included into the cmake
 * openstore
 * ubtd
 * timer - fails @ starting
-* uMatriks
+* uMatriks - fails @ building
 * telegram
 
 
@@ -1370,3 +1386,65 @@ QT_QPA_PLATFORM=ubuntumirclient UNITY_MIR_SOCKET=/run/mir_socket MIR_SOCKET=/var
 ```
 
 but alas the problems prevail...
+
+##### Investigating further
+
+Following is under yunitbuntu_16-04-3_amd64_FREAKrun_4th-episode_ubuntu-app-launch.log
+
+Stefano Verzegnassi came up with the tip that [ubuntu-app-launch](https://launchpad.net/ubuntu-app-launch) might help or looking into how this works at least...
+
+Okay, checking ```apt-cache search ubuntu-app-launch``` brings up a few results, and the package with the exact name is allready installed, not however *ubuntu-app-launch-tools*, installing this and just trying some things....
+
+```
+sudo apt install ubuntu-app-launch-tools
+ubuntu-app-launch-appids
+```
+
+> (process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+>
+> (process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+>
+> (process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+>
+> (process:2844): Json-CRITICAL **: json_array_get_length: assertion 'array != NULL' failed
+> instantfx.sverzegnassi
+> ubuntu-system-settings
+> display-im6
+> display-im6.q16
+> byobu
+> credentials-preferences
+> gallery-app
+> system-config-printer
+> libertine-manager-app
+> ubuntu-calculator-app
+> webbrowser-app
+> mediaplayer-app
+> ibus-setup
+> ubuntu-clock-app
+> unity8-dash
+> vim
+> beru
+> nm-connection-editor
+> dialer-app
+> com.ubuntu.sudoku_sudoku
+> camera-app
+
+if we now do 
+
+```
+ubuntu-app-launch ubuntu-system-settings
+```
+
+the ouput from an ssh console is
+
+> Started: ubuntu-system-settings
+
+**HOWEVER: this does nothing in the graphical VM session!**
+
+Only executing via the terminal app inside the VM really starts a graphical representation of the app. Also running ```ubuntu-app-launch-appids``` is much more exhaustive than via ssh! (all "panels" which seem to be the controll indicators are listed as well)
+
+By comparing everything **we can see that all apps that are starting correctly are listed with this command** so **ubuntu-app-launch** is the key to success!
+
+#### Fixing ubuntu-app-launch
+
+TODO 1st thing seems to be fixing AppIDs (instantFX is listed but has some invalid AppID parameter, perhaps the dot inside it's name...)
