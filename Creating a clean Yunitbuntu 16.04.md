@@ -941,7 +941,7 @@ we get the following apps: (i'll include whether it works here while testing)
 * calendar-app - fails @ starting
 * ubports-app - fails @ starting
 * clock-app - works
-* gallery-app
+* gallery-app - works
 * address-book-app
 * sudoku-app
 
@@ -1176,6 +1176,15 @@ TODO:
 
 *gallery-app*
 
+```
+cd ~/builddir/gallery-app/
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+make -j4
+sudo make install
+```
+
+**works**, see yunitbuntu_16-04-3_amd64_FREAKrun_2nd-epsiode_cmake.log
+
 *address-book-app*
 
 *sudoku-app*
@@ -1325,9 +1334,13 @@ starting beru from the dash brought up a difference between ```ps -ef``` before 
 >UID        PID  PPID  C STIME TTY          TIME CMD
 >
 >yunit     4195  1606  0 13:43 ?        00:00:00 /bin/bash /usr/share/beru/beru
+>
 >yunit     4199  4195 21 13:43 ?        00:00:36 /usr/lib/x86_64-linux-gnu/qt5/bin/qmlscene -I /usr/share/beru /usr/share/beru/ui/main.qml --appargs=
+>
 >yunit     4205  4199  0 13:43 ?        00:00:00 /usr/lib/x86_64-linux-gnu/oxide-qt/chrome-sandbox /usr/lib/x86_64-linux-gnu/oxide-qt/oxide-renderer --type=zygote --shared-memory-override-path=/dev/shm
+>
 >yunit     4206  4205  0 13:43 ?        00:00:00 /usr/lib/x86_64-linux-gnu/oxide-qt/oxide-renderer --type=zygote --shared-memory-override-path=/dev/shm/beru.oxide --disable-gpu-compositing
+>
 >yunit     4208  4206  0 13:43 ?        00:00:00 /usr/lib/x86_64-linux-gnu/oxide-qt/oxide-renderer --type=zygote --shared-memory-override-path=/dev/shm/beru.oxide --disable-gpu-compositing
 
 well this doesn't help tooo much right now, but we'll look into it some other time.
@@ -1337,3 +1350,23 @@ Also some usefull links (maybe):
 * https://askubuntu.com/questions/767697/running-ubuntu-touch-applications-in-command-line-for-gdb-debugging
 * https://askubuntu.com/questions/642444/how-do-i-simply-run-an-ubuntu-touch-app-from-the-terminal
 
+
+So according to the latter, we should try running qmlscene pointing at the respectife desktop file and the main qml or whatever... let's try For beru this would be:
+
+```
+qmlscene --desktop_file_hint=/usr/share/applications/beru.desktop /usr/share/beru/ui/main.qml
+```
+
+okay, this doesn't work any better. Lets try to adapt a few things from the first post and run
+
+```
+QT_QPA_PLATFORM=ubuntumirclient UNITY_MIR_SOCKET=/run/mir_socket MIR_SOCKET=/var/run/mir_socket beru
+```
+
+or maybe
+
+```
+QT_QPA_PLATFORM=ubuntumirclient UNITY_MIR_SOCKET=/run/mir_socket MIR_SOCKET=/var/run/mir_socket APP_ID=beru beru --desktop_file_hint=/usr/share/applications/beru.desktop
+```
+
+but alas the problems prevail...

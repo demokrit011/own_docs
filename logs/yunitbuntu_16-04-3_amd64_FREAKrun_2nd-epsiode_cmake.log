@@ -1,0 +1,827 @@
+ssh -p 3022 yunit@127.0.0.1
+yunit@127.0.0.1's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.10.0-38-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+16 packages can be updated.
+16 updates are security updates.
+
+
+Last login: Fri Nov 17 20:33:59 2017 from 10.0.2.2
+yunit@yunitvm:~$ ls /
+ActionIcon.qml                               contenthub.json       manifest.json       share
+AppendFeedPage.qml                           CreateTopicPage.qml   media               SharePage.qml
+AppendNGFeedPage.qml                         DarkModeShader.qml    mnt                 shorts-app.qml
+ArticleFullImg.qml                           databasemodule_v2.js  NetworkManager.qml  shorts.png
+ArticleOneImgA.qml                           dateutils.js          node_modules        ShortsTab.qml
+ArticleTextA.qml                             dev                   opt                 snap
+ArticleTextB.qml                             EditFeedPage.qml      OptionsKeeper.qml   srv
+ArticleViewItem.qml                          etc                   OrganicGrid.qml     sys
+ArticleViewPage.qml                          FeedComponent.qml     PageLoader.qml      Timer
+assets                                       GoogleFeedApi.qml     Positioner.qml      tmp
+BaseTab.qml                                  GridModeItem.qml      proc                TopicComponent.qml
+bin                                          home                  push-helper         TopicManagementPage.qml
+boot                                         imgSeparator.js       push-helper.json    TopicTab.qml
+ChooseTopicPage.qml                          initrd.img            qml                 usr
+com.ubuntu.calendar.apparmor                 initrd.img.old        ReadingOptions.qml  var
+com.ubuntu.calendar_calendar.application     lib                   root                vmlinuz
+com.ubuntu.calendar_calendar.desktop         lib64                 run                 vmlinuz.old
+com.ubuntu.calendar_calendar.url-dispatcher  ListModeItem.qml      SavedTab.qml        XmlNetwork.qml
+com.ubuntu.ubports.apparmor                  lost+found            sbin                YadApi.qml
+com.ubuntu.ubports.desktop                   MainPage.qml          SettingsPage.qml    YadLoginPage.qml
+yunit@yunitvm:~$ cd builddir/gallery-app/
+yunit@yunitvm:~/builddir/gallery-app$ ls
+click           click-build.sh  CMakeLists.txt  debian   po  README.md       setup  snapcraft.yaml  tests
+clickable.json  cmake           COPYING         desktop  rc  runOnDevice.sh  snap   src
+yunit@yunitvm:~/builddir/gallery-app$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCLICK_MODE=off
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find Lcov (missing:  LCOV_EXECUTABLE GENHTML_EXECUTABLE) 
+-- Could NOT find gcovr (missing:  GCOVR_EXECUTABLE) 
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libGL.so  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'exiv2'
+--   Found exiv2, version 0.25
+-- Checking for module 'libmediainfo'
+--   Found libmediainfo, version 0.7.820.7.82
+-- Found Gettext: /usr/bin/msgmerge (found version "0.19.7") 
+-- Autopilot tests disabled: autopilot binary not found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yunit/builddir/gallery-app
+yunit@yunitvm:~/builddir/gallery-app$ make -j4
+Scanning dependencies of target gallery-app.desktop
+Scanning dependencies of target pofiles_61
+Scanning dependencies of target pofiles_60
+Scanning dependencies of target NON_COMPILED_TARGET
+[  1%] Generating es.gmo
+[  2%] Merging translations into gallery-app.desktop
+[  2%] Generating sv.gmo
+[  2%] Built target NON_COMPILED_TARGET
+Scanning dependencies of target pofiles_56
+[  2%] Built target pofiles_61
+[  2%] Built target pofiles_60
+Scanning dependencies of target pofiles_55
+Scanning dependencies of target pofiles_52
+[  3%] Generating ta.gmo
+[  4%] Generating te.gmo
+[  4%] Generating sr.gmo
+[  4%] Built target pofiles_56
+[  4%] Built target pofiles_55
+[  4%] Built target pofiles_52
+Scanning dependencies of target pofiles_51
+Scanning dependencies of target pofiles_50
+Scanning dependencies of target pofiles_49
+[  4%] Generating mr.gmo
+[  6%] Generating sk.gmo
+[  5%] Generating km.gmo
+[  6%] Built target pofiles_51
+Scanning dependencies of target pofiles_19
+[  6%] Built target pofiles_49
+Merging translations into gallery-app.desktop.
+[  6%] Built target pofiles_50
+[  6%] Generating fa.gmo
+Scanning dependencies of target pofiles_39
+[  6%] Built target gallery-app.desktop
+Scanning dependencies of target pofiles_53
+[  6%] Generating lv.gmo
+Scanning dependencies of target pofiles_17
+[  6%] Generating eu.gmo
+[  6%] Built target pofiles_19
+[  6%] Generating aa.gmo
+[  6%] Built target pofiles_53
+Scanning dependencies of target pofiles_45
+[  6%] Built target pofiles_39
+Scanning dependencies of target pofiles_16
+[  7%] Built target pofiles_17
+Scanning dependencies of target pofiles_34
+[  7%] Generating sc.gmo
+Scanning dependencies of target pofiles_15
+[  8%] Generating ca.gmo
+[  9%] Generating ru.gmo
+[  9%] Built target pofiles_45
+[  9%] Built target pofiles_16
+[  9%] Built target pofiles_34
+[  9%] Generating ckb.gmo
+Scanning dependencies of target pofiles_2
+[ 10%] Generating pl.gmo
+[ 10%] Built target pofiles_15
+Scanning dependencies of target pofiles_33
+Scanning dependencies of target pofiles_6
+[ 11%] Generating hu.gmo
+Scanning dependencies of target pofiles_58
+[ 11%] Generating sq.gmo
+[ 11%] Built target pofiles_2
+[ 11%] Built target pofiles_6
+[ 11%] Built target pofiles_33
+Scanning dependencies of target pofiles_44
+[ 12%] Generating ast.gmo
+Scanning dependencies of target pofiles_20
+[ 12%] Generating ro.gmo
+Scanning dependencies of target pofiles_25
+[ 12%] Built target pofiles_58
+[ 12%] Generating id.gmo
+[ 13%] Generating fi.gmo
+[ 13%] Built target pofiles_44
+Scanning dependencies of target pofiles_13
+[ 13%] Built target pofiles_25
+[ 13%] Generating am.gmo
+Scanning dependencies of target pofiles_12
+[ 13%] Built target pofiles_20
+Scanning dependencies of target pofiles_18
+Scanning dependencies of target pofiles_47
+[ 13%] Built target pofiles_13
+[ 14%] Generating he.gmo
+[ 15%] Generating nl.gmo
+[ 16%] Generating zh_TW.gmo
+[ 16%] Built target pofiles_12
+Scanning dependencies of target pofiles_32
+Scanning dependencies of target pofiles_11
+[ 17%] Generating en_AU.gmo
+[ 17%] Built target pofiles_18
+[ 17%] Built target pofiles_47
+Scanning dependencies of target pofiles_38
+Scanning dependencies of target pofiles_57
+[ 17%] Built target pofiles_32
+[ 17%] Generating ug.gmo
+Scanning dependencies of target pofiles_9
+[ 17%] Generating ca@valencia.gmo
+[ 18%] Generating fr.gmo
+[ 18%] Built target pofiles_11
+[ 18%] Built target pofiles_38
+[ 18%] Built target pofiles_57
+[ 18%] Generating de.gmo
+Scanning dependencies of target pofiles_28
+Scanning dependencies of target pofiles_14
+Scanning dependencies of target pofiles_59
+[ 18%] Built target pofiles_9
+[ 18%] Generating be.gmo
+Scanning dependencies of target pofiles_10
+[ 18%] Generating nb.gmo
+[ 19%] Generating br.gmo
+[ 19%] Built target pofiles_28
+[ 20%] Generating sl.gmo
+[ 20%] Built target pofiles_59
+[ 20%] Built target pofiles_14
+Scanning dependencies of target pofiles_3
+[ 20%] Built target pofiles_10
+Scanning dependencies of target pofiles_8
+Scanning dependencies of target pofiles_31
+[ 20%] Generating gl.gmo
+[ 20%] Generating ms.gmo
+[ 20%] Built target pofiles_3
+[ 21%] Generating en_GB.gmo
+Scanning dependencies of target pofiles_1
+Scanning dependencies of target pofiles_7
+[ 21%] Built target pofiles_8
+[ 21%] Built target pofiles_31
+[ 21%] Generating cs.gmo
+Scanning dependencies of target pofiles_4
+[ 21%] Generating az.gmo
+Scanning dependencies of target pofiles_35
+[ 21%] Built target pofiles_1
+[ 21%] Generating cy.gmo
+Scanning dependencies of target gallery-app.pot
+[ 22%] Generating ja.gmo
+[ 22%] Built target pofiles_7
+[ 22%] Generating translation template
+[ 22%] Built target pofiles_35
+Scanning dependencies of target pofiles_5
+[ 22%] Built target pofiles_4
+Scanning dependencies of target pofiles_21
+[ 22%] Generating pa.gmo
+Scanning dependencies of target pofiles_30
+[ 23%] Generating shn.gmo
+[ 24%] Generating el.gmo
+Wrote desktop/gallery-app.desktop.in.in.h
+[ 24%] Built target pofiles_5
+[ 24%] Built target pofiles_30
+Scanning dependencies of target pofiles_22
+[ 24%] Built target pofiles_21
+Scanning dependencies of target pofiles_46
+[ 24%] Generating zh_CN.gmo
+Scanning dependencies of target pofiles_23
+[ 24%] Built target gallery-app.pot
+[ 24%] Built target pofiles_22
+Scanning dependencies of target pofiles_24
+[ 24%] Generating tr.gmo
+[ 25%] Generating pt_BR.gmo
+[ 25%] Generating da.gmo
+Scanning dependencies of target pofiles_26
+[ 25%] Built target pofiles_46
+[ 25%] Built target pofiles_23
+[ 25%] Generating it.gmo
+[ 25%] Built target pofiles_24
+Scanning dependencies of target pofiles_27
+Scanning dependencies of target pofiles_54
+[ 25%] Built target pofiles_26
+[ 26%] Generating pt.gmo
+Scanning dependencies of target pofiles_48
+[ 27%] Generating gd.gmo
+[ 27%] Generating bs.gmo
+Scanning dependencies of target pofiles_29
+[ 27%] Built target pofiles_54
+[ 27%] Built target pofiles_27
+[ 28%] Generating my.gmo
+[ 28%] Built target pofiles_48
+Scanning dependencies of target pofiles_37
+Scanning dependencies of target pofiles_36
+[ 29%] Generating ar.gmo
+[ 29%] Generating is.gmo
+Scanning dependencies of target pofiles_42
+[ 29%] Built target pofiles_29
+[ 29%] Generating ml.gmo
+[ 29%] Built target pofiles_36
+Scanning dependencies of target pofiles_40
+[ 29%] Built target pofiles_37
+[ 29%] Built target pofiles_42
+Scanning dependencies of target pofiles_41
+[ 29%] Generating ko.gmo
+Scanning dependencies of target gallery-app_automoc
+Scanning dependencies of target pofiles_43
+[ 30%] Built target pofiles_40
+[ 30%] Generating uk.gmo
+[ 31%] Automatic moc for target gallery-app
+[ 32%] Generating zh_HK.gmo
+Scanning dependencies of target gallery-util_automoc
+[ 32%] Built target pofiles_41
+Generating moc_gallery-application.cpp
+[ 32%] Built target pofiles_43
+[ 32%] Automatic moc for target gallery-util
+Scanning dependencies of target gallery-album_automoc
+Scanning dependencies of target gallery-core_automoc
+[ 32%] Automatic moc for target gallery-core
+[ 32%] Built target gallery-util_automoc
+[ 32%] Automatic moc for target gallery-album
+Scanning dependencies of target gallery-database_automoc
+Generating moc_album-collection.cpp
+Generating moc_container-source-collection.cpp
+[ 32%] Automatic moc for target gallery-database
+Generating moc_album-table.cpp
+Generating moc_container-source.cpp
+Generating moc_data-collection.cpp
+Generating moc_database.cpp
+Generating moc_gallery-manager.cpp
+Generating moc_album-default-template.cpp
+Generating moc_data-object.cpp
+Generating moc_media-table.cpp
+Generating moc_data-source.cpp
+Generating moc_album-page.cpp
+[ 32%] Built target gallery-database_automoc
+Generating moc_selectable-view-collection.cpp
+Scanning dependencies of target gallery-event_automoc
+[ 33%] Automatic moc for target gallery-event
+Generating moc_media-object-factory.cpp
+Generating moc_source-collection.cpp
+Generating moc_event-collection.cpp
+Generating moc_album-template-page.cpp
+Generating moc_view-collection.cpp
+Generating moc_event.cpp
+[ 33%] Built target gallery-core_automoc
+Generating moc_album-template.cpp
+[ 33%] Built target gallery-app_automoc
+Scanning dependencies of target gallery-media_automoc
+Scanning dependencies of target gallery-medialoader_automoc
+[ 34%] Automatic moc for target gallery-media
+[ 35%] Automatic moc for target gallery-medialoader
+Generating moc_media-collection.cpp
+Generating moc_album.cpp
+Generating moc_video-metadata.cpp
+[ 35%] Built target gallery-event_automoc
+Scanning dependencies of target gallery-photo_automoc
+Generating moc_media-monitor.cpp
+[ 35%] Automatic moc for target gallery-photo
+[ 35%] Built target gallery-medialoader_automoc
+Generating moc_photo-metadata.cpp
+Scanning dependencies of target gallery-qml_automoc
+Generating moc_media-source.cpp
+[ 35%] Automatic moc for target gallery-qml
+Generating moc_qml-album-collection-model.cpp
+[ 35%] Built target gallery-album_automoc
+Scanning dependencies of target gallery-video_automoc
+Generating moc_photo.cpp
+[ 35%] Automatic moc for target gallery-video
+Generating moc_video.cpp
+[ 35%] Built target gallery-media_automoc
+Generating moc_qml-event-collection-model.cpp
+Scanning dependencies of target command-line-parser_automoc
+[ 36%] Automatic moc for target command-line-parser
+Generating tst_commandlineparser.moc
+[ 36%] Built target gallery-photo_automoc
+Scanning dependencies of target imaging_automoc
+[ 36%] Built target gallery-video_automoc
+[ 36%] Automatic moc for target imaging
+Scanning dependencies of target mediamonitor_automoc
+[ 36%] Automatic moc for target mediamonitor
+Generating tst_imaging.moc
+Generating moc_qml-event-overview-model.cpp
+Generating tst_mediamonitor.moc
+[ 36%] Built target command-line-parser_automoc
+Scanning dependencies of target mediaobjectfactory_automoc
+[ 37%] Automatic moc for target mediaobjectfactory
+Generating tst_mediaobjectfactory.moc
+Generating moc_qml-media-collection-model.cpp
+[ 37%] Built target imaging_automoc
+Scanning dependencies of target resource_automoc
+[ 37%] Built target mediamonitor_automoc
+[ 37%] Automatic moc for target resource
+Scanning dependencies of target video_automoc
+[ 38%] Automatic moc for target video
+Generating tst_resource.moc
+Generating tst_video.moc
+Generating moc_media-object-factory.cpp
+Generating moc_qml-view-collection-model.cpp
+[ 38%] Built target resource_automoc
+Scanning dependencies of target photo-metadata_automoc
+Generating moc_gallery-manager.cpp
+[ 39%] Automatic moc for target photo-metadata
+Generating tst_photo-metadata.moc
+Generating moc_photo.cpp
+[ 39%] Built target gallery-qml_automoc
+Scanning dependencies of target gallery-util
+[ 40%] Building CXX object src/util/CMakeFiles/gallery-util.dir/command-line-parser.cpp.o
+Generating moc_media-object-factory.cpp
+Generating moc_photo-metadata.cpp
+[ 40%] Built target mediaobjectfactory_automoc
+Scanning dependencies of target gallery-core
+[ 40%] Building CXX object src/core/CMakeFiles/gallery-core.dir/container-source.cpp.o
+[ 40%] Built target photo-metadata_automoc
+[ 40%] Built target video_automoc
+Scanning dependencies of target gallery-database
+Scanning dependencies of target gallery-event
+[ 41%] Building CXX object src/event/CMakeFiles/gallery-event.dir/event.cpp.o
+[ 42%] Building CXX object src/database/CMakeFiles/gallery-database.dir/album-table.cpp.o
+[ 43%] Building CXX object src/core/CMakeFiles/gallery-core.dir/container-source-collection.cpp.o
+[ 43%] Building CXX object src/util/CMakeFiles/gallery-util.dir/imaging.cpp.o
+[ 43%] Building CXX object src/core/CMakeFiles/gallery-core.dir/data-collection.cpp.o
+[ 43%] Building CXX object src/event/CMakeFiles/gallery-event.dir/event-collection.cpp.o
+[ 43%] Building CXX object src/database/CMakeFiles/gallery-database.dir/database.cpp.o
+[ 44%] Building CXX object src/util/CMakeFiles/gallery-util.dir/orientation.cpp.o
+[ 45%] Building CXX object src/core/CMakeFiles/gallery-core.dir/data-object.cpp.o
+[ 45%] Building CXX object src/util/CMakeFiles/gallery-util.dir/resource.cpp.o
+[ 46%] Building CXX object src/database/CMakeFiles/gallery-database.dir/media-table.cpp.o
+[ 47%] Building CXX object src/event/CMakeFiles/gallery-event.dir/gallery-event_automoc.cpp.o
+[ 47%] Building CXX object src/core/CMakeFiles/gallery-core.dir/data-source.cpp.o
+[ 48%] Building CXX object src/util/CMakeFiles/gallery-util.dir/urlhandler.cpp.o
+[ 49%] Building CXX object src/core/CMakeFiles/gallery-core.dir/selectable-view-collection.cpp.o
+[ 49%] Building CXX object src/database/CMakeFiles/gallery-database.dir/gallery-database_automoc.cpp.o
+[ 49%] Linking CXX static library libgallery-event.a
+[ 49%] Built target gallery-event
+Scanning dependencies of target gallery-media
+[ 49%] Building CXX object src/core/CMakeFiles/gallery-core.dir/source-collection.cpp.o
+[ 49%] Building CXX object src/media/CMakeFiles/gallery-media.dir/media-collection.cpp.o
+[ 49%] Building CXX object src/util/CMakeFiles/gallery-util.dir/gallery-util_automoc.cpp.o
+[ 50%] Linking CXX static library libgallery-util.a
+[ 50%] Built target gallery-util
+Scanning dependencies of target gallery-photo
+[ 50%] Building CXX object src/photo/CMakeFiles/gallery-photo.dir/photo.cpp.o
+[ 51%] Building CXX object src/core/CMakeFiles/gallery-core.dir/view-collection.cpp.o
+[ 52%] Linking CXX static library libgallery-database.a
+[ 52%] Built target gallery-database
+Scanning dependencies of target gallery-qml
+[ 53%] Building CXX object src/qml/CMakeFiles/gallery-qml.dir/qml-album-collection-model.cpp.o
+[ 53%] Building CXX object src/core/CMakeFiles/gallery-core.dir/gallery-core_automoc.cpp.o
+[ 54%] Building CXX object src/media/CMakeFiles/gallery-media.dir/media-monitor.cpp.o
+[ 55%] Building CXX object src/photo/CMakeFiles/gallery-photo.dir/photo-metadata.cpp.o
+[ 56%] Linking CXX static library libgallery-core.a
+[ 56%] Built target gallery-core
+Scanning dependencies of target gallery-video
+[ 57%] Building CXX object src/video/CMakeFiles/gallery-video.dir/video.cpp.o
+[ 57%] Building CXX object src/qml/CMakeFiles/gallery-qml.dir/qml-event-collection-model.cpp.o
+[ 57%] Building CXX object src/photo/CMakeFiles/gallery-photo.dir/gallery-photo_automoc.cpp.o
+[ 57%] Building CXX object src/media/CMakeFiles/gallery-media.dir/media-source.cpp.o
+[ 57%] Building CXX object src/video/CMakeFiles/gallery-video.dir/gallery-video_automoc.cpp.o
+[ 58%] Building CXX object src/qml/CMakeFiles/gallery-qml.dir/qml-event-overview-model.cpp.o
+[ 59%] Building CXX object src/media/CMakeFiles/gallery-media.dir/gallery-media_automoc.cpp.o
+[ 60%] Linking CXX static library libgallery-photo.a
+[ 60%] Built target gallery-photo
+Scanning dependencies of target command-line-parser
+[ 60%] Building CXX object tests/unittests/command-line-parser/CMakeFiles/command-line-parser.dir/tst_commandlineparser.cpp.o
+[ 61%] Linking CXX static library libgallery-video.a
+[ 61%] Built target gallery-video
+Scanning dependencies of target imaging
+[ 62%] Building CXX object tests/unittests/imaging/CMakeFiles/imaging.dir/tst_imaging.cpp.o
+[ 62%] Building CXX object src/qml/CMakeFiles/gallery-qml.dir/qml-media-collection-model.cpp.o
+[ 62%] Linking CXX static library libgallery-media.a
+[ 62%] Built target gallery-media
+Scanning dependencies of target resource
+[ 63%] Building CXX object tests/unittests/resource/CMakeFiles/resource.dir/tst_resource.cpp.o
+[ 64%] Building CXX object tests/unittests/command-line-parser/CMakeFiles/command-line-parser.dir/command-line-parser_automoc.cpp.o
+[ 64%] Linking CXX executable command-line-parser
+[ 64%] Built target command-line-parser
+Scanning dependencies of target gallery-album
+[ 64%] Building CXX object src/album/CMakeFiles/gallery-album.dir/album.cpp.o
+[ 64%] Building CXX object tests/unittests/imaging/CMakeFiles/imaging.dir/imaging_automoc.cpp.o
+[ 65%] Linking CXX executable imaging
+[ 66%] Building CXX object src/qml/CMakeFiles/gallery-qml.dir/qml-view-collection-model.cpp.o
+[ 66%] Built target imaging
+Scanning dependencies of target gallery-medialoader
+[ 66%] Building CXX object src/medialoader/CMakeFiles/gallery-medialoader.dir/video-metadata.cpp.o
+[ 66%] Building CXX object tests/unittests/resource/CMakeFiles/resource.dir/resource_automoc.cpp.o
+[ 67%] Linking CXX executable resource
+[ 68%] Building CXX object src/medialoader/CMakeFiles/gallery-medialoader.dir/gallery-medialoader_automoc.cpp.o
+[ 68%] Built target resource
+[ 69%] Generating __/__/__/src/medialoader/moc_video-metadata.cpp
+[ 70%] Generating __/__/__/src/database/moc_media-table.cpp
+[ 70%] Generating __/__/__/src/photo/moc_photo-metadata.cpp
+Scanning dependencies of target mediaobjectfactory
+[ 70%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/tst_mediaobjectfactory.cpp.o
+[ 70%] Building CXX object src/qml/CMakeFiles/gallery-qml.dir/gallery-qml_automoc.cpp.o
+[ 71%] Building CXX object src/album/CMakeFiles/gallery-album.dir/album-default-template.cpp.o
+[ 71%] Linking CXX static library libgallery-medialoader.a
+[ 71%] Built target gallery-medialoader
+[ 71%] Building CXX object src/album/CMakeFiles/gallery-album.dir/album-collection.cpp.o
+[ 72%] Building CXX object src/album/CMakeFiles/gallery-album.dir/album-page.cpp.o
+[ 73%] Linking CXX static library libgallery-qml.a
+[ 74%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/__/__/src/media-object-factory.cpp.o
+[ 74%] Built target gallery-qml
+[ 74%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/__/__/src/photo/photo.cpp.o
+[ 74%] Building CXX object src/album/CMakeFiles/gallery-album.dir/album-template.cpp.o
+[ 75%] Building CXX object src/album/CMakeFiles/gallery-album.dir/album-template-page.cpp.o
+[ 75%] Building CXX object src/album/CMakeFiles/gallery-album.dir/gallery-album_automoc.cpp.o
+[ 76%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/stubs/media-table_stub.cpp.o
+[ 76%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/stubs/video_stub.cpp.o
+[ 77%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/stubs/photometa-data_stub.cpp.o
+[ 77%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/stubs/video-metadata_stub.cpp.o
+[ 78%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/__/__/src/database/moc_media-table.cpp.o
+[ 79%] Linking CXX static library libgallery-album.a
+[ 79%] Built target gallery-album
+Scanning dependencies of target gallery-app
+[ 80%] Building CXX object src/CMakeFiles/gallery-app.dir/gallery-application.cpp.o
+[ 81%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/__/__/src/photo/moc_photo-metadata.cpp.o
+[ 81%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/__/__/__/src/medialoader/moc_video-metadata.cpp.o
+[ 82%] Building CXX object tests/unittests/mediaobjectfactory/CMakeFiles/mediaobjectfactory.dir/mediaobjectfactory_automoc.cpp.o
+Scanning dependencies of target mediamonitor
+[ 83%] Building CXX object tests/unittests/mediamonitor/CMakeFiles/mediamonitor.dir/tst_mediamonitor.cpp.o
+[ 83%] Building CXX object tests/unittests/mediamonitor/CMakeFiles/mediamonitor.dir/mediamonitor_automoc.cpp.o
+[ 83%] Building CXX object src/CMakeFiles/gallery-app.dir/gallery-manager.cpp.o
+[ 83%] Linking CXX executable mediaobjectfactory
+[ 84%] Building CXX object src/CMakeFiles/gallery-app.dir/main.cpp.o
+[ 84%] Built target mediaobjectfactory
+Scanning dependencies of target video
+[ 85%] Building CXX object tests/unittests/video/CMakeFiles/video.dir/tst_video.cpp.o
+[ 86%] Linking CXX executable mediamonitor
+[ 86%] Building CXX object src/CMakeFiles/gallery-app.dir/media-object-factory.cpp.o
+[ 86%] Built target mediamonitor
+[ 87%] Generating __/__/__/src/photo/moc_photo.cpp
+[ 87%] Generating __/__/__/src/moc_gallery-manager.cpp
+[ 88%] Generating __/__/__/src/database/moc_album-table.cpp
+[ 88%] Generating __/__/__/src/database/moc_database.cpp
+[ 89%] Generating __/__/__/src/database/moc_media-table.cpp
+[ 89%] Generating __/__/__/src/medialoader/moc_video-metadata.cpp
+Scanning dependencies of target photo-metadata
+[ 89%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/tst_photo-metadata.cpp.o
+[ 90%] Building CXX object src/CMakeFiles/gallery-app.dir/gallery-app_automoc.cpp.o
+[ 90%] Building CXX object tests/unittests/video/CMakeFiles/video.dir/__/__/__/src/gallery-manager.cpp.o
+[ 91%] Building CXX object tests/unittests/video/CMakeFiles/video.dir/__/__/__/src/media-object-factory.cpp.o
+[ 92%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/__/__/src/photo/photo-metadata.cpp.o
+[ 92%] Linking CXX executable gallery-app
+[ 92%] Built target gallery-app
+[ 92%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/stubs/album-table_stub.cpp.o
+[ 92%] Building CXX object tests/unittests/video/CMakeFiles/video.dir/video_automoc.cpp.o
+[ 93%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/stubs/database_stub.cpp.o
+[ 93%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/stubs/media-table_stub.cpp.o
+[ 94%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/stubs/photo_stub.cpp.o
+[ 94%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/stubs/video_stub.cpp.o
+[ 95%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/stubs/video-metadata_stub.cpp.o
+[ 96%] Linking CXX executable video
+[ 96%] Built target video
+[ 96%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/stubs/gallery-manager_stub.cpp.o
+[ 97%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/__/__/src/moc_gallery-manager.cpp.o
+[ 97%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/__/__/src/database/moc_album-table.cpp.o
+[ 98%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/__/__/src/database/moc_database.cpp.o
+[ 98%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/__/__/src/database/moc_media-table.cpp.o
+[ 99%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/__/__/src/medialoader/moc_video-metadata.cpp.o
+[ 99%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/__/__/__/src/photo/moc_photo.cpp.o
+[100%] Building CXX object tests/unittests/photo-metadata/CMakeFiles/photo-metadata.dir/photo-metadata_automoc.cpp.o
+[100%] Linking CXX executable photo-metadata
+[100%] Built target photo-metadata
+yunit@yunitvm:~/builddir/gallery-app$ sudo make install
+[sudo] password for yunit: 
+[  0%] Built target NON_COMPILED_TARGET
+[  1%] Merging translations into gallery-app.desktop
+Merging translations into gallery-app.desktop.
+[  1%] Built target gallery-app.desktop
+[  2%] Built target pofiles_61
+[  2%] Built target pofiles_60
+[  3%] Built target pofiles_56
+[  3%] Built target pofiles_55
+[  4%] Built target pofiles_52
+[  4%] Built target pofiles_51
+[  5%] Built target pofiles_50
+[  6%] Built target pofiles_49
+[  6%] Built target pofiles_19
+[  6%] Built target pofiles_39
+[  6%] Built target pofiles_53
+[  6%] Built target pofiles_17
+[  7%] Built target pofiles_45
+[  8%] Built target pofiles_16
+[  9%] Built target pofiles_34
+[  9%] Built target pofiles_15
+[ 10%] Built target pofiles_2
+[ 11%] Built target pofiles_6
+[ 11%] Built target pofiles_33
+[ 12%] Built target pofiles_58
+[ 12%] Built target pofiles_44
+[ 12%] Built target pofiles_20
+[ 13%] Built target pofiles_25
+[ 13%] Built target pofiles_13
+[ 14%] Built target pofiles_12
+[ 15%] Built target pofiles_18
+[ 16%] Built target pofiles_47
+[ 17%] Built target pofiles_32
+[ 17%] Built target pofiles_11
+[ 17%] Built target pofiles_57
+[ 18%] Built target pofiles_38
+[ 18%] Built target pofiles_9
+[ 18%] Built target pofiles_28
+[ 19%] Built target pofiles_14
+[ 19%] Built target pofiles_59
+[ 20%] Built target pofiles_10
+[ 20%] Built target pofiles_3
+[ 21%] Built target pofiles_8
+[ 21%] Built target pofiles_31
+[ 21%] Built target pofiles_1
+[ 21%] Built target pofiles_7
+[ 21%] Built target pofiles_35
+[ 22%] Built target pofiles_4
+[ 22%] Generating translation template
+Wrote desktop/gallery-app.desktop.in.in.h
+[ 22%] Built target gallery-app.pot
+[ 22%] Built target pofiles_5
+[ 23%] Built target pofiles_21
+[ 24%] Built target pofiles_30
+[ 24%] Built target pofiles_22
+[ 24%] Built target pofiles_46
+[ 25%] Built target pofiles_23
+[ 25%] Built target pofiles_24
+[ 25%] Built target pofiles_26
+[ 26%] Built target pofiles_27
+[ 27%] Built target pofiles_54
+[ 27%] Built target pofiles_48
+[ 28%] Built target pofiles_29
+[ 29%] Built target pofiles_36
+[ 29%] Built target pofiles_37
+[ 29%] Built target pofiles_42
+[ 29%] Built target pofiles_40
+[ 30%] Built target pofiles_41
+[ 31%] Built target pofiles_43
+[ 32%] Automatic moc for target gallery-app
+[ 32%] Built target gallery-app_automoc
+[ 32%] Automatic moc for target gallery-util
+[ 32%] Built target gallery-util_automoc
+[ 36%] Built target gallery-util
+[ 36%] Automatic moc for target gallery-core
+[ 36%] Built target gallery-core_automoc
+[ 41%] Built target gallery-core
+[ 41%] Automatic moc for target gallery-album
+[ 41%] Built target gallery-album_automoc
+[ 45%] Built target gallery-album
+[ 45%] Automatic moc for target gallery-database
+[ 45%] Built target gallery-database_automoc
+[ 48%] Built target gallery-database
+[ 49%] Automatic moc for target gallery-event
+[ 49%] Built target gallery-event_automoc
+[ 51%] Built target gallery-event
+[ 52%] Automatic moc for target gallery-media
+[ 52%] Built target gallery-media_automoc
+[ 54%] Built target gallery-media
+[ 55%] Automatic moc for target gallery-medialoader
+[ 55%] Built target gallery-medialoader_automoc
+[ 56%] Built target gallery-medialoader
+[ 56%] Automatic moc for target gallery-photo
+[ 56%] Built target gallery-photo_automoc
+[ 58%] Built target gallery-photo
+[ 58%] Automatic moc for target gallery-qml
+[ 58%] Built target gallery-qml_automoc
+[ 62%] Built target gallery-qml
+[ 62%] Automatic moc for target gallery-video
+[ 62%] Built target gallery-video_automoc
+[ 64%] Built target gallery-video
+[ 67%] Built target gallery-app
+[ 68%] Automatic moc for target command-line-parser
+[ 68%] Built target command-line-parser_automoc
+[ 69%] Built target command-line-parser
+[ 69%] Automatic moc for target imaging
+[ 69%] Built target imaging_automoc
+[ 71%] Built target imaging
+[ 71%] Automatic moc for target mediamonitor
+[ 71%] Built target mediamonitor_automoc
+[ 73%] Built target mediamonitor
+[ 74%] Automatic moc for target mediaobjectfactory
+[ 74%] Built target mediaobjectfactory_automoc
+[ 82%] Built target mediaobjectfactory
+[ 82%] Automatic moc for target resource
+[ 82%] Built target resource_automoc
+[ 84%] Built target resource
+[ 85%] Automatic moc for target video
+[ 85%] Built target video_automoc
+[ 88%] Built target video
+[ 89%] Automatic moc for target photo-metadata
+[ 89%] Built target photo-metadata_automoc
+[100%] Built target photo-metadata
+Install the project...
+-- Install configuration: ""
+-- Installing: /usr/share/content-hub/peers/gallery-app
+-- Up-to-date: /usr/share/icons/hicolor
+-- Up-to-date: /usr/share/icons/hicolor/256x256
+-- Up-to-date: /usr/share/icons/hicolor/256x256/apps
+-- Installing: /usr/share/icons/hicolor/256x256/apps/gallery-app.png
+-- Up-to-date: /usr/share/icons/hicolor/128x128
+-- Up-to-date: /usr/share/icons/hicolor/128x128/apps
+-- Installing: /usr/share/icons/hicolor/128x128/apps/gallery-app.png
+-- Up-to-date: /usr/share/icons/hicolor/64x64
+-- Up-to-date: /usr/share/icons/hicolor/64x64/apps
+-- Installing: /usr/share/icons/hicolor/64x64/apps/gallery-app.png
+-- Installing: /usr/share/applications/gallery-app.desktop
+-- Installing: /usr/share/url-dispatcher/urls/gallery-app.url-dispatcher
+-- Installing: /usr/share/locale/cs/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/pl/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/gl/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ja/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/pa/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/hu/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/az/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/en_GB/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/de/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/sl/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ug/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/he/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/am/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/br/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ckb/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ru/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/aa/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/zh_TW/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/fa/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/id/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/el/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/zh_CN/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/pt_BR/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/da/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/fi/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/it/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/gd/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/be/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/my/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/shn/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ms/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/en_AU/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/sq/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ca/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/cy/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ar/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/is/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/fr/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/eu/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ko/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/uk/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ml/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/zh_HK/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ro/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/sc/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/tr/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/nl/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/bs/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/sk/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/km/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/mr/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/te/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/lv/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/pt/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/sr/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ta/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ca@valencia/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/ast/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/nb/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/sv/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/locale/es/LC_MESSAGES/gallery-app.mo
+-- Installing: /usr/share/gallery-app/rc/img
+-- Installing: /usr/share/gallery-app/rc/img/album-cover-default-icon.png
+-- Installing: /usr/share/gallery-app/rc/img/album-cover-green-icon.png
+-- Installing: /usr/share/gallery-app/rc/img/album-cover-blue-icon.png
+-- Installing: /usr/share/gallery-app/rc/img/album-cover-pattern-icon.png
+-- Installing: /usr/share/gallery-app/rc/img/transparency-bg.png
+-- Installing: /usr/share/gallery-app/rc/img/photo-preview-selected-overlay.png
+-- Installing: /usr/share/gallery-app/rc/img/album-cover-red-icon.png
+-- Installing: /usr/share/gallery-app/rc/js
+-- Installing: /usr/share/gallery-app/rc/js/Gallery.js
+-- Installing: /usr/share/gallery-app/rc/js/GalleryUtility.js
+-- Installing: /usr/share/gallery-app/rc/js/GraphicsRoutines.js
+-- Installing: /usr/share/gallery-app/rc/qml
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer/MediaViewer.qml
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer/PhotoEditorPage.qml
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer/PopupPhotoViewer.qml
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer/PhotoViewerTransition.qml
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer/SingleMediaViewer.qml
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer/MediaListView.qml
+-- Installing: /usr/share/gallery-app/rc/qml/MediaViewer/GalleryPhotoComponent.qml
+-- Installing: /usr/share/gallery-app/rc/qml/PickerScreen.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components
+-- Installing: /usr/share/gallery-app/rc/qml/Components/MediaSelector.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/EventCard.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/AspectArea.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/MediaGrid.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/PopupAlbumPicker.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/TextEditOnClick.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/DeleteOrDeleteWithContentsDialog.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/UnableShareDialog.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/Checkerboard.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/MouseAreaWithMultipoint.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/DeleteDialog.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/CheckerboardDelegate.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Components/SwipeArea.qml
+-- Installing: /usr/share/gallery-app/rc/qml/EventsOverview.qml
+-- Installing: /usr/share/gallery-app/rc/qml/PhotosOverview.qml
+-- Installing: /usr/share/gallery-app/rc/qml/OrganicView
+-- Installing: /usr/share/gallery-app/rc/qml/OrganicView/OrganicView.qml
+-- Installing: /usr/share/gallery-app/rc/qml/OrganicView/OrganicItemInteraction.qml
+-- Installing: /usr/share/gallery-app/rc/qml/OrganicView/OrganicMediaList.qml
+-- Installing: /usr/share/gallery-app/rc/qml/OrganicView/OrganicAlbumView.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumEditor
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumEditor/AlbumCoverMenu.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumEditor/AlbumEditMenu.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumEditor/AlbumEditor.qml
+-- Installing: /usr/share/gallery-app/rc/qml/MainScreen.qml
+-- Installing: /usr/share/gallery-app/rc/qml/LoadingScreen.qml
+-- Installing: /usr/share/gallery-app/rc/qml/GalleryApplication.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Utility
+-- Installing: /usr/share/gallery-app/rc/qml/Utility/SelectionState.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Utility/DissolveAnimation.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Utility/FadeOutAnimation.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Utility/ExpandAnimation.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Utility/FadeInAnimation.qml
+-- Installing: /usr/share/gallery-app/rc/qml/Utility/EditingHUD.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumsOverview.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumPreviewComponent.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumPageComponent.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumCoverList.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumSpreadViewer.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumPageIndicator.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumOpener.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageLayoutLeftDoubleLandscape.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageLayoutRightDoubleLandscape.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageLayoutLeftPortrait.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageContents.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/img
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/img/album-thumbnail-frame-right.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/img/album-thumbnail-frame-left.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageLayout.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/FramePortrait.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageFlipperPage.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageFlipper.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageLayoutAdd.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumInternals/AlbumPageLayoutRightPortrait.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-red.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-preview-left.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-green.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-pattern.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-add-green.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-red-large.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-default-large.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-blue.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-default.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-add-blue.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-pattern-large.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/icon-pager-inactive.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/icon-pager-active.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-blue-large.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-add-red.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-add-pattern.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-add-default.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/img/album-cover-green-large.png
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumCover.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumViewer.qml
+-- Installing: /usr/share/gallery-app/rc/qml/AlbumViewer/AlbumViewerAnimated.qml
+-- Installing: /usr/share/gallery-app/rc/sql
+-- Installing: /usr/share/gallery-app/rc/sql/8.sql
+-- Installing: /usr/share/gallery-app/rc/sql/2.sql
+-- Installing: /usr/share/gallery-app/rc/sql/4.sql
+-- Installing: /usr/share/gallery-app/rc/sql/7.sql
+-- Installing: /usr/share/gallery-app/rc/sql/1.sql
+-- Installing: /usr/share/gallery-app/rc/sql/6.sql
+-- Installing: /usr/share/gallery-app/rc/sql/5.sql
+-- Installing: /usr/share/gallery-app/rc/sql/3.sql
+-- Installing: /usr/bin/gallery-app
+yunit@yunitvm:~/builddir/gallery-app$ sudo reboot
+Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
