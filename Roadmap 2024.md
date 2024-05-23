@@ -41,7 +41,7 @@ So what software is essentiell for the Phone to comply with this endeveaour? All
 
 ### log
 
--2024-may-21: So i tried installing Kubuntu 24.04 (KDE Plasma 5 :-/) on my PC, which worked quiet well until i tried to reboot and i only get a blackscreen, no terminal, nothing, no matter what keycombination i try...
--2024-may-22: I looked into KDE Neon but it's based upon Ubuntu 22.04 which is too old for my convenience. Actually, i wanted to stick with something ubuntu based, just to be better prepared to help others in my community which almost allways use a vanilla ubuntu experience. Using the same base, i thought, might enable easier maintenance routines. Nethertheless, i tried installing Manjaro KDE Edition today. It won't even boot to the installer so i cast it aside upon first trey... Moving on.
--2024-may-23: 
+* 2024-may-21: So i tried installing Kubuntu 24.04 (KDE Plasma 5 :-/) on my PC, which worked quiet well until i tried to reboot and i only get a blackscreen, no terminal, nothing, no matter what keycombination i try...
+* 2024-may-22: I looked into KDE Neon but it's based upon Ubuntu 22.04 which is too old for my convenience. Actually, i wanted to stick with something ubuntu based, just to be better prepared to help others in my community which almost allways use a vanilla ubuntu experience. Using the same base, i thought, might enable easier maintenance routines. Nethertheless, i tried installing Manjaro KDE Edition today. It won't even boot to the installer so i cast it aside upon first trey... Moving on.
+* 2024-may-23: For now i am quitting this misery and i will try installing Vanilla Ubuntu 24.04 on the PC, maybe 24.10 of Kubuntu will work better, let's see in October..
 
